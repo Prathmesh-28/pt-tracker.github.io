@@ -1,0 +1,165 @@
+[
+  {
+    "rank": 951,
+    "company": "Sonic Fire Tech",
+    "date": "2026-08-17",
+    "founded": "2019",
+    "location": "United States",
+    "round": "Series A",
+    "amount_raw": "143Cr",
+    "amount_inr": 1430000000,
+    "investor_kind": "Institutional",
+    "investors": [
+      "The O.H.I.O. Fund[+1]"
+    ],
+    "is_venture_round": true
+  },
+  {
+    "rank": 954,
+    "company": "Vero",
+    "date": "2026-08-17",
+    "founded": "2019",
+    "location": "United States",
+    "round": "Series B",
+    "amount_raw": "",
+    "amount_inr": null,
+    "investor_kind": "",
+    "investors": [],
+    "is_venture_round": true
+  },
+  {
+    "rank": 955,
+    "company": "The Liverpool Football Club and Athletic Grounds",
+    "date": "2026-08-17",
+    "founded": "1892",
+    "location": "United Kingdom",
+    "round": "Angel",
+    "amount_raw": "",
+    "amount_inr": null,
+    "investor_kind": "Angel",
+    "investors": [
+      "Jeff Bezos"
+    ],
+    "is_venture_round": true
+  },
+  {
+    "rank": 984,
+    "company": "Ribara",
+    "date": "2026-08-17",
+    "founded": "2020",
+    "location": "Nigeria",
+    "round": "Grant (prize money)",
+    "amount_raw": "95.6L",
+    "amount_inr": 9560000,
+    "investor_kind": "Corporate",
+    "investors": [
+      "Mastercard Foundation"
+    ],
+    "is_venture_round": false
+  },
+  {
+    "rank": 992,
+    "company": "Boeing",
+    "date": "2026-08-15",
+    "founded": "1916",
+    "location": "United States",
+    "round": "Post IPO",
+    "amount_raw": "10.9Cr",
+    "amount_inr": 109000000,
+    "investor_kind": "Institutional",
+    "investors": [
+      "Everett Harris"
+    ],
+    "is_venture_round": false
+  },
+  {
+    "rank": 995,
+    "company": "Keertana",
+    "date": "2026-08-15",
+    "founded": "1996",
+    "location": "India",
+    "round": "Series B",
+    "amount_raw": "230Cr",
+    "amount_inr": 2300000000,
+    "investor_kind": "Corporate",
+    "investors": [
+      "Neo Wealth Partners"
+    ],
+    "is_venture_round": true
+  },
+  {
+    "rank": 1159,
+    "company": "Minimac Systems",
+    "date": "2026-08-12",
+    "founded": "2012",
+    "location": "India",
+    "round": "Seed",
+    "amount_raw": "30Cr",
+    "amount_inr": 300000000,
+    "investor_kind": "Institutional",
+    "investors": [
+      "Rainmatter"
+    ],
+    "is_venture_round": true
+  },
+  {
+    "rank": 1166,
+    "company": "Wippi",
+    "date": "2026-08-12",
+    "founded": "2024",
+    "location": "India",
+    "round": "Seed",
+    "amount_raw": "11.4Cr",
+    "amount_inr": 114000000,
+    "investor_kind": "Institutional",
+    "investors": [
+      "12 Flags Group[+3]"
+    ],
+    "is_venture_round": true
+  },
+  {
+    "rank": 1176,
+    "company": "Quarkitech.com",
+    "date": "2026-08-12",
+    "founded": "2025",
+    "location": "India",
+    "round": "Seed",
+    "amount_raw": "2Cr",
+    "amount_inr": 20000000,
+    "investor_kind": "Institutional",
+    "investors": [
+      "Artha India Ventures[+1]"
+    ],
+    "is_venture_round": true
+  },
+  {
+    "rank": 1191,
+    "company": "Jio Credit",
+    "date": "2026-08-12",
+    "founded": "2000",
+    "location": "India",
+    "round": "Series D",
+    "amount_raw": "18,300Cr",
+    "amount_inr": 183000000000,
+    "investor_kind": "Corporate",
+    "investors": [
+      "Bank of America"
+    ],
+    "is_venture_round": true
+  },
+  {
+    "rank": 1200,
+    "company": "Lovable",
+    "date": "2026-08-12",
+    "founded": "2023",
+    "location": "Sweden",
+    "round": "Series C",
+    "amount_raw": "3,820Cr",
+    "amount_inr": 38200000000,
+    "investor_kind": "Institutional",
+    "investors": [
+      "Menlo Ventures[+13]"
+    ],
+    "is_venture_round": true
+  }
+]

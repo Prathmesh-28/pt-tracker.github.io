@@ -1,0 +1,272 @@
+[
+  {
+    "family": "Product analyst and associate product manager (entry-level, 0-2 years, India)",
+    "bands": [
+      {
+        "stage": "seed/pre-Series A",
+        "city_tier": "Bengaluru-Gurugram-Mumbai",
+        "fixed_low_lpa": 6,
+        "fixed_high_lpa": 14,
+        "total_high_lpa": 20,
+        "sources": [
+          "https://www.payscale.com/research/IN/Job=Product_Analyst/Salary",
+          "https://in.talent.com/salary?job=product+analyst",
+          "https://productmanagementjob.com/product-manager-salary/india",
+          "https://www.productleadership.com/blog/associate-product-manager-salary-india/",
+          "https://www.davzon.com/india-salary-guide"
+        ],
+        "confidence": "low",
+        "note": "Thinnest data of any row - no source I could reach breaks out pre-Series A separately. Built bottom-up: Payscale India Product Analyst averages Rs 5.12L for <1 yr and Rs 7.84L for 1-4 yrs (76 profiles, Jul 2026); Talent.com puts entry Product Analyst at Rs 8.0L. Then applied the only published early-stage adjustment I found - productmanagementjob.com's 'pre-seed to Series A: below market, often 10-25% under the national median, highest equity percentage' - to the Rs 12L median entry APM base. In practice product-analyst titles cluster Rs 6-9L here and APM titles Rs 10-14L. Variable is usually token (0-10%) at this stage; the gap between Rs 14L fixed and Rs 20L total is almost entirely ESOP notional, which is a large percentage of a tiny cap table - treat it as paper, not pay. Confidence low: extrapolated from stage-discount language, not from observed seed-stage offers."
+      },
+      {
+        "stage": "seed/pre-Series A",
+        "city_tier": "other Indian city",
+        "fixed_low_lpa": 4.5,
+        "fixed_high_lpa": 10,
+        "total_high_lpa": 13,
+        "sources": [
+          "https://www.davzon.com/india-salary-guide",
+          "https://beaconfiling.com/blog/salary-benchmarks-indian-city-foreign-company",
+          "https://www.payscale.com/research/IN/Job=Product_Analyst/Salary"
+        ],
+        "confidence": "low",
+        "note": "Genuinely no direct data for this combination - I could not find a single source reporting seed-stage entry-level product pay outside the metros. Derived by applying the published non-metro adjustment (Davzon India Salary Guide 2026: 0.82x tier-2 multiplier, 0.75x for remote/tier-3; Beacon Filing: 'tier 2 cities typically run 15-30% below tier 1 equivalents') to the metro seed row, with the floor cross-checked against Payscale's 10th percentile of Rs 3.44L for Product Analyst India-wide and Davzon's junior business analyst band of Rs 4-7L. Confidence low and should be treated as a rough prior only - at this stage and location, individual offers vary far more than any band, and equity terms matter more than the cash number."
+      },
+      {
+        "stage": "Series A-B",
+        "city_tier": "Bengaluru-Gurugram-Mumbai",
+        "fixed_low_lpa": 8,
+        "fixed_high_lpa": 18,
+        "total_high_lpa": 26,
+        "sources": [
+          "https://www.productleadership.com/blog/associate-product-manager-salary-india/",
+          "https://www.productleadership.com/product-manager-salary-in-india/",
+          "https://productmanagementjob.com/product-manager-salary/india",
+          "https://www.recrew.ai/salary-guides/product-manager-in-india",
+          "https://onjob.io/blog/product-manager-salary-in-india-2026/"
+        ],
+        "confidence": "medium",
+        "note": "Best-supported startup row. Four independent write-ups converge: Product Leadership puts growth-stage startup APMs at Rs 12-22L, 'ESOP heavy', and its calculator returns Rs 12-16L base + Rs 2-4L variable + Rs 2-6L ESOP for a Series B+ mid-size entry PM; productmanagementjob.com gives entry APM base Rs 9-16.2L, median Rs 12L, total comp Rs 13.4L, with Series B-D 'at or slightly above median' plus 'meaningful options'; Recrew gives entry APM Rs 8-15L with a 0-2 yr average of Rs 15L. The Rs 8L low end is the product-analyst title (and analytics-flavoured APM roles), not a branded APM program. Bonus convention is 10-20% of base. Confidence medium rather than high because every source states company stage qualitatively and the LPA figures are not themselves cut by funding stage."
+      },
+      {
+        "stage": "Series A-B",
+        "city_tier": "other Indian city",
+        "fixed_low_lpa": 6,
+        "fixed_high_lpa": 13,
+        "total_high_lpa": 17,
+        "sources": [
+          "https://www.davzon.com/india-salary-guide",
+          "https://beaconfiling.com/blog/salary-benchmarks-indian-city-foreign-company",
+          "https://in.indeed.com/career/associate-product-manager/salaries",
+          "https://onjob.io/blog/product-manager-salary-in-india-2026/"
+        ],
+        "confidence": "low",
+        "note": "Series A-B companies outside Bengaluru/Gurugram/Mumbai are concentrated in Pune, Hyderabad, Ahmedabad, Chennai, Jaipur and Indore. Band derived by applying the tier-2 adjustment (Davzon 0.82x; Beacon Filing 15-30% below tier-1) to the metro Series A-B row. Directionally consistent with Indeed India's non-metro APM city averages (Hyderabad Rs 13.04L, Chennai Rs 13.02L, Noida Rs 12.51L) and with OnJob's statement that Hyderabad and Pune typically run 5-15% below Bengaluru - but those Indeed figures are all-experience averages, not filtered to 0-2 years, so they over-read the entry band. Confidence low: the adjustment is real and published, the underlying stage-specific non-metro data is not."
+      },
+      {
+        "stage": "Series C+",
+        "city_tier": "Bengaluru-Gurugram-Mumbai",
+        "fixed_low_lpa": 12,
+        "fixed_high_lpa": 24,
+        "total_high_lpa": 34,
+        "sources": [
+          "https://in.indeed.com/career/associate-product-manager/salaries",
+          "https://in.indeed.com/career/product-analyst/salaries",
+          "https://onjob.io/blog/product-manager-salary-in-india-2026/",
+          "https://www.productleadership.com/blog/associate-product-manager-salary-india/",
+          "https://6figr.com/in/salary/apm--t",
+          "https://www.jobaajlearnings.com/blog/product-manager-salary-in-india-2026"
+        ],
+        "confidence": "medium",
+        "note": "This is where the crowdsourced data actually concentrates, because late-stage startups and unicorns are what people report. Indeed India: APM average base Rs 16.39L (25 salaries, Aug 2026), low Rs 11.71L to high Rs 22.95L, Gurgaon Rs 20.14L and Bengaluru Rs 17.04L; named late-stage employers on that page include ShareChat Rs 22.14L and Slice Rs 22.00L. OnJob puts APM (0-2 yrs) total cash at Rs 12-28L, median Rs 18L, at 'product and funded-startup companies'. 6figr's India APM page reports an average of Rs 17L (I could only read that figure from the listing, the page body did not render for me). Product-analyst titles at the same companies sit lower - Indeed's India Product Analyst average base is Rs 12.70L (23 salaries) - which is why the fixed low is Rs 12L rather than higher. Total high adds ~10-15% variable plus roughly Rs 4-8L/yr of ESOP notional. Confidence medium, not high: sample sizes on Indeed are 23-25, and the title is applied inconsistently across levels."
+      },
+      {
+        "stage": "Series C+",
+        "city_tier": "other Indian city",
+        "fixed_low_lpa": 9,
+        "fixed_high_lpa": 17,
+        "total_high_lpa": 24,
+        "sources": [
+          "https://in.indeed.com/career/associate-product-manager/salaries",
+          "https://in.indeed.com/career/product-analyst/salaries",
+          "https://onjob.io/blog/product-manager-salary-in-india-2026/",
+          "https://www.productleadership.com/product-manager-salary-in-india/"
+        ],
+        "confidence": "medium",
+        "note": "Anchored on actual reported non-metro city numbers rather than a multiplier: Indeed India APM averages Hyderabad Rs 13.04L, Chennai Rs 13.02L, Noida Rs 12.51L; Indeed Product Analyst averages Chennai Rs 10.13L and Hyderabad Rs 7.42L. Cross-checked against OnJob (Hyderabad/Pune typically 5-15% below Bengaluru) and Product Leadership's all-level PM city index (Delhi NCR -12%, Hyderabad -17%, Pune -28%, Chennai -33% versus Bengaluru). Caveat that keeps this at medium rather than high: those city figures are all-experience averages for a junior-skewed title, not a clean 0-2 year cut, so the true entry band is probably at the lower half of what the averages imply. ESOP at Series C+ is real but usually a smaller multiple than at Series A-B, hence the narrower fixed-to-total gap."
+      },
+      {
+        "stage": "listed/large",
+        "city_tier": "Bengaluru-Gurugram-Mumbai",
+        "fixed_low_lpa": 7,
+        "fixed_high_lpa": 26,
+        "total_high_lpa": 45,
+        "sources": [
+          "https://www.jobaajlearnings.com/blog/product-manager-salary-in-india-2026",
+          "https://www.productleadership.com/blog/associate-product-manager-salary-india/",
+          "https://productmanagementjob.com/product-manager-salary/india",
+          "https://www.levels.fyi/t/product-manager/locations/india",
+          "https://www.levels.fyi/t/business-analyst/locations/india",
+          "https://www.davzon.com/india-salary-guide"
+        ],
+        "confidence": "medium",
+        "note": "Deliberately the widest band because this bucket is bimodal and averaging it would mislead. Lower mode - IT services, BFSI, listed non-tech: Jobaaj cites Rs 8-12L starting packages for entry-level product roles at IT services firms; Product Leadership puts service/traditional IT APMs at Rs 8-15L; Davzon puts a junior (0-2 yr) business analyst at Rs 4-7L and a junior PM at Rs 8-14L. Upper mode - branded APM programs and big-tech/listed consumer tech: Jobaaj reports top APM programs at Google, Microsoft, Meta, Flipkart, Zepto and PhonePe paying Rs 16-45L; Product Leadership puts tier-1 product companies at Rs 18-35L with ESOPs. The Rs 45L total high assumes an RSU-heavy big-tech APM offer where stock is 30-60% of total comp (productmanagementjob.com). Note Levels.fyi India shows a PM 25th percentile of Rs 29.2L and median Rs 44.6L total, but that is all levels and is badly skewed to senior big-tech PMs - do not read it as an entry-level number. Confidence medium."
+      },
+      {
+        "stage": "listed/large",
+        "city_tier": "other Indian city",
+        "fixed_low_lpa": 5,
+        "fixed_high_lpa": 18,
+        "total_high_lpa": 28,
+        "sources": [
+          "https://www.levels.fyi/t/business-analyst/locations/india",
+          "https://in.indeed.com/career/product-analyst/salaries",
+          "https://www.jobaajlearnings.com/blog/product-manager-salary-in-india-2026",
+          "https://www.davzon.com/india-salary-guide",
+          "https://beaconfiling.com/blog/salary-benchmarks-indian-city-foreign-company"
+        ],
+        "confidence": "medium",
+        "note": "Same bimodality as the metro row, compressed at the bottom but not at the top. Lower mode: IT services and shared-services entry analyst roles in Pune, Chennai, Kolkata, Coimbatore and Indore run Rs 5-10L, consistent with Davzon's junior BA band of Rs 4-7L before its 0.82x tier-2 multiplier and Beacon Filing's 15-30% tier-2 discount (it cites a 36% Bangalore-to-Coimbatore gap for developers). Upper mode: global capability centres in Hyderabad and Pune pay at or near metro parity, which is why the high end stays at Rs 18L fixed / Rs 28L total rather than being multiplied down - Levels.fyi India business analyst city averages are Hyderabad Rs 19.58L and Pune Rs 18.66L, both above Mumbai's Rs 15.43L (all levels). Indeed's Product Analyst page lists large-employer outliers such as Amadeus Rs 19.33L and Sopra Steria Rs 19.00L. Confidence medium; read this row as two distributions, not one, and place a specific offer by employer type before city."
+      }
+    ]
+  },
+  {
+    "family": "Growth and performance marketing (entry-level, 0-2 years, India)",
+    "bands": [
+      {
+        "stage": "seed/pre-Series A",
+        "city_tier": "Bengaluru-Gurugram-Mumbai",
+        "fixed_low_lpa": 4,
+        "fixed_high_lpa": 8,
+        "total_high_lpa": 10,
+        "sources": [
+          "https://www.ambitionbox.com/profile/growth-marketing-executive-salary",
+          "https://www.ambitionbox.com/profile/performance-marketing-associate-salary",
+          "https://www.ambitionbox.com/profile/growth-executive-salary",
+          "https://www.ambitionbox.com/profile/growth-marketing-associate-salary",
+          "https://www.ambitionbox.com/profile/paid-media-executive-salary",
+          "https://www.ambitionbox.com/profile/media-buyer-salary"
+        ],
+        "confidence": "medium",
+        "note": "Titles seed startups actually post: Growth Associate, Performance Marketing Associate/Executive, Paid Media Executive. AmbitionBox (Aug-Sep 2026 refresh): Growth Marketing Executive 0-1yr Rs4.3-4.8L, 1-3yr Rs5.1-5.6L (158 salaries); Performance Marketing Associate 0-1yr Rs2.8-4.1L, 1-3yr Rs4.7-5.7L (77); Growth Executive typical Rs4.3-4.8L (643); Growth Marketing Associate 1-3yr Rs4.0-4.4L (13, AmbitionBox itself flags medium confidence); Paid Media Executive 1-3yr Rs3.8-4.3L (353). Rs8L fixed is the realistic ceiling and needs a strong signal (tier-1 campus, prior D2C/agency internship with real ad-spend ownership, or a well-capitalised YC/Accel seed). ESOP is normal at this stage but for a 0-2yr hire the grant is small in notional terms (often 0.01-0.05%, roughly Rs0.5-1.5L/yr of paper) and should be discounted heavily - the Rs10L total-high assumes ~Rs1-1.5L notional ESOP plus a 5-10% variable. Confidence capped at medium because no source I could reach tags data by funding stage; the stage split is my inference from the title mix, not a sourced cut."
+      },
+      {
+        "stage": "seed/pre-Series A",
+        "city_tier": "other Indian city",
+        "fixed_low_lpa": 3,
+        "fixed_high_lpa": 6,
+        "total_high_lpa": 7.5,
+        "sources": [
+          "https://www.ambitionbox.com/profile/digital-marketing-executive-salary",
+          "https://www.ambitionbox.com/profile/paid-media-executive-salary",
+          "https://www.ambitionbox.com/profile/performance-marketing-associate-salary",
+          "https://in.indeed.com/career/digital-marketing-executive/salaries"
+        ],
+        "confidence": "low",
+        "note": "Extrapolated, not directly sourced - there is no reachable dataset that isolates seed-stage growth hires outside the metros, so treat this row as an estimate. Anchors used: AmbitionBox city cut for Digital Marketing Executive (Pune Rs3.2-3.5L, Hyderabad Rs3.3-3.7L vs Bengaluru/Mumbai Rs3.6-4.0L) and Indeed India (Digital Marketing Executive national average base Rs2.28L, 588 salaries, updated 25 May 2026; Pune Rs3.79L, Hyderabad Rs3.61L). The observed tier-2 discount at the executive band is only ~10-15%, but the seed ecosystem outside metros is thin and offers cluster low. Below roughly Rs3L this stops being a growth-marketing offer and becomes a general digital-marketing executive job. ESOP is often offered here but is close to worthless in cash terms at this stage - do not let it justify a fixed-cash number below Rs3.5L."
+      },
+      {
+        "stage": "Series A-B",
+        "city_tier": "Bengaluru-Gurugram-Mumbai",
+        "fixed_low_lpa": 6,
+        "fixed_high_lpa": 12,
+        "total_high_lpa": 16,
+        "sources": [
+          "https://www.ambitionbox.com/profile/performance-marketing-analyst-salary",
+          "https://www.ambitionbox.com/profile/performance-marketing-associate-salary",
+          "https://www.ambitionbox.com/profile/marketing-associate-salary",
+          "https://www.ambitionbox.com/profile/growth-executive-salary",
+          "https://www.ambitionbox.com/profile/senior-performance-marketing-executive-salary",
+          "https://www.levels.fyi/t/marketing/locations/india"
+        ],
+        "confidence": "medium",
+        "note": "AmbitionBox Aug-Sep 2026: Performance Marketing Analyst 1-3yr Rs5.5-6.1L (32 salaries); Performance Marketing Associate 1-3yr Rs4.7-5.7L with reported points such as AdYogi Rs6.5L at 1yr; Marketing Associate Bengaluru Rs5.7-6.3L, Gurugram Rs5.6-6.2L, Mumbai Rs5.5-6.0L (4.4k salaries); Growth Executive Gurugram Rs5.2-6.5L; Senior Performance Marketing Executive 1-3yr Rs6.0-7.0L (371). Levels.fyi India Marketing 25th percentile total comp is Rs9.38L (verified offers, updated 10 Sep 2026) - a fair proxy for the junior end of the funded-startup sample. Rs12L fixed is the top of the band and generally requires an MBA or a demonstrated P&L/ad-spend track record. ESOP is standard and meaningful at A-B: assume Rs1.5-3L/yr notional over a 4-year vest plus a 10% variable to reach the Rs16L total-high. Medium confidence: the underlying salary counts are good, but the stage attribution is inferred."
+      },
+      {
+        "stage": "Series A-B",
+        "city_tier": "other Indian city",
+        "fixed_low_lpa": 4,
+        "fixed_high_lpa": 9,
+        "total_high_lpa": 12,
+        "sources": [
+          "https://www.ambitionbox.com/profile/marketing-associate-salary",
+          "https://www.ambitionbox.com/profile/digital-marketing-associate-salary",
+          "https://www.ambitionbox.com/profile/senior-performance-marketing-executive-salary",
+          "https://www.levels.fyi/t/marketing/locations/india.md"
+        ],
+        "confidence": "low",
+        "note": "Thin evidence - marked low deliberately. AmbitionBox city cuts show only a small tier-2 discount at associate level (Marketing Associate Pune Rs5.3-6.0L vs Bengaluru Rs5.7-6.3L; Digital Marketing Associate Pune Rs3.8-4.2L, Hyderabad Rs4.0-4.4L vs Bengaluru Rs4.0-4.5L), but Levels.fyi's aggregate city medians show a much wider gap at the funded-company end (Hyderabad Rs9.03L vs Bengaluru Rs19.83L, updated 10 Sep 2026), which is what drags this band down versus the metro row. Practically, most Series A-B companies hiring outside the metros are in Pune, Hyderabad, Chennai, Ahmedabad or Jaipur, and the sample is too small for anyone to publish a clean band. ESOP is offered on the same terms as the metro row; the discount is almost entirely in fixed cash."
+      },
+      {
+        "stage": "Series C+",
+        "city_tier": "Bengaluru-Gurugram-Mumbai",
+        "fixed_low_lpa": 8,
+        "fixed_high_lpa": 18,
+        "total_high_lpa": 26,
+        "sources": [
+          "https://www.ambitionbox.com/profile/growth-manager-salary",
+          "https://www.ambitionbox.com/profile/growth-marketing-manager-salary",
+          "https://www.ambitionbox.com/profile/performance-marketing-manager-salary",
+          "https://www.ambitionbox.com/salaries/phonepe-salaries/growth-manager",
+          "https://www.ambitionbox.com/salaries/unacademy-salaries/growth-manager",
+          "https://www.ambitionbox.com/salaries/zepto-salaries/growth-manager",
+          "https://www.ambitionbox.com/salaries/razorpay-salaries/growth-manager",
+          "https://www.ambitionbox.com/salaries/groww-salaries/growth-manager",
+          "https://www.levels.fyi/t/marketing/locations/india"
+        ],
+        "confidence": "medium",
+        "note": "This band is genuinely wide because two different hires sit in it. A non-MBA growth/performance analyst promoted in lands Rs8-13L fixed; a tier-1 MBA or premium campus growth hire lands Rs14-18L, occasionally Rs20L+. Evidence (AmbitionBox, Aug-Sep 2026): Growth Manager India 1-3yr Rs12.9-14.3L (553 salaries in that bucket, 3.2k overall); Growth Marketing Manager 1-3yr Rs11.8-15.2L (915); Performance Marketing Manager 1-3yr Rs8.5-10.4L (2.8k). Company pages: PhonePe growth manager Rs11.5-17.1L for 2-7yrs (30 salaries, AmbitionBox high confidence), Unacademy Rs11.6-15.6L for 1-8yrs (34, high confidence), Zepto 1-3yr estimated Rs12.8-18.9L, Razorpay 1-3yr estimated Rs13.6-19.4L, Groww 3-6yr Rs19.7-29.5L. City premium is real: Growth Manager Bengaluru Rs17.1-18.9L, Gurugram Rs16.6-18.5L, Mumbai Rs15.6-18.0L. Total-high of Rs26L assumes 15-20% variable plus Rs3-6L/yr notional ESOP - and at C+ that ESOP is worth more than at earlier stages because secondaries and buybacks are common. Note the 'Manager' title inflation: many of these 1-3yr datapoints are post-MBA, so a 0-2yr non-MBA candidate should anchor to the lower half."
+      },
+      {
+        "stage": "Series C+",
+        "city_tier": "other Indian city",
+        "fixed_low_lpa": 6,
+        "fixed_high_lpa": 13,
+        "total_high_lpa": 18,
+        "sources": [
+          "https://www.ambitionbox.com/profile/growth-manager-salary",
+          "https://www.ambitionbox.com/profile/performance-marketing-manager-salary",
+          "https://www.ambitionbox.com/salaries/physicswallah-salaries/growth-manager",
+          "https://www.levels.fyi/t/marketing/locations/india.md"
+        ],
+        "confidence": "low",
+        "note": "Low confidence: very few Series C+ companies run growth teams outside Bengaluru/Gurugram/Mumbai, so no source publishes this cut and I am extrapolating. Anchors: AmbitionBox Growth Manager Noida Rs14.2-17.4L and New Delhi Rs15.1-17.0L versus Bengaluru Rs17.1-18.9L (a ~10-20% step down for near-metro NCR, and the step is steeper for true tier-2); Performance Marketing Manager New Delhi Rs12.9-14.2L versus Bengaluru Rs16.1-17.8L; PhysicsWallah (Noida) growth manager Rs9.7-14.0L at 3-4yrs (3 salaries, AmbitionBox low confidence). Levels.fyi's Hyderabad marketing median of Rs9.03L versus Bengaluru Rs19.83L supports a material discount. In practice the credible employers here are Chennai SaaS (Freshworks, Zoho, Chargebee), Hyderabad (Darwinbox), Pune and Ahmedabad D2C. ESOP terms usually match the metro row; the cut is in fixed cash."
+      },
+      {
+        "stage": "listed/large",
+        "city_tier": "Bengaluru-Gurugram-Mumbai",
+        "fixed_low_lpa": 5.5,
+        "fixed_high_lpa": 18,
+        "total_high_lpa": 26,
+        "sources": [
+          "https://www.ambitionbox.com/profile/performance-marketing-manager-salary",
+          "https://www.ambitionbox.com/profile/digital-marketing-specialist-salary",
+          "https://www.ambitionbox.com/salaries/swiggy-salaries/growth-manager",
+          "https://www.ambitionbox.com/salaries/meesho-salaries/growth-manager",
+          "https://www.ambitionbox.com/salaries/lenskart-salaries/performance-marketing-manager",
+          "https://www.levels.fyi/t/marketing/locations/india",
+          "https://www.levels.fyi/t/marketing/locations/india.md"
+        ],
+        "confidence": "medium",
+        "note": "This row is strongly bimodal and the single number is misleading unless you split it. LOW MODE - media/creative agencies and IT services (GroupM/WPP Media, Publicis, Omnicom, Accenture, Infosys): AmbitionBox shows WPP Media performance marketing manager Rs7.1-10.5L across 23 salaries, Publicis Media/Publicis Global Delivery performance marketing analyst Rs6.0L at 3yrs, Accenture digital marketing associate Rs4.8L at 2yrs. Entry-level here is Rs5.5-8L fixed with little or no equity and a 5-10% variable. HIGH MODE - listed/late-stage consumer internet and global tech (Swiggy, Eternal/Zomato, Meesho, Amazon, Nykaa): Swiggy growth manager 1-3yr Rs17.4-25.9L (overall Rs20.5-23.6L across 48 salaries, AmbitionBox high confidence), Meesho growth manager 3-6yr Rs37.7-44.4L, Amazon performance marketing associate Rs12.6L at 3yrs, Lenskart performance marketing manager 3-6yr Rs16.6-18.4L. Levels.fyi India Marketing (verified offers, updated 10 Sep 2026): median total comp Rs16.44L, 25th percentile Rs9.38L, 75th Rs26.58L, with Bengaluru at Rs19.83L, Mumbai Rs13.79L, Gurgaon Rs11.56L. Total-high of Rs26L reflects the high mode with RSUs plus a 10-15% cash bonus. If the offer in front of you is from an agency, benchmark against the low mode only."
+      },
+      {
+        "stage": "listed/large",
+        "city_tier": "other Indian city",
+        "fixed_low_lpa": 4,
+        "fixed_high_lpa": 12,
+        "total_high_lpa": 16,
+        "sources": [
+          "https://www.ambitionbox.com/profile/digital-marketing-executive-salary",
+          "https://www.ambitionbox.com/profile/digital-marketing-specialist-salary",
+          "https://www.ambitionbox.com/profile/marketing-associate-salary",
+          "https://in.indeed.com/career/digital-marketing-executive/salaries",
+          "https://in.indeed.com/career/performance-marketing-executive/salaries",
+          "https://www.levels.fyi/t/marketing/locations/india.md"
+        ],
+        "confidence": "medium",
+        "note": "The best-sourced non-metro row, because large employers report at volume in tier-2. AmbitionBox (Sep 2026, 47.9k salaries): Digital Marketing Executive 0-1yr Rs2.5-2.8L and 1-3yr Rs2.9-3.2L nationally, with Pune Rs3.2-3.5L, Hyderabad Rs3.3-3.7L, Chennai-area comparable; Digital Marketing Specialist 1-3yr Rs3.9-4.4L nationally with Chennai Rs5.4-5.9L and Pune Rs6.3-6.9L on the blended average; Marketing Associate Pune Rs5.3-6.0L. Indeed India: Digital Marketing Executive average base Rs2.28L (588 salaries, 25 May 2026) with Bengaluru Rs3.85L, Pune Rs3.79L, Hyderabad Rs3.61L; the Marketing Executive page (2.4k salaries, 30 Jun 2026) gives a Rs1.28L-Rs4.19L spread. The Rs12L top of the band is captured by global-capability-centre roles such as Amazon Hyderabad or Chennai SaaS, not by domestic firms. Levels.fyi Hyderabad marketing median Rs9.03L (all levels) supports that upper tail. Equity is RSU-based at MNCs and near-zero at domestic large employers; variable is typically 5-10%."
+      }
+    ]
+  }
+]
