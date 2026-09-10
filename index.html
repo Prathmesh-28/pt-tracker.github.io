@@ -1,0 +1,694 @@
+<title>Fresher Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap">
+<style>
+:root{
+  --paper:#F4F3EE;
+  --card:#FBFAF6;
+  --ink:#181A1B;
+  --body:#33373A;
+  --muted:#71767B;
+  --line:#DEDCD3;
+  --line-soft:#E9E7DF;
+  --accent:#A85D00;
+  --accent-soft:#F0E2CC;
+  --open:#126B4F;
+  --open-soft:#D8E9E0;
+  --walled:#8B9096;
+  --walled-soft:#E4E3DD;
+  --shadow:0 1px 2px rgba(24,26,27,.05);
+  --r:7px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#131517;
+    --card:#1B1E21;
+    --ink:#F1EFE9;
+    --body:#C7C9CB;
+    --muted:#8B9096;
+    --line:#2C3034;
+    --line-soft:#242629;
+    --accent:#E8A13C;
+    --accent-soft:#3A2C15;
+    --open:#4FBE92;
+    --open-soft:#153229;
+    --walled:#767B81;
+    --walled-soft:#25282B;
+    --shadow:0 1px 2px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131517;
+  --card:#1B1E21;
+  --ink:#F1EFE9;
+  --body:#C7C9CB;
+  --muted:#8B9096;
+  --line:#2C3034;
+  --line-soft:#242629;
+  --accent:#E8A13C;
+  --accent-soft:#3A2C15;
+  --open:#4FBE92;
+  --open-soft:#153229;
+  --walled:#767B81;
+  --walled-soft:#25282B;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--paper);color:var(--body);
+  font:450 15px/1.55 "IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:20px;padding-block:0 72px}
+a{color:inherit}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;color:var(--ink);text-wrap:balance;margin:0}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+
+/* ---------- masthead ---------- */
+header{border-bottom:1px solid var(--line);margin-bottom:26px}
+.masthead{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between;padding-block:34px 22px}
+h1{font-size:clamp(30px,5.4vw,46px);font-weight:800;letter-spacing:-.025em;line-height:1.02}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{margin:9px 0 0;max-width:56ch;color:var(--muted);font-size:14.5px}
+.stamp{font-size:12px;color:var(--muted);text-align:right;line-height:1.7;white-space:nowrap}
+.stamp b{color:var(--ink);font-weight:600}
+
+/* ---------- gate summary ---------- */
+.gate{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:12px}
+.gate button{
+  appearance:none;border:0;text-align:left;cursor:pointer;font:inherit;
+  background:var(--card);color:var(--body);padding:15px 17px;display:flex;
+  flex-direction:column;gap:3px;transition:background .12s;
+}
+.gate button:hover{background:var(--accent-soft)}
+.gate button[aria-pressed="true"]{background:var(--accent-soft)}
+.gate .n{font-family:"Bricolage Grotesque",sans-serif;font-size:27px;font-weight:700;line-height:1;color:var(--ink)}
+.gate .lbl{font-size:12.5px;font-weight:600;letter-spacing:.02em}
+.gate .hint{font-size:11.5px;color:var(--muted);line-height:1.4}
+.gate .t-open .n{color:var(--open)}
+.gate .t-unstated .n{color:var(--accent)}
+.gate .t-walled .n{color:var(--walled)}
+.note{font-size:12.5px;color:var(--muted);margin:0 0 26px;max-width:78ch}
+
+/* ---------- controls ---------- */
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.controls input[type=search]{
+  flex:1 1 220px;min-width:0;font:inherit;font-size:14px;padding:8px 12px;
+  border:1px solid var(--line);border-radius:var(--r);background:var(--card);color:var(--ink);
+}
+.controls select{
+  font:inherit;font-size:13.5px;padding:8px 10px;border:1px solid var(--line);
+  border-radius:var(--r);background:var(--card);color:var(--ink);
+}
+input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{
+  outline:2px solid var(--accent);outline-offset:2px}
+.count{font-size:12.5px;color:var(--muted);margin-left:auto}
+.refresh{appearance:none;font:inherit;font-size:13px;font-weight:600;cursor:pointer;
+  padding:8px 14px;border-radius:var(--r);border:1px solid var(--accent);
+  background:transparent;color:var(--accent);transition:.12s}
+.refresh:hover:not(:disabled){background:var(--accent);color:var(--paper)}
+.refresh:disabled{opacity:.5;cursor:progress}
+.livenote{margin:0 0 14px;font-size:12.5px;color:var(--muted)}
+.age{font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;
+  padding:2px 7px;border-radius:100px;background:var(--walled-soft);color:var(--walled);white-space:nowrap}
+.age.stale{background:var(--accent-soft);color:var(--accent)}
+
+/* ---------- role rows ---------- */
+.rows{display:flex;flex-direction:column;gap:0;border:1px solid var(--line);
+  border-radius:var(--r);overflow:hidden;background:var(--card)}
+.row{display:grid;grid-template-columns:5px 1fr auto;gap:0;border-bottom:1px solid var(--line-soft)}
+.row:last-child{border-bottom:0}
+.row .stripe{background:var(--walled)}
+.row.t-open .stripe{background:var(--open)}
+.row.t-unstated .stripe{background:var(--accent)}
+.row .main{padding:13px 16px;min-width:0}
+.row .side{padding:13px 16px 13px 8px;display:flex;flex-direction:column;align-items:flex-end;
+  gap:7px;justify-content:center}
+.row h3{font-size:15px;font-weight:600;letter-spacing:-.005em;line-height:1.3}
+.row h3 a{text-decoration:none}
+.row h3 a:hover{color:var(--accent);text-decoration:underline;text-underline-offset:2px}
+.meta{display:flex;flex-wrap:wrap;gap:5px 12px;margin-top:5px;font-size:12.5px;color:var(--muted);align-items:center}
+.meta .co{color:var(--ink);font-weight:600}
+.pill{font-size:11px;font-weight:600;letter-spacing:.03em;text-transform:uppercase;
+  padding:2px 7px;border-radius:100px;white-space:nowrap}
+.pill.open{background:var(--open-soft);color:var(--open)}
+.pill.unstated{background:var(--accent-soft);color:var(--accent)}
+.pill.walled{background:var(--walled-soft);color:var(--walled)}
+.apply{font-size:12.5px;font-weight:600;text-decoration:none;color:var(--accent);white-space:nowrap}
+.apply:hover{text-decoration:underline;text-underline-offset:2px}
+.mark{display:flex;gap:4px}
+.mark button{
+  appearance:none;font:inherit;font-size:11px;font-weight:600;cursor:pointer;
+  padding:3px 8px;border-radius:100px;border:1px solid var(--line);
+  background:transparent;color:var(--muted);transition:.12s;
+}
+.mark button:hover{border-color:var(--accent);color:var(--accent)}
+.mark button[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.row.done{opacity:.55}
+.empty{padding:38px 18px;text-align:center;color:var(--muted);font-size:14px}
+
+/* ---------- panels ---------- */
+section{margin-top:44px}
+.head{display:flex;flex-wrap:wrap;gap:6px 14px;align-items:baseline;margin-bottom:5px}
+h2{font-size:21px;font-weight:700;letter-spacing:-.015em}
+.head p{margin:0;font-size:13px;color:var(--muted);max-width:62ch}
+.deck{margin:0 0 16px;font-size:13.5px;color:var(--muted);max-width:72ch}
+
+.rounds{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:10px}
+.round{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:14px 15px;
+  display:flex;flex-direction:column;gap:6px}
+.round .top{display:flex;justify-content:space-between;gap:10px;align-items:baseline}
+.round .co{font-family:"Bricolage Grotesque",sans-serif;font-size:16px;font-weight:700;color:var(--ink);
+  line-height:1.2;overflow-wrap:anywhere}
+.round .amt{font-size:13px;font-weight:600;color:var(--accent);white-space:nowrap}
+.round .stage{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.round .inv{font-size:12.5px;color:var(--body);line-height:1.45}
+.round .inv b{color:var(--muted);font-weight:500}
+.round .foot{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-top:auto;padding-top:4px}
+.round a{font-size:12px;font-weight:600;color:var(--accent);text-decoration:none}
+.round a:hover{text-decoration:underline}
+
+.links{display:flex;flex-wrap:wrap;gap:7px}
+.links a{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;
+  text-decoration:none;padding:7px 12px;border:1px solid var(--line);border-radius:100px;
+  background:var(--card);transition:.12s}
+.links a:hover{border-color:var(--accent);color:var(--accent)}
+.links a::after{content:"↗";font-size:11px;color:var(--muted)}
+.links a:hover::after{color:var(--accent)}
+
+.method{border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:16px 18px}
+.method dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:7px 16px;font-size:13px}
+.method dt{color:var(--muted)}
+.method dd{margin:0;color:var(--body)}
+.method dd b{color:var(--ink);font-weight:600}
+
+footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);
+  font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:space-between}
+
+@media (max-width:640px){
+  .gate{grid-template-columns:1fr}
+  .row{grid-template-columns:5px 1fr}
+  .row .side{grid-column:2;padding:0 16px 13px;align-items:flex-start;flex-direction:row;
+    flex-wrap:wrap;justify-content:flex-start}
+  .count{margin-left:0;width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+<header>
+  <div class="masthead">
+    <div>
+      <h1>Every role that will <em>actually</em> take a fresher</h1>
+      <p class="sub">Business-track openings in India, pulled straight from company applicant-tracking
+        feeds and filtered by the experience line written in each posting.</p>
+    </div>
+    <div class="stamp mono">
+      <div>Pulled <b id="gen">—</b></div>
+      <div><b id="cov-emp">—</b> employers · <b id="cov-boards">—</b> live feeds</div>
+      <div><b id="cov-scan">—</b> postings scanned</div>
+    </div>
+  </div>
+</header>
+
+<div class="gate" role="group" aria-label="Filter by experience requirement">
+  <button class="t-open" data-tier="open" aria-pressed="false">
+    <span class="n" id="n-open">—</span>
+    <span class="lbl">Open to you</span>
+    <span class="hint">Posting asks for one year or less, or says fresher</span>
+  </button>
+  <button class="t-unstated" data-tier="unstated" aria-pressed="false">
+    <span class="n" id="n-unstated">—</span>
+    <span class="lbl">Doesn't say</span>
+    <span class="hint">No experience line in the description. Worth a read.</span>
+  </button>
+  <button class="t-walled" data-tier="walled" aria-pressed="false">
+    <span class="n" id="n-walled">—</span>
+    <span class="lbl">Two years or more</span>
+    <span class="hint">Excluded by your filter. Shown so you can see the wall.</span>
+  </button>
+</div>
+<p class="note" id="note"></p>
+
+<div class="controls">
+  <input type="search" id="q" placeholder="Search title, company or team" aria-label="Search roles">
+  <select id="f-family" aria-label="Filter by function"><option value="">All functions</option></select>
+  <select id="f-city" aria-label="Filter by city"><option value="">All cities</option></select>
+  <select id="f-company" aria-label="Filter by company"><option value="">All companies</option></select>
+  <select id="f-mark" aria-label="Filter by your status">
+    <option value="">Any status</option>
+    <option value="unmarked">Not marked</option>
+    <option value="shortlist">Shortlisted</option>
+    <option value="applied">Applied</option>
+  </select>
+  <button id="refresh" class="refresh" hidden>Pull live</button>
+  <span class="count" id="count"></span>
+</div>
+<p class="livenote" id="livenote" hidden></p>
+
+<div class="rows" id="rows"></div>
+
+<section>
+  <div class="head">
+    <h2>Funded in the last 60 days</h2>
+    <p>Where next quarter's openings come from. A round closing is the reliable leading indicator of a hiring plan.</p>
+  </div>
+  <div class="rounds" id="rounds"></div>
+</section>
+
+<section>
+  <div class="head"><h2>Searches worth running by hand</h2></div>
+  <p class="deck">Most large Indian employers run Workday, Darwinbox or Naukri RMS, none of which
+    publish a feed, so roughly half the market is invisible to the pull above. These links carry the
+    entry-level and last-30-days filters already applied, sorted newest first.</p>
+  <div class="links" id="links"></div>
+</section>
+
+<section>
+  <div class="head"><h2>How this was built</h2></div>
+  <div class="method">
+    <dl>
+      <dt>Sources</dt>
+      <dd>Greenhouse, Lever and Ashby public board APIs. No scraping, no credentials.</dd>
+      <dt>Experience</dt>
+      <dd>Parsed from each posting's own description, not inferred from its title.
+        <b>Product Manager</b> is a graduate role at one company and a four-year role at the next.</dd>
+      <dt>Pay</dt>
+      <dd id="pay-note">—</dd>
+      <dt>Blind spots</dt>
+      <dd>Slug discovery is guesswork. A company missing here may simply not expose a feed
+        under the name we guessed.</dd>
+    </dl>
+  </div>
+</section>
+
+<footer>
+  <span>Every link goes to the employer's own posting. Nothing here is scraped or resold.</span>
+  <span class="mono" id="saved">Marks are stored locally to this page</span>
+</footer>
+</div>
+
+<script>
+/* Client-side re-pull. Works only where fetch to third-party hosts is allowed,
+   which means GitHub Pages, not inside a published Artifact. All three board
+   APIs send Access-Control-Allow-Origin: *, so no proxy is needed. */
+(function (global) {
+  const ENDPOINTS = {
+    greenhouse: s => `https://boards-api.greenhouse.io/v1/boards/${s}/jobs?content=true`,
+    lever:      s => `https://api.lever.co/v0/postings/${s}?mode=json`,
+    ashby:      s => `https://api.ashbyhq.com/posting-api/job-board/${s}?includeCompensation=true`,
+  };
+
+  const INDIA = /\b(india|bengaluru|bangalore|mumbai|gurgaon|gurugram|delhi|noida|ncr|hyderabad|pune|chennai|kolkata|ahmedabad|jaipur|indore|kochi|cochin|coimbatore|chandigarh|surat|nagpur|bhubaneswar|thiruvananthapuram)\b/i;
+
+  const WANTED = /(business analyst|product analyst|growth analyst|data analyst|operations analyst|financial analyst|research analyst|\banalyst\b|associate consultant|\bconsultant\b|strategy|growth|associate product manager|product manager|\bapm\b|product associate|founder'?s office|chief of staff|category|management trainee|graduate trainee|trainee|business development|\bbd\b|inside sales|sales associate|account executive|customer success|partnerships|program manager|project manager|operations associate|\bops\b|associate|generalist)/i;
+
+  const SENIOR = /(senior|\bsr\.?\b|staff\b|principal|\blead\b|leader|head of|\bhead\b|director|\bvp\b|vice president|president|\bchief\b|architect|manager ii|manager iii|\bii\b|\biii\b|\biv\b|\bl[3-9]\b)/i;
+
+  const ENGINEERING = /(software engineer|\bengineer\b|engineering|developer|\bsde\b|\bsdet\b|devops|\bsre\b|\bqa\b|quality assurance|data scientist|scientist|machine learning|\bml\b|backend|back-end|frontend|front-end|fullstack|full-stack|android|\bios\b|mobile dev|security|infrastructure|platform eng|designer|\bdesign\b|technical writer)/i;
+
+  const YEARS = [
+    /(\d{1,2})\s*(?:-|–|—|to)\s*(\d{1,2})\s*\+?\s*(?:years?|yrs?)/gi,
+    /(?:minimum|at least|min\.?|more than|over)\s*(?:of\s*)?(\d{1,2})\s*\+?\s*(?:years?|yrs?)/gi,
+    /(\d{1,2})\s*\+\s*(?:years?|yrs?)/gi,
+    /(\d{1,2})\s*(?:years?|yrs?)\s+(?:of\s+)?(?:relevant\s+|prior\s+|work\s+|professional\s+)?experience/gi,
+  ];
+  const FRESHER = /(fresher|fresh graduate|entry[- ]level|no prior (?:work )?experience|campus hire|graduate (?:trainee|programme|program)|management trainee|final[- ]year student|20(?:26|27) (?:batch|pass ?out|graduat))/i;
+
+  const strip = s => String(s || "").replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g,"&").replace(/&lt;/g,"<").replace(/&gt;/g,">")
+    .replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&nbsp;/g," ")
+    .replace(/\s+/g, " ").trim();
+
+  function minYears(text){
+    if (!text) return null;
+    const found = [];
+    for (const re of YEARS){
+      re.lastIndex = 0;
+      let m;
+      while ((m = re.exec(text)) !== null){
+        const n = parseInt(m[1], 10);
+        if (!Number.isNaN(n)) found.push(n);
+      }
+    }
+    if (FRESHER.test(text)) found.push(0);
+    return found.length ? Math.min(...found) : null;
+  }
+
+  function isoDate(v){
+    if (v === null || v === undefined || v === "") return "";
+    if (typeof v === "number") return new Date(v).toISOString().slice(0,10);
+    const s = String(v);
+    if (/^\d+$/.test(s)) return new Date(Number(s)).toISOString().slice(0,10);
+    return s.slice(0,10);
+  }
+
+  function normalise(ats, slug, raw){
+    if (ats === "greenhouse") return {
+      ats, slug, id: String(raw.id), title: raw.title || "",
+      location: (raw.location && raw.location.name) || "",
+      url: raw.absolute_url || "",
+      posted: isoDate(raw.first_published || raw.updated_at),
+      updated: isoDate(raw.updated_at),
+      deadline: isoDate(raw.application_deadline),
+      pay: "",
+      team: (raw.departments || []).map(d => d.name).filter(Boolean).join(", "),
+      description: strip(raw.content),
+    };
+    if (ats === "lever"){
+      const c = raw.categories || {};
+      return {
+        ats, slug, id: String(raw.id), title: raw.text || "",
+        location: c.location || "", url: raw.hostedUrl || raw.applyUrl || "",
+        posted: isoDate(raw.createdAt), updated: "", deadline: "", pay: "",
+        team: c.team || c.department || "",
+        description: strip(raw.descriptionPlain),
+      };
+    }
+    if (ats === "ashby"){
+      if (raw.isListed === false) return null;
+      const comp = raw.compensation || {};
+      const band = raw.shouldDisplayCompensationOnJobPostings === false
+        ? "" : (comp.compensationTierSummary || "");
+      return {
+        ats, slug, id: String(raw.id), title: raw.title || "",
+        location: raw.location || raw.address || "",
+        url: raw.jobUrl || raw.applyUrl || "",
+        posted: isoDate(raw.publishedAt), updated: "", deadline: "", pay: band,
+        team: raw.department || raw.team || "",
+        description: strip(raw.descriptionPlain),
+      };
+    }
+    return null;
+  }
+
+  const wanted = t => /chief of staff/i.test(t)
+    || (!ENGINEERING.test(t) && !SENIOR.test(t) && WANTED.test(t));
+
+  async function pool(items, limit, fn){
+    const out = [];
+    let i = 0;
+    await Promise.all(Array.from({length: Math.min(limit, items.length)}, async () => {
+      while (i < items.length){
+        const n = i++;
+        try { out.push(await fn(items[n], n)); } catch { out.push(null); }
+      }
+    }));
+    return out;
+  }
+
+  async function pullBoard(board){
+    const res = await fetch(ENDPOINTS[board.ats](board.slug), {mode: "cors"});
+    if (!res.ok) throw new Error(`${board.ats}/${board.slug} ${res.status}`);
+    const payload = await res.json();
+    const rows = Array.isArray(payload) ? payload : (payload.jobs || []);
+    return rows.map(r => normalise(board.ats, board.slug, r)).filter(r => r && r.url);
+  }
+
+  global.PTLive = {
+    async pull(boards, onProgress){
+      let done = 0;
+      const batches = await pool(boards, 8, async board => {
+        const rows = await pullBoard(board).catch(() => []);
+        done++;
+        if (onProgress) onProgress(done, boards.length, board.slug);
+        return rows;
+      });
+      const all = batches.filter(Boolean).flat();
+      const india = all.filter(r => INDIA.test(r.location));
+      const biz = india.filter(r => wanted(r.title));
+      biz.forEach(r => { r.min_years = minYears(r.description); });
+      return {all, india, biz};
+    },
+  };
+})(window);
+
+</script>
+<script>
+let DATA = {"generated":"2026-09-10","roles":[{"age_days":9,"first_seen":"2026-09-10","reposted":false,"title":"Risk Analyst","company":"Paytm","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/paytm/beb24813-6250-46c4-b8af-63aae1f2bbe6","posted":"2026-09-01","deadline":"","team":"Lending","family":"Business analyst","min_years":1,"tier":"open","ats":"lever","batch":"","key":"lever:paytm:beb24813-6250-46c4-b8af-63aae1f2bbe6"},{"age_days":14,"first_seen":"2026-09-10","reposted":false,"title":"Associate - Motor Insurance","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/20d54134-b6e5-4816-8da9-42e3a3ed8f57","posted":"2026-08-27","deadline":"","team":"Insurance - Customer Service Team (CST)","family":"Support & other","min_years":0,"tier":"open","ats":"lever","batch":"","key":"lever:paytm:20d54134-b6e5-4816-8da9-42e3a3ed8f57"},{"age_days":38,"first_seen":"2026-09-10","reposted":false,"title":"CST - Associate - Social CST","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/84ffd393-c82b-484c-9a88-9f9ddef1b720","posted":"2026-08-03","deadline":"","team":"Customer Service Team (CST)","family":"Support & other","min_years":1,"tier":"open","ats":"lever","batch":"","key":"lever:paytm:84ffd393-c82b-484c-9a88-9f9ddef1b720"},{"age_days":38,"first_seen":"2026-09-10","reposted":false,"title":"CST - Associate - Email CST","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/715e52dd-0a51-4ff7-be68-855112e56b99","posted":"2026-08-03","deadline":"","team":"Customer Service Team (CST)","family":"Support & other","min_years":1,"tier":"open","ats":"lever","batch":"","key":"lever:paytm:715e52dd-0a51-4ff7-be68-855112e56b99"},{"age_days":44,"first_seen":"2026-09-10","reposted":false,"title":"Payroll & Finance Associate","company":"Bureau","city":"Bengaluru","location":"Bangalore","pay":"","url":"https://jobs.ashbyhq.com/bureau/8b0a9bec-c408-4815-867e-d7cfb7607a1c","posted":"2026-07-28","deadline":"","team":"Finance","family":"Support & other","min_years":1,"tier":"open","ats":"ashby","batch":"","key":"ashby:bureau:8b0a9bec-c408-4815-867e-d7cfb7607a1c"},{"age_days":155,"first_seen":"2026-09-10","reposted":false,"title":"Tele caller - Associate","company":"Paytm","city":"Mumbai","location":"Mumbai, Maharashtra","pay":"","url":"https://jobs.lever.co/paytm/552ba2c8-ffb8-4342-8d8c-ca1903800a68","posted":"2026-04-08","deadline":"","team":"Lending Collections","family":"Support & other","min_years":1,"tier":"open","ats":"lever","batch":"","key":"lever:paytm:552ba2c8-ffb8-4342-8d8c-ca1903800a68"},{"age_days":2,"first_seen":"2026-09-10","reposted":false,"title":"GTM Strategy - Chanakya","company":"Sarvam AI","city":"Delhi","location":"Delhi","pay":"","url":"https://jobs.ashbyhq.com/sarvam/6e8354d0-8e75-4e31-a361-21dfd91bfdfa","posted":"2026-09-08","deadline":"","team":"Sales/GTM","family":"Strategy","min_years":null,"tier":"unstated","ats":"ashby","batch":"","key":"ashby:sarvam:6e8354d0-8e75-4e31-a361-21dfd91bfdfa"},{"age_days":9,"first_seen":"2026-09-10","reposted":false,"title":"Product Management - Product Manager (AI) - Risk","company":"Paytm","city":"Bengaluru","location":"Bengaluru, Karnataka","pay":"","url":"https://jobs.lever.co/paytm/1486e470-b4f5-43d9-9d2e-e121db0437ef","posted":"2026-09-01","deadline":"","team":"Risk","family":"Product","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:paytm:1486e470-b4f5-43d9-9d2e-e121db0437ef"},{"age_days":16,"first_seen":"2026-09-10","reposted":false,"title":"capital partnerships","company":"CRED","city":"Bengaluru","location":"bengaluru, mumbai","pay":"","url":"https://jobs.lever.co/cred/5b8e2c1a-06eb-4127-914f-db56b3078158","posted":"2026-08-25","deadline":"","team":"business","family":"Business development","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:cred:5b8e2c1a-06eb-4127-914f-db56b3078158"},{"age_days":20,"first_seen":"2026-09-10","reposted":false,"title":"business development & strategic partnerships - d2c","company":"CRED","city":"Bengaluru","location":"bengaluru","pay":"","url":"https://jobs.lever.co/cred/a65bef0e-0f4c-40af-b662-9313f255189e","posted":"2026-08-21","deadline":"","team":"business - CREDpay","family":"Business development","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:cred:a65bef0e-0f4c-40af-b662-9313f255189e"},{"age_days":22,"first_seen":"2026-09-10","reposted":false,"title":"Associate Business Development Representative","company":"Atlan","city":"India","location":"India","pay":"","url":"https://jobs.ashbyhq.com/atlan/107864a1-7090-4a0c-9cd5-a1c6478ff2b2","posted":"2026-08-19","deadline":"","team":"Marketing","family":"Business development","min_years":null,"tier":"unstated","ats":"ashby","batch":"","key":"ashby:atlan:107864a1-7090-4a0c-9cd5-a1c6478ff2b2"},{"age_days":30,"first_seen":"2026-09-10","reposted":false,"title":"Business Analyst- Paytm Ads","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/0a05295a-5393-4c0d-bb0a-a0e7c97f1287","posted":"2026-08-11","deadline":"","team":"Paytm Ads","family":"Business analyst","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:paytm:0a05295a-5393-4c0d-bb0a-a0e7c97f1287"},{"age_days":31,"first_seen":"2026-09-10","reposted":false,"title":"Group Product Manager (Manager Effectiveness)","company":"Mindtickle","city":"Pune","location":"Pune, Maharashtra","pay":"","url":"https://jobs.lever.co/mindtickle/4365dc2a-87b1-4751-bd30-c90c70dea92c","posted":"2026-08-10","deadline":"","team":"Product Management","family":"Product","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:mindtickle:4365dc2a-87b1-4751-bd30-c90c70dea92c"},{"age_days":34,"first_seen":"2026-09-10","reposted":false,"title":"Product Manager  (Internal Platform)","company":"Meesho","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/meesho/2f1dba8f-bc99-4490-8200-d2cd7f92f544","posted":"2026-08-07","deadline":"","team":"Product","family":"Product","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:meesho:2f1dba8f-bc99-4490-8200-d2cd7f92f544"},{"age_days":35,"first_seen":"2026-09-10","reposted":false,"title":"Associate PMM \u2014 Tetriz","company":"Fi Money","city":"Bengaluru","location":"Bangalore","pay":"","url":"https://jobs.lever.co/epifi/1b3fb7e6-495d-43ec-a82f-06df53822a09","posted":"2026-08-06","deadline":"","team":"Product Marketing","family":"Support & other","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:epifi:1b3fb7e6-495d-43ec-a82f-06df53822a09"},{"age_days":44,"first_seen":"2026-09-10","reposted":false,"title":"Assistant Manager - Ops","company":"Meesho","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/meesho/5afe596f-17a2-4e8b-a498-ca46b2c7a869","posted":"2026-07-28","deadline":"","team":"Meesho Mall","family":"Operations","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:meesho:5afe596f-17a2-4e8b-a498-ca46b2c7a869"},{"age_days":71,"first_seen":"2026-09-10","reposted":false,"title":"GTM & Enterprise Sales Consultant \u2013 Meesho AI Services (MAS)","company":"Meesho","city":"Mumbai","location":"Mumbai, Maharashtra","pay":"","url":"https://jobs.lever.co/meesho/122c2edd-ea44-41fd-a06f-ecc79588f6c6","posted":"2026-07-01","deadline":"","team":"AI Services","family":"Consulting","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:meesho:122c2edd-ea44-41fd-a06f-ecc79588f6c6"},{"age_days":73,"first_seen":"2026-09-10","reposted":false,"title":"Group Product Manager","company":"Meesho","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/meesho/d7924eb1-301e-4098-ab7b-f3a4c92c210a","posted":"2026-06-29","deadline":"","team":"Product","family":"Product","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:meesho:d7924eb1-301e-4098-ab7b-f3a4c92c210a"},{"age_days":87,"first_seen":"2026-09-10","reposted":false,"title":"Manager - DAU Growth","company":"Meesho","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/meesho/d4c4d777-d41b-4940-9407-e2100fb5dcd1","posted":"2026-06-15","deadline":"","team":"All Teams","family":"Growth","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:meesho:d4c4d777-d41b-4940-9407-e2100fb5dcd1"},{"age_days":93,"first_seen":"2026-09-10","reposted":true,"title":"Implementation Consultant","company":"Zenoti","city":"Hyderabad","location":"Hyderabad, Telangana, India","pay":"","url":"https://job-boards.greenhouse.io/zenoti/jobs/7739178003","posted":"2026-06-09","deadline":"","team":"","family":"Consulting","min_years":null,"tier":"unstated","ats":"greenhouse","batch":"","key":"greenhouse:zenoti:7739178003"},{"age_days":99,"first_seen":"2026-09-10","reposted":true,"title":"Associate - Content (Digest)","company":"Groww","city":"Bengaluru","location":"Bengaluru-VTP, India","pay":"","url":"https://job-boards.eu.greenhouse.io/groww/jobs/4880153101","posted":"2026-06-03","deadline":"","team":"","family":"Support & other","min_years":null,"tier":"unstated","ats":"greenhouse","batch":"","key":"greenhouse:groww:4880153101"},{"age_days":108,"first_seen":"2026-09-10","reposted":false,"title":"business development & partnerships","company":"CRED","city":"Bengaluru","location":"bengaluru","pay":"","url":"https://jobs.lever.co/cred/09022710-e79a-4cf0-8060-df0e1cd64263","posted":"2026-05-25","deadline":"","team":"consumer products","family":"Business development","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:cred:09022710-e79a-4cf0-8060-df0e1cd64263"},{"age_days":108,"first_seen":"2026-09-10","reposted":false,"title":"Associate Compliance Manager","company":"Meesho","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/meesho/80ab7795-de6b-4dfe-9a66-a8ad5e7b8a83","posted":"2026-05-25","deadline":"","team":"Infrastructure","family":"Support & other","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:meesho:80ab7795-de6b-4dfe-9a66-a8ad5e7b8a83"},{"age_days":142,"first_seen":"2026-09-10","reposted":false,"title":"CST - Executive/Associate - Paytm Travel (Flights)","company":"Paytm","city":"Bengaluru","location":"Bengaluru, Karnataka","pay":"","url":"https://jobs.lever.co/paytm/74ce5d90-26b5-41b5-81dc-2ba5b862da60","posted":"2026-04-21","deadline":"","team":"Travel - Customer Service Team (CST)","family":"Support & other","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:paytm:74ce5d90-26b5-41b5-81dc-2ba5b862da60"},{"age_days":189,"first_seen":"2026-09-10","reposted":false,"title":"Account Executive, Commercial [NAMER]","company":"Mindtickle","city":"Pune","location":"Pune, Maharashtra","pay":"","url":"https://jobs.lever.co/mindtickle/203fff0a-f8cc-48cf-bc6f-fcd97a469674","posted":"2026-03-05","deadline":"","team":"Commercial Sales","family":"Business development","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:mindtickle:203fff0a-f8cc-48cf-bc6f-fcd97a469674"},{"age_days":209,"first_seen":"2026-09-10","reposted":false,"title":"Brand Associate","company":"Meesho","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/meesho/2b694ca9-0f0d-4ab5-a4e6-b5531cda59c8","posted":"2026-02-13","deadline":"","team":"Meesho Mall","family":"Support & other","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:meesho:2b694ca9-0f0d-4ab5-a4e6-b5531cda59c8"},{"age_days":265,"first_seen":"2026-09-10","reposted":false,"title":"Growth Operations -Paytm Money","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/c63b74c3-8a95-4126-9464-a2cc1a54eb8a","posted":"2025-12-19","deadline":"","team":"Paytm Money","family":"Growth","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:paytm:c63b74c3-8a95-4126-9464-a2cc1a54eb8a"},{"age_days":920,"first_seen":"2026-09-10","reposted":false,"title":"Learning Consultant","company":"Mindtickle","city":"Pune","location":"Pune, Maharashtra","pay":"","url":"https://jobs.lever.co/mindtickle/e5f69583-dd88-4b86-af6b-5582df1548d8","posted":"2024-03-04","deadline":"","team":"CaaS","family":"Consulting","min_years":null,"tier":"unstated","ats":"lever","batch":"","key":"lever:mindtickle:e5f69583-dd88-4b86-af6b-5582df1548d8"},{"age_days":9,"first_seen":"2026-09-10","reposted":false,"title":"Program Management \u2013 Lending(Sales Planning & Distribution Strategy)","company":"Paytm","city":"Mumbai","location":"Mumbai, Maharashtra","pay":"","url":"https://jobs.lever.co/paytm/041dc595-2d0b-45d7-9729-f0ac7c0e1764","posted":"2026-09-01","deadline":"","team":"Lending","family":"Strategy","min_years":10,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:041dc595-2d0b-45d7-9729-f0ac7c0e1764"},{"age_days":10,"first_seen":"2026-09-10","reposted":false,"title":"Product Ops \u2013 LMS (Assistant Manager)","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/a8a0e9eb-2838-466e-a60f-19f3cff63541","posted":"2026-08-31","deadline":"","team":"Lending","family":"Product","min_years":4,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:a8a0e9eb-2838-466e-a60f-19f3cff63541"},{"age_days":10,"first_seen":"2026-09-10","reposted":false,"title":"Growth Manager - Postpaid","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/5f453bde-148d-4098-996e-25bb73fdbaa5","posted":"2026-08-31","deadline":"","team":"Growth Marketing","family":"Growth","min_years":4,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:5f453bde-148d-4098-996e-25bb73fdbaa5"},{"age_days":10,"first_seen":"2026-09-10","reposted":false,"title":"Category Manager","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/1f3131e8-6d40-49d3-820e-13b0a5e99444","posted":"2026-08-31","deadline":"","team":"User Growth","family":"Category","min_years":8,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:1f3131e8-6d40-49d3-820e-13b0a5e99444"},{"age_days":15,"first_seen":"2026-09-10","reposted":false,"title":"Growth Management- DGM/ GM- Lending EMI","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/4c6e737e-0e89-4e06-985f-e7cb6e9481c5","posted":"2026-08-26","deadline":"","team":"Lending","family":"Growth","min_years":5,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:4c6e737e-0e89-4e06-985f-e7cb6e9481c5"},{"age_days":16,"first_seen":"2026-09-10","reposted":false,"title":"Product Manager, Model APIs","company":"Sarvam AI","city":"Bengaluru","location":"Bengaluru","pay":"","url":"https://jobs.ashbyhq.com/sarvam/45986600-4da3-4e46-a204-2865392df169","posted":"2026-08-25","deadline":"","team":"Models","family":"Product","min_years":3,"tier":"walled","ats":"ashby","batch":"","key":"ashby:sarvam:45986600-4da3-4e46-a204-2865392df169"},{"age_days":16,"first_seen":"2026-09-10","reposted":false,"title":"Program Manager - Assistant Manager - Lending Collection","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/82162dc3-bbd6-4151-af01-d425d44900ef","posted":"2026-08-25","deadline":"","team":"Lending Collections","family":"Operations","min_years":3,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:82162dc3-bbd6-4151-af01-d425d44900ef"},{"age_days":16,"first_seen":"2026-09-10","reposted":false,"title":"Product Analyst - Assistant Manager - Agent & Merchant","company":"Paytm","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/paytm/73be7b61-489e-499e-8856-c5ad3379bde7","posted":"2026-08-25","deadline":"","team":"Agent Product","family":"Product","min_years":3,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:73be7b61-489e-499e-8856-c5ad3379bde7"},{"age_days":17,"first_seen":"2026-09-10","reposted":false,"title":"Product Manager - Chanakya","company":"Sarvam AI","city":"Delhi","location":"Delhi","pay":"","url":"https://jobs.ashbyhq.com/sarvam/c4099026-b194-4b16-8a12-c7ae1a9b51a0","posted":"2026-08-24","deadline":"","team":"Product","family":"Product","min_years":4,"tier":"walled","ats":"ashby","batch":"","key":"ashby:sarvam:c4099026-b194-4b16-8a12-c7ae1a9b51a0"},{"age_days":21,"first_seen":"2026-09-10","reposted":false,"title":"GTM & Strategy, Model API","company":"Sarvam AI","city":"Bengaluru","location":"Bengaluru","pay":"","url":"https://jobs.ashbyhq.com/sarvam/2fd59d81-b766-4f54-85b3-d0eae08dbfc0","posted":"2026-08-20","deadline":"","team":"Sales/GTM","family":"Strategy","min_years":3,"tier":"walled","ats":"ashby","batch":"","key":"ashby:sarvam:2fd59d81-b766-4f54-85b3-d0eae08dbfc0"},{"age_days":27,"first_seen":"2026-09-10","reposted":false,"title":"Product Management - Product Manager - UPI","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/c173ccbe-d2ae-42f4-9cd5-72f69ff45a0f","posted":"2026-08-14","deadline":"","team":"Payments","family":"Product","min_years":4,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:c173ccbe-d2ae-42f4-9cd5-72f69ff45a0f"},{"age_days":27,"first_seen":"2026-09-10","reposted":false,"title":"Product Management - Product Manager - Telco","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/be484058-3628-4b82-9342-6d1864c2d4a0","posted":"2026-08-14","deadline":"","team":"Telco","family":"Product","min_years":2,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:be484058-3628-4b82-9342-6d1864c2d4a0"},{"age_days":29,"first_seen":"2026-09-10","reposted":false,"title":"Growth Operations - Assistant Manager - Travel Business (Bus)","company":"Paytm","city":"Gurugram","location":"Gurugram, Haryana","pay":"","url":"https://jobs.lever.co/paytm/3d396d95-cef6-4a5f-bd07-8b21944533a0","posted":"2026-08-12","deadline":"","team":"Travel","family":"Growth","min_years":2,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:3d396d95-cef6-4a5f-bd07-8b21944533a0"},{"age_days":29,"first_seen":"2026-09-10","reposted":false,"title":"Data Analyst (Finance)","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/494a9ea6-28af-4334-b887-5d1e6b57060c","posted":"2026-08-12","deadline":"","team":"Accounting","family":"Business analyst","min_years":2,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:494a9ea6-28af-4334-b887-5d1e6b57060c"},{"age_days":30,"first_seen":"2026-09-10","reposted":false,"title":"Program Manager- Manager- Vendor & Partnership Management","company":"Paytm","city":"Mumbai","location":"Mumbai, Maharashtra","pay":"","url":"https://jobs.lever.co/paytm/b0206e19-c969-443a-9e4d-3497befa696d","posted":"2026-08-11","deadline":"","team":"Lending","family":"Business development","min_years":4,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:b0206e19-c969-443a-9e4d-3497befa696d"},{"age_days":34,"first_seen":"2026-09-10","reposted":true,"title":"Product Manager","company":"Druva","city":"Pune","location":"Pune, Maharashtra, India","pay":"","url":"https://www.druva.com/why-druva/explore/careers/jobs/8651130002/?gh_jid=8651130002","posted":"2026-08-07","deadline":"","team":"","family":"Product","min_years":3,"tier":"walled","ats":"greenhouse","batch":"","key":"greenhouse:druva:8651130002"},{"age_days":34,"first_seen":"2026-09-10","reposted":false,"title":"Sales/BD Executive - Paytm (Pi Commerce)","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/0a418b0f-6d2f-486f-bbf3-155f09e1fce3","posted":"2026-08-07","deadline":"","team":"Inference and Agentic AI","family":"Business development","min_years":3,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:0a418b0f-6d2f-486f-bbf3-155f09e1fce3"},{"age_days":35,"first_seen":"2026-09-10","reposted":false,"title":"Project Manager","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/9f3726a5-236d-4eff-aae8-f2a56ddb072e","posted":"2026-08-06","deadline":"","team":"Business Solutions","family":"Operations","min_years":4,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:9f3726a5-236d-4eff-aae8-f2a56ddb072e"},{"age_days":35,"first_seen":"2026-09-10","reposted":false,"title":"Growth Manager - Campaigns & Analytics","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/fa5befe1-43f5-417f-a1de-a989264e1871","posted":"2026-08-06","deadline":"","team":"Consumer Growth","family":"Growth","min_years":3,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:fa5befe1-43f5-417f-a1de-a989264e1871"},{"age_days":41,"first_seen":"2026-09-10","reposted":false,"title":"Category Management- DGM/ GM","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/d8a35136-a41e-4593-ad67-a9a619de7133","posted":"2026-07-31","deadline":"","team":"User Growth","family":"Category","min_years":7,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:d8a35136-a41e-4593-ad67-a9a619de7133"},{"age_days":45,"first_seen":"2026-09-10","reposted":false,"title":"Product Manager \u2013 Media & Entertainment, Sarvam Studio","company":"Sarvam AI","city":"Bengaluru","location":"Bengaluru","pay":"","url":"https://jobs.ashbyhq.com/sarvam/adbc090f-3aad-4b12-af36-a2f4b55c017e","posted":"2026-07-27","deadline":"","team":"Product","family":"Product","min_years":5,"tier":"walled","ats":"ashby","batch":"","key":"ashby:sarvam:adbc090f-3aad-4b12-af36-a2f4b55c017e"},{"age_days":49,"first_seen":"2026-09-10","reposted":false,"title":"Technical Project Manager - Paytm","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/6a812d19-9ec8-4d97-a641-cafe50a24f81","posted":"2026-07-23","deadline":"","team":"Business Solutions","family":"Operations","min_years":4,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:6a812d19-9ec8-4d97-a641-cafe50a24f81"},{"age_days":51,"first_seen":"2026-09-10","reposted":true,"title":"Enterprise Account Executive","company":"Postman","city":"Bengaluru","location":"Bengaluru, Karnataka, India","pay":"","url":"https://job-boards.greenhouse.io/postman/jobs/7802294003","posted":"2026-07-21","deadline":"","team":"","family":"Business development","min_years":13,"tier":"walled","ats":"greenhouse","batch":"","key":"greenhouse:postman:7802294003"},{"age_days":66,"first_seen":"2026-09-10","reposted":false,"title":"Business & Partnerships Associate","company":"FamPay","city":"Bengaluru","location":"Bengaluru","pay":"","url":"https://jobs.lever.co/fampay/76e5974a-aa6f-4342-81f3-2a99821c2adc","posted":"2026-07-06","deadline":"","team":"Business","family":"Business development","min_years":3,"tier":"walled","ats":"lever","batch":"","key":"lever:fampay:76e5974a-aa6f-4342-81f3-2a99821c2adc"},{"age_days":67,"first_seen":"2026-09-10","reposted":false,"title":"Business Development Representative","company":"Sarvam AI","city":"Bengaluru","location":"Bengaluru","pay":"","url":"https://jobs.ashbyhq.com/sarvam/ccfc0dbf-cf76-439a-aaea-f622daae614b","posted":"2026-07-05","deadline":"","team":"Marketing","family":"Business development","min_years":2,"tier":"walled","ats":"ashby","batch":"","key":"ashby:sarvam:ccfc0dbf-cf76-439a-aaea-f622daae614b"},{"age_days":69,"first_seen":"2026-09-10","reposted":false,"title":"Business Analyst","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/8a118b61-3e1a-4d5c-835a-04d05197c2aa","posted":"2026-07-03","deadline":"","team":"Procurement","family":"Business analyst","min_years":2,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:8a118b61-3e1a-4d5c-835a-04d05197c2aa"},{"age_days":71,"first_seen":"2026-09-10","reposted":false,"title":"Group Product Manager (Device & RASP)","company":"Bureau","city":"Bengaluru","location":"Bangalore","pay":"","url":"https://jobs.ashbyhq.com/bureau/6bcfe19a-9a1b-4a92-a979-f7e4823ad099","posted":"2026-07-01","deadline":"","team":"Product","family":"Product","min_years":6,"tier":"walled","ats":"ashby","batch":"","key":"ashby:bureau:6bcfe19a-9a1b-4a92-a979-f7e4823ad099"},{"age_days":77,"first_seen":"2026-09-10","reposted":false,"title":"Product Analyst - Assistant Manager - Lending","company":"Paytm","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/paytm/45172222-c2e0-4cf3-ba0e-2254e48eea96","posted":"2026-06-25","deadline":"","team":"Lending","family":"Product","min_years":3,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:45172222-c2e0-4cf3-ba0e-2254e48eea96"},{"age_days":90,"first_seen":"2026-09-10","reposted":false,"title":"Business Partnerships - Insurance","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/85666bed-f6cd-4454-9cad-5906ba185cbc","posted":"2026-06-12","deadline":"","team":"Insurance","family":"Business development","min_years":2,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:85666bed-f6cd-4454-9cad-5906ba185cbc"},{"age_days":93,"first_seen":"2026-09-10","reposted":false,"title":"Sales Excellence(Strategy & Ops) - Paytm - Delhi/NCR","company":"Paytm","city":"Noida","location":"Greater Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/ec75c97a-0e6e-4cc5-869e-09deef1d6521","posted":"2026-06-09","deadline":"","team":"Inference and Agentic AI","family":"Strategy","min_years":7,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:ec75c97a-0e6e-4cc5-869e-09deef1d6521"},{"age_days":98,"first_seen":"2026-09-10","reposted":false,"title":"Business Development Representative","company":"Atlan","city":"India","location":"India","pay":"","url":"https://jobs.ashbyhq.com/atlan/8e3252f6-90fc-4ec5-abb7-6363df2df55a","posted":"2026-06-04","deadline":"","team":"Marketing","family":"Business development","min_years":2,"tier":"walled","ats":"ashby","batch":"","key":"ashby:atlan:8e3252f6-90fc-4ec5-abb7-6363df2df55a"},{"age_days":106,"first_seen":"2026-09-10","reposted":true,"title":"Payments Program Manager","company":"Zenoti","city":"Hyderabad","location":"Hyderabad, Telangana, India","pay":"","url":"https://job-boards.greenhouse.io/zenoti/jobs/7747999003","posted":"2026-05-27","deadline":"","team":"","family":"Operations","min_years":5,"tier":"walled","ats":"greenhouse","batch":"","key":"greenhouse:zenoti:7747999003"},{"age_days":107,"first_seen":"2026-09-10","reposted":false,"title":"Consumer Investing Growth Manager - SIP/ETF - Paytm Money","company":"Paytm","city":"Mumbai","location":"Mumbai, Maharashtra","pay":"","url":"https://jobs.lever.co/paytm/db20324e-47cf-410a-99de-d1b3a1870f3d","posted":"2026-05-26","deadline":"","team":"Consumer Growth","family":"Growth","min_years":3,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:db20324e-47cf-410a-99de-d1b3a1870f3d"},{"age_days":107,"first_seen":"2026-09-10","reposted":false,"title":"Consumer Investing Growth Manager - Intraday & IPO - Paytm Money","company":"Paytm","city":"Mumbai","location":"Mumbai, Maharashtra","pay":"","url":"https://jobs.lever.co/paytm/458bc9e2-61fc-411d-93c3-5f4cffcd614a","posted":"2026-05-26","deadline":"","team":"User Growth","family":"Growth","min_years":3,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:458bc9e2-61fc-411d-93c3-5f4cffcd614a"},{"age_days":107,"first_seen":"2026-09-10","reposted":false,"title":"Consumer Investing Growth Manager - Algo + Partnership - Paytm Money","company":"Paytm","city":"Mumbai","location":"Mumbai, Maharashtra","pay":"","url":"https://jobs.lever.co/paytm/8ea991c7-69ba-4e18-9d8f-10165b7586e6","posted":"2026-05-26","deadline":"","team":"User Growth","family":"Growth","min_years":5,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:8ea991c7-69ba-4e18-9d8f-10165b7586e6"},{"age_days":108,"first_seen":"2026-09-10","reposted":false,"title":"Product Manager, Monetization & Retention","company":"Sarvam AI","city":"Bengaluru","location":"Bengaluru","pay":"","url":"https://jobs.ashbyhq.com/sarvam/6390e602-7b98-4700-baa9-ced5be8b1651","posted":"2026-05-25","deadline":"","team":"Product","family":"Product","min_years":2,"tier":"walled","ats":"ashby","batch":"","key":"ashby:sarvam:6390e602-7b98-4700-baa9-ced5be8b1651"},{"age_days":108,"first_seen":"2026-09-10","reposted":false,"title":"Product Manager, Growth","company":"Sarvam AI","city":"Bengaluru","location":"Bengaluru","pay":"","url":"https://jobs.ashbyhq.com/sarvam/929e2e12-7a2f-4e28-9d27-f220910b2125","posted":"2026-05-25","deadline":"","team":"Product","family":"Growth","min_years":2,"tier":"walled","ats":"ashby","batch":"","key":"ashby:sarvam:929e2e12-7a2f-4e28-9d27-f220910b2125"},{"age_days":121,"first_seen":"2026-09-10","reposted":false,"title":"Product Manager On-Device & Edge AI","company":"Sarvam AI","city":"Bengaluru","location":"Bengaluru","pay":"","url":"https://jobs.ashbyhq.com/sarvam/f462051e-ec76-45cf-96c5-e0192dd4dcc6","posted":"2026-05-12","deadline":"","team":"Product","family":"Product","min_years":4,"tier":"walled","ats":"ashby","batch":"","key":"ashby:sarvam:f462051e-ec76-45cf-96c5-e0192dd4dcc6"},{"age_days":126,"first_seen":"2026-09-10","reposted":false,"title":"Customer Support Associate","company":"Paytm","city":"Mumbai","location":"Mumbai, Maharashtra","pay":"","url":"https://jobs.lever.co/paytm/cca996fb-c2b7-46a7-8280-c793670aa81f","posted":"2026-05-07","deadline":"","team":"Paytm Money - Customer Service Team (CST)","family":"Support & other","min_years":2,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:cca996fb-c2b7-46a7-8280-c793670aa81f"},{"age_days":141,"first_seen":"2026-09-10","reposted":false,"title":"Growth Affiliates-Paytm Money","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/861b9aba-b3d5-4c96-8ccb-7f711d3c0ab3","posted":"2026-04-22","deadline":"","team":"Paytm Money","family":"Growth","min_years":10,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:861b9aba-b3d5-4c96-8ccb-7f711d3c0ab3"},{"age_days":146,"first_seen":"2026-09-10","reposted":false,"title":"Product Manager","company":"Sarvam AI","city":"Bengaluru","location":"Bengaluru","pay":"","url":"https://jobs.ashbyhq.com/sarvam/c4bb3b2c-7608-4d57-8761-650b4222ac13","posted":"2026-04-17","deadline":"","team":"Product","family":"Product","min_years":3,"tier":"walled","ats":"ashby","batch":"","key":"ashby:sarvam:c4bb3b2c-7608-4d57-8761-650b4222ac13"},{"age_days":146,"first_seen":"2026-09-10","reposted":false,"title":"Product Manager (Models)","company":"Sarvam AI","city":"Bengaluru","location":"Bengaluru","pay":"","url":"https://jobs.ashbyhq.com/sarvam/9e197c29-5164-42eb-8e74-4f691a794517","posted":"2026-04-17","deadline":"","team":"Product","family":"Product","min_years":3,"tier":"walled","ats":"ashby","batch":"","key":"ashby:sarvam:9e197c29-5164-42eb-8e74-4f691a794517"},{"age_days":146,"first_seen":"2026-09-10","reposted":false,"title":"Product Management - Product Manager - Lending Platform","company":"Paytm","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/paytm/bcd1320b-72a8-47e1-a062-15241381fdb3","posted":"2026-04-17","deadline":"","team":"Lending","family":"Product","min_years":2,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:bcd1320b-72a8-47e1-a062-15241381fdb3"},{"age_days":196,"first_seen":"2026-09-10","reposted":true,"title":"Salesforce Techno Functional Consultant","company":"Netradyne","city":"Bengaluru","location":"Bengaluru, Karnataka, India","pay":"","url":"https://www.netradyne.com/company/careers?gh_jid=4666185005","posted":"2026-02-26","deadline":"","team":"","family":"Consulting","min_years":10,"tier":"walled","ats":"greenhouse","batch":"","key":"greenhouse:netradyne:4666185005"},{"age_days":225,"first_seen":"2026-09-10","reposted":false,"title":"Product Manager (Transaction Monitoring)","company":"Bureau","city":"Bengaluru","location":"Bangalore","pay":"","url":"https://jobs.ashbyhq.com/bureau/660a0bbc-d266-4b9b-b3e1-c93310562555","posted":"2026-01-28","deadline":"","team":"Product","family":"Product","min_years":3,"tier":"walled","ats":"ashby","batch":"","key":"ashby:bureau:660a0bbc-d266-4b9b-b3e1-c93310562555"},{"age_days":246,"first_seen":"2026-09-10","reposted":false,"title":"Sales/Services Associate - Health Insurance","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/021ee805-1a37-48a6-9a01-3e129ae03c3a","posted":"2026-01-07","deadline":"","team":"Insurance","family":"Business development","min_years":2,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:021ee805-1a37-48a6-9a01-3e129ae03c3a"},{"age_days":254,"first_seen":"2026-09-10","reposted":false,"title":"Product Management - Product Growth Manager - Agent","company":"Paytm","city":"Bengaluru","location":"Bengaluru, Karnataka","pay":"","url":"https://jobs.lever.co/paytm/3db438be-5917-4f31-96ca-f8e26f0ff5bc","posted":"2025-12-30","deadline":"","team":"Agent Product","family":"Growth","min_years":3,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:3db438be-5917-4f31-96ca-f8e26f0ff5bc"},{"age_days":282,"first_seen":"2026-09-10","reposted":false,"title":"Product Management - Product Manager - Paytm Money","company":"Paytm","city":"Bengaluru","location":"Bangalore, Karnataka","pay":"","url":"https://jobs.lever.co/paytm/d73b511b-ae92-46f0-9aa1-ac10f2fbb84a","posted":"2025-12-02","deadline":"","team":"Paytm Money","family":"Product","min_years":3,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:d73b511b-ae92-46f0-9aa1-ac10f2fbb84a"},{"age_days":398,"first_seen":"2026-09-10","reposted":false,"title":"Credit Risk Analyst","company":"Paytm","city":"Noida","location":"Noida, Uttar Pradesh","pay":"","url":"https://jobs.lever.co/paytm/ad781ae8-cd4a-44c1-a74b-2822118b7c3d","posted":"2025-08-08","deadline":"","team":"Lending","family":"Business analyst","min_years":2,"tier":"walled","ats":"lever","batch":"","key":"lever:paytm:ad781ae8-cd4a-44c1-a74b-2822118b7c3d"}],"rounds":[{"company":"Mesa School","round":"Series A","amount":"Rs 100 Cr","investors":[],"sector":"new-age business education","date":"2026-09-10","source_url":"https://entrackr.com/exclusive/exclusive-mesa-school-set-to-raise-rs-100-cr-in-series-a-co-founder-may-sell-29-stake-12513921"},{"company":"Greenwave Circularity","round":"Undisclosed","amount":"$31.5M","investors":["OeEB"],"sector":"scrap recycling circularity","date":"2026-09-10","source_url":"https://yourstory.com/2026/09/greenwave-circularity-raises-315-million-financing-from-oeeb-of-austria"},{"company":"Carrum Mobility","round":"Series B","amount":"$10 Mn","investors":["Uber"],"sector":"B2B fleet management","date":"2026-09-09","source_url":"https://entrackr.com/snippets/fleet-management-platform-carrum-mobility-raises-10-mn-in-series-b-led-by-uber-12511605"},{"company":"Theater","round":"Series A","amount":"Rs 56.25 crore","investors":["Niveshaay","FirstPort Capital","Skagen Ventures","Saket Agarwal","Vishal Julka","IPV International"],"sector":"digital-first fashion brand","date":"2026-09-09","source_url":"https://entrackr.com/exclusive/exclusive-fashion-brand-theater-raises-series-a-at-rs-400-cr-valuation-12509223"},{"company":"QNu Labs","round":"Series A1","amount":"Rs 200 Cr","investors":["National Quantum Mission","Speciale Invest","Sony Innovation Fund","Gaja Capital","Artha Ventures"],"sector":"quantum-safe cybersecurity","date":"2026-09-09","source_url":"https://entrackr.com/news/deep-tech-cybersecurity-company-qnu-labs-raises-rs-200-cr-in-series-a1-round-12509199"},{"company":"Marmalade","round":"Seed","amount":"Rs 6 crore","investors":["Ashok Chokalingam","Robert Sellares","Ishank Gupta","Srikanth Iyer","Tanuj Choudhry"],"sector":"alco-bev craft spirits","date":"2026-09-09","source_url":"https://entrackr.com/snippets/alco-bev-startup-marmalade-raises-seed-round-12508946"},{"company":"KARAM Safety","round":"Undisclosed","amount":"\u20b9600 crore","investors":["Motilal Oswal Alternates"],"sector":"personal protective equipment","date":"2026-09-09","source_url":"https://yourstory.com/2026/09/karam-safety-motilal-oswal-alternates-600-crore-investment"},{"company":"DigitalPaani","round":"Undisclosed","amount":"Rs 22 Cr","investors":["Navam Capital","Enzia Ventures","Chakra Growth Capital","3one4 Capital","Momentum Capital","Achieving Women Entrepreneurs Early Growth Fund","Echo River Capital"],"sector":"AI water infrastructure","date":"2026-09-08","source_url":"https://entrackr.com/snippets/navam-capital-leads-rs-22-cr-round-in-digitalpaani-12507542"},{"company":"Circolife","round":"Pre-Series A","amount":"$4.5 Mn","investors":["Bharat Jaisinghani","Nitish Mittersain","Intelliquity Ventures","Sumit Jalan","Siddharth Ladsariya","Anand Ladsariya","Anant Goenka","Sky Impact Capital","Rohit Dev","S N Damani","Vyom Wealth"],"sector":"cooling-as-a-service platform","date":"2026-09-08","source_url":"https://entrackr.com/snippets/circolife-raises-45-mn-in-pre-series-a-round-led-by-bharat-jaisinghani-12507089"},{"company":"Sorry Sugar","round":"Seed","amount":"$1 Mn","investors":["Dhanuka family","Amishi London"],"sector":"zero-sugar beverages","date":"2026-09-08","source_url":"https://entrackr.com/snippets/beverage-brand-sorry-sugar-raises-1-mn-in-seed-round-12506729"},{"company":"ARC","round":"Pre-seed","amount":"Rs 10.5 Cr","investors":["Chimera VC","MIXI Global Investments","Dhruv Vohra"],"sector":"gaming hardware technology","date":"2026-09-08","source_url":"https://entrackr.com/snippets/gaming-tech-startup-arc-raises-rs-105-cr-in-pre-seed-round-12506561"},{"company":"Iztri","round":"Seed","amount":"Undisclosed","investors":["All In Capital","Suashish Group","Anupam Mittal","Kunal Shah","Tanmay Bhat","Gaurav Munjal","Roman Saini","Abhishek Goyal","JK Tyre family office","Abhishek Bansal","Vaibhav Khadelwal","PedalStart"],"sector":"hyperlocal fabric care","date":"2026-09-08","source_url":"https://entrackr.com/snippets/fabric-care-startup-iztri-raises-seed-round-led-by-all-in-capital-suashish-group-12506395"},{"company":"BlissClub","round":"Series B","amount":"Rs 160 crore","investors":["Singularity AMC","Vidit Aatrey","Elevation Capital","Eight Roads Ventures"],"sector":"D2C athleisure brand","date":"2026-09-08","source_url":"https://entrackr.com/decoding/blissclub-founders-stake-slips-below-40-after-series-b-meeshos-vidit-aatrey-holds-694-12506148"},{"company":"Fundly.ai","round":"Undisclosed","amount":"$4 Mn","investors":["Accel","Multiply Ventures","Rajeev Ahuja"],"sector":"B2B pharma distribution","date":"2026-09-08","source_url":"https://entrackr.com/snippets/b2b-pharma-distribution-startup-fundlyai-raises-4-mn-led-by-accel-multiply-12505458"},{"company":"HerSpace","round":"Undisclosed","amount":"$40 million","investors":["Gray Matters Capital"],"sector":"workforce accommodation housing","date":"2026-09-07","source_url":"https://entrackr.com/news/herspace-secures-40-mn-from-existing-investor-gray-matters-capital-12502764"},{"company":"DaMENSCH","round":"Undisclosed","amount":"Rs 17.40 crore","investors":["A91 Partners","Tancom Electronics"],"sector":"D2C men's apparel","date":"2026-09-07","source_url":"https://entrackr.com/exclusive/exclusive-damensch-raises-fresh-funding-at-flat-valuation-of-rs-600-cr-12501961"},{"company":"Navana.ai","round":"Series A","amount":"Rs 40 crore ($4.2 million)","investors":["Ronnie Screwvala","Antler India","Sharad Sanghi","Sandeep Singhal","Paula Mariwala"],"sector":"voice AI enterprise","date":"2026-09-07","source_url":"https://entrackr.com/snippets/voice-ai-startup-navanaai-raises-rs-40-cr-led-by-ronnie-screwvala-12501888"},{"company":"Swish","round":"Extended Series B","amount":"Rs 224.54 crore (around $24 million)","investors":["Bertelsmann India Investments","Bain Capital Ventures","Accel","Hara Global"],"sector":"10-minute food delivery","date":"2026-09-07","source_url":"https://entrackr.com/exclusive/exclusive-swish-to-raise-around-24-mn-at-175-mn-valuation-12501614"},{"company":"Lickicious","round":"Growth","amount":"Rs 19 crore","investors":["Prath Ventures"],"sector":"pet food nutrition","date":"2026-09-07","source_url":"https://entrackr.com/snippets/pet-food-and-nutrition-brand-lickicious-raises-rs-19-cr-led-by-prath-ventures-12501283"},{"company":"Nua","round":"Series C","amount":"$50 million","investors":["Peak XV Partners","Filter Capital","Mirabilis Investment Trust","Footpath Ventures"],"sector":"women's wellness brand","date":"2026-09-07","source_url":"https://entrackr.com/news/womens-wellness-brand-nua-raises-50-mn-led-by-peak-xv-filter-capital-12501195"},{"company":"Pixxel","round":"Series C","amount":"$100 million","investors":["Temasek","Seraphim Space","360 ONE Asset","IMM Investment","Radical Ventures","growX Ventures"],"sector":"space tech satellites","date":"2026-09-07","source_url":"https://entrackr.com/news/spactech-startup-pixxel-raises-100-mn-in-series-c-led-by-temasek-seraphim-12501095"},{"company":"Sugar Cosmetics","round":"Undisclosed","amount":"Rs 144.5 crore","investors":["A91 Partners"],"sector":"D2C beauty cosmetics","date":"2026-09-04","source_url":"https://entrackr.com/news/sugar-cosmetics-raises-rs-144-cr-at-rs-755-cr-valuation-early-investors-seek-steep-discount-exits-12493909"},{"company":"Comet","round":"Series B","amount":"Rs 100 crore","investors":["Verlinvest","Elevation Capital","Nexus Venture Partners","Abhiraj Singh Bhal","Ajit Mohan","Anand Ahuja"],"sector":"D2C sneaker brand","date":"2026-09-04","source_url":"https://entrackr.com/news/d2c-sneaker-brand-comet-raises-rs-100-cr-in-series-b-led-by-verlinvest-12493061"}],"searches":[{"query":"business analyst","url":"https://www.linkedin.com/jobs/search/?keywords=business+analyst&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"},{"query":"associate consultant","url":"https://www.linkedin.com/jobs/search/?keywords=associate+consultant&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"},{"query":"strategy associate","url":"https://www.linkedin.com/jobs/search/?keywords=strategy+associate&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"},{"query":"growth analyst","url":"https://www.linkedin.com/jobs/search/?keywords=growth+analyst&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"},{"query":"product analyst","url":"https://www.linkedin.com/jobs/search/?keywords=product+analyst&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"},{"query":"associate product manager","url":"https://www.linkedin.com/jobs/search/?keywords=associate+product+manager&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"},{"query":"founder's office","url":"https://www.linkedin.com/jobs/search/?keywords=founder%27s+office&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"},{"query":"chief of staff","url":"https://www.linkedin.com/jobs/search/?keywords=chief+of+staff&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"},{"query":"category manager","url":"https://www.linkedin.com/jobs/search/?keywords=category+manager&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"},{"query":"management trainee","url":"https://www.linkedin.com/jobs/search/?keywords=management+trainee&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"},{"query":"business development associate","url":"https://www.linkedin.com/jobs/search/?keywords=business+development+associate&location=India&f_E=1%2C2&f_TPR=r2592000&sortBy=DD"}],"boards":[{"ats":"lever","slug":"paytm","postings":211},{"ats":"greenhouse","slug":"postman","postings":67},{"ats":"ashby","slug":"sarvam","postings":62},{"ats":"lever","slug":"meesho","postings":49},{"ats":"greenhouse","slug":"zenoti","postings":46},{"ats":"ashby","slug":"sentry","postings":40},{"ats":"greenhouse","slug":"druva","postings":38},{"ats":"greenhouse","slug":"bluestone","postings":32},{"ats":"greenhouse","slug":"netradyne","postings":30},{"ats":"lever","slug":"porter","postings":28},{"ats":"greenhouse","slug":"slice","postings":26},{"ats":"lever","slug":"glide","postings":20},{"ats":"lever","slug":"mindtickle","postings":19},{"ats":"lever","slug":"zeta","postings":18},{"ats":"ashby","slug":"bureau","postings":16},{"ats":"lever","slug":"fampay","postings":12},{"ats":"lever","slug":"cred","postings":11},{"ats":"lever","slug":"epifi","postings":11},{"ats":"ashby","slug":"glide","postings":10},{"ats":"ashby","slug":"navi","postings":9},{"ats":"ashby","slug":"atlan","postings":8},{"ats":"ashby","slug":"velocity","postings":8},{"ats":"ashby","slug":"bounce","postings":7},{"ats":"greenhouse","slug":"groww","postings":7},{"ats":"ashby","slug":"cello","postings":4},{"ats":"lever","slug":"eternal","postings":4},{"ats":"ashby","slug":"pilgrim","postings":4},{"ats":"ashby","slug":"river","postings":4},{"ats":"lever","slug":"vogo","postings":3},{"ats":"greenhouse","slug":"hone","postings":2},{"ats":"greenhouse","slug":"glide","postings":1},{"ats":"greenhouse","slug":"porter","postings":1}],"closed_tracked":1,"coverage":{"boards":32,"employers":29,"postings_scanned":808,"postings_india":453,"business_track":77,"open":6,"unstated":22,"walled":49}};
+const TIERS = {open:"Fresher OK", unstated:"Not stated", walled:"2+ yrs"};
+
+let marks = {};          // key -> "shortlist" | "applied"
+let db = null;
+const state = {tier:"", q:"", family:"", city:"", company:"", mark:""};
+
+const el = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
+  ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+/* ---------- header + counts ---------- */
+function paintHeader(){
+  const c = DATA.coverage || {};
+  el("gen").textContent = DATA.generated || "—";
+  el("cov-emp").textContent = c.employers ?? "—";
+  el("cov-boards").textContent = c.boards ?? "—";
+  el("cov-scan").textContent = c.postings_scanned ?? "—";
+  el("n-open").textContent = c.open ?? 0;
+  el("n-unstated").textContent = c.unstated ?? 0;
+  el("n-walled").textContent = c.walled ?? 0;
+
+  const total = (c.open||0)+(c.unstated||0)+(c.walled||0);
+  el("note").textContent = total
+    ? `Of ${total} business-track openings found in India, ${c.walled} are closed to you on `
+      + `experience alone. That ratio is the job market, not a gap in the search.`
+    : "";
+
+  const withPay = DATA.roles.filter(r => r.pay).length;
+  el("pay-note").innerHTML = withPay
+    ? `<b>${withPay}</b> of these postings publish a band. Ashby is the only feed that carries one.`
+    : `None of these employers publish a salary band. Ashby is the only feed that can carry one, `
+      + `and no Indian board in this pull filled it in.`;
+}
+
+/* ---------- filters ---------- */
+function fillSelect(id, values){
+  const sel = el(id);
+  values.filter(Boolean).sort((a,b)=>a.localeCompare(b)).forEach(v => {
+    const o = document.createElement("option");
+    o.value = v; o.textContent = v; sel.appendChild(o);
+  });
+}
+
+function matches(r){
+  if (state.tier && r.tier !== state.tier) return false;
+  if (state.family && r.family !== state.family) return false;
+  if (state.city && r.city !== state.city) return false;
+  if (state.company && r.company !== state.company) return false;
+  if (state.mark === "unmarked" && marks[r.key]) return false;
+  if (state.mark && state.mark !== "unmarked" && marks[r.key] !== state.mark) return false;
+  if (state.q){
+    const hay = `${r.title} ${r.company} ${r.team} ${r.family} ${r.city}`.toLowerCase();
+    if (!hay.includes(state.q)) return false;
+  }
+  return true;
+}
+
+/* ---------- rows ---------- */
+function rowHTML(r){
+  const gate = r.min_years === null ? "not stated"
+    : r.min_years === 0 ? "fresher" : `${r.min_years}+ yrs`;
+  const bits = [`<span class="co">${esc(r.company)}</span>`, esc(r.city)];
+  if (r.team) bits.push(esc(r.team));
+  if (r.posted) bits.push(`<span class="mono">${esc(r.posted)}</span>`);
+  if (r.deadline) bits.push(`<span class="mono">closes ${esc(r.deadline)}</span>`);
+  if (r.pay) bits.push(`<span class="mono">${esc(r.pay)}</span>`);
+  if (r.reposted) bits.push(`<span title="Edited after it was first published">reposted</span>`);
+  const age = r.age_days;
+  const ageTag = age === null || age === undefined ? ""
+    : `<span class="age ${age > 180 ? "stale" : ""}" title="Days since the employer first published this role">${
+        age < 1 ? "new today" : age + "d open"}</span>`;
+  const mk = marks[r.key] || "";
+  return `<article class="row t-${r.tier} ${mk==="applied"?"done":""}" data-key="${esc(r.key)}">
+    <div class="stripe"></div>
+    <div class="main">
+      <h3><a href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">${esc(r.title)}</a></h3>
+      <div class="meta">
+        <span class="pill ${r.tier}">${esc(TIERS[r.tier])}</span>
+        ${bits.join("<span>·</span>")}
+        <span class="mono" title="Experience the posting asks for">${esc(gate)}</span>
+        ${ageTag}
+      </div>
+    </div>
+    <div class="side">
+      <a class="apply" href="${esc(r.url)}" target="_blank" rel="noopener noreferrer">Apply ↗</a>
+      <div class="mark">
+        <button data-mark="shortlist" aria-pressed="${mk==="shortlist"}">Shortlist</button>
+        <button data-mark="applied" aria-pressed="${mk==="applied"}">Applied</button>
+      </div>
+    </div>
+  </article>`;
+}
+
+function render(){
+  const list = DATA.roles.filter(matches);
+  el("rows").innerHTML = list.length
+    ? list.map(rowHTML).join("")
+    : `<div class="empty">No role matches these filters. Clear one to widen the search.</div>`;
+  const marked = Object.keys(marks).length;
+  el("count").textContent = `${list.length} of ${DATA.roles.length} shown`
+    + (marked ? ` · ${marked} marked` : "");
+  document.querySelectorAll(".gate button").forEach(b =>
+    b.setAttribute("aria-pressed", String(state.tier === b.dataset.tier)));
+}
+
+/* ---------- rounds + links ---------- */
+function paintRounds(){
+  const rs = DATA.rounds || [];
+  el("rounds").innerHTML = rs.length ? rs.map(r => {
+    const inv = (r.investors || []).filter(Boolean);
+    return `<div class="round">
+      <div class="top">
+        <span class="co">${esc(r.company || "—")}</span>
+        <span class="amt mono">${esc(r.amount || "")}</span>
+      </div>
+      <div class="stage">${esc(r.round || "round undisclosed")}${r.sector ? " · " + esc(r.sector) : ""}</div>
+      ${inv.length ? `<div class="inv"><b>Backed by</b> ${esc(inv.slice(0,4).join(", "))}</div>` : ""}
+      <div class="foot">
+        <span class="mono" style="font-size:11.5px;color:var(--muted)">${esc(r.date || "")}</span>
+        ${r.source_url || r.url
+          ? `<a href="${esc(r.source_url || r.url)}" target="_blank" rel="noopener noreferrer">Report ↗</a>`
+          : ""}
+      </div>
+    </div>`;
+  }).join("") : `<div class="empty">No rounds in the window.</div>`;
+
+  el("links").innerHTML = (DATA.searches || []).map(s =>
+    `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.query)}</a>`).join("");
+}
+
+/* ---------- persistence ---------- */
+async function connect(){
+  try { db = await window.claude?.use?.("db"); } catch { db = null; }
+  if (!db){
+    try {
+      marks = JSON.parse(localStorage.getItem("fresher-marks") || "{}");
+      el("saved").textContent = "Marks saved in this browser only";
+    } catch { marks = {}; }
+    render();
+    return;
+  }
+  el("saved").textContent = "Marks saved to this page";
+  try {
+    db.collection("applications").onSnapshot(snap => {
+      const next = {};
+      (snap.docs || snap || []).forEach(d => {
+        const data = d.data ? d.data() : d;
+        if (data && data.state) next[d.id] = data.state;
+      });
+      marks = next;
+      render();
+    });
+  } catch {
+    render();
+  }
+}
+
+async function setMark(key, value){
+  if (marks[key] === value) { delete marks[key]; value = null; }
+  else marks[key] = value;
+  render();
+  if (db){
+    try {
+      if (value) await db.doc(`applications/${key}`).set({state:value, at:new Date().toISOString()});
+      else await db.doc(`applications/${key}`).delete();
+    } catch {/* read-only viewer: the optimistic mark stands for this session */}
+  } else {
+    try { localStorage.setItem("fresher-marks", JSON.stringify(marks)); } catch {}
+  }
+}
+
+/* ---------- wiring ---------- */
+paintHeader();
+paintRounds();
+fillSelect("f-family", [...new Set(DATA.roles.map(r => r.family))]);
+fillSelect("f-city",    [...new Set(DATA.roles.map(r => r.city))]);
+fillSelect("f-company", [...new Set(DATA.roles.map(r => r.company))]);
+render();
+
+el("q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); render(); });
+["family","city","company","mark"].forEach(k =>
+  el("f-"+k).addEventListener("change", e => { state[k] = e.target.value; render(); }));
+document.querySelectorAll(".gate button").forEach(b =>
+  b.addEventListener("click", () => {
+    state.tier = state.tier === b.dataset.tier ? "" : b.dataset.tier;
+    render();
+  }));
+el("rows").addEventListener("click", e => {
+  const btn = e.target.closest("[data-mark]");
+  if (!btn) return;
+  const key = btn.closest(".row")?.dataset.key;
+  if (key) setMark(key, btn.dataset.mark);
+});
+
+/* ---------- live pull ---------- */
+function repaint(){
+  paintHeader(); paintRounds();
+  ["family","city","company"].forEach(k => {
+    const sel = el("f-"+k); const keep = sel.value;
+    sel.length = 1;
+    fillSelect("f-"+k, [...new Set(DATA.roles.map(r => r[k === "family" ? "family" : k]))]);
+    sel.value = keep;
+  });
+  render();
+}
+
+async function boot(){
+  /* On GitHub Pages the committed file is newer than whatever was inlined at
+     build time. Inside an Artifact this fetch is blocked, and the inlined copy
+     is all there is - which is why both exist. */
+  try {
+    const res = await fetch("./data/latest.json", {cache: "no-store"});
+    if (res.ok){
+      const fresh = await res.json();
+      if (fresh && Array.isArray(fresh.roles) && fresh.roles.length){ DATA = fresh; repaint(); }
+    }
+  } catch {/* artifact context: keep the inlined data */}
+
+  /* The refresh button only appears where a cross-origin pull can actually run. */
+  if (typeof window.PTLive === "undefined" || !DATA.boards || !DATA.boards.length) return;
+  try {
+    const probe = await fetch("https://boards-api.greenhouse.io/v1/boards/postman/jobs", {mode:"cors"});
+    if (!probe.ok) return;
+  } catch { return; }
+
+  const btn = el("refresh"), note = el("livenote");
+  btn.hidden = false;
+  btn.addEventListener("click", async () => {
+    btn.disabled = true; note.hidden = false;
+    note.textContent = `Pulling ${DATA.boards.length} boards straight from Greenhouse, Lever and Ashby…`;
+    try {
+      const {all, india, biz} = await window.PTLive.pull(DATA.boards, (done, total, slug) => {
+        note.textContent = `${done} of ${total} boards · ${slug}`;
+      });
+      const byKey = new Map(DATA.roles.map(r => [r.key, r]));
+      DATA.roles = biz.map(r => {
+        const key = `${r.ats}:${r.slug}:${r.id}`;
+        const prev = byKey.get(key) || {};
+        const tier = r.min_years === null ? "unstated" : (r.min_years <= 1 ? "open" : "walled");
+        return {...prev, ...r, key, tier,
+          company: prev.company || r.slug,
+          city: prev.city || r.location,
+          family: prev.family || "Support & other",
+          age_days: prev.age_days ?? null, reposted: prev.reposted ?? false};
+      }).sort((a,b) => ({open:0,unstated:1,walled:2})[a.tier] - ({open:0,unstated:1,walled:2})[b.tier]);
+      DATA.coverage = {...DATA.coverage,
+        postings_scanned: all.length, postings_india: india.length, business_track: biz.length,
+        open: DATA.roles.filter(r=>r.tier==="open").length,
+        unstated: DATA.roles.filter(r=>r.tier==="unstated").length,
+        walled: DATA.roles.filter(r=>r.tier==="walled").length};
+      DATA.generated = new Date().toISOString().slice(0,10);
+      repaint();
+      note.textContent = `Live as of ${new Date().toLocaleTimeString()} · ${all.length} postings read from ${DATA.boards.length} boards. `
+        + `Funding and history stay as of the last scheduled build.`;
+    } catch (err) {
+      note.textContent = `Live pull failed: ${err.message}. The data below is the last scheduled build.`;
+    } finally { btn.disabled = false; }
+  });
+}
+
+connect();
+boot();
+</script>

@@ -1,0 +1,64 @@
+name: Refresh job data
+
+on:
+  schedule:
+    # Four times a day. Board feeds do not change faster than this.
+    - cron: "17 1,7,13,19 * * *"
+  workflow_dispatch:
+    inputs:
+      rediscover:
+        description: "Re-probe every candidate slug (slow, ~2200 requests)"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Re-discover boards
+        if: ${{ inputs.rediscover }}
+        run: python scripts/probe_boards.py
+
+      - name: Pull postings
+        run: python scripts/fetch_jobs.py
+
+      - name: Read descriptions and parse experience
+        run: python scripts/enrich.py
+
+      - name: Pull funding feeds
+        run: python scripts/funding.py 60
+        continue-on-error: true
+
+      - name: Update recruitment history
+        run: python scripts/track_history.py
+
+      - name: Build page data
+        run: python scripts/build_data.py
+
+      - name: Render page
+        run: python scripts/render.py
+
+      - name: Commit if anything changed
+        run: |
+          git config user.name  "pt-tracker bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A data boards.json index.html
+          if git diff --cached --quiet; then
+            echo "no change"
+          else
+            git commit -m "refresh: $(date -u +%Y-%m-%dT%H:%MZ)"
+            git push
+          fi

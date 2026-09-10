@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+probe.log
+# regenerated on every run; large and not worth versioning
+all_postings.json
+shortlist.json
+headlines.json
+rounds.json
+data.json
