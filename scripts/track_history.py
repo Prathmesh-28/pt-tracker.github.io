@@ -42,6 +42,7 @@ def days_between(a: str, b: str) -> int | None:
 def main() -> None:
     today = date.today().isoformat()
     postings = load(ROOT / "all_postings.json", [])
+    boards = load(ROOT / "boards.json", [])
     seen = load(SEEN, {})
 
     current = set()
@@ -70,8 +71,18 @@ def main() -> None:
             record["closed_on"] = ""
             record["min_years"] = row.get("min_years")
 
+    # Only a board we still track can tell us a role closed. When a board is
+    # dropped (a slug that turned out to be a foreign namesake), its postings
+    # vanish from `current` without having closed - marking them closed would
+    # invent 200 closures that never happened.
+    tracked = {f"{b['ats']}:{b['slug']}" for b in boards}
+
     newly_closed = 0
     for key, record in seen.items():
+        ats, slug, _ = key.split(":", 2)
+        if f"{ats}:{slug}" not in tracked:
+            record["untracked"] = True
+            continue
         if key not in current and not record.get("closed"):
             record["closed"] = True
             record["closed_on"] = today

@@ -2999,6 +2999,235 @@
       ],
       "sector": "founded 2022",
       "source_url": ""
+    },
+    {
+      "company": "30 Sundays",
+      "round": "Series A",
+      "amount": "Rs 64.6 Cr",
+      "date": "2026-05-27",
+      "investors": [
+        "Bessemer Venture Partners[+2]"
+      ],
+      "sector": "founded 2022",
+      "source_url": ""
+    },
+    {
+      "company": "C2I Semiconductors",
+      "round": "Series A",
+      "amount": "Rs 161.0 Cr",
+      "date": "2026-05-27",
+      "investors": [
+        "TDK Ventures[+1]"
+      ],
+      "sector": "founded 2024",
+      "source_url": ""
+    },
+    {
+      "company": "TIEA",
+      "round": "Series A",
+      "amount": "Rs 77.1 Cr",
+      "date": "2026-05-27",
+      "investors": [
+        "IvyCap Ventures[+2]"
+      ],
+      "sector": "founded 2020",
+      "source_url": ""
+    },
+    {
+      "company": "Fairdeal.market",
+      "round": "Series A",
+      "amount": "Rs 143.0 Cr",
+      "date": "2026-05-26",
+      "investors": [
+        "Bertelsmann India Investments[+12]"
+      ],
+      "sector": "founded 2022",
+      "source_url": ""
+    },
+    {
+      "company": "FlexPrice.io",
+      "round": "Seed",
+      "amount": "Rs 14.3 Cr",
+      "date": "2026-05-26",
+      "investors": [
+        "Shastra[+2]"
+      ],
+      "sector": "founded 2024",
+      "source_url": ""
+    },
+    {
+      "company": "Cyient Semiconductors (Cyient)",
+      "round": "Series A",
+      "amount": "Rs 95.9 Cr",
+      "date": "2026-05-25",
+      "investors": [
+        "EAAA Alternatives"
+      ],
+      "sector": "founded 2025",
+      "source_url": ""
+    },
+    {
+      "company": "Incuspaze",
+      "round": "Series A",
+      "amount": "Rs 45.1 Cr",
+      "date": "2026-05-25",
+      "investors": [
+        "Pantomath Group"
+      ],
+      "sector": "founded 2016",
+      "source_url": ""
+    },
+    {
+      "company": "StrainX Biotech",
+      "round": "Series B",
+      "amount": "Rs 125.0 Cr",
+      "date": "2026-05-25",
+      "investors": [
+        "Prime Venture Partners[+6]"
+      ],
+      "sector": "founded 2023",
+      "source_url": ""
+    },
+    {
+      "company": "Gabit",
+      "round": "Angel",
+      "amount": "Rs 36.3 Cr",
+      "date": "2026-05-22",
+      "investors": [
+        "Deepak Gupta[+3]"
+      ],
+      "sector": "founded 2022",
+      "source_url": ""
+    },
+    {
+      "company": "Mandrake Bio",
+      "round": "Seed",
+      "amount": "Rs 18.3 Cr",
+      "date": "2026-05-22",
+      "investors": [
+        "Antler[+7]"
+      ],
+      "sector": "founded 2025",
+      "source_url": ""
+    },
+    {
+      "company": "Metafy",
+      "round": "Seed",
+      "amount": "Rs 3.9 Cr",
+      "date": "2026-05-21",
+      "investors": [
+        "Lumikai[+3]"
+      ],
+      "sector": "founded 2025",
+      "source_url": ""
+    },
+    {
+      "company": "shatterdome",
+      "round": "Seed",
+      "amount": "Rs 33.9 Cr",
+      "date": "2026-05-21",
+      "investors": [
+        "Transpose Platform[+2]"
+      ],
+      "sector": "founded 2025",
+      "source_url": ""
+    },
+    {
+      "company": "Solfin",
+      "round": "Series C",
+      "amount": "Rs 281.0 Cr",
+      "date": "2026-05-21",
+      "investors": [],
+      "sector": "founded 2022",
+      "source_url": ""
+    },
+    {
+      "company": "TIST Media",
+      "round": "Seed",
+      "amount": "Rs 8.5 Cr",
+      "date": "2026-05-21",
+      "investors": [
+        "Sthira Partners"
+      ],
+      "sector": "founded 2016",
+      "source_url": ""
+    },
+    {
+      "company": "Wiffy",
+      "round": "Series A",
+      "amount": "Rs 29.1 Cr",
+      "date": "2026-05-21",
+      "investors": [
+        "Earthfund[+2]"
+      ],
+      "sector": "founded 2019",
+      "source_url": ""
+    },
+    {
+      "company": "ANSCER",
+      "round": "Series A",
+      "amount": "Rs 52.3 Cr",
+      "date": "2026-05-20",
+      "investors": [
+        "Indian Angel Network[+2]"
+      ],
+      "sector": "founded 2020",
+      "source_url": ""
+    },
+    {
+      "company": "Scapia",
+      "round": "Series C",
+      "amount": "Rs 610.0 Cr",
+      "date": "2026-05-20",
+      "investors": [
+        "General Catalyst[+2]"
+      ],
+      "sector": "founded 2022",
+      "source_url": ""
+    },
+    {
+      "company": "Centre for Sight",
+      "round": "Series B",
+      "amount": "Rs 90.2 Cr",
+      "date": "2026-05-19",
+      "investors": [
+        "Carillon Group[+4]"
+      ],
+      "sector": "founded 1996",
+      "source_url": ""
+    },
+    {
+      "company": "Iscon Balaji Foods",
+      "round": "Series A",
+      "amount": "Rs 1,450.0 Cr",
+      "date": "2026-05-19",
+      "investors": [
+        "Advent International"
+      ],
+      "sector": "founded 2012",
+      "source_url": ""
+    },
+    {
+      "company": "ONO",
+      "round": "Seed",
+      "amount": "Rs 11.6 Cr",
+      "date": "2026-05-19",
+      "investors": [
+        "Aeravti Ventures[+1]"
+      ],
+      "sector": "founded 2021",
+      "source_url": ""
+    },
+    {
+      "company": "Zouk",
+      "round": "Series B",
+      "amount": "Rs 60.6 Cr",
+      "date": "2026-05-19",
+      "investors": [
+        "Stellaris Venture Partners[+3]"
+      ],
+      "sector": "founded 2016",
+      "source_url": ""
     }
   ],
   "searches": [
@@ -3124,7 +3353,7 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 204,
+  "closed_tracked": 1,
   "coverage": {
     "boards": 15,
     "employers": 15,

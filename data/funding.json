@@ -1,4 +1,25 @@
 {
+ "30-sundays|2026-05-27|series-a": {
+  "amount_inr": 646000000,
+  "amount_raw": "64.6Cr",
+  "company": "30 Sundays",
+  "date": "2026-05-27",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2022",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Bessemer Venture Partners[+2]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 513,
+  "revenue_multiple": "",
+  "round": "Series A"
+ },
  "72-street|2026-09-01|angel": {
   "amount_inr": 39900000,
   "amount_raw": "3.99Cr",
@@ -80,6 +101,27 @@
   "rank": 137,
   "revenue_multiple": "",
   "round": "Seed"
+ },
+ "anscer|2026-05-20|series-a": {
+  "amount_inr": 523000000,
+  "amount_raw": "52.3Cr",
+  "company": "ANSCER",
+  "date": "2026-05-20",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2020",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Indian Angel Network[+2]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": 2050000000,
+  "pre_money_inr": 1530000000,
+  "rank": 546,
+  "revenue_multiple": "",
+  "round": "Series A"
  },
  "arboreal|2026-07-21|series-a": {
   "amount_inr": 2320000000,
@@ -258,6 +300,27 @@
   "rank": 777,
   "round": "Series A"
  },
+ "c2i-semiconductors|2026-05-27|series-a": {
+  "amount_inr": 1610000000,
+  "amount_raw": "161Cr",
+  "company": "C2I Semiconductors",
+  "date": "2026-05-27",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2024",
+  "investor_kind": "Institutional",
+  "investors": [
+   "TDK Ventures[+1]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": 5570000000,
+  "pre_money_inr": null,
+  "rank": 514,
+  "revenue_multiple": "",
+  "round": "Series A"
+ },
  "carrum|2026-09-09|series-b": {
   "amount_inr": 948000000,
   "amount_raw": "94.8Cr",
@@ -273,6 +336,27 @@
   "location": "India",
   "parent": "",
   "rank": 42,
+  "round": "Series B"
+ },
+ "centre-for-sight|2026-05-19|series-b": {
+  "amount_inr": 902000000,
+  "amount_raw": "90.2Cr",
+  "company": "Centre for Sight",
+  "date": "2026-05-19",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "1996",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Carillon Group[+4]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": 25600000000,
+  "pre_money_inr": 24700000000,
+  "rank": 555,
+  "revenue_multiple": "",
   "round": "Series B"
  },
  "centricity|2026-08-13|series-a": {
@@ -379,6 +463,27 @@
   "rank": 36,
   "revenue_multiple": "",
   "round": "Seed"
+ },
+ "cyient-semiconductors|2026-05-25|series-a": {
+  "amount_inr": 959000000,
+  "amount_raw": "95.9Cr",
+  "company": "Cyient Semiconductors",
+  "date": "2026-05-25",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2025",
+  "investor_kind": "Corporate",
+  "investors": [
+   "EAAA Alternatives"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "Cyient",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 529,
+  "revenue_multiple": "",
+  "round": "Series A"
  },
  "deployment|2026-08-10|seed": {
   "amount_inr": 476000000,
@@ -498,6 +603,27 @@
   "rank": 35,
   "round": "Seed"
  },
+ "fairdeal-market|2026-05-26|series-a": {
+  "amount_inr": 1430000000,
+  "amount_raw": "143Cr",
+  "company": "Fairdeal.market",
+  "date": "2026-05-26",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2022",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Bertelsmann India Investments[+12]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 521,
+  "revenue_multiple": "",
+  "round": "Series A"
+ },
  "finnovate|2026-06-26|seed": {
   "amount_inr": 189000000,
   "amount_raw": "18.9Cr",
@@ -516,6 +642,27 @@
   "post_money_inr": null,
   "pre_money_inr": null,
   "rank": 352,
+  "revenue_multiple": "",
+  "round": "Seed"
+ },
+ "flexprice-io|2026-05-26|seed": {
+  "amount_inr": 143000000,
+  "amount_raw": "14.3Cr",
+  "company": "FlexPrice.io",
+  "date": "2026-05-26",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2024",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Shastra[+2]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 519,
   "revenue_multiple": "",
   "round": "Seed"
  },
@@ -579,6 +726,27 @@
   "rank": 15,
   "revenue_multiple": "",
   "round": "Venture Debt"
+ },
+ "gabit|2026-05-22|angel": {
+  "amount_inr": 363000000,
+  "amount_raw": "36.3Cr",
+  "company": "Gabit",
+  "date": "2026-05-22",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2022",
+  "investor_kind": "Angel",
+  "investors": [
+   "Deepak Gupta[+3]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 534,
+  "revenue_multiple": "",
+  "round": "Angel"
  },
  "groyyo|2026-07-16|series-b": {
   "amount_inr": 908000000,
@@ -700,6 +868,27 @@
   "rank": 2,
   "round": "Seed"
  },
+ "incuspaze|2026-05-25|series-a": {
+  "amount_inr": 451000000,
+  "amount_raw": "45.1Cr",
+  "company": "Incuspaze",
+  "date": "2026-05-25",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2016",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Pantomath Group"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 527,
+  "revenue_multiple": "",
+  "round": "Series A"
+ },
  "inrisk-labs|2026-08-05|series-a": {
   "amount_inr": 2570000000,
   "amount_raw": "257Cr",
@@ -741,6 +930,27 @@
   "rank": 118,
   "revenue_multiple": "",
   "round": "Seed"
+ },
+ "iscon-balaji-foods|2026-05-19|series-a": {
+  "amount_inr": 14500000000,
+  "amount_raw": "1,450Cr",
+  "company": "Iscon Balaji Foods",
+  "date": "2026-05-19",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2012",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Advent International"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": 67500000000,
+  "pre_money_inr": 53800000000,
+  "rank": 554,
+  "revenue_multiple": "",
+  "round": "Series A"
  },
  "jio-credit|2026-08-12|series-d": {
   "amount_inr": 183000000000,
@@ -1037,6 +1247,27 @@
   "revenue_multiple": "",
   "round": "Seed"
  },
+ "mandrake-bio|2026-05-22|seed": {
+  "amount_inr": 183000000,
+  "amount_raw": "18.3Cr",
+  "company": "Mandrake Bio",
+  "date": "2026-05-22",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2025",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Antler[+7]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 532,
+  "revenue_multiple": "",
+  "round": "Seed"
+ },
  "marmalade|2026-09-09|seed": {
   "amount_inr": 60100000,
   "amount_raw": "6.01Cr",
@@ -1074,6 +1305,27 @@
   "rank": 28,
   "revenue_multiple": "",
   "round": "Series A"
+ },
+ "metafy|2026-05-21|seed": {
+  "amount_inr": 38800000,
+  "amount_raw": "3.88Cr",
+  "company": "Metafy",
+  "date": "2026-05-21",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2025",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Lumikai[+3]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 539,
+  "revenue_multiple": "",
+  "round": "Seed"
  },
  "minimac-systems|2026-08-12|seed": {
   "amount_inr": 300000000,
@@ -1270,6 +1522,27 @@
   "parent": "Anglian Omega",
   "rank": 760,
   "round": "Series A"
+ },
+ "ono|2026-05-19|seed": {
+  "amount_inr": 116000000,
+  "amount_raw": "11.6Cr",
+  "company": "ONO",
+  "date": "2026-05-19",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2021",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Aeravti Ventures[+1]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 548,
+  "revenue_multiple": "",
+  "round": "Seed"
  },
  "open-secret|2026-07-15|series-c": {
   "amount_inr": 301000000,
@@ -1688,6 +1961,27 @@
   "rank": 735,
   "round": "Conventional Debt"
  },
+ "scapia|2026-05-20|series-c": {
+  "amount_inr": 6100000000,
+  "amount_raw": "610Cr",
+  "company": "Scapia",
+  "date": "2026-05-20",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2022",
+  "investor_kind": "Institutional",
+  "investors": [
+   "General Catalyst[+2]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": 48400000000,
+  "pre_money_inr": 42300000000,
+  "rank": 544,
+  "revenue_multiple": "",
+  "round": "Series C"
+ },
  "science4beauty|2026-09-03|seed": {
   "amount_inr": 175000000,
   "amount_raw": "17.5Cr",
@@ -1772,6 +2066,27 @@
   "revenue_multiple": "",
   "round": "Seed"
  },
+ "shatterdome|2026-05-21|seed": {
+  "amount_inr": 339000000,
+  "amount_raw": "33.9Cr",
+  "company": "shatterdome",
+  "date": "2026-05-21",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2025",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Transpose Platform[+2]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 541,
+  "revenue_multiple": "",
+  "round": "Seed"
+ },
  "slice|2026-09-03|series-d": {
   "amount_inr": 9450000000,
   "amount_raw": "945Cr",
@@ -1793,6 +2108,25 @@
   "revenue_multiple": "",
   "round": "Series D"
  },
+ "solfin|2026-05-21|series-c": {
+  "amount_inr": 2810000000,
+  "amount_raw": "281Cr",
+  "company": "Solfin",
+  "date": "2026-05-21",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2022",
+  "investor_kind": "",
+  "investors": [],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": 7810000000,
+  "pre_money_inr": null,
+  "rank": 537,
+  "revenue_multiple": "",
+  "round": "Series C"
+ },
  "square-yards|2026-06-23|series-c": {
   "amount_inr": 9010000000,
   "amount_raw": "901Cr",
@@ -1813,6 +2147,27 @@
   "rank": 373,
   "revenue_multiple": "",
   "round": "Series C"
+ },
+ "strainx-biotech|2026-05-25|series-b": {
+  "amount_inr": 1250000000,
+  "amount_raw": "125Cr",
+  "company": "StrainX Biotech",
+  "date": "2026-05-25",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2023",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Prime Venture Partners[+6]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 523,
+  "revenue_multiple": "",
+  "round": "Series B"
  },
  "sugar-cosmetics|2026-09-04|series-d": {
   "amount_inr": 1450000000,
@@ -1950,6 +2305,48 @@
   "parent": "",
   "rank": 23,
   "round": "Series A"
+ },
+ "tiea|2026-05-27|series-a": {
+  "amount_inr": 771000000,
+  "amount_raw": "77.1Cr",
+  "company": "TIEA",
+  "date": "2026-05-27",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2020",
+  "investor_kind": "Institutional",
+  "investors": [
+   "IvyCap Ventures[+2]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": 2170000000,
+  "pre_money_inr": null,
+  "rank": 515,
+  "revenue_multiple": "",
+  "round": "Series A"
+ },
+ "tist-media|2026-05-21|seed": {
+  "amount_inr": 85300000,
+  "amount_raw": "8.53Cr",
+  "company": "TIST Media",
+  "date": "2026-05-21",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2016",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Sthira Partners"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": 566000000,
+  "pre_money_inr": 481000000,
+  "rank": 542,
+  "revenue_multiple": "",
+  "round": "Seed"
  },
  "typsy-beauty|2026-07-21|seed": {
   "amount_inr": 203000000,
@@ -2222,6 +2619,27 @@
   "revenue_multiple": "",
   "round": "Conventional Debt"
  },
+ "wiffy|2026-05-21|series-a": {
+  "amount_inr": 291000000,
+  "amount_raw": "29.1Cr",
+  "company": "Wiffy",
+  "date": "2026-05-21",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2019",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Earthfund[+2]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": null,
+  "pre_money_inr": null,
+  "rank": 536,
+  "revenue_multiple": "",
+  "round": "Series A"
+ },
  "wippi|2026-08-12|seed": {
   "amount_inr": 114000000,
   "amount_raw": "11.4Cr",
@@ -2356,5 +2774,26 @@
   "rank": 153,
   "revenue_multiple": "",
   "round": "Seed"
+ },
+ "zouk|2026-05-19|series-b": {
+  "amount_inr": 606000000,
+  "amount_raw": "60.6Cr",
+  "company": "Zouk",
+  "date": "2026-05-19",
+  "ev_ebitda": "",
+  "first_ingested": "2026-09-10",
+  "founded": "2016",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Stellaris Venture Partners[+3]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "post_money_inr": 6100000000,
+  "pre_money_inr": 5500000000,
+  "rank": 552,
+  "revenue_multiple": "",
+  "round": "Series B"
  }
 }
