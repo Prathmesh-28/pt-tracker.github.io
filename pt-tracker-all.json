@@ -2,7 +2,7 @@
   "compiled": "2026-09-10",
   "summary": {
     "funding_rounds_india": 154,
-    "with_role_estimates": 24,
+    "with_role_estimates": 25,
     "with_valuation": 28,
     "open_roles_scraped": 77,
     "roles_open_to_freshers": 6,
@@ -4008,12 +4008,61 @@
       "round": "Series B",
       "amount_cr": 704.0,
       "post_money_cr": null,
-      "estimated_roles": [],
-      "band_confidence": "",
+      "estimated_roles": [
+        {
+          "title": "Role Explorer",
+          "family": "General / open application (no defined family)",
+          "why": "The only live listing open to 0 years of experience (posted as 0-20 yrs) and the sole realistic door for a 2026/27 graduate today, because all 24 other reqs \u2014 including every business-side one \u2014 start at 1+ and mostly 3-8 years. It is a catch-all for candidates Pixxel wants but has no matching req for, which is exactly the situation the $100M round creates: headcount is about to move (a 6-8 yr Talent Acquisition Specialist was posted three weeks before the round) but the defined graduate reqs have not been written yet.",
+          "likelihood": "listed now"
+        },
+        {
+          "title": "Associate Product Manager / Product Analyst - Earth Observation Software",
+          "family": "Product analyst and associate product manager (APM)",
+          "why": "The round explicitly funds \"Earth intelligence software\" \u2014 scaling the Aurora / Earth Observation Studio platform \u2014 and Product currently carries exactly one req (Image Product Manager, 4-6 yrs, Bengaluru). A single senior PM cannot carry a platform that is now one of four funded pillars, and the standard next hire is a junior product/analyst seat underneath: requirements gathering from mining, agri, energy and government users, imagery product specs, and usage analytics. This is also the business-track role where an engineering degree is an advantage rather than a handicap.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Business Analyst - Business Finance (Government Contracts)",
+          "family": "Business analyst and data analyst",
+          "why": "Maps directly onto the \"sovereign space systems\" line the round funds, and onto the Manager - Business Finance (Gov Contracts) req Pixxel posted on Aug 21 2026. NASA and NRO contracts in hand plus selection to lead India's first public-private Earth observation constellation generate continuous contract costing, milestone billing, compliance reporting and audit-pack work \u2014 the delegable half of which is a junior analyst seat. Government-contract finance functions almost never stay a single-person team once the contract count grows.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Supply Chain / Procurement Associate - Gigapixxel Manufacturing",
+          "family": "Operations, supply chain and city launch",
+          "why": "One of the four stated uses of the round is increasing in-house manufacturing capacity through the Gigapixxel facility, alongside a new high-resolution optical satellite product line. Scaling a satellite production line is a procurement problem before it is an engineering one: vendor onboarding and qualification, long-lead component planning, import-export and customs documentation for space-grade parts, inventory and kitting against MAIT schedules. This is the classic entry seat that takes fresh engineering graduates on the business side, and Pixxel already runs an MAIT and checkout engineering team that a buyer/planner would support.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Program Operations / Business Operations Analyst - Mission Programs",
+          "family": "Founder's office / chief of staff / strategy associate",
+          "why": "Six Firefly satellites deployed, NASA and NRO deliverables, a new optical satellite line and India's first public-private EO constellation all running in parallel creates programme-tracking load \u2014 schedule and milestone reporting, investor and government reporting packs, cross-team coordination between Bengaluru and El Segundo. Indian deep-tech companies at exactly this stage typically add one or two junior founder's-office / business-ops seats after a large round to absorb that. No such req is open today, which is why this is possible rather than likely.",
+          "likelihood": "possible"
+        },
+        {
+          "title": "Customer Success / Solutions Associate (Geospatial)",
+          "family": "Business development, inside sales and account management",
+          "why": "Revenue comes from customers actually using imagery and analytics, and today the only commercial front door on the site is a \"Contact Sales / Become A Reseller\" form. As Aurora scales with the funded software push, onboarding mining, agriculture, energy, forestry and government users onto the platform, running pilots and turning imagery into customer-usable outputs becomes a defined job. It sits between technical and commercial, which suits an engineering graduate, but there is zero evidence of such a req today.",
+          "likelihood": "possible"
+        },
+        {
+          "title": "Sales Development / Business Development Associate - Earth Observation",
+          "family": "Business development, inside sales and account management",
+          "why": "The weakest of the set and included with that flag. A $100M growth round normally implies a go-to-market build-out, but Pixxel's board shows the opposite: not a single growth, sales, marketing, BD, category, strategy or partnerships req among 25 openings. Pixxel's revenue today looks contract- and government-led (NASA, NRO, India constellation) rather than pipeline-led, so an SDR function may simply not be how this company sells. If Aurora's commercial software motion takes hold, a junior BD or pipeline seat is the first GTM hire \u2014 but that is a 2027 possibility, not a 2026 one.",
+          "likelihood": "possible"
+        },
+        {
+          "title": "Talent Acquisition Associate / Recruiting Coordinator",
+          "family": "Management trainee and graduate leadership programmes (HR ops track)",
+          "why": "The clearest hiring tell on the board is the Talent Acquisition Specialist req at 6-8 years, posted Aug 20 2026, three weeks before the round. A senior recruiter hired immediately ahead of $100M means headcount is about to expand across spacecraft engineering, the new optical satellite line, manufacturing and the US office \u2014 and a coordinator or associate to run scheduling, sourcing and candidate operations under that specialist is the usual second hire. It is a genuine business-track entry point that takes graduates, though lower-paying than the product or finance routes.",
+          "likelihood": "possible"
+        }
+      ],
+      "band_confidence": "low",
       "fit_for_fresher": "",
       "fit_reason": "",
-      "careers_url": "",
-      "caveat": ""
+      "careers_url": "https://www.pixxel.space/careers",
+      "caveat": "The honest risk is not that the band is wrong \u2014 it is that the roles may not exist. Pixxel's live board is 19 of 25 spacecraft and space-systems engineering reqs, and there is not one growth, sales, marketing, business development, strategy, partnerships or founder's-office opening anywhere on it. Every business-side role currently posted (Business Finance Gov Contracts, Associate Director Finance US, SAP S4 Hana, Talent Acquisition Specialist, Image Product Manager) asks for 3-8 years, which means Pixxel's revealed preference for business functions is experienced laterals, not graduates. So there is a real chance that over the next 12 months this company opens zero true entry-level business-track seats in Bengaluru, and the only door for a 2026/27 grad stays the \"Role Explorer\" catch-all. Second risk: the band is derived entirely from consumer-internet and SaaS benchmarks because no Indian spacetech comparable (Pixxel, Skyroot, Agnikul, Dhruva) has enough self-reported entry-level business salaries to benchmark against \u2014 deep-tech pay can sit either below these rows (smaller commercial teams, mission-driven discount) or above them for anything image-science-adjacent. Third: for a 2026/27 engineering graduate specifically, Pixxel is far more likely to hire you into an engineering seat than a business one, and those pay on a different, generally higher scale \u2014 applying business-side is arguably fighting the company's actual demand. Fourth, a method caveat carried from the research: the job board sits in a Darwinbox iframe behind Cloudflare, so the openings list is a point-in-time read from 2026-09-10 and post-round reqs may already have changed it."
     },
     {
       "amount_inr": 348000000,
