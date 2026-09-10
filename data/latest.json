@@ -3507,12 +3507,12 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 1,
+  "closed_tracked": 6,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 607,
-    "postings_india": 453,
+    "postings_scanned": 604,
+    "postings_india": 452,
     "business_track": 77,
     "open": 6,
     "unstated": 22,
