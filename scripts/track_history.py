@@ -15,14 +15,18 @@ last_seen, and a key that stops appearing is marked closed on the date it went.
 
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
 import json
 import pathlib
 import sys
 from datetime import date, datetime
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-SEEN = ROOT / "data" / "seen.json"
-HISTORY = ROOT / "data" / "history"
+SEEN = paths.SEEN
+HISTORY = paths.HISTORY
 
 
 def load(path: pathlib.Path, fallback):
@@ -41,8 +45,8 @@ def days_between(a: str, b: str) -> int | None:
 
 def main() -> None:
     today = date.today().isoformat()
-    postings = load(ROOT / "all_postings.json", [])
-    boards = load(ROOT / "boards.json", [])
+    postings = load(paths.POSTINGS, [])
+    boards = load(paths.BOARDS, [])
     seen = load(SEEN, {})
 
     current = set()

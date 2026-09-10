@@ -8,6 +8,9 @@ import urllib.parse
 from datetime import date
 
 from fetch_jobs import INDIA, entry_level_business
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
 
 TODAY = date.today().isoformat()
 
@@ -80,9 +83,9 @@ def linkedin(query: str) -> str:
 
 
 def main() -> None:
-    postings = json.load(open("all_postings.json"))
+    postings = json.load(open(paths.POSTINGS))
     try:
-        seen = json.load(open("data/seen.json"))
+        seen = json.load(open(paths.SEEN))
     except (FileNotFoundError, json.JSONDecodeError):
         seen = {}
 
@@ -129,14 +132,14 @@ def main() -> None:
     roles.sort(key=lambda r: {"open": 0, "unstated": 1, "walled": 2}[r["tier"]])
 
     try:
-        rounds = json.load(open("rounds_clean.json"))
+        rounds = json.load(open(paths.ROUNDS_CLEAN))
     except FileNotFoundError:
-        rounds = json.load(open("rounds.json"))
+        rounds = json.load(open(paths.ROUNDS_RSS))
 
     # Fold in the accumulated Tracxn-style ingests. RSS gives narrative detail;
     # the export gives exact amounts and founded years. Neither alone is complete.
     try:
-        store = json.load(open("data/funding.json"))
+        store = json.load(open(paths.FUNDING))
     except (FileNotFoundError, json.JSONDecodeError):
         store = {}
     def norm(name):
@@ -164,7 +167,7 @@ def main() -> None:
         })
     rounds.sort(key=lambda r: r.get("date") or "", reverse=True)
 
-    boards = json.load(open("boards.json"))
+    boards = json.load(open(paths.BOARDS))
 
     data = {
         "generated": TODAY,
@@ -185,7 +188,7 @@ def main() -> None:
         },
     }
 
-    json.dump(data, open("data/latest.json", "w"), indent=2)
+    json.dump(data, open(paths.SITE_DATA, "w"), indent=2)
     c = data["coverage"]
     print(f"{c['business_track']} business-track roles: "
           f"{c['open']} open, {c['unstated']} unstated, {c['walled']} walled off")

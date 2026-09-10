@@ -20,6 +20,9 @@ import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -167,8 +170,8 @@ def main() -> None:
         c.pop("_dt", None)
 
     rounds.sort(key=lambda c: c["date"], reverse=True)
-    json.dump(classified, open("headlines.json", "w"), indent=2)
-    json.dump(rounds, open("rounds.json", "w"), indent=2)
+    json.dump(classified, open(paths.HEADLINES, "w"), indent=2)
+    json.dump(rounds, open(paths.ROUNDS_RSS, "w"), indent=2)
 
     print(f"\n{len(raw)} headlines, {len(rounds)} funding rounds inside {window} days",
           file=sys.stderr)

@@ -60,15 +60,51 @@ which publish a feed. A company missing here may simply not expose one under
 the name that was tried. Add candidates to `scripts/probe_boards.py` and run
 the refresh workflow with `rediscover` enabled.
 
+## Everything in one file
+
+`pt-tracker-all.json` and `pt-tracker-all.csv` at the repo root hold the whole
+dataset: every funding round ingested, the roles estimated for each with a
+salary band, every open posting scraped, the salary benchmarks, and the board
+list. The CSV is one row per estimated role, which is the shape you actually
+read. Rebuild both with `python3 scripts/compile_all.py`.
+
+## Run it
+
+```bash
+./scripts/run_all.sh                          # the whole pipeline, in order
+python3 scripts/ingest_paste.py <file>        # add a funding export
+python3 scripts/probe_funded.py               # look for boards at funded companies
+```
+
 ## Layout
 
+Every path is declared in `scripts/paths.py`. Nothing writes anywhere else.
+
 ```
-scripts/probe_boards.py   find which employers expose a board
-scripts/fetch_jobs.py     pull postings, filter to India and business-track
-scripts/enrich.py         read descriptions, extract the experience requirement
-scripts/funding.py        pull funding RSS, separate rounds from other news
-scripts/track_history.py  maintain first_seen / last_seen / closed
-scripts/build_data.py     assemble data/latest.json
-scripts/render.py         inject data and live.js into index.html
-scripts/live.js           browser-side re-pull
+pt-tracker-all.json      THE compiled dataset
+pt-tracker-all.csv       the same thing, one row per role
+index.html               the site (generated)
+
+data/funding.json        every funding round ever ingested, deduplicated
+data/seen.json           recruitment history: first seen, last seen, closed
+data/benchmarks.json     entry-level salary bands by family, stage and city
+data/boards.json         employers with a readable board
+data/rejected_slugs.json slugs that turned out to be foreign namesakes
+data/latest.json         what the page loads
+data/incoming/           the raw exports, kept as source of truth
+data/history/            one snapshot per run
+data/raw/                regenerated each run, not versioned
+
+scripts/paths.py         every file location, in one place
+scripts/probe_boards.py  find which employers expose a board
+scripts/probe_funded.py  same, using the funded list as candidates
+scripts/fetch_jobs.py    pull postings, filter to India and business-track
+scripts/enrich.py        read descriptions, extract the experience requirement
+scripts/funding.py       pull funding RSS, separate rounds from other news
+scripts/ingest_paste.py  parse a pasted funding export into the store
+scripts/track_history.py maintain first_seen / last_seen / closed
+scripts/build_data.py    assemble data/latest.json
+scripts/compile_all.py   write the two bundle files
+scripts/render.py        inject data and live.js into index.html
+scripts/live.js          browser-side re-pull
 ```

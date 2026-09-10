@@ -17,6 +17,9 @@ import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -162,7 +165,7 @@ def pull(board: dict) -> list[dict]:
 
 
 def main() -> None:
-    boards = json.load(open("boards.json"))
+    boards = json.load(open(paths.BOARDS))
     print(f"pulling {len(boards)} boards", file=sys.stderr)
 
     everything: list[dict] = []
@@ -175,8 +178,8 @@ def main() -> None:
 
     keep.sort(key=lambda r: (r["posted"] or ""), reverse=True)
 
-    json.dump(everything, open("all_postings.json", "w"), indent=2)
-    json.dump(keep, open("shortlist.json", "w"), indent=2)
+    json.dump(everything, open(paths.POSTINGS, "w"), indent=2)
+    json.dump(keep, open(paths.SHORTLIST, "w"), indent=2)
 
     print(f"\n{len(everything)} postings total", file=sys.stderr)
     print(f"{len(india)} in India", file=sys.stderr)

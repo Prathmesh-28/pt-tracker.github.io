@@ -51,11 +51,14 @@ jobs:
       - name: Render page
         run: python scripts/render.py
 
+      - name: Compile the single-file bundle
+        run: python scripts/compile_all.py
+
       - name: Commit if anything changed
         run: |
           git config user.name  "pt-tracker bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A data boards.json index.html
+          git add -A data index.html pt-tracker-all.json pt-tracker-all.csv
           if git diff --cached --quiet; then
             echo "no change"
           else

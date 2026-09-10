@@ -17,6 +17,9 @@ import re
 import sys
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -92,8 +95,8 @@ def fetch_descriptions(board: dict) -> dict[str, str]:
 
 
 def main() -> None:
-    boards = json.load(open("boards.json"))
-    postings = json.load(open("all_postings.json"))
+    boards = json.load(open(paths.BOARDS))
+    postings = json.load(open(paths.POSTINGS))
 
     print(f"fetching descriptions for {len(boards)} boards", file=sys.stderr)
     lookup: dict[tuple[str, str], dict[str, str]] = {}
@@ -114,7 +117,7 @@ def main() -> None:
         else:
             stated += 1
 
-    json.dump(postings, open("all_postings.json", "w"), indent=2)
+    json.dump(postings, open(paths.POSTINGS, "w"), indent=2)
     print(f"\nexperience stated on {stated}, unstated on {unstated}", file=sys.stderr)
 
 

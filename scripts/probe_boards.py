@@ -11,6 +11,9 @@ import sys
 import urllib.error
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -643,7 +646,7 @@ def main() -> None:
                       file=sys.stderr)
 
     hits.sort(key=lambda h: -h["postings"])
-    with open("boards.json", "w") as f:
+    with open(paths.BOARDS, "w") as f:
         json.dump(hits, f, indent=2)
     print(f"\n{len(hits)} live boards across {len({h['slug'] for h in hits})} employers "
           f"-> boards.json", file=sys.stderr)

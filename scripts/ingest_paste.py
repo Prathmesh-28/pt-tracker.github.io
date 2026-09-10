@@ -10,6 +10,10 @@ company names, and "Logo (failed to load)" in place of "Logo".
 
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
 import json
 import re
 import sys
@@ -106,7 +110,7 @@ def parse(text: str) -> list[dict]:
     return records
 
 
-STORE = pathlib.Path(__file__).resolve().parent.parent / "data" / "funding.json"
+STORE = paths.FUNDING
 
 
 def slug(text: str) -> str:

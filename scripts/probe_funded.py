@@ -10,6 +10,10 @@ to real boards belonging to unrelated foreign companies.
 
 from __future__ import annotations
 
+import os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import paths
+
 import json
 import pathlib
 import re
@@ -71,10 +75,10 @@ def probe(job):
 
 
 def main() -> None:
-    store = json.loads((ROOT / "data" / "funding.json").read_text())
+    store = json.loads((paths.FUNDING).read_text())
     rejected = set()
     try:
-        rejected = set(json.loads((ROOT / "data" / "rejected_slugs.json").read_text())["slugs"])
+        rejected = set(json.loads((paths.REJECTED).read_text())["slugs"])
     except Exception:
         pass
 
@@ -99,7 +103,7 @@ def main() -> None:
                       f"{res['postings']:>4} postings, {res['india']:>3} India "
                       f"({res['matched_company']})", file=sys.stderr)
 
-    (ROOT / "data" / "funded_boards.json").write_text(json.dumps(hits, indent=2))
+    (paths.FUNDED_BOARDS).write_text(json.dumps(hits, indent=2))
     print(f"\n{len(hits)} boards with a real India presence", file=sys.stderr)
 
 
