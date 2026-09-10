@@ -31,11 +31,17 @@ def to_rupees(text: str) -> int | None:
     """'143Cr' -> 1430000000, '95.6L' -> 9560000, '18,300Cr' -> ..."""
     if not text or text == "-":
         return None
-    m = re.match(r"^([\d,]+(?:\.\d+)?)\s*(Cr|L)$", text.strip(), re.I)
-    if not m:
-        return None
-    value = float(m.group(1).replace(",", ""))
-    return int(value * (10_000_000 if m.group(2).lower() == "cr" else 100_000))
+    t = text.strip()
+    m = re.match(r"^([\d,]+(?:\.\d+)?)\s*(Cr|L)$", t, re.I)
+    if m:
+        value = float(m.group(1).replace(",", ""))
+        return int(value * (10_000_000 if m.group(2).lower() == "cr" else 100_000))
+    # a few rows come through in dollars; 88 INR/USD is close enough to rank by
+    d = re.match(r"^\$\s?([\d,]+(?:\.\d+)?)\s*([KMB])?$", t, re.I)
+    if d:
+        mult = {"k": 1_000, "m": 1_000_000, "b": 1_000_000_000}.get((d.group(2) or "").lower(), 1)
+        return int(float(d.group(1).replace(",", "")) * mult * 88)
+    return None
 
 
 def parse(text: str) -> list[dict]:
