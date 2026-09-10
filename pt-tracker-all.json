@@ -2,7 +2,7 @@
   "compiled": "2026-09-10",
   "summary": {
     "funding_rounds_india": 154,
-    "with_role_estimates": 20,
+    "with_role_estimates": 24,
     "with_valuation": 28,
     "open_roles_scraped": 77,
     "roles_open_to_freshers": 6,
@@ -54,12 +54,67 @@
       "round": "Series B",
       "amount_cr": 228.0,
       "post_money_cr": null,
-      "estimated_roles": [],
-      "band_confidence": "",
+      "estimated_roles": [
+        {
+          "title": "Talent Acquisition Specialist",
+          "family": "HR and talent acquisition",
+          "why": "Already live in Bengaluru (posted 8 Sep 2026), alongside a Head of Human Resources posted 18 Aug. The round funds a jump from ~50 pincodes to a 1,000+ kitchen roadmap across new cities, which is a hiring problem before it is anything else \u2014 the company is staffing recruiting capacity first. This is the only currently-listed non-engineering role a 0-1 year graduate could realistically enter; the other nine live postings are Manager, Senior Manager, Lead or Head grade.",
+          "likelihood": "listed now"
+        },
+        {
+          "title": "City Launch / Expansion Associate",
+          "family": "Operations, supply chain and city launch",
+          "why": "The company's own announcement says the capital will 'expand into new cities' and 'enter new urban markets'. Each launch needs a junior owner for site scouting, kitchen commissioning, pincode-level demand mapping and the first 90 days of launch metrics \u2014 the standard entry seat at every Indian quick-commerce company at this stage.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Kitchen Operations Executive / Cluster Operations Associate",
+          "family": "Operations, supply chain and city launch",
+          "why": "Swish owns and staffs its kitchens rather than partnering with restaurants. Going from today's footprint to 1,000+ kitchens means the highest-volume entry-level seat by far is shift and cluster ops \u2014 holding prep time under four minutes and 80%+ of orders under 15 minutes. It is also the lowest-paid seat in this family, sitting at or below the bottom of the band.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Supply Chain / Inventory Analyst (Associate)",
+          "family": "Operations, supply chain and city launch",
+          "why": "Reports under the already-listed Senior Manager \u2013 Inventory & Process Design. The round is explicitly for 'supply chain infrastructure', and 250+ SKUs across 20+ categories cooked fresh in 1 km micro-catchments makes daily demand forecasting, indenting and wastage control a funded, headcount-hungry problem.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Procurement / Sourcing Associate",
+          "family": "Category management and merchandising / procurement",
+          "why": "A Procurement Manager role is live in Bengaluru right now. A multi-city raw-material buy for company-owned kitchens needs junior buyers per commodity group (produce, dairy, packaging, proteins) as kitchen count multiplies across Delhi NCR and Bengaluru \u2014 this is the commercial analogue of a category role at a marketplace.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Business Analyst \u2013 Central Operations",
+          "family": "Business analyst and data analyst",
+          "why": "Monthly orders tripled since March 2026 to 1M+, against Rs 4 crore revenue and a Rs 19 crore loss in the 8-month FY25 filing. Cost-per-order, rider utilisation, kitchen-level P&L and SLA analytics are exactly what a Series B2 board asks for, and the already-listed Manager \u2013 Operations Excellence & Productivity will need analyst support under them.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Growth / Performance Marketing Associate",
+          "family": "Growth and performance marketing",
+          "why": "Brand Manager and PR Lead are both open in Bengaluru, meaning a consumer-marketing function is being built from scratch \u2014 junior performance, CRM and retention seats typically follow within one or two quarters. Marked possible rather than likely because the stated use of funds is kitchens and supply chain, not a GTM build.",
+          "likelihood": "possible"
+        },
+        {
+          "title": "Associate \u2013 Founder's Office / Strategy",
+          "family": "Founder's office / chief of staff / strategy associate",
+          "why": "Three founders (Aniket Shah, Ujjwal Sukheja, Sureshkumar Saran) running a five-city operation with a low-thousands on-ground workforce and a 1,000-kitchen roadmap is the classic trigger for one or two junior founder's-office hires after a raise. Possible, not likely, because it is a one-or-two-person function, not a hiring wave.",
+          "likelihood": "possible"
+        },
+        {
+          "title": "Product Analyst",
+          "family": "Product analyst and associate product manager",
+          "why": "Swish owns the app, the kitchens and the fleet, so it holds full-stack order-to-doorstep data that a product analyst could work \u2014 but product headcount at a ~350-person, ops-heavy company is thin and this round funds physical infrastructure rather than product.",
+          "likelihood": "possible"
+        }
+      ],
+      "band_confidence": "medium",
       "fit_for_fresher": "",
       "fit_reason": "",
-      "careers_url": "",
-      "caveat": ""
+      "careers_url": "https://www.linkedin.com/company/justswish/jobs/",
+      "caveat": "Three things could make this wrong for Swish specifically. First, it may not run a graduate business track at all: all ten non-engineering roles live today are Manager, Senior Manager, Lead or Head grade, which is the signature of a company hiring 3-8 year laterals out of Zepto, Swiggy, Blinkit and Rebel Foods rather than freshers \u2014 the entry-level wave is inferred from the Head of HR plus Talent Acquisition Specialist hires, not observed. Second, the fixed-cash budget may be tighter than a $175M valuation implies: Rs 4 crore of revenue against a Rs 19 crore loss in the last filed period, in a business that pays for its own kitchens, kitchen staff and riders, means capital is going into physical assets and on-ground wages, not office CTCs; a cost-heavy owned-kitchen model typically pays its corporate ops bench below a comparably-valued asset-light marketplace. Third, the entry-level population at this company is overwhelmingly kitchen and rider staff at Rs 2.5-4 LPA, and a role titled 'Operations Executive' at Swish could be either that or a Bengaluru HQ analyst seat \u2014 the title alone will not tell you which, so ask in the first call whether the seat is kitchen-floor, city-cluster or central before benchmarking any number against this band. Also note there is no self-hosted careers portal or ATS: the justswish.in careers link points straight at LinkedIn Jobs, so postings and any pay detail can appear and disappear without a trace."
     },
     {
       "amount_inr": 948000000,
@@ -855,12 +910,61 @@
       "round": "Series D",
       "amount_cr": 145.0,
       "post_money_cr": null,
-      "estimated_roles": [],
-      "band_confidence": "",
+      "estimated_roles": [
+        {
+          "title": "Performance Marketing Executive (paid media / D2C acquisition)",
+          "family": "Growth and performance marketing",
+          "why": "The round is explicitly characterised as capital to stabilise a business whose revenue fell 20% to Rs 404 crore while losses nearly doubled to Rs 135 crore. For a D2C beauty brand in that position, CAC and ROAS on Meta/Google/marketplace ads are the one lever that moves both revenue and burn, and paid-media execution is the last thing a D2C brand stops staffing. It is also the cheapest seat to fill with a 0-1 year hire.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Business Analyst / MIS Analyst (sales, retail and channel reporting)",
+          "family": "Business analyst and data analyst",
+          "why": "A Rs 135 crore loss on Rs 404 crore of revenue plus a new institutional investor holding ~19.97% means monthly SKU-, store- and channel-level margin reporting becomes mandatory. Investor reporting packs and unit-economics dashboards are entry-level analyst work, and a stabilisation raise funds cost visibility before it funds growth.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Category / Merchandising Executive (colour cosmetics)",
+          "family": "Category management and merchandising",
+          "why": "Colour cosmetics is an assortment and shade-depth business, and a stabilisation phase means SKU rationalisation, dead-inventory clean-up and margin-mix work rather than new-category launches. That is exactly what a junior category executive does, and it directly frees working capital, which is what the round is for.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "E-commerce / Marketplace Account Executive (Nykaa, Amazon, Myntra, Flipkart)",
+          "family": "Business development, inside sales and account management",
+          "why": "When own-site acquisition is unaffordable, marketplace channels carry the volume. Listing hygiene, catalogue and A+ content, marketplace ad spend and co-op negotiation is a junior account-executive seat, and it is revenue-protecting rather than revenue-expanding, which fits a survival raise.",
+          "likelihood": "likely"
+        },
+        {
+          "title": "Supply Chain / Demand Planning Executive",
+          "family": "Operations, supply chain and city launch",
+          "why": "Inventory is the largest cash lever available to a brand raising to stabilise. Better forecasting, fill-rate and returns control at the warehouse and counter level converts directly into cash, and planning-executive seats are the standard entry point for that work.",
+          "likelihood": "possible"
+        },
+        {
+          "title": "Retail Operations Executive (branded counters and stores)",
+          "family": "Operations, supply chain and city launch",
+          "why": "Most of the company's 500-1,700 headcount is retail and field staff, so this is where replacement hiring actually happens even with no expansion plan. Note it is the lowest-paid role on this list and is largely a field/BA-coordination seat, not an HQ analytics seat.",
+          "likelihood": "possible"
+        },
+        {
+          "title": "Retention / CRM Marketing Associate",
+          "family": "Growth and performance marketing",
+          "why": "The standard playbook when paid acquisition has to shrink is to push repeat purchase through email, WhatsApp and loyalty. A junior CRM associate is a cheap way to lift contribution margin without adding ad spend, which is precisely what a stabilisation raise pays for.",
+          "likelihood": "possible"
+        },
+        {
+          "title": "Founder's Office / Strategy Associate",
+          "family": "Founder's office / chief of staff / strategy associate",
+          "why": "Down-round companies commonly add one junior associate to the CEO/CFO office to run the cost programme, board and investor reporting and A91's diligence follow-ups. It is a single seat at most, and it is the first thing cut if hiring stays frozen.",
+          "likelihood": "possible"
+        }
+      ],
+      "band_confidence": "low",
       "fit_for_fresher": "",
       "fit_reason": "",
-      "careers_url": "",
-      "caveat": ""
+      "careers_url": "None found. sugarcosmetics.com has no careers page (its pages sitemap lists only /pages/about-us; /pages/careers and /careers redirect to product pages and /pages/career returns 404), careers.sugarcosmetics.com does not resolve, and no ATS instance exists on keka, darwinbox, zohorecruit or freshteam. The only plausible listing surface is the official LinkedIn company page's jobs tab (https://www.linkedin.com/company/sugarcosmetics/), which showed no public openings at the time of research.",
+      "caveat": "The most likely way this is wrong is that SUGAR opens none of these roles at all. There is no use-of-funds statement, no headcount plan, no careers page, no ATS and no public postings, and the round reads as a survival raise on falling revenue and doubling losses \u2014 a company in that position often freezes corporate hiring entirely and backfills only retail and field seats, where an engineering graduate is not the target candidate anyway. Two further specific risks. One, if they do hire on the business side, a cash-constrained company usually buys experienced laterals who need no training rather than 0-1 year graduates, which would push the real entry door to internships and contract roles rather than the full-time bands quoted here. Two, the evidence base for the \"no hiring\" read is weak in a particular way: the research session's web-search budget was exhausted and mine is too, so job boards (Naukri, Indeed, foundit, Instahyre, AmbitionBox) were never actually checked \u2014 all returned HTTP 403 to automated fetches. Absence of a findable posting is not a confirmed empty board, and a brand this size almost certainly recruits through Naukri and referrals rather than an owned careers page, so live openings could well exist that this analysis cannot see. The company profile itself is marked unverified, including the headcount range and the stage read. Finally, the benchmark rows used carry medium confidence at best, none of them segment by funding stage directly, and none cover a distressed down-round company specifically \u2014 the stabilisation discount applied here is judgement, not measurement."
     },
     {
       "amount_inr": 104000000,
@@ -2366,12 +2470,77 @@
       "round": "Series D",
       "amount_cr": 18300.0,
       "post_money_cr": null,
-      "estimated_roles": [],
-      "band_confidence": "",
-      "fit_for_fresher": "",
-      "fit_reason": "",
-      "careers_url": "",
-      "caveat": ""
+      "estimated_roles": [
+        {
+          "title": "Home Loan Sales Relationship Manager",
+          "family": "Business development, inside sales and account management",
+          "why": "Live posting on the company's own Naukri recruiter account (JIO Credit - Housing Loan Builder Channel). Home loans and LAP are the core secured retail products the BofA capital is meant to scale, and disbursements grew 173% YoY - frontline RM headcount is the direct lever. An engineering grad can enter this, but it is builder-channel/DSA relationship sales with a monthly disbursement target, not an analytical role.",
+          "likelihood": "listed now",
+          "band_low_lpa": 4,
+          "band_high_lpa": 7
+        },
+        {
+          "title": "Home Loan Sales Relationship Manager - Chennai",
+          "family": "Business development, inside sales and account management",
+          "why": "Same live posting, Chennai location - so it prices off the non-metro row, not the Mumbai HQ row. Chennai is a GCC/tier-1.5 city so it sits at the top of the non-metro band rather than the floor, but frontline NBFC RM pay carries almost no city premium and the fixed component is deliberately kept low against an incentive tail.",
+          "likelihood": "listed now",
+          "band_low_lpa": 3.5,
+          "band_high_lpa": 6
+        },
+        {
+          "title": "Walk-in || Sales Manager- LAP",
+          "family": "Business development, inside sales and account management",
+          "why": "Live walk-in posting (Delhi NCR) for loan-against-property sales. LAP is the second leg of the secured retail book being recapitalised. Caution: a walk-in 'Sales Manager' title in NBFC lending almost always screens for 1-3 years of existing DSA/channel relationships and a portable sourcing book - a 0-1 year graduate lands at the very bottom of this band if at all.",
+          "likelihood": "listed now",
+          "band_low_lpa": 4.5,
+          "band_high_lpa": 8
+        },
+        {
+          "title": "Credit Analyst / Underwriter - Secured Lending (Trainee)",
+          "family": "Business analyst and data analyst",
+          "why": "Gross AUM went from \u20b911,665 Cr to \u20b930,667 Cr in four quarters. Every one of those files needs income assessment, property/collateral valuation review and policy-deviation checks, and underwriting headcount scales roughly with file volume. This is the most realistic HQ-based analytical entry point for an engineering graduate, and BofA's stated contribution of risk-management and governance expertise makes the credit function the one most likely to be built out deliberately rather than opportunistically.",
+          "likelihood": "likely",
+          "band_low_lpa": 4.5,
+          "band_high_lpa": 9
+        },
+        {
+          "title": "Risk / Portfolio Analytics Analyst",
+          "family": "Business analyst and data analyst",
+          "why": "A book that tripled in a year has not yet seen its own delinquency curve. The BofA deal explicitly brings 'risk management, governance and technology expertise' plus equal board representation, which in practice means portfolio monitoring, early-warning and vintage-cut reporting get staffed properly. SQL/Python-literate engineering graduates are the standard hire here, and this is the highest-paying business-track seat a fresher can realistically get at this company.",
+          "likelihood": "likely",
+          "band_low_lpa": 6,
+          "band_high_lpa": 12
+        },
+        {
+          "title": "Management Trainee / Graduate Trainee - Jio Financial Services",
+          "family": "Management trainee and graduate leadership programmes",
+          "why": "JFSL group headcount went from ~584 in FY24 to over 2,000 in FY26 and is still climbing across four regulated entities sharing one Mumbai BKC campus and one careers inbox. Groups scaling at that rate almost always stand up a rotational trainee cadre rather than hiring every seat laterally. Note this would be a group-level programme (careers@jfs.in), not a Jio Credit-branded one - and no such programme is publicly advertised today, which is why this is 'possible' rather than 'likely'.",
+          "likelihood": "possible",
+          "band_low_lpa": 6,
+          "band_high_lpa": 11
+        },
+        {
+          "title": "Business / Product Analyst - JioFinance App",
+          "family": "Product analyst and associate product manager",
+          "why": "The company describes itself as digital-first and originates most of its loans through the JioFinance app, so journey conversion, drop-off analysis and lending-funnel instrumentation are business-critical rather than nice-to-have. An engineering degree is an asset here rather than a mismatch. Tempered by the fact that JFSL group runs product and tech centrally and this seat may sit in a sibling entity, not in Jio Credit itself.",
+          "likelihood": "possible",
+          "band_low_lpa": 7,
+          "band_high_lpa": 13
+        },
+        {
+          "title": "Collections & Loan Operations Executive",
+          "family": "Operations, supply chain and city launch",
+          "why": "Secured lending at this growth rate generates a large downstream load - disbursement processing, document and lien management, mortgage registration follow-up, and early-bucket collections as the first vintages season. It is the highest-volume genuine fresher entry point at any NBFC, and the lowest-paid; listed here for completeness because an engineering graduate should recognise it as a different career track from the analytics roles above.",
+          "likelihood": "possible",
+          "band_low_lpa": 3.5,
+          "band_high_lpa": 6
+        }
+      ],
+      "band_confidence": "medium",
+      "fit_for_fresher": "mixed",
+      "fit_reason": "Split verdict, and the split matters more than the average. Against the fresher: every single publicly visible opening is experienced frontline secured-lending sales - two builder-channel home-loan RM posts and a walk-in LAP Sales Manager - and NBFC channel sales screens for existing DSA and builder relationships that a 2026/2027 graduate does not have. The 'Sales Manager' title in particular is a 1-3 year role. The group careers page at jfs.in/careers carries no individual vacancies at all, only a resume inbox, which is what a company with no structured campus intake looks like from the outside. And an engineering degree is close to irrelevant in these roles; commerce graduates and MBAs are the default hire. For the fresher: this is a genuinely fast-scaling lender, not a mature bank protecting headcount - AUM up 163% and disbursements up 173% in a year, JFSL group headcount from ~584 in FY24 to over 2,000 in FY26. Growth of that shape always creates volume entry seats in credit operations, underwriting support and collections, and the BofA mandate to import risk management, governance and technology capability points at a deliberate build-out of risk and portfolio analytics, which is where an engineering graduate's SQL and Python are actually worth paying for. The practical conclusion: do not expect to walk into a business-track seat here through a public job board. The realistic routes are the careers@jfs.in inbox, staffing agencies that supply NBFC credit ops, and Reliance/Jio group campus channels - and the sales roles that are visible pay bottom-quartile fixed cash with a target-contingent tail.",
+      "careers_url": "https://www.jfs.in/careers/",
+      "caveat": "The visible hiring sample is three postings from two Naukri recruiter accounts, and none of them is entry-level - so the role mix above is built mostly on inference about what a lender tripling its book must need, not on observed vacancies. A group this size hires through internal referral and staffing agencies, so the true opening list is near-certainly larger and differently shaped than what I could see; there may already be a Jio Credit or JFSL graduate cadre recruiting off campus that leaves no public trace, in which case both the titles and the pay grid would be standardised and could differ materially from these bands in either direction. The bands themselves are the second weakness: none of these companies published a band, and no benchmark row is specific to NBFC secured lending. I priced the sales roles by an analogy - Indian listed internet BDE/inside-sales - drawn from IndiaMART, Info Edge and edtech BDA data, which may not travel cleanly to mortgage channel sales, where fixed pay can run lower and the incentive tail higher than I have assumed. Finally, the stage label in the source export was wrong ('Series D' venture funding for what is a JV preferential allotment by a listed large-cap subsidiary); I have corrected it to listed/large, but if the group prices this entity as a growth venture rather than as Reliance-grid corporate BFSI, the analytical roles could pay above these bands. That correction, plus the absence of any NBFC-specific benchmark row and any posted band, is why confidence is medium despite the underlying benchmark rows being rated high."
     },
     {
       "amount_inr": 95399999,
@@ -4332,12 +4501,77 @@
       "round": "Series H",
       "amount_cr": 5090.0,
       "post_money_cr": null,
-      "estimated_roles": [],
-      "band_confidence": "",
-      "fit_for_fresher": "",
-      "fit_reason": "",
-      "careers_url": "",
-      "caveat": ""
+      "estimated_roles": [
+        {
+          "title": "Home Loan Sales Relationship Manager",
+          "family": "Business development, inside sales and account management",
+          "why": "Live posting on the company's own Naukri recruiter account (JIO Credit - Housing Loan Builder Channel). Home loans and LAP are the core secured retail products the BofA capital is meant to scale, and disbursements grew 173% YoY - frontline RM headcount is the direct lever. An engineering grad can enter this, but it is builder-channel/DSA relationship sales with a monthly disbursement target, not an analytical role.",
+          "likelihood": "listed now",
+          "band_low_lpa": 4,
+          "band_high_lpa": 7
+        },
+        {
+          "title": "Home Loan Sales Relationship Manager - Chennai",
+          "family": "Business development, inside sales and account management",
+          "why": "Same live posting, Chennai location - so it prices off the non-metro row, not the Mumbai HQ row. Chennai is a GCC/tier-1.5 city so it sits at the top of the non-metro band rather than the floor, but frontline NBFC RM pay carries almost no city premium and the fixed component is deliberately kept low against an incentive tail.",
+          "likelihood": "listed now",
+          "band_low_lpa": 3.5,
+          "band_high_lpa": 6
+        },
+        {
+          "title": "Walk-in || Sales Manager- LAP",
+          "family": "Business development, inside sales and account management",
+          "why": "Live walk-in posting (Delhi NCR) for loan-against-property sales. LAP is the second leg of the secured retail book being recapitalised. Caution: a walk-in 'Sales Manager' title in NBFC lending almost always screens for 1-3 years of existing DSA/channel relationships and a portable sourcing book - a 0-1 year graduate lands at the very bottom of this band if at all.",
+          "likelihood": "listed now",
+          "band_low_lpa": 4.5,
+          "band_high_lpa": 8
+        },
+        {
+          "title": "Credit Analyst / Underwriter - Secured Lending (Trainee)",
+          "family": "Business analyst and data analyst",
+          "why": "Gross AUM went from \u20b911,665 Cr to \u20b930,667 Cr in four quarters. Every one of those files needs income assessment, property/collateral valuation review and policy-deviation checks, and underwriting headcount scales roughly with file volume. This is the most realistic HQ-based analytical entry point for an engineering graduate, and BofA's stated contribution of risk-management and governance expertise makes the credit function the one most likely to be built out deliberately rather than opportunistically.",
+          "likelihood": "likely",
+          "band_low_lpa": 4.5,
+          "band_high_lpa": 9
+        },
+        {
+          "title": "Risk / Portfolio Analytics Analyst",
+          "family": "Business analyst and data analyst",
+          "why": "A book that tripled in a year has not yet seen its own delinquency curve. The BofA deal explicitly brings 'risk management, governance and technology expertise' plus equal board representation, which in practice means portfolio monitoring, early-warning and vintage-cut reporting get staffed properly. SQL/Python-literate engineering graduates are the standard hire here, and this is the highest-paying business-track seat a fresher can realistically get at this company.",
+          "likelihood": "likely",
+          "band_low_lpa": 6,
+          "band_high_lpa": 12
+        },
+        {
+          "title": "Management Trainee / Graduate Trainee - Jio Financial Services",
+          "family": "Management trainee and graduate leadership programmes",
+          "why": "JFSL group headcount went from ~584 in FY24 to over 2,000 in FY26 and is still climbing across four regulated entities sharing one Mumbai BKC campus and one careers inbox. Groups scaling at that rate almost always stand up a rotational trainee cadre rather than hiring every seat laterally. Note this would be a group-level programme (careers@jfs.in), not a Jio Credit-branded one - and no such programme is publicly advertised today, which is why this is 'possible' rather than 'likely'.",
+          "likelihood": "possible",
+          "band_low_lpa": 6,
+          "band_high_lpa": 11
+        },
+        {
+          "title": "Business / Product Analyst - JioFinance App",
+          "family": "Product analyst and associate product manager",
+          "why": "The company describes itself as digital-first and originates most of its loans through the JioFinance app, so journey conversion, drop-off analysis and lending-funnel instrumentation are business-critical rather than nice-to-have. An engineering degree is an asset here rather than a mismatch. Tempered by the fact that JFSL group runs product and tech centrally and this seat may sit in a sibling entity, not in Jio Credit itself.",
+          "likelihood": "possible",
+          "band_low_lpa": 7,
+          "band_high_lpa": 13
+        },
+        {
+          "title": "Collections & Loan Operations Executive",
+          "family": "Operations, supply chain and city launch",
+          "why": "Secured lending at this growth rate generates a large downstream load - disbursement processing, document and lien management, mortgage registration follow-up, and early-bucket collections as the first vintages season. It is the highest-volume genuine fresher entry point at any NBFC, and the lowest-paid; listed here for completeness because an engineering graduate should recognise it as a different career track from the analytics roles above.",
+          "likelihood": "possible",
+          "band_low_lpa": 3.5,
+          "band_high_lpa": 6
+        }
+      ],
+      "band_confidence": "medium",
+      "fit_for_fresher": "mixed",
+      "fit_reason": "Split verdict, and the split matters more than the average. Against the fresher: every single publicly visible opening is experienced frontline secured-lending sales - two builder-channel home-loan RM posts and a walk-in LAP Sales Manager - and NBFC channel sales screens for existing DSA and builder relationships that a 2026/2027 graduate does not have. The 'Sales Manager' title in particular is a 1-3 year role. The group careers page at jfs.in/careers carries no individual vacancies at all, only a resume inbox, which is what a company with no structured campus intake looks like from the outside. And an engineering degree is close to irrelevant in these roles; commerce graduates and MBAs are the default hire. For the fresher: this is a genuinely fast-scaling lender, not a mature bank protecting headcount - AUM up 163% and disbursements up 173% in a year, JFSL group headcount from ~584 in FY24 to over 2,000 in FY26. Growth of that shape always creates volume entry seats in credit operations, underwriting support and collections, and the BofA mandate to import risk management, governance and technology capability points at a deliberate build-out of risk and portfolio analytics, which is where an engineering graduate's SQL and Python are actually worth paying for. The practical conclusion: do not expect to walk into a business-track seat here through a public job board. The realistic routes are the careers@jfs.in inbox, staffing agencies that supply NBFC credit ops, and Reliance/Jio group campus channels - and the sales roles that are visible pay bottom-quartile fixed cash with a target-contingent tail.",
+      "careers_url": "https://www.jfs.in/careers/",
+      "caveat": "The visible hiring sample is three postings from two Naukri recruiter accounts, and none of them is entry-level - so the role mix above is built mostly on inference about what a lender tripling its book must need, not on observed vacancies. A group this size hires through internal referral and staffing agencies, so the true opening list is near-certainly larger and differently shaped than what I could see; there may already be a Jio Credit or JFSL graduate cadre recruiting off campus that leaves no public trace, in which case both the titles and the pay grid would be standardised and could differ materially from these bands in either direction. The bands themselves are the second weakness: none of these companies published a band, and no benchmark row is specific to NBFC secured lending. I priced the sales roles by an analogy - Indian listed internet BDE/inside-sales - drawn from IndiaMART, Info Edge and edtech BDA data, which may not travel cleanly to mortgage channel sales, where fixed pay can run lower and the incentive tail higher than I have assumed. Finally, the stage label in the source export was wrong ('Series D' venture funding for what is a JV preferential allotment by a listed large-cap subsidiary); I have corrected it to listed/large, but if the group prices this entity as a growth venture rather than as Reliance-grid corporate BFSI, the analytical roles could pay above these bands. That correction, plus the absence of any NBFC-specific benchmark row and any posted band, is why confidence is medium despite the underlying benchmark rows being rated high."
     },
     {
       "amount_inr": 2170000000,
