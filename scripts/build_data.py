@@ -139,9 +139,15 @@ def main() -> None:
         store = json.load(open("data/funding.json"))
     except (FileNotFoundError, json.JSONDecodeError):
         store = {}
-    have = {(r.get("company") or "").lower().strip() for r in rounds}
+    def norm(name):
+        return re.sub(r"[^a-z0-9]", "", (name or "").lower())
+
+    # RSS and the export name the same company differently: "Carrum" vs
+    # "Carrum Mobility", "KARAM" vs "KARAM Safety". Match on containment.
+    have = [norm(r.get("company")) for r in rounds]
     for rec in store.values():
-        if (rec.get("company") or "").lower().strip() in have:
+        key = norm(rec.get("company"))
+        if key and any(key in h or h in key for h in have if h):
             continue
         if not rec.get("is_venture_round", True):
             continue

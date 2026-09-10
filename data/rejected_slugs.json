@@ -1,0 +1,20 @@
+{
+  "reason": "slug resolves to a different company of the same name, not the Indian one",
+  "checked": "2026-09-10",
+  "slugs": [
+    "bluestone",
+    "bounce",
+    "cello",
+    "eternal",
+    "glide",
+    "hone",
+    "navi",
+    "pilgrim",
+    "porter",
+    "river",
+    "sentry",
+    "slice",
+    "velocity",
+    "vogo"
+  ]
+}
