@@ -1,0 +1,255 @@
+{
+ "bgauss|2026-08-20|series-d": {
+  "amount_inr": 1110000000,
+  "amount_raw": "111Cr",
+  "company": "BGauss",
+  "date": "2026-08-20",
+  "first_ingested": "2026-09-10",
+  "founded": "2020",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Adesh Realtor[+2]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "RR Global",
+  "rank": 733,
+  "round": "Series D"
+ },
+ "big-tree-entertainment|2026-08-19|series-d": {
+  "amount_inr": null,
+  "amount_raw": "",
+  "company": "Big Tree Entertainment",
+  "date": "2026-08-19",
+  "first_ingested": "2026-09-10",
+  "founded": "1999",
+  "investor_kind": "Institutional",
+  "investors": [
+   "KKR"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 778,
+  "round": "Series D"
+ },
+ "butterfly-learnings|2026-08-19|series-a": {
+  "amount_inr": 642000000,
+  "amount_raw": "64.2Cr",
+  "company": "Butterfly Learnings",
+  "date": "2026-08-19",
+  "first_ingested": "2026-09-10",
+  "founded": "2021",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Inflexor[+3]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 777,
+  "round": "Series A"
+ },
+ "ekatra|2026-08-19|angel": {
+  "amount_inr": 100000000,
+  "amount_raw": "10Cr",
+  "company": "Ekatra",
+  "date": "2026-08-19",
+  "first_ingested": "2026-09-10",
+  "founded": "2026",
+  "investor_kind": "Angel",
+  "investors": [
+   "Vasuki Punj"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 780,
+  "round": "Angel"
+ },
+ "jio-credit|2026-08-12|series-d": {
+  "amount_inr": 183000000000,
+  "amount_raw": "18,300Cr",
+  "company": "Jio Credit",
+  "date": "2026-08-12",
+  "first_ingested": "2026-09-10",
+  "founded": "2000",
+  "investor_kind": "Corporate",
+  "investors": [
+   "Bank of America"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 1191,
+  "round": "Series D"
+ },
+ "karm-baba|2026-08-20|seed": {
+  "amount_inr": 9990000,
+  "amount_raw": "99.9L",
+  "company": "KARM BABA",
+  "date": "2026-08-20",
+  "first_ingested": "2026-09-10",
+  "founded": "2025",
+  "investor_kind": "",
+  "investors": [],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 764,
+  "round": "Seed"
+ },
+ "keertana|2026-08-15|series-b": {
+  "amount_inr": 2300000000,
+  "amount_raw": "230Cr",
+  "company": "Keertana",
+  "date": "2026-08-15",
+  "first_ingested": "2026-09-10",
+  "founded": "1996",
+  "investor_kind": "Corporate",
+  "investors": [
+   "Neo Wealth Partners"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 995,
+  "round": "Series B"
+ },
+ "minimac-systems|2026-08-12|seed": {
+  "amount_inr": 300000000,
+  "amount_raw": "30Cr",
+  "company": "Minimac Systems",
+  "date": "2026-08-12",
+  "first_ingested": "2026-09-10",
+  "founded": "2012",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Rainmatter"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 1159,
+  "round": "Seed"
+ },
+ "neuromod-aqua|2026-08-19|seed": {
+  "amount_inr": null,
+  "amount_raw": "",
+  "company": "Neuromod Aqua",
+  "date": "2026-08-19",
+  "first_ingested": "2026-09-10",
+  "founded": "2026",
+  "investor_kind": "Angel",
+  "investors": [
+   "Porush Jain"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 802,
+  "round": "Seed"
+ },
+ "omega-seiki-mobility|2026-08-20|series-a": {
+  "amount_inr": 573000000,
+  "amount_raw": "57.3Cr",
+  "company": "Omega Seiki Mobility",
+  "date": "2026-08-20",
+  "first_ingested": "2026-09-10",
+  "founded": "2018",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Sanjeev Agarwal Family Office[+3]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "Anglian Omega",
+  "rank": 760,
+  "round": "Series A"
+ },
+ "quarkitech-com|2026-08-12|seed": {
+  "amount_inr": 20000000,
+  "amount_raw": "2Cr",
+  "company": "Quarkitech.com",
+  "date": "2026-08-12",
+  "first_ingested": "2026-09-10",
+  "founded": "2025",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Artha India Ventures[+1]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 1176,
+  "round": "Seed"
+ },
+ "savemfi|2026-08-20|conventional-debt": {
+  "amount_inr": 30000000,
+  "amount_raw": "3Cr",
+  "company": "Savemfi",
+  "date": "2026-08-20",
+  "first_ingested": "2026-09-10",
+  "founded": "",
+  "investor_kind": "Corporate",
+  "investors": [
+   "State Bank of India"
+  ],
+  "is_venture_round": false,
+  "location": "India",
+  "parent": "",
+  "rank": 735,
+  "round": "Conventional Debt"
+ },
+ "wippi|2026-08-12|seed": {
+  "amount_inr": 114000000,
+  "amount_raw": "11.4Cr",
+  "company": "Wippi",
+  "date": "2026-08-12",
+  "first_ingested": "2026-09-10",
+  "founded": "2024",
+  "investor_kind": "Institutional",
+  "investors": [
+   "12 Flags Group[+3]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 1166,
+  "round": "Seed"
+ },
+ "yantra-packs|2026-08-19|seed": {
+  "amount_inr": 120000000,
+  "amount_raw": "12Cr",
+  "company": "Yantra Packs",
+  "date": "2026-08-19",
+  "first_ingested": "2026-09-10",
+  "founded": "2020",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Caret Capital"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 787,
+  "round": "Seed"
+ },
+ "zaydn-sneakers|2026-08-20|seed": {
+  "amount_inr": 65100000,
+  "amount_raw": "6.51Cr",
+  "company": "Zaydn sneakers",
+  "date": "2026-08-20",
+  "first_ingested": "2026-09-10",
+  "founded": "2021",
+  "investor_kind": "Institutional",
+  "investors": [
+   "Inflection Point Ventures[+1]"
+  ],
+  "is_venture_round": true,
+  "location": "India",
+  "parent": "",
+  "rank": 739,
+  "round": "Seed"
+ }
+}

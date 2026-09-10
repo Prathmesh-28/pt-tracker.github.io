@@ -13,13 +13,15 @@ from __future__ import annotations
 import json
 import re
 import sys
-from datetime import datetime
+import pathlib
+from datetime import date, datetime
 
 NUM = re.compile(r"^\d+\.$")
 DATE = re.compile(r"^[A-Z][a-z]{2} \d{1,2}, \d{4}$")
 LOGO = re.compile(r"^Logo(\s*\(failed to load\))?$", re.I)
 STRAY = re.compile(r"^[A-Za-z0-9]$")          # the lone "m" / "s" / "u" / "4" lines
 INV_KIND = re.compile(r"^(Institutional|Angel|Corporate|Government|Family Office):$", re.I)
+PARENT = re.compile(r"^Part of \((.+)\)$", re.I)   # subsidiary marker between name and date
 
 # Round types that are not a startup raising venture money.
 NOT_VENTURE = re.compile(r"^(post ipo|conventional debt|grant|pe|buyout|secondary|icos?)", re.I)
@@ -50,10 +52,16 @@ def parse(text: str) -> list[dict]:
             continue
 
         # company: everything between the logo line and the date, minus stray chars
-        name_parts = [
-            l for l in block[1:date_at]
-            if not LOGO.match(l) and not STRAY.match(l)
-        ]
+        parent = ""
+        name_parts = []
+        for l in block[1:date_at]:
+            if LOGO.match(l) or STRAY.match(l):
+                continue
+            m = PARENT.match(l)
+            if m:
+                parent = m.group(1).strip()
+                continue
+            name_parts.append(l)
         company = " ".join(name_parts).strip()
         if not company:
             continue
@@ -74,6 +82,7 @@ def parse(text: str) -> list[dict]:
         records.append({
             "rank": int(block[0].rstrip(".")),
             "company": company,
+            "parent": parent,
             "date": datetime.strptime(block[date_at], "%b %d, %Y").date().isoformat(),
             "founded": field(1) if field(1) != "-" else "",
             "location": field(2) if field(2) != "-" else "",
@@ -85,6 +94,39 @@ def parse(text: str) -> list[dict]:
             "is_venture_round": not bool(NOT_VENTURE.match(round_name)),
         })
     return records
+
+
+STORE = pathlib.Path(__file__).resolve().parent.parent / "data" / "funding.json"
+
+
+def slug(text: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+
+
+def merge(rows: list[dict]) -> tuple[int, int]:
+    """Fold new rows into the cumulative store. Same company, date and round is
+    the same event however many times it is pasted."""
+    try:
+        store = json.loads(STORE.read_text())
+    except (FileNotFoundError, json.JSONDecodeError):
+        store = {}
+
+    added = updated = 0
+    for r in rows:
+        key = f"{slug(r['company'])}|{r['date']}|{slug(r['round'])}"
+        if key in store:
+            # a later paste may carry investors an earlier one truncated
+            before = store[key]
+            if len(r.get("investors") or []) > len(before.get("investors") or []):
+                before.update(r)
+                updated += 1
+        else:
+            store[key] = {**r, "first_ingested": date.today().isoformat()}
+            added += 1
+
+    STORE.parent.mkdir(parents=True, exist_ok=True)
+    STORE.write_text(json.dumps(store, indent=1, sort_keys=True))
+    return added, updated
 
 
 def main() -> None:
@@ -101,8 +143,10 @@ def main() -> None:
     for r in dropped:
         print(f"  dropped {r['company']}: {r['round']}", file=sys.stderr)
 
-    json.dump(rows, open("paste_all.json", "w"), indent=2)
-    json.dump(venture, open("paste_india.json", "w"), indent=2)
+    added, updated = merge(india)
+    total = len(json.loads(STORE.read_text()))
+    print(f"  store: +{added} new, {updated} enriched, {total} India rounds held",
+          file=sys.stderr)
     for r in venture:
         cr = f"{r['amount_inr']/10_000_000:,.1f}Cr" if r["amount_inr"] else "undisclosed"
         print(f"{r['date']} | {r['company'][:26]:26} | {r['round'][:14]:14} | {cr:>12} | "

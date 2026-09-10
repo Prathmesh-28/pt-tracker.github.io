@@ -133,6 +133,31 @@ def main() -> None:
     except FileNotFoundError:
         rounds = json.load(open("rounds.json"))
 
+    # Fold in the accumulated Tracxn-style ingests. RSS gives narrative detail;
+    # the export gives exact amounts and founded years. Neither alone is complete.
+    try:
+        store = json.load(open("data/funding.json"))
+    except (FileNotFoundError, json.JSONDecodeError):
+        store = {}
+    have = {(r.get("company") or "").lower().strip() for r in rounds}
+    for rec in store.values():
+        if (rec.get("company") or "").lower().strip() in have:
+            continue
+        if not rec.get("is_venture_round", True):
+            continue
+        amount = (f"Rs {rec['amount_inr']/10_000_000:,.1f} Cr"
+                  if rec.get("amount_inr") else "Undisclosed")
+        rounds.append({
+            "company": rec["company"] + (f" ({rec['parent']})" if rec.get("parent") else ""),
+            "round": rec.get("round") or "",
+            "amount": amount,
+            "date": rec.get("date") or "",
+            "investors": rec.get("investors") or [],
+            "sector": f"founded {rec['founded']}" if rec.get("founded") else "",
+            "source_url": "",
+        })
+    rounds.sort(key=lambda r: r.get("date") or "", reverse=True)
+
     boards = json.load(open("boards.json"))
 
     data = {
