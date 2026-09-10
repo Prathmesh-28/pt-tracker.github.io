@@ -2,7 +2,7 @@
   "compiled": "2026-09-10",
   "summary": {
     "funding_rounds_india": 154,
-    "with_role_estimates": 25,
+    "with_role_estimates": 21,
     "with_valuation": 28,
     "open_roles_scraped": 77,
     "roles_open_to_freshers": 6,
@@ -54,67 +54,12 @@
       "round": "Series B",
       "amount_cr": 228.0,
       "post_money_cr": null,
-      "estimated_roles": [
-        {
-          "title": "Talent Acquisition Specialist",
-          "family": "HR and talent acquisition",
-          "why": "Already live in Bengaluru (posted 8 Sep 2026), alongside a Head of Human Resources posted 18 Aug. The round funds a jump from ~50 pincodes to a 1,000+ kitchen roadmap across new cities, which is a hiring problem before it is anything else \u2014 the company is staffing recruiting capacity first. This is the only currently-listed non-engineering role a 0-1 year graduate could realistically enter; the other nine live postings are Manager, Senior Manager, Lead or Head grade.",
-          "likelihood": "listed now"
-        },
-        {
-          "title": "City Launch / Expansion Associate",
-          "family": "Operations, supply chain and city launch",
-          "why": "The company's own announcement says the capital will 'expand into new cities' and 'enter new urban markets'. Each launch needs a junior owner for site scouting, kitchen commissioning, pincode-level demand mapping and the first 90 days of launch metrics \u2014 the standard entry seat at every Indian quick-commerce company at this stage.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Kitchen Operations Executive / Cluster Operations Associate",
-          "family": "Operations, supply chain and city launch",
-          "why": "Swish owns and staffs its kitchens rather than partnering with restaurants. Going from today's footprint to 1,000+ kitchens means the highest-volume entry-level seat by far is shift and cluster ops \u2014 holding prep time under four minutes and 80%+ of orders under 15 minutes. It is also the lowest-paid seat in this family, sitting at or below the bottom of the band.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Supply Chain / Inventory Analyst (Associate)",
-          "family": "Operations, supply chain and city launch",
-          "why": "Reports under the already-listed Senior Manager \u2013 Inventory & Process Design. The round is explicitly for 'supply chain infrastructure', and 250+ SKUs across 20+ categories cooked fresh in 1 km micro-catchments makes daily demand forecasting, indenting and wastage control a funded, headcount-hungry problem.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Procurement / Sourcing Associate",
-          "family": "Category management and merchandising / procurement",
-          "why": "A Procurement Manager role is live in Bengaluru right now. A multi-city raw-material buy for company-owned kitchens needs junior buyers per commodity group (produce, dairy, packaging, proteins) as kitchen count multiplies across Delhi NCR and Bengaluru \u2014 this is the commercial analogue of a category role at a marketplace.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Business Analyst \u2013 Central Operations",
-          "family": "Business analyst and data analyst",
-          "why": "Monthly orders tripled since March 2026 to 1M+, against Rs 4 crore revenue and a Rs 19 crore loss in the 8-month FY25 filing. Cost-per-order, rider utilisation, kitchen-level P&L and SLA analytics are exactly what a Series B2 board asks for, and the already-listed Manager \u2013 Operations Excellence & Productivity will need analyst support under them.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Growth / Performance Marketing Associate",
-          "family": "Growth and performance marketing",
-          "why": "Brand Manager and PR Lead are both open in Bengaluru, meaning a consumer-marketing function is being built from scratch \u2014 junior performance, CRM and retention seats typically follow within one or two quarters. Marked possible rather than likely because the stated use of funds is kitchens and supply chain, not a GTM build.",
-          "likelihood": "possible"
-        },
-        {
-          "title": "Associate \u2013 Founder's Office / Strategy",
-          "family": "Founder's office / chief of staff / strategy associate",
-          "why": "Three founders (Aniket Shah, Ujjwal Sukheja, Sureshkumar Saran) running a five-city operation with a low-thousands on-ground workforce and a 1,000-kitchen roadmap is the classic trigger for one or two junior founder's-office hires after a raise. Possible, not likely, because it is a one-or-two-person function, not a hiring wave.",
-          "likelihood": "possible"
-        },
-        {
-          "title": "Product Analyst",
-          "family": "Product analyst and associate product manager",
-          "why": "Swish owns the app, the kitchens and the fleet, so it holds full-stack order-to-doorstep data that a product analyst could work \u2014 but product headcount at a ~350-person, ops-heavy company is thin and this round funds physical infrastructure rather than product.",
-          "likelihood": "possible"
-        }
-      ],
-      "band_confidence": "medium",
+      "estimated_roles": [],
+      "band_confidence": "",
       "fit_for_fresher": "",
       "fit_reason": "",
-      "careers_url": "https://www.linkedin.com/company/justswish/jobs/",
-      "caveat": "Three things could make this wrong for Swish specifically. First, it may not run a graduate business track at all: all ten non-engineering roles live today are Manager, Senior Manager, Lead or Head grade, which is the signature of a company hiring 3-8 year laterals out of Zepto, Swiggy, Blinkit and Rebel Foods rather than freshers \u2014 the entry-level wave is inferred from the Head of HR plus Talent Acquisition Specialist hires, not observed. Second, the fixed-cash budget may be tighter than a $175M valuation implies: Rs 4 crore of revenue against a Rs 19 crore loss in the last filed period, in a business that pays for its own kitchens, kitchen staff and riders, means capital is going into physical assets and on-ground wages, not office CTCs; a cost-heavy owned-kitchen model typically pays its corporate ops bench below a comparably-valued asset-light marketplace. Third, the entry-level population at this company is overwhelmingly kitchen and rider staff at Rs 2.5-4 LPA, and a role titled 'Operations Executive' at Swish could be either that or a Bengaluru HQ analyst seat \u2014 the title alone will not tell you which, so ask in the first call whether the seat is kitchen-floor, city-cluster or central before benchmarking any number against this band. Also note there is no self-hosted careers portal or ATS: the justswish.in careers link points straight at LinkedIn Jobs, so postings and any pay detail can appear and disappear without a trace."
+      "careers_url": "",
+      "caveat": ""
     },
     {
       "amount_inr": 948000000,
@@ -233,61 +178,12 @@
       "round": "PE",
       "amount_cr": 601.0,
       "post_money_cr": null,
-      "estimated_roles": [
-        {
-          "title": "Graduate Engineer Trainee / Management Trainee - Sales & Marketing",
-          "family": "Management trainee and graduate leadership programmes",
-          "why": "The round is explicitly for strengthening the global distribution network and manufacturing capability. A PPE and fall-protection maker sells a technical, standards-certified product (3,800+ certified SKUs, EN/IS compliance) to industrial safety officers, so the standard intake for the commercial ladder is an engineering graduate put through a plant-plus-field rotation. KARAM's own careers page carries testimonials from Production, Marketing, Sales, Purchase and IT, which is the shape of a rotational trainee intake even though no programme is named.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Sales Executive / Territory Sales Executive - Industrial Safety",
-          "family": "Business development, inside sales and account management",
-          "why": "This is the job family that actually scales when a distributor-led safety business is told to grow its distribution network. Google snippets of the unreachable careers.karam.in subdomain reference postings in Kolkata, Salt Lake, Panvel, Bahadurgarh, Vadodara, Mumbai and Lucknow - all industrial-belt and plant-adjacent locations, which is exactly where territory sales and channel seats sit, not head-office strategy seats.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Export Sales / International Business Development Executive",
-          "family": "Business development, inside sales and account management",
-          "why": "The stated use of funds names international markets and the global distribution network directly, and KARAM already exports to 140+ nations with plants in South Africa and Brazil. A Dubai posting appeared in the same search snippets. Entry-level export desk work (documentation, distributor coordination, tender and certification support) is the cheapest way to add capacity ahead of acquisitions in overseas markets.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Application / Technical Support Engineer - Fall Protection",
-          "family": "Business development, inside sales and account management (technical pre-sales)",
-          "why": "Secondary use of the capital is investment in innovation and new products. Fall-protection systems are specified, not just sold - site surveys, anchorage design, training and demo work sit between product and sales, and this is the seat a 0-1 year engineering graduate is genuinely qualified for at this company.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Supply Chain / Production Planning Executive (plant)",
-          "family": "Operations, supply chain and city launch",
-          "why": "The round funds manufacturing capability across five plants and 65+ acres. Capacity investment pulls in planning, sourcing and quality headcount at Lucknow, Sitarganj, Sandila and Coimbatore before it pulls in anything head-office. Note these are true tier-2 postings and price at the bottom of the band.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Product / Category Executive - New Product Categories",
-          "family": "Category management and merchandising",
-          "why": "The headline is diversification into complementary product categories via acquisition. Whoever buys a category has to run it, and a junior category or product executive supporting the four brands is a plausible add once a deal closes - but it follows integration rather than leading it, so it is not a day-one opening.",
-          "likelihood": "possible"
-        },
-        {
-          "title": "Business Analyst / MIS Executive - Sales Analytics",
-          "family": "Business analyst and data analyst",
-          "why": "The coverage specifically mentions further solidifying corporate governance, which in a PE-backed manufacturer means monthly reporting packs, distributor and SKU profitability, and board MIS. That work usually starts as one or two junior MIS/analyst seats under the CFO rather than a new analytics team.",
-          "likelihood": "possible"
-        },
-        {
-          "title": "Corporate Development / M&A Integration Analyst",
-          "family": "Founder's office / strategy associate",
-          "why": "Acquisitions are the explicit headline use of the capital and no such function appears publicly today, so it will have to be built. But it is the least likely entry door for a fresh graduate: this seat is normally filled at 2-5 years from banking, Big-4 transaction services or consulting, and KARAM's C-suite is already full and family-led, so a 0-1 year hire would be a support analyst at best.",
-          "likelihood": "possible"
-        }
-      ],
-      "band_confidence": "low",
+      "estimated_roles": [],
+      "band_confidence": "",
       "fit_for_fresher": "",
       "fit_reason": "",
-      "careers_url": "https://www.karam.in/careers",
-      "caveat": "The honest problem is that nothing here is confirmed by a KARAM job posting. Three specific ways this could be wrong. (1) Zero verified openings: karam.in/careers is only a generic interest form with no listings, LinkedIn shows no KARAM-posted jobs, and the real job board at careers.karam.in failed DNS resolution from this environment (ENOTFOUND) \u2014 search snippets referenced positions in Kolkata, Panvel, Bahadurgarh, Vadodara, Dubai and Lucknow, but no titles or bands could be loaded, so every role above is inferred from what the business needs, not from a posting. Re-check careers.karam.in from an unblocked network before acting on this. (2) The round funds M&A, not hiring: the coverage quotes zero headcount targets and earmarks the capital for acquisitions, capacity, distribution and governance. Hiring here follows acquisition integration on a 6-18 month lag, so the timing could easily slip past a 2026/2027 graduation date, and the roles that open may be absorbed into an acquired company's payroll rather than KARAM's. (3) Candidate-profile mismatch: a PPE manufacturer's field sales force is often hired as diploma-holders, B.Sc/BBA graduates or industrial-safety diploma candidates rather than B.Tech graduates, and at 2.8-3.5 LPA in tier-2 plant towns \u2014 below my floor. Conversely, if KARAM does run a structured Graduate Engineer Trainee programme benchmarked against larger UP/Uttarakhand manufacturers, a Noida corporate-office offer could reach 8-9 LPA, above my ceiling. Finally, no salary aggregator carries a usable KARAM-specific entry-level sample, so this band is peer-derived throughout. Practical move given the weak signal: approach CHRO Kavita Nigam directly rather than applying through the form."
+      "careers_url": "",
+      "caveat": ""
     },
     {
       "amount_inr": 60100000,
@@ -1639,93 +1535,12 @@
       "round": "Series D",
       "amount_cr": null,
       "post_money_cr": null,
-      "estimated_roles": [
-        {
-          "title": "Trainee - CLM",
-          "family": "Growth and performance marketing (entry-level, 0-2 years, India)",
-          "why": "Listed now, in Mumbai, and filed under the careers page's 'Intern With Us' category \u2014 CLM is customer-lifecycle/CRM marketing (retention, push/email journeys, cohort reporting), one of the two genuine 0-1 year doors into the company right now. Analytical enough that an engineering grad is credible on the shortlist. Band is the Series C+ Mumbai growth-marketing row (Rs 7-15L fixed) cut hard because this is a trainee rung, not the Growth Analyst rung that row is built on: expect a stipend of roughly Rs 20-30k/month during the traineeship converting to an Executive CTC of about Rs 5-7L.",
-          "likelihood": "listed now",
-          "band_low_lpa": 3,
-          "band_high_lpa": 6.5
-        },
-        {
-          "title": "Trainee - Sponsorship Sales (Live Events)",
-          "family": "Business development, inside sales and account management (entry-level, 0-2 years, India)",
-          "why": "Listed now, Mumbai, also under 'Intern With Us', and it sits exactly where the KKR money is pointed \u2014 selling brand sponsorship into owned festival IP (Lollapalooza India and similar). The clearest fresher entry point in the company. Series C+ Mumbai BD row is Rs 6.5-12L fixed, but that row is anchored on SaaS SDRs at LeadSquared/MoEngage-class employers; event sponsorship sales in media pays well below that at trainee level, and a chunk of the money arrives as incentive rather than fixed. Assume Rs 3-5L fixed with quota incentive taking on-target earnings toward Rs 6.5L.",
-          "likelihood": "listed now",
-          "band_low_lpa": 3,
-          "band_high_lpa": 6.5
-        },
-        {
-          "title": "Executive - Social Media",
-          "family": "Growth and performance marketing (entry-level, 0-2 years, India)",
-          "why": "Listed now, Mumbai, Marketing. 'Executive' is BookMyShow's first post-trainee rung and these roles routinely go to 0-2 year candidates. Organic social at a consumer-entertainment brand is a content/community job rather than a paid-performance job, so it sits below the performance-marketing anchors in the Series C+ row (Rs 7-15L); the realistic Mumbai media band for a fresher-to-one-year social executive is Rs 4.5-8L fixed, with the top of that reserved for someone arriving with a real internship portfolio.",
-          "likelihood": "listed now",
-          "band_low_lpa": 4.5,
-          "band_high_lpa": 8
-        },
-        {
-          "title": "Search Engine Optimization",
-          "family": "Growth and performance marketing (entry-level, 0-2 years, India)",
-          "why": "Listed now, Mumbai, Marketing, and the title carries no seniority prefix \u2014 which usually signals an individual-contributor role open at 1-3 years, so a 0-1 year graduate is at the bottom edge rather than the centre of the target. BookMyShow's showtime and event pages are a large organic-traffic asset, so the role is technical (crawl, schema, page structure) and an engineering grad reads well for it. Priced a notch above the social role for the technical premium: Rs 4.5-9L.",
-          "likelihood": "listed now",
-          "band_low_lpa": 4.5,
-          "band_high_lpa": 9
-        },
-        {
-          "title": "Management Trainee / Graduate Trainee - Live Entertainment",
-          "family": "Management trainee and graduate leadership programmes (India, 0-2 years)",
-          "why": "Predicted. The company already runs a trainee channel (two trainee roles live now) and the round explicitly funds scaling live entertainment across the 700+ towns it already ticketes \u2014 that is the classic trigger for a rotational graduate intake across event ops, sponsorship and city launch. Series C+ Mumbai MT row is Rs 8-16L fixed, but that row is built on unicorn/GCC business-analyst comparables; a media and live-events MT in Mumbai lands closer to the listed/large 'Cluster B' shape (mainstream corporate MT, Rs 5-10L). Rs 5-9L.",
-          "likelihood": "likely",
-          "band_low_lpa": 5,
-          "band_high_lpa": 9
-        },
-        {
-          "title": "Executive - Project Management / Event Operations (Live)",
-          "family": "Operations, supply chain and city launch (entry-level, 0-2 years, India)",
-          "why": "Predicted, and near-certain to recur: 'Assistant Project Management (Events)' is open right now, and owned festival IP plus in-house production capability means on-ground execution headcount scales with the event calendar, not with the tech roadmap. This is the central/city-launch ladder of the ops row (Rs 8-14L per that note) discounted for the media sector and for a 0-1 year hire doing venue, vendor and run-sheet coordination: Rs 4-7.5L. Long hours, weekend-heavy, and pay lags the quick-commerce ops comparables the benchmark row is built on.",
-          "likelihood": "likely",
-          "band_low_lpa": 4,
-          "band_high_lpa": 7.5
-        },
-        {
-          "title": "Executive - Sponsorship & Brand Partnerships (BMS Live)",
-          "family": "Business development, inside sales and account management (entry-level, 0-2 years, India)",
-          "why": "Predicted as the junior rung under the 'Senior Executive - Brandlabs (BMS Live)' and 'Senior Manager - Sponsorship (Live Events)' roles already posted. Live events hit ~Rs 756 crore in FY25 (up 66% YoY) and are about to overtake ticketing, and sponsorship revenue is the part of that the KKR capital is meant to compound \u2014 so the team grows from the bottom. Series C+ Mumbai BD row (Rs 6.5-12L) trimmed for the media-versus-SaaS gap: Rs 5-9L fixed, with incentive potentially adding 15-25% at quota.",
-          "likelihood": "likely",
-          "band_low_lpa": 5,
-          "band_high_lpa": 9
-        },
-        {
-          "title": "Analyst - Business / Pricing & Ticketing Insights",
-          "family": "Business analyst and data analyst (entry-level, 0-2 years, India)",
-          "why": "Predicted. A profitable Rs 1,869 crore consumer platform with occupancy, dynamic-pricing, convenience-fee and event-yield questions needs junior analysts, and this is the single best-fit family for an engineering graduate on the business track (SQL, dashboards, cohort work). The benchmark note is emphatic that title drives pay here: a 'Business Analyst' hire is priced far above a 'Data Analyst' reporting role at the same employer. Series C+ Mumbai row is Rs 5-16L; BookMyShow is not a Flipkart/Amazon-class payer, so Rs 6-11L. Caveat: no analyst role is posted today, so this is inference from the business, not from the page.",
-          "likelihood": "possible",
-          "band_low_lpa": 6,
-          "band_high_lpa": 11
-        },
-        {
-          "title": "Associate - Content / Category Partnerships (studios, venues, promoters)",
-          "family": "Category management and merchandising",
-          "why": "Predicted. Supply on this platform is films, venues, promoters and artists rather than SKUs, so the category-management skill maps directly onto relationship and catalogue management with studios and event organisers. The Series C+ category row is Rs 5-20L and openly bimodal: a tier-1 MBA 'Category Manager' track and a non-MBA 'Category Executive' track paid 3-4x less. An engineering graduate with no MBA lands on the second track, so Rs 5-10L, and only the very top of that if hired through a campus process.",
-          "likelihood": "possible",
-          "band_low_lpa": 5,
-          "band_high_lpa": 10
-        },
-        {
-          "title": "Associate - Growth / Performance Marketing (app)",
-          "family": "Growth and performance marketing (entry-level, 0-2 years, India)",
-          "why": "Predicted. A transactional app of this scale runs continuous paid acquisition, app-install and retention spend, and the marketing team is already hiring at the executive rung (social, SEO). Paid growth is the analytical end of marketing and the one where an engineering grad's numeracy converts to pay. Series C+ Mumbai row is Rs 7-15L fixed for growth roles, but that note warns the upper half is post-MBA 'Manager' titles; a 0-1 year non-MBA hire anchors to the lower half, discounted again for media: Rs 6-11L.",
-          "likelihood": "possible",
-          "band_low_lpa": 6,
-          "band_high_lpa": 11
-        }
-      ],
-      "band_confidence": "low",
-      "fit_for_fresher": "mixed",
-      "fit_reason": "Genuinely open door, but a narrow one, and not obviously pointed at an engineering degree. On the positive side: two of the fourteen live openings are explicitly Trainee roles under an \"Intern With Us\" category, which is a real, named 0-1 year channel that many companies of this size simply do not run; hiring is concentrated in Mumbai where the candidate pool is deep; and the live-entertainment expansion the KKR capital funds is people-intensive in exactly the junior, executional way that absorbs graduates \u2014 event ops, sponsorship support, client servicing, city coverage. Against it: eleven of the fourteen openings are Assistant Manager, Senior Manager, Senior Executive or Consultant titles, which in Indian media convention means 2-5 years and above, so the fresher-addressable share of current hiring is small. The business-side functions here \u2014 marketing, client servicing, live-event production, sponsorship \u2014 recruit predominantly from mass communication, commerce and MBA backgrounds, and an engineering graduate competes without a natural lane except in the analytical roles (SEO, CLM, business analytics), which are the minority. Pay is also the honest catch: a 0-1 year business hire here should expect Rs 4-8L, below what the same graduate could earn in a business role at a funded consumer-tech company, because the sector pays less and the company is a disciplined, profitable operator rather than one buying growth. And the careers page currently shows no engineering roles at all, so the software-adjacent fallback that would normally exist at a consumer-internet company is not visible on this channel.",
-      "careers_url": "https://bookmyshow.hire.trakstar.com/",
-      "caveat": "The honest reasons this could be wrong, worst first. (1) No benchmark row in the file covers media, ticketing or live entertainment; every Series C+ comparable behind these numbers is quick-commerce, SaaS or a unicorn marketplace. The sector haircut I applied is my judgment, not measured data, and if BookMyShow prices its Mumbai marketing and analytics roles against consumer-tech rather than against media, every band here is low by Rs 2-4L. (2) The two Trainee roles are filed under \"Intern With Us\", so they may be stipend internships with no guaranteed conversion rather than salaried CTC roles \u2014 in which case the Rs 3-6.5L annualised figures overstate what actually lands in a first-year bank account. (3) The stage classification is contested by the profile itself: the \"Series D\" label is a database convention over a KKR minority stake that neither party called a venture round, and this 27-year-old profitable company arguably belongs in the listed/large rows instead, which would lower the floors and widen the ceilings. I split the difference, which means I am wrong in one direction or the other. (4) The predicted roles are inferred from the funding rationale and from junior rungs implied by senior postings, not from anything BookMyShow has announced; a company that runs disciplined margins on Rs 1,869 crore of income may scale live events with contract and agency staff rather than full-time graduate hires, in which case the management-trainee and event-operations predictions do not materialise as salaried roles at all. (5) The fourteen openings are a single-day snapshot of a page that rotates, and the total absence of engineering roles suggests some hiring runs through channels this page does not show \u2014 so both the role list and the read on what the company is hiring for could be incomplete. (6) Headcount across sources ranges from 586 to ~1,500 depending on whether subsidiaries and international operations are counted; if the Mumbai corporate entity is nearer the low figure, junior intake is thinner than these predictions assume. Re-check the careers URL before acting on any of this."
+      "estimated_roles": [],
+      "band_confidence": "",
+      "fit_for_fresher": "",
+      "fit_reason": "",
+      "careers_url": "",
+      "caveat": ""
     },
     {
       "amount_inr": 642000000,
@@ -2693,12 +2508,45 @@
       "round": "Seed",
       "amount_cr": 2.0,
       "post_money_cr": null,
-      "estimated_roles": [],
-      "band_confidence": "",
-      "fit_for_fresher": "",
-      "fit_reason": "",
-      "careers_url": "",
-      "caveat": ""
+      "estimated_roles": [
+        {
+          "title": "Founder's Office / Business Associate",
+          "family": "Founder's office / chief of staff / strategy associate (entry-level, 0-2 years, India)",
+          "why": "The single non-engineering hire a pre-seed deep-tech spinout actually makes: one generalist next to the CEO (Sanyam Parashar is the only non-PhD founder) covering investor reporting to Artha and Finvolve, incorporation/compliance admin, IITM Research Park logistics, recruiting coordination and deck work. Nothing in the round is earmarked for it, so it happens only if the CEO decides he cannot scale himself.",
+          "likelihood": "possible",
+          "band_low_lpa": 3,
+          "band_high_lpa": 6
+        },
+        {
+          "title": "Business Development Associate - Defence & Space (technical pre-sales)",
+          "family": "Business development, inside sales and account management (entry-level, 0-2 years, India)",
+          "why": "The product is sold to DRDO/iDEX, ISRO/IN-SPACe and drone-platform OEMs, which is a relationship-and-credentials sale on multi-year cycles. A fresher here would be support, not owner: qualifying inbound, tender and RFP tracking on iDEX/GeM, and translating compression ratios and link-budget numbers for buyers. Most likely to exist only after the core library is demo-ready.",
+          "likelihood": "possible",
+          "band_low_lpa": 3,
+          "band_high_lpa": 5.5
+        },
+        {
+          "title": "Grants, Proposals & Programme Associate",
+          "family": "Management trainee / graduate leadership / business associate (entry-level, 0-2 years, India)",
+          "why": "The clearest real need created by the funding itself: they are running a Rs 1.5 Cr National Quantum Mission grant alongside the equity, and the obvious next money is more non-dilutive - iDEX SPRINT/ADITI, TDF, MeitY and further NQM tranches. Someone has to write, submit and report on those. Usually absorbed by a founder, occasionally handed to a junior hire.",
+          "likelihood": "possible",
+          "band_low_lpa": 3.5,
+          "band_high_lpa": 6
+        },
+        {
+          "title": "Marketing & Communications Associate",
+          "family": "Growth and performance marketing (entry-level, 0-2 years, India)",
+          "why": "Their public surface is an unmodified Webflow template with Lorem ipsum still on the contact page and a dead #careers anchor, so the gap is visible. But B2G/defence deep-tech does not run performance marketing - the need is a working site, a capability one-pager and conference presence. Realistically an internship or contract engagement, not a salaried fresher role.",
+          "likelihood": "possible",
+          "band_low_lpa": 2.5,
+          "band_high_lpa": 5
+        }
+      ],
+      "band_confidence": "low",
+      "fit_for_fresher": "poor",
+      "fit_reason": "This is a professor-founded IIT Madras deep-tech spinout of roughly eight people, of whom four are PhDs and one is the CEO, on Rs 2 Cr of equity plus a Rs 1.5 Cr research grant, pre-revenue, still building the core compression library. There is no business function to join yet. Every rupee in the round is pointed at algorithm work - the money buys research engineers who can do tensor-network and compression work, not business hires, and at this burn the entire equity round supports roughly 8-12 person-years total. The customer set makes it worse for a fresher: defence and space buyers are reached through DRDO/iDEX/ISRO relationships, prior clearances and IIT Madras networks, none of which a 2026 graduate carries, and a pre-seed team cannot afford to train someone into that. There is also no hiring surface at all - no careers page, a dead #careers anchor, /careers and /jobs both 404, an empty LinkedIn jobs tab - which is consistent with a company that hires through founder outreach and IITM Research Park referrals rather than posted requisitions. The honest read: a strong engineering fresher with signal-processing, compression or quantum-algorithms coursework has a real shot at a research/engineering role here; a business-track fresher most likely has zero openings for the next 9-18 months, and the realistic route in is an internship or a project through the IITM ecosystem rather than a salaried business role. Anyone who does land one should expect a generalist job with no manager, no process and below-market cash.",
+      "careers_url": "No careers page exists. Footer link https://www.quarkitech.com/#careers is a dead anchor (the \"careers\" strings in the homepage HTML are unused Webflow template class names), and /careers, /careers.html and /jobs all return 404. Closest live surface: https://www.linkedin.com/company/quarkitech (no jobs listed). Better watch targets: founders' personal LinkedIn posts (Sanyam Parashar, Dr Shashikant Singh Kunwar) and the IITM Incubation Cell / Research Park listings.",
+      "caveat": "The honest reason this could be wrong: not one of these four roles is evidenced. The profile is unverified because there is no careers page to verify against, the currently_open list is genuinely empty, and no reporting on the round (Entrackr, Indian Startup News, FinSMES, Analytics Insight) mentions hiring plans, headcount targets or any role. Every title here is inferred from what an eight-person pre-revenue defence/space deep-tech company plausibly needs, and the most likely single outcome is that Quarkitech opens zero business-track entry-level roles in the next year and spends the round entirely on research engineers. The bands carry two stacked uncertainties: the benchmark rows for \"seed/pre-Series A\" plus \"other Indian city\" are themselves marked low confidence in the source file (extrapolated from stage-discount language, not from observed offers), and I then applied a further judgement-based pre-seed haircut on top. A specific way the numbers could break upward: IIT Madras Research Park and National Quantum Mission companies sometimes pay at or above the seed band to compete for talent inside the campus ecosystem, and government grant budgets can fund a named project-associate line at a fixed, better-than-startup rate - so a \"Project Associate\" style offer at Rs 5-7L is possible even though I have priced the generic business roles below that. A way it could break downward: the first non-engineering person hired at a company this size is frequently an intern converted at Rs 2.5-3.5L, or a co-founder-level equity-only arrangement with no meaningful cash at all. Finally, the tracker's own row is wrong on three counts (stage labelled Seed rather than pre-seed, investor labelled Artha India Ventures rather than Artha Access/Artha Venture Fund II, and it drops both Finvolve and the Rs 1.5 Cr grant), so if the downstream pipeline re-reads that row rather than this analysis it will benchmark this company one stage too high."
     },
     {
       "amount_inr": 114000000,
@@ -4550,77 +4398,12 @@
       "round": "Series H",
       "amount_cr": 5090.0,
       "post_money_cr": null,
-      "estimated_roles": [
-        {
-          "title": "Home Loan Sales Relationship Manager",
-          "family": "Business development, inside sales and account management",
-          "why": "Live posting on the company's own Naukri recruiter account (JIO Credit - Housing Loan Builder Channel). Home loans and LAP are the core secured retail products the BofA capital is meant to scale, and disbursements grew 173% YoY - frontline RM headcount is the direct lever. An engineering grad can enter this, but it is builder-channel/DSA relationship sales with a monthly disbursement target, not an analytical role.",
-          "likelihood": "listed now",
-          "band_low_lpa": 4,
-          "band_high_lpa": 7
-        },
-        {
-          "title": "Home Loan Sales Relationship Manager - Chennai",
-          "family": "Business development, inside sales and account management",
-          "why": "Same live posting, Chennai location - so it prices off the non-metro row, not the Mumbai HQ row. Chennai is a GCC/tier-1.5 city so it sits at the top of the non-metro band rather than the floor, but frontline NBFC RM pay carries almost no city premium and the fixed component is deliberately kept low against an incentive tail.",
-          "likelihood": "listed now",
-          "band_low_lpa": 3.5,
-          "band_high_lpa": 6
-        },
-        {
-          "title": "Walk-in || Sales Manager- LAP",
-          "family": "Business development, inside sales and account management",
-          "why": "Live walk-in posting (Delhi NCR) for loan-against-property sales. LAP is the second leg of the secured retail book being recapitalised. Caution: a walk-in 'Sales Manager' title in NBFC lending almost always screens for 1-3 years of existing DSA/channel relationships and a portable sourcing book - a 0-1 year graduate lands at the very bottom of this band if at all.",
-          "likelihood": "listed now",
-          "band_low_lpa": 4.5,
-          "band_high_lpa": 8
-        },
-        {
-          "title": "Credit Analyst / Underwriter - Secured Lending (Trainee)",
-          "family": "Business analyst and data analyst",
-          "why": "Gross AUM went from \u20b911,665 Cr to \u20b930,667 Cr in four quarters. Every one of those files needs income assessment, property/collateral valuation review and policy-deviation checks, and underwriting headcount scales roughly with file volume. This is the most realistic HQ-based analytical entry point for an engineering graduate, and BofA's stated contribution of risk-management and governance expertise makes the credit function the one most likely to be built out deliberately rather than opportunistically.",
-          "likelihood": "likely",
-          "band_low_lpa": 4.5,
-          "band_high_lpa": 9
-        },
-        {
-          "title": "Risk / Portfolio Analytics Analyst",
-          "family": "Business analyst and data analyst",
-          "why": "A book that tripled in a year has not yet seen its own delinquency curve. The BofA deal explicitly brings 'risk management, governance and technology expertise' plus equal board representation, which in practice means portfolio monitoring, early-warning and vintage-cut reporting get staffed properly. SQL/Python-literate engineering graduates are the standard hire here, and this is the highest-paying business-track seat a fresher can realistically get at this company.",
-          "likelihood": "likely",
-          "band_low_lpa": 6,
-          "band_high_lpa": 12
-        },
-        {
-          "title": "Management Trainee / Graduate Trainee - Jio Financial Services",
-          "family": "Management trainee and graduate leadership programmes",
-          "why": "JFSL group headcount went from ~584 in FY24 to over 2,000 in FY26 and is still climbing across four regulated entities sharing one Mumbai BKC campus and one careers inbox. Groups scaling at that rate almost always stand up a rotational trainee cadre rather than hiring every seat laterally. Note this would be a group-level programme (careers@jfs.in), not a Jio Credit-branded one - and no such programme is publicly advertised today, which is why this is 'possible' rather than 'likely'.",
-          "likelihood": "possible",
-          "band_low_lpa": 6,
-          "band_high_lpa": 11
-        },
-        {
-          "title": "Business / Product Analyst - JioFinance App",
-          "family": "Product analyst and associate product manager",
-          "why": "The company describes itself as digital-first and originates most of its loans through the JioFinance app, so journey conversion, drop-off analysis and lending-funnel instrumentation are business-critical rather than nice-to-have. An engineering degree is an asset here rather than a mismatch. Tempered by the fact that JFSL group runs product and tech centrally and this seat may sit in a sibling entity, not in Jio Credit itself.",
-          "likelihood": "possible",
-          "band_low_lpa": 7,
-          "band_high_lpa": 13
-        },
-        {
-          "title": "Collections & Loan Operations Executive",
-          "family": "Operations, supply chain and city launch",
-          "why": "Secured lending at this growth rate generates a large downstream load - disbursement processing, document and lien management, mortgage registration follow-up, and early-bucket collections as the first vintages season. It is the highest-volume genuine fresher entry point at any NBFC, and the lowest-paid; listed here for completeness because an engineering graduate should recognise it as a different career track from the analytics roles above.",
-          "likelihood": "possible",
-          "band_low_lpa": 3.5,
-          "band_high_lpa": 6
-        }
-      ],
-      "band_confidence": "medium",
-      "fit_for_fresher": "mixed",
-      "fit_reason": "Split verdict, and the split matters more than the average. Against the fresher: every single publicly visible opening is experienced frontline secured-lending sales - two builder-channel home-loan RM posts and a walk-in LAP Sales Manager - and NBFC channel sales screens for existing DSA and builder relationships that a 2026/2027 graduate does not have. The 'Sales Manager' title in particular is a 1-3 year role. The group careers page at jfs.in/careers carries no individual vacancies at all, only a resume inbox, which is what a company with no structured campus intake looks like from the outside. And an engineering degree is close to irrelevant in these roles; commerce graduates and MBAs are the default hire. For the fresher: this is a genuinely fast-scaling lender, not a mature bank protecting headcount - AUM up 163% and disbursements up 173% in a year, JFSL group headcount from ~584 in FY24 to over 2,000 in FY26. Growth of that shape always creates volume entry seats in credit operations, underwriting support and collections, and the BofA mandate to import risk management, governance and technology capability points at a deliberate build-out of risk and portfolio analytics, which is where an engineering graduate's SQL and Python are actually worth paying for. The practical conclusion: do not expect to walk into a business-track seat here through a public job board. The realistic routes are the careers@jfs.in inbox, staffing agencies that supply NBFC credit ops, and Reliance/Jio group campus channels - and the sales roles that are visible pay bottom-quartile fixed cash with a target-contingent tail.",
-      "careers_url": "https://www.jfs.in/careers/",
-      "caveat": "The visible hiring sample is three postings from two Naukri recruiter accounts, and none of them is entry-level - so the role mix above is built mostly on inference about what a lender tripling its book must need, not on observed vacancies. A group this size hires through internal referral and staffing agencies, so the true opening list is near-certainly larger and differently shaped than what I could see; there may already be a Jio Credit or JFSL graduate cadre recruiting off campus that leaves no public trace, in which case both the titles and the pay grid would be standardised and could differ materially from these bands in either direction. The bands themselves are the second weakness: none of these companies published a band, and no benchmark row is specific to NBFC secured lending. I priced the sales roles by an analogy - Indian listed internet BDE/inside-sales - drawn from IndiaMART, Info Edge and edtech BDA data, which may not travel cleanly to mortgage channel sales, where fixed pay can run lower and the incentive tail higher than I have assumed. Finally, the stage label in the source export was wrong ('Series D' venture funding for what is a JV preferential allotment by a listed large-cap subsidiary); I have corrected it to listed/large, but if the group prices this entity as a growth venture rather than as Reliance-grid corporate BFSI, the analytical roles could pay above these bands. That correction, plus the absence of any NBFC-specific benchmark row and any posted band, is why confidence is medium despite the underlying benchmark rows being rated high."
+      "estimated_roles": [],
+      "band_confidence": "",
+      "fit_for_fresher": "",
+      "fit_reason": "",
+      "careers_url": "",
+      "caveat": ""
     },
     {
       "amount_inr": 2170000000,
@@ -5423,67 +5206,12 @@
       "round": "Series A",
       "amount_cr": 203.0,
       "post_money_cr": 359.0,
-      "estimated_roles": [
-        {
-          "title": "Account Manager",
-          "family": "Business development, inside sales and account management",
-          "why": "Directly serves the round's first mandate, to \"expand Voice AI deployments among BFSI enterprises\". Navana already has named, sticky logos (Bajaj Finserv, Protean, Ujjivan SFB, Jana SFB, Grihum) and 100M+ minutes processed, so the cheapest growth is farming existing accounts, which is exactly what a remote AM does. Caveat for a 0-1 yr grad: the title is Manager and the intended bar is roughly 2-5 years of BFSI/SaaS account experience, so treat this as the seat to grow into or ask whether they will open an associate variant under it.",
-          "likelihood": "listed now"
-        },
-        {
-          "title": "Enterprise Sales Manager",
-          "family": "Business development, inside sales and account management",
-          "why": "The single Mumbai on-site/hybrid role on the whole careers page, which is a deliberate signal: new-logo selling into banks, NBFCs and insurers is relationship-led and does not run remote. It is the GTM build behind the same \"expand deployments among BFSI enterprises\" mandate. Realistically a 4-8 year hire and effectively closed to a fresher; listed for completeness because it anchors the GTM team a junior hire would sit under.",
-          "likelihood": "listed now"
-        },
-        {
-          "title": "Product Manager",
-          "family": "Product analyst and associate product manager (APM)",
-          "why": "Maps to the one genuinely new product line the round funds: the AI Contact Centre plus automated evaluation platform. The PM + Product Designer pairing on the careers page is the staffing signature of turning speech APIs into a full product surface. At a 25-45 person Series A this will be a 3-6 year PM, not an APM, so a 2026/27 grad is a long shot unless they have shipped voice/AI side projects.",
-          "likelihood": "listed now"
-        },
-        {
-          "title": "Sales Development Representative / Business Development Associate (BFSI outbound)",
-          "family": "Business development, inside sales and account management",
-          "why": "One Enterprise Sales Manager and one Account Manager cannot generate their own pipeline across the entire Indian BFSI universe. The standard next GTM hire after a Series A with an enterprise-expansion mandate is an SDR/BDR to build and work the bank/NBFC/insurer outbound list and qualify inbound from the funding coverage. This is the most realistic genuine entry-level business door at Navana over the next 12 months.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Solutions / Pre-Sales Associate (Sales Engineer)",
-          "family": "Pre-sales and solutions engineering (business-side technical GTM)",
-          "why": "On-premise deployment inside regulated BFSI means every deal runs through a POC, a security and compliance review and integration scoping against a bank's telephony and core systems. That work sits between sales and engineering and is the standard way an early-stage deep-tech company scales deployments without adding expensive senior sellers. Best-fit seat on this list for a 2026/27 engineering graduate, because the qualification is being able to wire up an STT/TTS API and explain a WER number to a bank's IT team.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Customer Success / Implementation Associate",
-          "family": "Operations, supply chain and city launch (customer operations)",
-          "why": "100M+ voice minutes are already live at named regulated clients, and the round funds deeper penetration of those same accounts. On-prem deployments need onboarding, model tuning per client, SLA and accuracy reporting, and QBR support - work the single Account Manager cannot absorb alongside commercial farming. Expansion revenue in enterprise voice AI is delivered by CS, not by sales.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Speech Data & Language Operations Associate (annotation / dialect QA)",
-          "family": "Operations (AI data operations)",
-          "why": "The second use of funds is to \"strengthen its speech models for Indian languages and dialects\" - currently 12 languages and 40-45 dialects. Before that is a modelling problem it is a data-sourcing and label-quality problem: recruiting speakers, managing transcription vendors, auditing per-dialect label quality, and building evaluation sets. Historically the most fresher-accessible non-engineering seat at an Indian speech company, and it scales headcount cheaply, which suits a Rs 40 crore round.",
-          "likelihood": "likely"
-        },
-        {
-          "title": "Associate Product Manager / Product Analyst (AI Contact Centre & evaluation platform)",
-          "family": "Product analyst and associate product manager (APM)",
-          "why": "The automated evaluation platform is inherently metric-driven - call QA scores, accuracy by language and dialect, containment and deflection rates - which usually pulls in an analyst once the first enterprise customers are live. Marked possible rather than likely because at 25-45 people this work is normally loaded onto the senior PM they are already hiring; an APM seat only appears if the contact-centre line gets traction fast.",
-          "likelihood": "possible"
-        },
-        {
-          "title": "Founder's Office / Business Associate",
-          "family": "Founder's office / chief of staff / strategy associate",
-          "why": "Two founder-brothers with fresh institutional capital and new investor reporting obligations to Screwvala, Antler India and three angels is the classic trigger for a founder's-office hire. Marked possible only: the careers page currently shows zero appetite for general org build-out - no growth, strategy, category or operations roles - and the reporting quotes no headcount target, so this would be opportunistic rather than planned.",
-          "likelihood": "possible"
-        }
-      ],
-      "band_confidence": "low",
+      "estimated_roles": [],
+      "band_confidence": "",
       "fit_for_fresher": "",
       "fit_reason": "",
-      "careers_url": "https://navana.ai/careers",
-      "caveat": "The strongest reason this estimate could be wrong is that Navana currently has no entry-level door at all. All six live roles are Manager or Senior titles (Account Manager, Enterprise Sales Manager, Product Manager, Product Designer, Senior MLOps Engineer, DevSecOps Engineer), and the funding coverage quotes no hiring plan, no headcount target and no new-city or international expansion - the only forward-looking language is the three use-of-funds phrases. Every \"likely\" and \"possible\" role above is my inference from what the round funds, not something Navana has announced, and a capital-efficient company that took eight years to reach a Rs 40 crore Series A may spend it on a handful of experienced GTM and infra people rather than building a junior funnel at all. Three further sources of error: headcount is a LinkedIn band estimate (11-50), not a published figure, so the company could be materially smaller than assumed and pay accordingly; remote-first hiring means comp may be set on a national rather than a Mumbai band, which would push a non-metro candidate 25-35% below the row I used; and at this size founders set compensation by discretion and candidate-by-candidate negotiation, so a single strong technical grad who can demo voice-AI work could be offered well above 9 LPA while a generic business hire could be offered 4-5. Finally, the benchmark row itself is medium confidence and stage-attributed by inference - no Indian salary source segments employers by funding stage - and I lowered it a further step for company size, so treat 5-9 as a planning bracket for a conversation, not a number to reject an offer on."
+      "careers_url": "",
+      "caveat": ""
     },
     {
       "amount_inr": 20400000000,

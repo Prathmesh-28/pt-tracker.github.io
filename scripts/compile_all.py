@@ -67,11 +67,29 @@ def main() -> None:
     bench = benchmarks()
 
     # attach estimates to the funding rows they belong to
+    def key(name):
+        return "".join(c for c in (name or "").lower() if c.isalnum())
+
     def match(name):
-        n = "".join(c for c in name.lower() if c.isalnum())
+        """Exact, or the estimate's name is the funding name plus a parenthetical.
+
+        Substring matching is wrong here: "cred" is inside "jiocredit", which
+        silently attributed Jio Credit's home-loan roles to CRED.
+        """
+        n = key(name)
+        if not n:
+            return None
         for k, v in est.items():
-            m = "".join(c for c in k.lower() if c.isalnum())
-            if n and (n in m or m.startswith(n) or n.startswith(m[:12])):
+            m = key(k)
+            if m == n:
+                return v
+        for k, v in est.items():
+            # "Big Tree Entertainment" -> "BookMyShow (Bigtree Entertainment Pvt. Ltd.)"
+            m = key(k)
+            if len(n) >= 6 and (m.startswith(n) or n.startswith(m)):
+                return v
+            head = key(k.split("(")[0])
+            if len(n) >= 6 and head and (head == n or head.startswith(n) or n.startswith(head)):
                 return v
         return None
 
