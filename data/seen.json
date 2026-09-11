@@ -3213,8 +3213,8 @@
  },
  "greenhouse:druva:8626085002": {
   "age_days": 53,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-11",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-11",
@@ -4558,6 +4558,20 @@
   "reposted": true,
   "title": "Customer Success Engineer, German Speaking ",
   "url": "https://job-boards.greenhouse.io/postman/jobs/7692476003"
+ },
+ "greenhouse:postman:7701509003": {
+  "age_days": 149,
+  "closed": false,
+  "closed_on": "",
+  "company": "postman",
+  "first_seen": "2026-09-11",
+  "last_seen": "2026-09-11",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 6,
+  "posted": "2026-04-15",
+  "reposted": true,
+  "title": "Senior Engineer, Search",
+  "url": "https://job-boards.greenhouse.io/postman/jobs/7701509003"
  },
  "greenhouse:postman:7703523003": {
   "age_days": 148,
@@ -6521,6 +6535,20 @@
   "title": "Assistant Manager(Controllership)",
   "url": "https://jobs.lever.co/fampay/09c9d0cd-f422-4138-a065-8d45e71d01a7"
  },
+ "lever:fampay:23dd18f9-a331-4115-98e9-e98c404c47c6": {
+  "age_days": 2286,
+  "closed": false,
+  "closed_on": "",
+  "company": "fampay",
+  "first_seen": "2026-09-11",
+  "last_seen": "2026-09-11",
+  "location": "Bengaluru",
+  "min_years": null,
+  "posted": "2020-06-08",
+  "reposted": false,
+  "title": "Copy Intern",
+  "url": "https://jobs.lever.co/fampay/23dd18f9-a331-4115-98e9-e98c404c47c6"
+ },
  "lever:fampay:2cbd7317-458c-4dbe-acac-84ef926bc055": {
   "age_days": 35,
   "closed": false,
@@ -6977,8 +7005,8 @@
  },
  "lever:meesho:128cee5f-5e62-43f4-8339-6ead8b5498e7": {
   "age_days": 30,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-11",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-11",
@@ -7044,6 +7072,20 @@
   "reposted": false,
   "title": "Associate Director - Commerce Platform",
   "url": "https://jobs.lever.co/meesho/1c610094-fbc4-42b0-b7f2-4b05c5569e9a"
+ },
+ "lever:meesho:1de2fc88-e203-4f1a-8046-55df700de4be": {
+  "age_days": 408,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-11",
+  "last_seen": "2026-09-11",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2025-07-30",
+  "reposted": false,
+  "title": "Trainee - Recruitment Coordinator",
+  "url": "https://jobs.lever.co/meesho/1de2fc88-e203-4f1a-8046-55df700de4be"
  },
  "lever:meesho:1f2462b8-3548-466e-908f-dcae91cfaee1": {
   "age_days": 147,
@@ -11390,8 +11432,8 @@
  },
  "lever:zeta:570f6cf7-5525-4357-81c4-658534458043": {
   "age_days": 127,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-11",
   "company": "zeta",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-11",
