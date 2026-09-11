@@ -3085,6 +3085,20 @@
   "title": "Sales Development Representative - Future Opportunity",
   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8324608002/?gh_jid=8324608002"
  },
+ "greenhouse:druva:8459688002": {
+  "age_days": 168,
+  "closed": false,
+  "closed_on": "",
+  "company": "druva",
+  "first_seen": "2026-09-11",
+  "last_seen": "2026-09-11",
+  "location": "Santa Clara, CA",
+  "min_years": 8,
+  "posted": "2026-03-27",
+  "reposted": true,
+  "title": "Director, Product Management, Security & Data Governance ",
+  "url": "https://www.druva.com/why-druva/explore/careers/jobs/8459688002/?gh_jid=8459688002"
+ },
  "greenhouse:druva:8525676002": {
   "age_days": 136,
   "closed": false,
@@ -3748,8 +3762,8 @@
  },
  "greenhouse:netradyne:4686019005": {
   "age_days": 147,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-11",
   "company": "netradyne",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-11",
