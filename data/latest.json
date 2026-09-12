@@ -342,26 +342,6 @@
       "key": "lever:meesho:5afe596f-17a2-4e8b-a498-ca46b2c7a869"
     },
     {
-      "age_days": 73,
-      "first_seen": "2026-09-10",
-      "reposted": false,
-      "title": "GTM & Enterprise Sales Consultant \u2013 Meesho AI Services (MAS)",
-      "company": "Meesho",
-      "city": "Mumbai",
-      "location": "Mumbai, Maharashtra",
-      "pay": "",
-      "url": "https://jobs.lever.co/meesho/122c2edd-ea44-41fd-a06f-ecc79588f6c6",
-      "posted": "2026-07-01",
-      "deadline": "",
-      "team": "AI Services",
-      "family": "Consulting",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "batch": "",
-      "key": "lever:meesho:122c2edd-ea44-41fd-a06f-ecc79588f6c6"
-    },
-    {
       "age_days": 75,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -3553,9 +3533,9 @@
     "employers": 15,
     "postings_scanned": 604,
     "postings_india": 453,
-    "business_track": 79,
+    "business_track": 78,
     "open": 7,
-    "unstated": 23,
+    "unstated": 22,
     "walled": 49
   }
 }
