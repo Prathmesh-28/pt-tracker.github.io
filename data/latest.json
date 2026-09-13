@@ -142,6 +142,26 @@
       "key": "lever:paytm:552ba2c8-ffb8-4342-8d8c-ca1903800a68"
     },
     {
+      "age_days": 1,
+      "first_seen": "2026-09-13",
+      "reposted": false,
+      "title": "Manager \u2013 GTM & Sales Strategy, Meesho AI Services (MAS)",
+      "company": "Meesho",
+      "city": "Mumbai",
+      "location": "Mumbai, Maharashtra",
+      "pay": "",
+      "url": "https://jobs.lever.co/meesho/9401d014-8199-4861-8f65-42fda8160e0c",
+      "posted": "2026-09-12",
+      "deadline": "",
+      "team": "AI Services",
+      "family": "Strategy",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:meesho:9401d014-8199-4861-8f65-42fda8160e0c"
+    },
+    {
       "age_days": 5,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -3531,11 +3551,11 @@
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 604,
-    "postings_india": 453,
-    "business_track": 78,
+    "postings_scanned": 605,
+    "postings_india": 454,
+    "business_track": 79,
     "open": 7,
-    "unstated": 22,
+    "unstated": 23,
     "walled": 49
   }
 }

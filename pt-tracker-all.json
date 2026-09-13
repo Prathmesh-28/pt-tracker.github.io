@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 78,
+    "open_roles_scraped": 79,
     "roles_open_to_freshers": 7,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 820,
+    "postings_tracked_in_history": 821,
     "benchmark_families": 0
   },
   "companies": [
@@ -4496,6 +4496,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:paytm:552ba2c8-ffb8-4342-8d8c-ca1903800a68"
+    },
+    {
+      "age_days": 1,
+      "first_seen": "2026-09-13",
+      "reposted": false,
+      "title": "Manager \u2013 GTM & Sales Strategy, Meesho AI Services (MAS)",
+      "company": "Meesho",
+      "city": "Mumbai",
+      "location": "Mumbai, Maharashtra",
+      "pay": "",
+      "url": "https://jobs.lever.co/meesho/9401d014-8199-4861-8f65-42fda8160e0c",
+      "posted": "2026-09-12",
+      "deadline": "",
+      "team": "AI Services",
+      "family": "Strategy",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:meesho:9401d014-8199-4861-8f65-42fda8160e0c"
     },
     {
       "age_days": 5,
