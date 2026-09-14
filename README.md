@@ -1,7 +1,8 @@
 # pt-tracker
 
 Entry-level, business-track job openings in India, pulled from company
-applicant-tracking feeds rather than scraped from job boards.
+applicant-tracking feeds and from LinkedIn and Indeed searches, with a local
+script that tailors your resume and drafts a pitch for the ones worth applying to.
 
 **Live site:** see the Pages deployment for this repo.
 
@@ -34,10 +35,27 @@ the minimum stated years extracted. Roles split three ways:
 | Greenhouse | `boards-api.greenhouse.io/v1/boards/{token}/jobs` | `content=true` for descriptions. `application_deadline` and `first_published` are real. |
 | Lever | `api.lever.co/v0/postings/{site}?mode=json` | Title is `text`, not `title`. `createdAt` is epoch **milliseconds**. |
 | Ashby | `api.ashbyhq.com/posting-api/job-board/{board}` | Unlisted postings ship in the array. `isListed` must be checked. |
+| LinkedIn, Indeed | [JobSpy](https://github.com/speedyapply/JobSpy) | Top 30 per query per site, last 30 days. Descriptions included. Indeed writes locations as `KA, IN`. |
 | Entrackr, Inc42, YourStory | RSS | VCCircle and Moneycontrol return 403 regardless of headers. |
 
-LinkedIn is **not** scraped. The page builds search URLs with the entry-level
-and last-30-days filters pre-applied, and you click them yourself.
+Search rows differ from board rows in three ways that matter:
+
+- **They are never marked closed.** A search returns its top matches; a role
+  dropping out of them has not necessarily closed. Only `last_seen` moves.
+- **The board row wins.** A role on both an employer's board and LinkedIn is
+  kept once, as the board row, matched on company and title.
+- **Pull live does not refresh them.** The browser can re-read the three ATS
+  APIs but not LinkedIn, so search rows stay as of the last scheduled build.
+
+JobSpy also supports Naukri, Glassdoor and Google Jobs. From an Indian IP on
+2026-09-14 Naukri demanded a recaptcha, Glassdoor rejected the location and
+Google returned nothing, so they are off by default. `JOBSPY_SITES`,
+`JOBSPY_RESULTS`, `JOBSPY_HOURS` and `JOBSPY_PROXIES` override the defaults.
+LinkedIn rate-limits datacenter IPs; if the scheduled run is blocked every time,
+add a `JOBSPY_PROXIES` repository secret. A blocked run keeps the board results.
+
+The hand-run LinkedIn links on the page use the same query list and still
+matter: they return every result, not the top 30.
 
 ## What the history can and cannot show
 
@@ -56,7 +74,7 @@ first run is not recoverable. What is available:
 
 Slug discovery is guesswork against a candidate list. Most large Indian
 employers run Workday, Darwinbox, SAP SuccessFactors or Naukri RMS, none of
-which publish a feed. A company missing here may simply not expose one under
+which publish a feed; the LinkedIn and Indeed searches reach some of them. A company missing here may simply not expose one under
 the name that was tried. Add candidates to `scripts/probe_boards.py` and run
 the refresh workflow with `rediscover` enabled.
 
@@ -68,9 +86,51 @@ salary band, every open posting scraped, the salary benchmarks, and the board
 list. The CSV is one row per estimated role, which is the shape you actually
 read. Rebuild both with `python3 scripts/compile_all.py`.
 
-## Run it
+## Applying
+
+`scripts/apply.py` does what the n8n "job applications with AI resume
+tailoring" workflow does, against this tracker's roles:
+
+| Step | n8n | Here |
+|---|---|---|
+| Master resume | Google Doc | `private/resume.md`, or `resume.pdf` (transcribed once to `.md`) |
+| Jobs | Apify LinkedIn scraper | `data/latest.json`: boards, LinkedIn and Indeed |
+| Fit filter | GPT-4o-mini | Claude, low effort: apply, stretch or skip, with matches and gaps |
+| Tailored resume | GPT-4o, saved as a Google Doc | Claude, high effort: `resume.md`, `.html`, `.docx` |
+| Contact | Anymail Finder | Anymail Finder with `--find-email`; an address in the posting is used first |
+| Email | Gmail draft | `email.eml` always; a Gmail draft with `--gmail` |
+
+The resume is rewritten from facts already in it: reordered, cut and reworded,
+never added to. Check `changes.md` in each folder against the original anyway.
+Nothing is ever sent.
+
+**Everything it writes goes under `private/`, which is gitignored. This repo is
+public and Pages serves its root. Never commit your resume.**
 
 ```bash
+python scripts/apply.py --dry-run                     # which roles it would pick
+python scripts/apply.py                               # 5 newest fresher-OK roles
+python scripts/apply.py --tier open,unstated --family Product --city Bengaluru --limit 10
+python scripts/apply.py --key 'linkedin:meridian:li-4464567231'
+python scripts/apply.py --find-email --gmail
+```
+
+| Variable | For |
+|---|---|
+| `ANTHROPIC_API_KEY` | Claude (or `ant auth login`) |
+| `ANYMAILFINDER_API_KEY` | `--find-email`. Paid. Only a verified address goes in `To:` |
+| `GMAIL_ADDRESS`, `GMAIL_APP_PASSWORD` | `--gmail`. A Google app password, which needs 2-step verification |
+
+Roles already screened or drafted are logged in `private/applications.json`
+and skipped next time; `--force` redoes them.
+
+## Run it
+
+Python 3.10+ for the search and apply steps. The board pipeline is standard
+library only.
+
+```bash
+python3.11 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
 ./scripts/run_all.sh                          # the whole pipeline, in order
 python3 scripts/ingest_paste.py <file>        # add a funding export
 python3 scripts/probe_funded.py               # look for boards at funded companies
@@ -94,11 +154,14 @@ data/latest.json         what the page loads
 data/incoming/           the raw exports, kept as source of truth
 data/history/            one snapshot per run
 data/raw/                regenerated each run, not versioned
+private/                 your resume, tailored copies, drafts; gitignored
 
 scripts/paths.py         every file location, in one place
 scripts/probe_boards.py  find which employers expose a board
 scripts/probe_funded.py  same, using the funded list as candidates
 scripts/fetch_jobs.py    pull postings, filter to India and business-track
+scripts/fetch_search.py  add LinkedIn and Indeed results via JobSpy
+scripts/apply.py         screen, tailor the resume, draft the pitch
 scripts/enrich.py        read descriptions, extract the experience requirement
 scripts/funding.py       pull funding RSS, separate rounds from other news
 scripts/ingest_paste.py  parse a pasted funding export into the store

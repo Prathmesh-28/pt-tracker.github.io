@@ -1,0 +1,8 @@
+# Python 3.10+. The board pipeline itself is standard library only.
+
+# scripts/fetch_search.py - LinkedIn and Indeed through JobSpy
+python-jobspy>=1.1.82
+
+# scripts/apply.py and pipeline.py - Claude
+anthropic
+pydantic>=2

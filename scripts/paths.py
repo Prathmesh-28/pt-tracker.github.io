@@ -15,6 +15,7 @@ REJECTED = DATA / "rejected_slugs.json"
 
 # --- working artefacts ---
 POSTINGS = RAW / "all_postings.json"
+SEARCH_POSTINGS = RAW / "search_postings.json"  # JobSpy rows, before merging
 SHORTLIST = RAW / "shortlist.json"
 HEADLINES = RAW / "headlines.json"
 ROUNDS_RSS = RAW / "rounds.json"
@@ -32,6 +33,12 @@ BUNDLE_JSON = ROOT / "pt-tracker-all.json"
 BUNDLE_CSV = ROOT / "pt-tracker-all.csv"
 INDEX = ROOT / "index.html"
 TEMPLATE = ROOT / "page.template.html"
+
+# --- personal, never committed: this repo is public and Pages serves its root ---
+PRIVATE = ROOT / "private"
+RESUME = PRIVATE / "resume.md"            # or resume.pdf / resume.txt
+APPLICATIONS = PRIVATE / "applications"   # one folder per tailored application
+APPLIED_LOG = PRIVATE / "applications.json"
 
 for d in (DATA, RAW, INCOMING, HISTORY):
     d.mkdir(parents=True, exist_ok=True)

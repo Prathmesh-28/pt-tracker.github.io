@@ -1,4 +1,7 @@
 __pycache__/
 *.pyc
+.venv/
 # regenerated on every run
 data/raw/
+# your resume, tailored copies and drafts; this repo is public
+private/

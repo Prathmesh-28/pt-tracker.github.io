@@ -28,12 +28,23 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
       - name: Re-discover boards
         if: ${{ inputs.rediscover }}
         run: python scripts/probe_boards.py
 
       - name: Pull postings
         run: python scripts/fetch_jobs.py
+
+      # LinkedIn rate-limits datacenter IPs. A blocked run keeps the board
+      # results; set JOBSPY_PROXIES as a repo secret if it happens every time.
+      - name: Pull LinkedIn and Indeed via JobSpy
+        run: python scripts/fetch_search.py
+        continue-on-error: true
+        env:
+          JOBSPY_PROXIES: ${{ secrets.JOBSPY_PROXIES }}
 
       - name: Read descriptions and parse experience
         run: python scripts/enrich.py

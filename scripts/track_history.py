@@ -18,6 +18,7 @@ from __future__ import annotations
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import paths
+from fetch_search import SEARCH_SITES
 
 import json
 import pathlib
@@ -60,7 +61,8 @@ def main() -> None:
                 "last_seen": today,
                 "posted": row.get("posted") or "",
                 "title": row.get("title") or "",
-                "company": row.get("slug") or "",
+                "company": (row.get("company") if row["ats"] in SEARCH_SITES
+                            else row.get("slug")) or "",
                 "location": row.get("location") or "",
                 "url": row.get("url") or "",
                 "min_years": row.get("min_years"),
@@ -84,6 +86,10 @@ def main() -> None:
     newly_closed = 0
     for key, record in seen.items():
         ats, slug, _ = key.split(":", 2)
+        if ats in SEARCH_SITES:
+            # A search returns its top N. Dropping out of that is not closing,
+            # so last_seen is all a search row can honestly carry.
+            continue
         if f"{ats}:{slug}" not in tracked:
             record["untracked"] = True
             continue

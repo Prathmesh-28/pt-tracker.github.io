@@ -11,6 +11,7 @@ from fetch_jobs import INDIA, entry_level_business
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import paths
+from fetch_search import QUERIES, SEARCH_SITES
 
 TODAY = date.today().isoformat()
 
@@ -28,12 +29,8 @@ FAMILIES = [
     ("Support & other", r"."),
 ]
 
-LINKEDIN_QUERIES = [
-    "business analyst", "associate consultant", "strategy associate",
-    "growth analyst", "product analyst", "associate product manager",
-    "founder's office", "chief of staff", "category manager",
-    "management trainee", "business development associate",
-]
+# The JobSpy searches and the hand-run links use one list.
+LINKEDIN_QUERIES = QUERIES
 
 
 
@@ -108,7 +105,8 @@ def main() -> None:
             "first_seen": hist.get("first_seen", ""),
             "reposted": bool(hist.get("reposted")),
             "title": r["title"].strip(),
-            "company": display_name(r["slug"]),
+            "company": (r["company"] if r["ats"] in SEARCH_SITES
+                        else display_name(r["slug"])),
             "city": city_of(r["location"]),
             "location": r["location"],
             "pay": r.get("pay") or "",
@@ -120,6 +118,8 @@ def main() -> None:
             "min_years": years,
             "tier": tier,
             "ats": r["ats"],
+            "source": "search" if r["ats"] in SEARCH_SITES else "board",
+            "apply_url": r.get("apply_url") or "",
             "batch": r.get("batch") or "",
             "key": key,
         })
@@ -180,6 +180,7 @@ def main() -> None:
             "boards": len(boards),
             "employers": len({b["slug"] for b in boards}),
             "postings_scanned": len(postings),
+            "search_postings": sum(1 for r in postings if r["ats"] in SEARCH_SITES),
             "postings_india": len(india),
             "business_track": len(biz),
             "open": sum(1 for r in roles if r["tier"] == "open"),

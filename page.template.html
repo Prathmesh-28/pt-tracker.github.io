@@ -262,8 +262,9 @@ footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);
 <section>
   <div class="head"><h2>Searches worth running by hand</h2></div>
   <p class="deck">Most large Indian employers run Workday, Darwinbox or Naukri RMS, none of which
-    publish a feed, so roughly half the market is invisible to the pull above. These links carry the
-    entry-level and last-30-days filters already applied, sorted newest first.</p>
+    publish a feed. The LinkedIn and Indeed pull above reaches some of them, but only the top results
+    per search. These links run the same searches in full, with the entry-level and last-30-days filters
+    applied, sorted newest first.</p>
   <div class="links" id="links"></div>
 </section>
 
@@ -272,7 +273,10 @@ footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);
   <div class="method">
     <dl>
       <dt>Sources</dt>
-      <dd>Greenhouse, Lever and Ashby public board APIs. No scraping, no credentials.</dd>
+      <dd>Greenhouse, Lever and Ashby public board APIs, plus LinkedIn and Indeed search results
+        pulled with <a href="https://github.com/speedyapply/JobSpy" target="_blank" rel="noopener noreferrer">JobSpy</a>.
+        Search rows are marked <b>via LinkedIn</b> or <b>via Indeed</b>. A role that drops out of a search
+        has not necessarily closed, so only board roles are tracked to closure.</dd>
       <dt>Experience</dt>
       <dd>Parsed from each posting's own description, not inferred from its title.
         <b>Product Manager</b> is a graduate role at one company and a four-year role at the next.</dd>
@@ -286,7 +290,7 @@ footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);
 </section>
 
 <footer>
-  <span>Every link goes to the employer's own posting. Nothing here is scraped or resold.</span>
+  <span>Board roles link to the employer's own posting; search roles link to the LinkedIn or Indeed listing.</span>
   <span class="mono" id="saved">Marks are stored locally to this page</span>
 </footer>
 </div>
@@ -294,6 +298,7 @@ footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);
 <script>
 let DATA = /*__DATA__*/{"roles":[],"rounds":[],"searches":[],"boards":[],"coverage":{},"generated":""};
 const TIERS = {open:"Fresher OK", unstated:"Not stated", walled:"2+ yrs"};
+const SITE_NAMES = {linkedin:"LinkedIn", indeed:"Indeed", naukri:"Naukri", glassdoor:"Glassdoor", google:"Google Jobs"};
 
 let marks = {};          // key -> "shortlist" | "applied"
 let db = null;
@@ -322,7 +327,7 @@ function paintHeader(){
 
   const withPay = DATA.roles.filter(r => r.pay).length;
   el("pay-note").innerHTML = withPay
-    ? `<b>${withPay}</b> of these postings publish a band. Ashby is the only feed that carries one.`
+    ? `<b>${withPay}</b> of these postings publish a band, from Ashby feeds or Indeed listings.`
     : `None of these employers publish a salary band. Ashby is the only feed that can carry one, `
       + `and no Indian board in this pull filled it in.`;
 }
@@ -360,6 +365,7 @@ function rowHTML(r){
   if (r.deadline) bits.push(`<span class="mono">closes ${esc(r.deadline)}</span>`);
   if (r.pay) bits.push(`<span class="mono">${esc(r.pay)}</span>`);
   if (r.reposted) bits.push(`<span title="Edited after it was first published">reposted</span>`);
+  if (r.source === "search") bits.push(`<span title="Found through a job-board search, not the employer's own feed">via ${esc(SITE_NAMES[r.ats] || r.ats)}</span>`);
   const age = r.age_days;
   const ageTag = age === null || age === undefined ? ""
     : `<span class="age ${age > 180 ? "stale" : ""}" title="Days since the employer first published this role">${
@@ -528,6 +534,8 @@ async function boot(){
         note.textContent = `${done} of ${total} boards · ${slug}`;
       });
       const byKey = new Map(DATA.roles.map(r => [r.key, r]));
+      /* The browser can only re-read the boards. Search rows stay as of the last build. */
+      const searched = DATA.roles.filter(r => r.source === "search");
       DATA.roles = biz.map(r => {
         const key = `${r.ats}:${r.slug}:${r.id}`;
         const prev = byKey.get(key) || {};
@@ -537,16 +545,17 @@ async function boot(){
           city: prev.city || r.location,
           family: prev.family || "Support & other",
           age_days: prev.age_days ?? null, reposted: prev.reposted ?? false};
-      }).sort((a,b) => ({open:0,unstated:1,walled:2})[a.tier] - ({open:0,unstated:1,walled:2})[b.tier]);
+      }).concat(searched).sort((a,b) => ({open:0,unstated:1,walled:2})[a.tier] - ({open:0,unstated:1,walled:2})[b.tier]);
       DATA.coverage = {...DATA.coverage,
-        postings_scanned: all.length, postings_india: india.length, business_track: biz.length,
+        postings_scanned: all.length + searched.length, postings_india: india.length + searched.length,
+        business_track: biz.length + searched.length,
         open: DATA.roles.filter(r=>r.tier==="open").length,
         unstated: DATA.roles.filter(r=>r.tier==="unstated").length,
         walled: DATA.roles.filter(r=>r.tier==="walled").length};
       DATA.generated = new Date().toISOString().slice(0,10);
       repaint();
       note.textContent = `Live as of ${new Date().toLocaleTimeString()} · ${all.length} postings read from ${DATA.boards.length} boards. `
-        + `Funding and history stay as of the last scheduled build.`;
+        + `LinkedIn and Indeed results, funding and history stay as of the last scheduled build.`;
     } catch (err) {
       note.textContent = `Live pull failed: ${err.message}. The data below is the last scheduled build.`;
     } finally { btn.disabled = false; }

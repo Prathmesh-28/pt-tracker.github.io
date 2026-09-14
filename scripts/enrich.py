@@ -20,6 +20,7 @@ from concurrent.futures import ThreadPoolExecutor
 import os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import paths
+from fetch_search import SEARCH_SITES
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -106,7 +107,11 @@ def main() -> None:
 
     stated = unstated = 0
     for row in postings:
-        text = lookup.get((row["ats"], row["slug"]), {}).get(row["id"], "")
+        if row["ats"] in SEARCH_SITES:
+            # JobSpy returned the description with the search; there is no board to re-read.
+            text = clean(row.get("description") or "")
+        else:
+            text = lookup.get((row["ats"], row["slug"]), {}).get(row["id"], "")
         row["description"] = text
         years = min_years(text) if text else None
         row["min_years"] = years
