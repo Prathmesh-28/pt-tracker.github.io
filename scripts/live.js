@@ -10,7 +10,7 @@
 
   const INDIA = /\b(india|bengaluru|bangalore|mumbai|gurgaon|gurugram|delhi|noida|ncr|hyderabad|pune|chennai|kolkata|ahmedabad|jaipur|indore|kochi|cochin|coimbatore|chandigarh|surat|nagpur|bhubaneswar|thiruvananthapuram)\b/i;
 
-  const WANTED = /(business analyst|product analyst|growth analyst|data analyst|operations analyst|financial analyst|research analyst|\banalyst\b|associate consultant|\bconsultant\b|strategy|growth|associate product manager|product manager|\bapm\b|product associate|founder'?s office|chief of staff|category|management trainee|graduate trainee|trainee|business development|\bbd\b|inside sales|sales associate|account executive|customer success|partnerships|program manager|project manager|operations associate|\bops\b|associate|generalist)/i;
+  const WANTED = /(business analyst|product analyst|growth analyst|data analyst|operations analyst|financial analyst|research analyst|\banalyst\b|associate consultant|\bconsultant\b|strategy|growth|associate product manager|product manager|\bapm\b|product associate|founder'?s office|chief of staff|category|management trainee|graduate trainee|trainee|business development|\bbd\b|inside sales|sales associate|account executive|customer success|partnerships|program manager|project manager|operations associate|\bops\b|associate|generalist|\bintern(?:ship)?s?\b)/i;
 
   const SENIOR = /(senior|\bsr\.?\b|staff\b|principal|\blead\b|leader|head of|\bhead\b|director|\bvp\b|vice president|president|\bchief\b|architect|manager ii|manager iii|\bii\b|\biii\b|\biv\b|\bl[3-9]\b)/i;
 

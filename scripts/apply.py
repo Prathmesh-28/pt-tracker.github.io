@@ -30,6 +30,7 @@ Usage:
   python scripts/apply.py --dry-run                 # which roles would be picked
   python scripts/apply.py                           # 5 newest fresher-OK roles
   python scripts/apply.py --tier open,unstated --family Product --city Bengaluru --limit 10
+  python scripts/apply.py --grad-year 2027 --kind internship --city-tier "Tier 1"
   python scripts/apply.py --key linkedin:meridian:li-4464567231 --force
   python scripts/apply.py --email --find-email --gmail
 """
@@ -241,6 +242,15 @@ def load_json(path, fallback):
         return fallback
 
 
+def fits_grad(role: dict, year: int) -> bool:
+    """Same rule as the page: an internship, a posting naming that batch, or a
+    fresher role naming no batch. A posting naming only other batches is out."""
+    named = role.get("batches") or []
+    if named:
+        return year in named
+    return role.get("kind") == "internship" or role["tier"] != "walled"
+
+
 def pick(args, roles: list[dict], log: dict) -> list[dict]:
     tiers = {t.strip() for t in args.tier.split(",")}
 
@@ -258,6 +268,10 @@ def pick(args, roles: list[dict], log: dict) -> list[dict]:
             if r["tier"] in tiers
             and hit(r["family"], args.family) and hit(r["city"], args.city)
             and hit(r["company"], args.company)
+            and (not args.kind or r.get("kind", "full-time") == args.kind)
+            and (not args.city_tier or r.get("city_tier") == args.city_tier)
+            and (not args.funded or r.get("funded"))
+            and (not args.grad_year or fits_grad(r, args.grad_year))
         ]
         chosen.sort(key=lambda r: r.get("posted") or "", reverse=True)
     if not args.force:
@@ -422,6 +436,10 @@ def main() -> None:
     ap.add_argument("--tier", default="open", help="open, unstated, walled; comma-separated")
     for field in ("--family", "--city", "--company"):
         ap.add_argument(field, help="case-insensitive substring")
+    ap.add_argument("--kind", choices=["internship", "full-time"])
+    ap.add_argument("--city-tier", choices=["Tier 1", "Tier 2", "Tier 3", "Remote", "City not given"])
+    ap.add_argument("--funded", action="store_true", help="only employers in the funding list")
+    ap.add_argument("--grad-year", type=int, help="only roles open to this graduating batch, e.g. 2027")
     ap.add_argument("--key", action="append", help="a role key from the page; repeatable")
     ap.add_argument("--force", action="store_true", help="redo roles already drafted, and draft skips")
     ap.add_argument("--dry-run", action="store_true")

@@ -49,11 +49,43 @@ FRESHER = re.compile(
     re.I,
 )
 
-BATCH = re.compile(r"\b(202[5-9])\s*(?:batch|pass ?out|graduates?)", re.I)
+# Batch years are written every which way: "2025 & 2026 pass-outs", "Class of
+# 2024, 2025 or 2026", "graduating between December 2027 and June 2028",
+# "Eligible Passing Year: 2025". So find the cue, then take every year near it.
+BATCH_CUE = re.compile(
+    r"batch|pass[\s-]?outs?|passing (?:out|year)|graduat\w*|class of|"
+    r"graduation year|year of (?:passing|graduation)|final[- ]year|pre[- ]final",
+    re.I,
+)
+# A year right after "founded in" or "since" is about the company, not a batch.
+YEAR = re.compile(r"(?<!founded in )(?<!founded )(?<!since )(?<!established in )(?<!launched in )\b(202[4-9])\b", re.I)
+SENTENCE = re.compile(r"\.\s|;|•|\s\*\s|\s-\s|\|")
+
+INTERN = re.compile(r"\bintern(?:ship)?s?\b|\bsummer (?:analyst|associate)", re.I)
+
+# JobSpy returns markdown, which escapes punctuation: "Pass\-outs", "2026\)".
+MD_ESCAPE = re.compile(r"\\([\\`*_{}\[\]()#+\-.!&|>~])")
 
 
 def clean(raw: str) -> str:
-    return SPACE.sub(" ", html.unescape(TAGS.sub(" ", raw or ""))).strip()
+    text = MD_ESCAPE.sub(r"\1", html.unescape(TAGS.sub(" ", raw or ""))).replace("**", "")
+    return SPACE.sub(" ", text).strip()
+
+
+def batches(text: str) -> list[int]:
+    """Every graduation year the posting names as eligible."""
+    years: set[int] = set()
+    for sentence in SENTENCE.split(text):
+        for cue in BATCH_CUE.finditer(sentence):
+            window = sentence[max(0, cue.start() - 60): cue.end() + 60]
+            years.update(int(y) for y in YEAR.findall(window))
+    return sorted(years)
+
+
+def kind(row: dict) -> str:
+    if INTERN.search(row.get("title") or "") or "internship" in (row.get("job_type") or ""):
+        return "internship"
+    return "full-time"
 
 
 def min_years(text: str) -> int | None:
@@ -108,6 +140,12 @@ def main() -> None:
     stated = unstated = 0
     for row in postings:
         if row["ats"] in SEARCH_SITES:
+            if not row.get("description") and "min_years" in row:
+                # A row from the committed cache: already derived, nothing to re-read.
+                years = row["min_years"]
+                row["batch"] = ", ".join(map(str, row.get("batches") or []))
+                stated, unstated = stated + (years is not None), unstated + (years is None)
+                continue
             # JobSpy returned the description with the search; there is no board to re-read.
             text = clean(row.get("description") or "")
         else:
@@ -115,8 +153,10 @@ def main() -> None:
         row["description"] = text
         years = min_years(text) if text else None
         row["min_years"] = years
-        batch = BATCH.search(text) if text else None
-        row["batch"] = batch.group(1) if batch else ""
+        # Titles carry batches too: "Graduate Management Trainee - 2026".
+        row["batches"] = batches(f"{row.get('title') or ''} graduates. {text}")
+        row["batch"] = ", ".join(map(str, row["batches"]))
+        row["kind"] = kind(row)
         if years is None:
             unstated += 1
         else:

@@ -3,5 +3,7 @@ __pycache__/
 .venv/
 # regenerated on every run
 data/raw/
+# every search, kept on this machine
+data/archive/
 # your resume, tailored copies and drafts; this repo is public
 private/

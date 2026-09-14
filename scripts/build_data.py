@@ -15,6 +15,9 @@ from fetch_search import QUERIES, SEARCH_SITES
 
 TODAY = date.today().isoformat()
 
+# The page's "Open to N grads" filter is worked out against this year.
+GRAD_YEAR = int(os.environ.get("PT_GRAD_YEAR", "2027"))
+
 FAMILIES = [
     ("Business analyst", r"business analyst|data analyst|risk analyst|financial analyst"),
     ("Consulting", r"consultant|consulting"),
@@ -58,17 +61,93 @@ def family_of(title: str) -> str:
     return "Support & other"
 
 
+# Tier 1 is the eight X-class cities of the government's HRA classification,
+# plus the NCR and Mumbai satellite cities, which hire as part of those metros.
+TIER1 = {
+    "Mumbai", "Delhi", "Bengaluru", "Hyderabad", "Chennai", "Kolkata", "Pune",
+    "Ahmedabad", "Gurugram", "Noida", "Greater Noida", "Ghaziabad", "Faridabad",
+    "Navi Mumbai", "Thane",
+}
+# Tier 2 is the Y-class list, trimmed to cities that actually post these roles.
+TIER2 = {
+    "Jaipur", "Lucknow", "Kochi", "Coimbatore", "Chandigarh", "Mohali", "Indore",
+    "Nagpur", "Surat", "Bhubaneswar", "Thiruvananthapuram", "Vadodara",
+    "Visakhapatnam", "Mysuru", "Nashik", "Bhopal", "Patna", "Ludhiana", "Kanpur",
+    "Madurai", "Vijayawada", "Mangaluru", "Dehradun", "Guwahati", "Raipur",
+    "Ranchi", "Jodhpur", "Rajkot", "Aurangabad", "Tiruchirappalli", "Hubballi",
+    "Goa", "Panaji", "Agra", "Varanasi", "Amritsar", "Jalandhar", "Gwalior",
+    "Jabalpur", "Salem", "Tiruppur", "Belagavi", "Kolhapur", "Solapur", "Siliguri",
+    "Durgapur", "Asansol", "Jamshedpur", "Dhanbad", "Cuttack", "Warangal",
+    "Guntur", "Nellore", "Udaipur", "Ajmer", "Bikaner", "Kota", "Meerut",
+    "Allahabad", "Prayagraj", "Bareilly", "Aligarh", "Moradabad", "Srinagar",
+    "Jammu", "Pondicherry", "Puducherry", "Vellore", "Erode", "Thrissur",
+    "Kozhikode", "Kannur", "Gandhinagar", "Bhavnagar", "Jamnagar", "Anand",
+}
+ALIASES = {
+    "bangalore": "Bengaluru", "gurgaon": "Gurugram", "new delhi": "Delhi",
+    "bombay": "Mumbai", "calcutta": "Kolkata", "madras": "Chennai",
+    "cochin": "Kochi", "trivandrum": "Thiruvananthapuram", "mysore": "Mysuru",
+    "baroda": "Vadodara", "vizag": "Visakhapatnam", "mangalore": "Mangaluru",
+    "hubli": "Hubballi", "trichy": "Tiruchirappalli", "belgaum": "Belagavi",
+    "calicut": "Kozhikode", "delhi ncr": "Delhi", "ncr": "Delhi",
+    "gautam buddha nagar": "Noida",
+}
+KNOWN = {c.lower(): c for c in TIER1 | TIER2} | ALIASES
+CITY = re.compile(r"\b(" + "|".join(sorted(map(re.escape, KNOWN), key=len, reverse=True)) + r")\b", re.I)
+STATES = {
+    "andhra pradesh", "arunachal pradesh", "assam", "bihar", "chhattisgarh", "goa",
+    "gujarat", "haryana", "himachal pradesh", "jharkhand", "karnataka", "kerala",
+    "madhya pradesh", "maharashtra", "manipur", "meghalaya", "mizoram", "nagaland",
+    "odisha", "punjab", "rajasthan", "sikkim", "tamil nadu", "telangana", "tripura",
+    "uttar pradesh", "uttarakhand", "west bengal", "india",
+}
+
+
+def place_of(location: str) -> tuple[str, str]:
+    """(city, city tier) from a location string as any of the sources write it."""
+    # A named city wins over "remote": "Pune/Remote" still means Pune.
+    if m := CITY.search(location):
+        city = KNOWN[m.group(1).lower()]
+        return city, "Tier 1" if city in TIER1 else "Tier 2"
+    if re.search(r"\b(remote|work from home|wfh)\b", location, re.I):
+        return "Remote", "Remote"
+    # LinkedIn writes "City, State, India"; a city missing from both lists is tier 3.
+    first = location.split(",")[0].strip()
+    if first and first.lower() not in STATES and not re.fullmatch(r"[A-Z]{2}", first):
+        return first.title(), "Tier 3"
+    # Indeed often gives only a state code: "KA, India".
+    return "India", "City not given"
+
+
 def city_of(location: str) -> str:
-    m = re.search(
-        r"\b(Bengaluru|Bangalore|Mumbai|Gurgaon|Gurugram|Delhi|Noida|Hyderabad|"
-        r"Pune|Chennai|Kolkata|Ahmedabad|Jaipur|Indore|Kochi|Coimbatore|"
-        r"Chandigarh|Bhubaneswar)\b",
-        location, re.I,
-    )
-    if not m:
-        return "India"
-    city = m.group(1).title()
-    return {"Bangalore": "Bengaluru", "Gurgaon": "Gurugram"}.get(city, city)
+    return place_of(location)[0]
+
+
+SUFFIXES = re.compile(
+    r"\b(private|pvt|limited|ltd|llp|inc|technologies|technology|solutions|"
+    r"services|india|labs|ventures|group)\b\.?", re.I)
+
+
+def company_key(name: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", SUFFIXES.sub("", (name or "").lower()))
+
+
+def funded_index() -> dict[str, dict]:
+    """Companies in the funding store, by a key that ignores "Pvt Ltd" and the like.
+
+    Exact matches only. Prefix matching attributed Jio Credit's roles to CRED.
+    """
+    try:
+        store = json.load(open(paths.FUNDING))
+    except (FileNotFoundError, json.JSONDecodeError):
+        return {}
+    out = {}
+    for rec in sorted(store.values(), key=lambda r: r.get("date") or ""):
+        for name in (rec.get("company"), rec.get("parent")):
+            k = company_key(name)
+            if len(k) >= 4:
+                out[k] = {"round": rec.get("round") or "", "date": rec.get("date") or ""}
+    return out
 
 
 def linkedin(query: str) -> str:
@@ -89,6 +168,7 @@ def main() -> None:
     india = [r for r in postings if INDIA.search(r["location"])]
     biz = [r for r in india if entry_level_business(r["title"])]
 
+    funded = funded_index()
     roles = []
     for r in biz:
         years = r.get("min_years")
@@ -100,14 +180,16 @@ def main() -> None:
             tier = "walled"
         key = f"{r['ats']}:{r['slug']}:{r['id']}"
         hist = seen.get(key, {})
+        city, city_tier = place_of(r["location"])
+        company = r["company"] if r["ats"] in SEARCH_SITES else display_name(r["slug"])
         roles.append({
             "age_days": hist.get("age_days"),
             "first_seen": hist.get("first_seen", ""),
             "reposted": bool(hist.get("reposted")),
             "title": r["title"].strip(),
-            "company": (r["company"] if r["ats"] in SEARCH_SITES
-                        else display_name(r["slug"])),
-            "city": city_of(r["location"]),
+            "company": company,
+            "city": city,
+            "city_tier": city_tier,
             "location": r["location"],
             "pay": r.get("pay") or "",
             "url": r["url"],
@@ -121,6 +203,9 @@ def main() -> None:
             "source": "search" if r["ats"] in SEARCH_SITES else "board",
             "apply_url": r.get("apply_url") or "",
             "batch": r.get("batch") or "",
+            "batches": r.get("batches") or [],
+            "kind": r.get("kind") or "full-time",
+            "funded": funded.get(company_key(company)) or funded.get(company_key(r["slug"])),
             "key": key,
         })
 
@@ -171,6 +256,9 @@ def main() -> None:
 
     data = {
         "generated": TODAY,
+        "grad_year": GRAD_YEAR,
+        # When LinkedIn and Indeed were last searched; only present on a machine that searched.
+        "search": json.load(open(paths.SEARCH_META)) if paths.SEARCH_META.exists() else {},
         "roles": roles,
         "rounds": rounds,
         "searches": [{"query": q, "url": linkedin(q)} for q in LINKEDIN_QUERIES],

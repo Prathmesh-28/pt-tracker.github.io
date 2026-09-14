@@ -50,7 +50,7 @@ WANTED = re.compile(
     r"business development|\bbd\b|inside sales|sales associate|"
     r"account executive|customer success|partnerships|"
     r"program manager|project manager|operations associate|\bops\b|"
-    r"associate|generalist)",
+    r"associate|generalist|\bintern(?:ship)?s?\b)",
     re.I,
 )
 

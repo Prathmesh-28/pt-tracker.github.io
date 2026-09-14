@@ -15,7 +15,12 @@ REJECTED = DATA / "rejected_slugs.json"
 
 # --- working artefacts ---
 POSTINGS = RAW / "all_postings.json"
-SEARCH_POSTINGS = RAW / "search_postings.json"  # JobSpy rows, before merging
+SEARCH_POSTINGS = RAW / "search_postings.json"  # JobSpy rows with descriptions, this machine only
+SEARCH_CACHE = DATA / "search_cache.json"        # the same rows without descriptions, committed
+SEARCH_META = RAW / "search_meta.json"           # when the last search ran, per-site counts
+ARCHIVE = DATA / "archive"                       # every search, gzipped; this machine only
+LOGS = RAW / "logs"                              # one log per pipeline run
+RUN_LOCK = RAW / "run.lock"                      # held while a pipeline run is in progress
 SHORTLIST = RAW / "shortlist.json"
 HEADLINES = RAW / "headlines.json"
 ROUNDS_RSS = RAW / "rounds.json"

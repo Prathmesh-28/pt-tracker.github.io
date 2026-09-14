@@ -235,8 +235,26 @@ footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);
 
 <div class="controls">
   <input type="search" id="q" placeholder="Search title, company or team" aria-label="Search roles">
+  <select id="f-batch" aria-label="Filter by graduation batch"><option value="">Any batch</option></select>
+  <select id="f-kind" aria-label="Filter by internship or full-time">
+    <option value="">Internship or full-time</option>
+    <option value="internship">Internships</option>
+    <option value="full-time">Full-time</option>
+  </select>
   <select id="f-family" aria-label="Filter by function"><option value="">All functions</option></select>
+  <select id="f-ctier" aria-label="Filter by city tier">
+    <option value="">All city tiers</option>
+    <option value="Tier 1">Tier 1 cities</option>
+    <option value="Tier 2">Tier 2 cities</option>
+    <option value="Tier 3">Tier 3 cities</option>
+    <option value="Remote">Remote</option>
+    <option value="City not given">City not given</option>
+  </select>
   <select id="f-city" aria-label="Filter by city"><option value="">All cities</option></select>
+  <select id="f-funded" aria-label="Filter by funding">
+    <option value="">Any employer</option>
+    <option value="yes">VC-funded</option>
+  </select>
   <select id="f-company" aria-label="Filter by company"><option value="">All companies</option></select>
   <select id="f-mark" aria-label="Filter by your status">
     <option value="">Any status</option>
@@ -302,7 +320,7 @@ const SITE_NAMES = {linkedin:"LinkedIn", indeed:"Indeed", naukri:"Naukri", glass
 
 let marks = {};          // key -> "shortlist" | "applied"
 let db = null;
-const state = {tier:"", q:"", family:"", city:"", company:"", mark:""};
+const state = {tier:"", q:"", family:"", city:"", company:"", mark:"", batch:"", kind:"", ctier:"", funded:""};
 
 const el = id => document.getElementById(id);
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c =>
@@ -341,15 +359,30 @@ function fillSelect(id, values){
   });
 }
 
+/* "Open to 2027 grads": an internship, a posting that names that batch, or a
+   fresher role that names no batch at all. A posting naming only earlier
+   batches is out. */
+function fitsGrad(r, year){
+  const b = r.batches || [];
+  if (b.length) return b.includes(year);
+  return r.kind === "internship" || r.tier !== "walled";
+}
+
 function matches(r){
   if (state.tier && r.tier !== state.tier) return false;
+  if (state.batch === "fits" && !fitsGrad(r, DATA.grad_year)) return false;
+  if (state.batch === "none" && (r.batches || []).length) return false;
+  if (/^\d{4}$/.test(state.batch) && !(r.batches || []).includes(+state.batch)) return false;
+  if (state.kind && (r.kind || "full-time") !== state.kind) return false;
+  if (state.ctier && r.city_tier !== state.ctier) return false;
+  if (state.funded && !r.funded) return false;
   if (state.family && r.family !== state.family) return false;
   if (state.city && r.city !== state.city) return false;
   if (state.company && r.company !== state.company) return false;
   if (state.mark === "unmarked" && marks[r.key]) return false;
   if (state.mark && state.mark !== "unmarked" && marks[r.key] !== state.mark) return false;
   if (state.q){
-    const hay = `${r.title} ${r.company} ${r.team} ${r.family} ${r.city}`.toLowerCase();
+    const hay = `${r.title} ${r.company} ${r.team} ${r.family} ${r.city} ${r.batch || ""} ${r.kind || ""}`.toLowerCase();
     if (!hay.includes(state.q)) return false;
   }
   return true;
@@ -359,7 +392,11 @@ function matches(r){
 function rowHTML(r){
   const gate = r.min_years === null ? "not stated"
     : r.min_years === 0 ? "fresher" : `${r.min_years}+ yrs`;
-  const bits = [`<span class="co">${esc(r.company)}</span>`, esc(r.city)];
+  const bits = [`<span class="co">${esc(r.company)}</span>`,
+    esc(r.city) + (r.city_tier && !["Remote", "City not given"].includes(r.city_tier) ? ` <span class="mono">${esc(r.city_tier)}</span>` : "")];
+  if (r.kind === "internship") bits.push(`<b>Internship</b>`);
+  if ((r.batches || []).length) bits.push(`<span title="Graduation years the posting names">${esc(r.batches.join("/"))} batch</span>`);
+  if (r.funded) bits.push(`<span title="In the funding list${r.funded.date ? ", " + esc(r.funded.date) : ""}">${esc(r.funded.round || "VC-funded")}</span>`);
   if (r.team) bits.push(esc(r.team));
   if (r.posted) bits.push(`<span class="mono">${esc(r.posted)}</span>`);
   if (r.deadline) bits.push(`<span class="mono">closes ${esc(r.deadline)}</span>`);
@@ -473,13 +510,21 @@ async function setMark(key, value){
 /* ---------- wiring ---------- */
 paintHeader();
 paintRounds();
+function fillBatches(){
+  const sel = el("f-batch"); sel.length = 1;
+  const add = (value, text) => { const o = document.createElement("option"); o.value = value; o.textContent = text; sel.appendChild(o); };
+  if (DATA.grad_year) add("fits", `Open to ${DATA.grad_year} grads`);
+  [...new Set(DATA.roles.flatMap(r => r.batches || []))].sort().forEach(y => add(String(y), `Names ${y} batch`));
+  add("none", "Names no batch");
+}
+fillBatches();
 fillSelect("f-family", [...new Set(DATA.roles.map(r => r.family))]);
 fillSelect("f-city",    [...new Set(DATA.roles.map(r => r.city))]);
 fillSelect("f-company", [...new Set(DATA.roles.map(r => r.company))]);
 render();
 
 el("q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); render(); });
-["family","city","company","mark"].forEach(k =>
+["family","city","company","mark","batch","kind","ctier","funded"].forEach(k =>
   el("f-"+k).addEventListener("change", e => { state[k] = e.target.value; render(); }));
 document.querySelectorAll(".gate button").forEach(b =>
   b.addEventListener("click", () => {
@@ -496,6 +541,7 @@ el("rows").addEventListener("click", e => {
 /* ---------- live pull ---------- */
 function repaint(){
   paintHeader(); paintRounds();
+  const keepBatch = el("f-batch").value; fillBatches(); el("f-batch").value = keepBatch;
   ["family","city","company"].forEach(k => {
     const sel = el("f-"+k); const keep = sel.value;
     sel.length = 1;
@@ -503,6 +549,77 @@ function repaint(){
     sel.value = keep;
   });
   render();
+}
+
+/* ---------- refresh on this Mac (scripts/serve.py) ---------- */
+const clock = iso => new Date(iso).toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
+const when = iso => iso
+  ? new Date(iso).toLocaleString([], {day:"numeric", month:"short", hour:"2-digit", minute:"2-digit"})
+  : "never";
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+function searchLine(s){
+  const counts = Object.entries(s.counts || {}).map(([k, n]) => `${SITE_NAMES[k] || k} ${n}`).join(", ");
+  let line = `LinkedIn and Indeed last searched ${when(s.searched_at)}${counts ? ` (${counts})` : ""}.`;
+  if ((s.blocked || []).length)
+    line += ` ${s.blocked.map(k => SITE_NAMES[k] || k).join(" and ")} returned nothing that time, so the results before it were kept.`;
+  line += s.search_allowed_now
+    ? " The next refresh searches them again."
+    : ` To stay clear of LinkedIn's limits they are not searched again until ${clock(s.next_search_after)};`
+      + " a refresh before then re-reads the company boards and keeps these results.";
+  return line;
+}
+
+async function localRefresh(){
+  let s;
+  try {
+    const res = await fetch("/api/status", {cache: "no-store"});
+    if (!res.ok) return false;
+    s = await res.json();
+  } catch { return false; }
+
+  const btn = el("refresh"), note = el("livenote");
+  btn.textContent = "Refresh everything";
+  btn.hidden = false; note.hidden = false;
+  note.textContent = searchLine(s);
+
+  const status = async () => (await fetch("/api/status", {cache: "no-store"})).json();
+  const watch = async () => {
+    btn.disabled = true;
+    let seen = s.running, tries = 0;
+    while (true){
+      s = await status();
+      seen = seen || s.running;
+      const step = (s.log || []).filter(l => l.startsWith("== ")).slice(-1)[0];
+      note.textContent = `Refreshing on this Mac${step ? " · " + step.slice(3) : "…"}`;
+      if (!s.running && (seen || ++tries > 10)) break;
+      await sleep(2000);
+    }
+    const finished = (s.log || []).find(l => l.startsWith("finished")) || "";
+    try {
+      const res = await fetch("./data/latest.json", {cache: "no-store"});
+      if (res.ok){ DATA = await res.json(); repaint(); }
+    } catch {}
+    note.textContent = (/exit 0$/.test(finished)
+        ? `Up to date as of ${new Date().toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"})}. `
+        : `The run did not finish cleanly (${finished || "no log"}); see data/raw/logs/latest.log. `)
+      + searchLine(s);
+    btn.disabled = false;
+  };
+
+  if (s.running) watch();
+  btn.addEventListener("click", async () => {
+    btn.disabled = true;
+    try {
+      const res = await fetch("/api/refresh", {method: "POST"});
+      if (!res.ok && res.status !== 409) throw new Error(`the server answered ${res.status}`);
+      await watch();
+    } catch (err) {
+      note.textContent = `Refresh did not start: ${err.message}.`;
+      btn.disabled = false;
+    }
+  });
+  return true;
 }
 
 async function boot(){
@@ -517,7 +634,11 @@ async function boot(){
     }
   } catch {/* artifact context: keep the inlined data */}
 
-  /* The refresh button only appears where a cross-origin pull can actually run. */
+  /* Served from this Mac: the button runs the whole pipeline, job boards included. */
+  if (await localRefresh()) return;
+
+  /* Elsewhere (GitHub Pages) the browser can only re-read the company boards,
+     and the button only appears where that cross-origin pull can run. */
   if (typeof window.PTLive === "undefined" || !DATA.boards || !DATA.boards.length) return;
   try {
     const probe = await fetch("https://boards-api.greenhouse.io/v1/boards/postman/jobs", {mode:"cors"});
@@ -525,10 +646,11 @@ async function boot(){
   } catch { return; }
 
   const btn = el("refresh"), note = el("livenote");
+  btn.textContent = `Re-read ${DATA.boards.length} company boards`;
   btn.hidden = false;
   btn.addEventListener("click", async () => {
     btn.disabled = true; note.hidden = false;
-    note.textContent = `Pulling ${DATA.boards.length} boards straight from Greenhouse, Lever and Ashby…`;
+    note.textContent = `Pulling ${DATA.boards.length} company boards straight from Greenhouse, Lever and Ashby…`;
     try {
       const {all, india, biz} = await window.PTLive.pull(DATA.boards, (done, total, slug) => {
         note.textContent = `${done} of ${total} boards · ${slug}`;

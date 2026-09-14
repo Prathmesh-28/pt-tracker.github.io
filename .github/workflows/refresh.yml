@@ -3,7 +3,9 @@ name: Refresh job data
 on:
   schedule:
     # Four times a day. Board feeds do not change faster than this.
-    - cron: "17 1,7,13,19 * * *"
+    # The first (06:47 IST) is the only one that searches LinkedIn and Indeed.
+    - cron: "17 1 * * *"
+    - cron: "17 7,13,19 * * *"
   workflow_dispatch:
     inputs:
       rediscover:
@@ -38,13 +40,19 @@ jobs:
       - name: Pull postings
         run: python scripts/fetch_jobs.py
 
-      # LinkedIn rate-limits datacenter IPs. A blocked run keeps the board
-      # results; set JOBSPY_PROXIES as a repo secret if it happens every time.
+      # Once a day is plenty and keeps LinkedIn from throttling the runner.
+      # A blocked site keeps its last good results; set JOBSPY_PROXIES as a
+      # repo secret if the morning run is blocked every day.
       - name: Pull LinkedIn and Indeed via JobSpy
+        if: ${{ github.event.schedule == '17 1 * * *' || github.event_name == 'workflow_dispatch' }}
         run: python scripts/fetch_search.py
         continue-on-error: true
         env:
           JOBSPY_PROXIES: ${{ secrets.JOBSPY_PROXIES }}
+
+      - name: Merge the morning's LinkedIn and Indeed results
+        if: ${{ github.event.schedule != '17 1 * * *' && github.event_name != 'workflow_dispatch' }}
+        run: python scripts/fetch_search.py --cached
 
       - name: Read descriptions and parse experience
         run: python scripts/enrich.py

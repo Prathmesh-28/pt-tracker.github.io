@@ -4,7 +4,9 @@ Entry-level, business-track job openings in India, pulled from company
 applicant-tracking feeds and from LinkedIn and Indeed searches, with a local
 script that tailors your resume and drafts a pitch for the ones worth applying to.
 
-**Live site:** see the Pages deployment for this repo.
+**On this Mac:** http://127.0.0.1:8765, refreshed every morning at 8. See
+[Running it on this Mac](#running-it-on-this-mac).
+**Public copy:** the Pages deployment for this repo.
 
 ## What it does
 
@@ -35,7 +37,7 @@ the minimum stated years extracted. Roles split three ways:
 | Greenhouse | `boards-api.greenhouse.io/v1/boards/{token}/jobs` | `content=true` for descriptions. `application_deadline` and `first_published` are real. |
 | Lever | `api.lever.co/v0/postings/{site}?mode=json` | Title is `text`, not `title`. `createdAt` is epoch **milliseconds**. |
 | Ashby | `api.ashbyhq.com/posting-api/job-board/{board}` | Unlisted postings ship in the array. `isListed` must be checked. |
-| LinkedIn, Indeed | [JobSpy](https://github.com/speedyapply/JobSpy) | Top 30 per query per site, last 30 days. Descriptions included. Indeed writes locations as `KA, IN`. |
+| LinkedIn, Indeed | [JobSpy](https://github.com/speedyapply/JobSpy) | Top 30 per query per site, last 30 days, 15 queries including four for internships. Descriptions included. Indeed usually gives only a state code, `KA, IN`. |
 | Entrackr, Inc42, YourStory | RSS | VCCircle and Moneycontrol return 403 regardless of headers. |
 
 Search rows differ from board rows in three ways that matter:
@@ -44,18 +46,40 @@ Search rows differ from board rows in three ways that matter:
   dropping out of them has not necessarily closed. Only `last_seen` moves.
 - **The board row wins.** A role on both an employer's board and LinkedIn is
   kept once, as the board row, matched on company and title.
-- **Pull live does not refresh them.** The browser can re-read the three ATS
-  APIs but not LinkedIn, so search rows stay as of the last scheduled build.
+- **Only this Mac refreshes them on demand.** A browser can re-read the three
+  ATS APIs but not LinkedIn, so on GitHub Pages the button re-reads the company
+  boards only. Served from this Mac, it runs the whole pipeline.
 
-JobSpy also supports Naukri, Glassdoor and Google Jobs. From an Indian IP on
-2026-09-14 Naukri demanded a recaptcha, Glassdoor rejected the location and
-Google returned nothing, so they are off by default. `JOBSPY_SITES`,
+**Not getting blocked.** JobSpy reads LinkedIn's logged-out job search, so no
+LinkedIn account is involved and none can be banned; the risk is the IP being
+throttled. Searches run one site at a time with 6-12 second pauses, a site that
+returns nothing twice in a row is left alone for the rest of the run, and
+LinkedIn and Indeed are never searched twice within 4 hours however often the
+pipeline runs (`JOBSPY_COOLDOWN_HOURS`). A blocked site keeps its results from
+the last good search.
+
+JobSpy also supports Naukri, Glassdoor and Google Jobs. On 2026-09-14 Naukri
+demanded a recaptcha, Glassdoor answered 403 from behind bot protection, and
+Google returned nothing. Getting past the first two means impersonating a
+browser, which is how IPs get banned, so they stay off. `JOBSPY_SITES`,
 `JOBSPY_RESULTS`, `JOBSPY_HOURS` and `JOBSPY_PROXIES` override the defaults.
-LinkedIn rate-limits datacenter IPs; if the scheduled run is blocked every time,
-add a `JOBSPY_PROXIES` repository secret. A blocked run keeps the board results.
 
 The hand-run LinkedIn links on the page use the same query list and still
 matter: they return every result, not the top 30.
+
+## Finding roles you can take
+
+The filters above the list, all combinable:
+
+| Filter | What it does |
+|---|---|
+| Batch | **Open to 2027 grads**: an internship, a posting that names 2027, or a fresher role naming no batch. A posting that names only other years is out. Or pick one named year. Set the year with `PT_GRAD_YEAR`. |
+| Internship or full-time | From the title (`intern`, `summer analyst`) and the listing's job type. |
+| City tier | Tier 1: the eight metros plus the NCR and Mumbai satellite cities. Tier 2: the other large cities. Tier 3: any other named city. Plus Remote, and City not given (mostly Indeed). |
+| VC-funded | The employer is in the funding store, matched on exact name after dropping "Pvt Ltd" and the like. |
+
+Few postings name a batch outright (11 of about 1,100 on 2026-09-14), so the
+batch years shown are only ever what the posting says.
 
 ## What the history can and cannot show
 
@@ -111,6 +135,7 @@ public and Pages serves its root. Never commit your resume.**
 python scripts/apply.py --dry-run                     # which roles it would pick
 python scripts/apply.py                               # screen + tailor the 5 newest fresher-OK roles
 python scripts/apply.py --tier open,unstated --family Product --city Bengaluru --limit 10
+python scripts/apply.py --grad-year 2027 --kind internship --city-tier "Tier 1"
 python scripts/apply.py --key 'linkedin:meridian:li-4464567231'
 python scripts/apply.py --email --find-email --gmail
 ```
@@ -124,14 +149,43 @@ python scripts/apply.py --email --find-email --gmail
 Roles already screened or drafted are logged in `private/applications.json`
 and skipped next time; `--force` redoes them.
 
-## Run it
+## Running it on this Mac
+
+```bash
+python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt
+./scripts/schedule_mac.sh install 08:00       # daily refresh + the local site
+```
+
+That installs two launchd jobs. One runs `scripts/refresh.sh` at 8:00 every
+morning, or as soon as the Mac wakes if it was asleep. The other keeps
+`scripts/serve.py` up at http://127.0.0.1:8765, where **Refresh everything**
+runs the same pipeline on demand and shows each step as it goes.
+
+- A lock stops the morning run and a button press from overlapping.
+- Each run writes `data/raw/logs/<time>.log`; `latest.log` points at the newest.
+- Every LinkedIn and Indeed search is archived gzipped in `data/archive/`.
+- `data/seen.json` keeps every role ever seen with its first and last day,
+  and `data/history/` a snapshot per day.
+- The server answers on 127.0.0.1 only, refuses refresh requests from other
+  sites, and never serves `private/`.
+
+The project has to live outside `~/Downloads`, `~/Documents` and `~/Desktop`;
+macOS does not let background jobs read those folders.
+
+```bash
+./scripts/schedule_mac.sh status              # both jobs, and the last run
+./scripts/schedule_mac.sh run                 # refresh now
+./scripts/schedule_mac.sh uninstall
+```
+
+## Run it by hand
 
 Python 3.10+ for the search and apply steps. The board pipeline is standard
 library only.
 
 ```bash
-python3.11 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
-./scripts/run_all.sh                          # the whole pipeline, in order
+./scripts/refresh.sh                          # the whole pipeline, locked and logged
+./scripts/run_all.sh                          # the same, straight to the terminal
 python3 scripts/ingest_paste.py <file>        # add a funding export
 python3 scripts/probe_funded.py               # look for boards at funded companies
 ```
@@ -153,7 +207,9 @@ data/rejected_slugs.json slugs that turned out to be foreign namesakes
 data/latest.json         what the page loads
 data/incoming/           the raw exports, kept as source of truth
 data/history/            one snapshot per run
-data/raw/                regenerated each run, not versioned
+data/search_cache.json   last LinkedIn/Indeed results without descriptions
+data/raw/                regenerated each run, not versioned; logs in data/raw/logs/
+data/archive/            every search, gzipped; not versioned
 private/                 your resume, tailored copies, drafts; gitignored
 
 scripts/paths.py         every file location, in one place
@@ -161,6 +217,9 @@ scripts/probe_boards.py  find which employers expose a board
 scripts/probe_funded.py  same, using the funded list as candidates
 scripts/fetch_jobs.py    pull postings, filter to India and business-track
 scripts/fetch_search.py  add LinkedIn and Indeed results via JobSpy
+scripts/refresh.sh       one locked, logged pipeline run
+scripts/serve.py         the local site and its refresh endpoint
+scripts/schedule_mac.sh  install the 8 AM refresh and the local site
 scripts/apply.py         screen, tailor the resume, draft the pitch
 scripts/enrich.py        read descriptions, extract the experience requirement
 scripts/funding.py       pull funding RSS, separate rounds from other news
