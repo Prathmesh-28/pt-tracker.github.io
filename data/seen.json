@@ -4743,8 +4743,8 @@
  },
  "greenhouse:postman:7766503003": {
   "age_days": 95,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-14",
   "company": "postman",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-14",
@@ -11737,6 +11737,20 @@
   "reposted": false,
   "title": "Lead Site Reliability Engineer",
   "url": "https://jobs.lever.co/zeta/5eb7a75b-312c-4759-8813-70e67b5d4109"
+ },
+ "lever:zeta:72ee1884-8e8b-447b-ab96-aa76605b5f4a": {
+  "age_days": 3,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-09-14",
+  "last_seen": "2026-09-14",
+  "location": "Bangalore - EC",
+  "min_years": null,
+  "posted": "2026-09-11",
+  "reposted": false,
+  "title": "Intern",
+  "url": "https://jobs.lever.co/zeta/72ee1884-8e8b-447b-ab96-aa76605b5f4a"
  },
  "lever:zeta:7c0e0301-f6e0-4092-980d-7e7ec3b566f1": {
   "age_days": 108,
