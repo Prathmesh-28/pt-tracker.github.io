@@ -6,8 +6,8 @@ run against this tracker's roles instead of an Apify LinkedIn scrape:
   n8n node                     here
   Google Docs master resume -> private/resume.md (or .pdf / .txt)
   Apify LinkedIn scraper    -> data/latest.json + data/raw/all_postings.json
-  GPT-4o-mini fit filter    -> screen(), Claude at low effort
-  GPT-4o resume rewrite     -> tailor(), Claude at high effort
+  GPT-4o-mini fit filter    -> screen(), Gemini
+  GPT-4o resume rewrite     -> tailor(), Gemini
   Google Doc per job        -> private/applications/<role>/resume.{md,html,docx}
   Anymail Finder            -> find_contact(), only with --find-email
   Gmail draft               -> email.eml with --email; a real Gmail draft with --gmail
@@ -20,7 +20,8 @@ Everything written here is personal and lands under private/, which is
 gitignored: this repo is public and GitHub Pages serves its root.
 
 Credentials, all from the environment:
-  Claude          ANTHROPIC_API_KEY (or an `ant auth login` profile)
+  Gemini          GEMINI_API_KEY, free from https://aistudio.google.com/apikey
+                  GEMINI_MODEL overrides the model (default gemini-3.5-flash)
   --find-email    ANYMAILFINDER_API_KEY   (paid; 1 credit per email found)
   --gmail         GMAIL_ADDRESS, GMAIL_APP_PASSWORD (a Google app password,
                   not your account password; needs 2-step verification on)
@@ -36,7 +37,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import base64
 import html
 import imaplib
 import json
@@ -56,14 +56,8 @@ from typing import Literal
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import paths
 
-MODEL = "claude-opus-5"
-
-# Opus 5's classifiers occasionally decline; this re-runs the request on
-# Anthropic's recommended fallback instead of returning the refusal.
-FALLBACK = dict(
-    extra_headers={"anthropic-beta": "server-side-fallback-2026-07-01"},
-    extra_body={"fallbacks": "default"},
-)
+# Flash is on the free tier. A pro model writes better resumes if you have quota.
+MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")
 
 _client = None
 
@@ -72,8 +66,10 @@ def client():
     """Created on first use so --dry-run needs no credentials or SDK."""
     global _client
     if _client is None:
-        import anthropic
-        _client = anthropic.Anthropic()
+        if not (os.environ.get("GEMINI_API_KEY") or os.environ.get("GOOGLE_API_KEY")):
+            sys.exit("Set GEMINI_API_KEY. A free key: https://aistudio.google.com/apikey")
+        from google import genai
+        _client = genai.Client()
     return _client
 
 
@@ -103,25 +99,43 @@ def schemas():
 
 
 # --------------------------------------------------------------------------
-# Claude calls
+# Gemini calls
 # --------------------------------------------------------------------------
 
-def parse(schema, prompt: str | list, *, effort: str, max_tokens: int = 16_000):
-    content = prompt if isinstance(prompt, list) else [{"type": "text", "text": prompt}]
-    response = client().messages.parse(
-        model=MODEL,
-        max_tokens=max_tokens,
-        output_config={"effort": effort},
-        output_format=schema,
-        messages=[{"role": "user", "content": content}],
-        **FALLBACK,
+def parse(schema, contents: str | list, *, attempts: int = 4):
+    """One structured-output call. Retries rate limits, which the free tier hits fast."""
+    from google.genai import errors, types
+
+    config = types.GenerateContentConfig(
+        response_mime_type="application/json",
+        response_schema=schema,
+        automatic_function_calling=types.AutomaticFunctionCallingConfig(disable=True),
     )
-    if response.stop_reason == "refusal":
-        detail = getattr(response.stop_details, "category", None)
-        raise RuntimeError(f"model declined the request (category: {detail})")
-    if response.stop_reason == "max_tokens":
-        raise RuntimeError("response hit max_tokens and is truncated")
-    return response.parsed_output
+    for attempt in range(attempts):
+        try:
+            response = client().models.generate_content(model=MODEL, contents=contents, config=config)
+            break
+        except errors.ClientError as exc:
+            if exc.code != 429 or attempt == attempts - 1:
+                raise
+            wait = 20 * (attempt + 1)
+            print(f"  rate limited; waiting {wait}s", file=sys.stderr)
+            time.sleep(wait)
+        except errors.ServerError:
+            if attempt == attempts - 1:
+                raise
+            time.sleep(5 * (attempt + 1))
+
+    if response.prompt_feedback and response.prompt_feedback.block_reason:
+        raise RuntimeError(f"prompt blocked: {response.prompt_feedback.block_reason}")
+    reason = response.candidates[0].finish_reason if response.candidates else None
+    if reason == types.FinishReason.MAX_TOKENS:
+        raise RuntimeError("response hit the output limit and is truncated")
+    if reason not in (None, types.FinishReason.STOP):
+        raise RuntimeError(f"model stopped early: {reason}")
+    if isinstance(response.parsed, schema):
+        return response.parsed
+    return schema.model_validate_json(response.text)
 
 
 def posting_block(role: dict, description: str) -> str:
@@ -151,7 +165,7 @@ def screen(resume: str, role: dict, description: str):
         "graduation year against a full-time start date; an internship can fit "
         "while a full-time role does not), or the role is a different function "
         "altogether."
-    ), effort="low", max_tokens=4_000)
+    ))
 
 
 def tailor(resume: str, role: dict, description: str, fit, *, email: bool):
@@ -181,7 +195,7 @@ def tailor(resume: str, role: dict, description: str, fit, *, email: bool):
         "resume, and say the resume is attached. No flattery of the company, no "
         "filler about passion.\n"
         "- Sign off with the candidate's name from the resume." if email else "")
-    ), effort="high")
+    ))
 
 
 def transcribe_pdf(pdf: bytes) -> str:
@@ -191,14 +205,13 @@ def transcribe_pdf(pdf: bytes) -> str:
     class Transcript(BaseModel):
         resume_markdown: str
 
+    from google.genai import types
+
     out = parse(Transcript, [
-        {"type": "document", "source": {
-            "type": "base64", "media_type": "application/pdf",
-            "data": base64.standard_b64encode(pdf).decode()}},
-        {"type": "text", "text": (
-            "Transcribe this resume to markdown, word for word. Do not summarise, "
-            "reorder or improve anything. # for the name, ## for sections, - for bullets.")},
-    ], effort="low")
+        types.Part.from_bytes(data=pdf, mime_type="application/pdf"),
+        "Transcribe this resume to markdown, word for word. Do not summarise, "
+        "reorder or improve anything. # for the name, ## for sections, - for bullets.",
+    ])
     return out.resume_markdown
 
 

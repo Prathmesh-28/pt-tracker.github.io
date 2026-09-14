@@ -95,8 +95,8 @@ tailoring" workflow does, against this tracker's roles:
 |---|---|---|
 | Master resume | Google Doc | `private/resume.md`, or `resume.pdf` (transcribed once to `.md`) |
 | Jobs | Apify LinkedIn scraper | `data/latest.json`: boards, LinkedIn and Indeed |
-| Fit filter | GPT-4o-mini | Claude, low effort: apply, stretch or skip, with matches and gaps |
-| Tailored resume | GPT-4o, saved as a Google Doc | Claude, high effort: `resume.md`, `.html`, `.docx` |
+| Fit filter | GPT-4o-mini | Gemini: apply, stretch or skip, with matches and gaps |
+| Tailored resume | GPT-4o, saved as a Google Doc | Gemini: `resume.md`, `.html`, `.docx` |
 | Contact | Anymail Finder | Anymail Finder with `--find-email`; an address in the posting is used first |
 | Email | Gmail draft | Off by default. `email.eml` with `--email`; a Gmail draft with `--gmail` |
 
@@ -117,7 +117,7 @@ python scripts/apply.py --email --find-email --gmail
 
 | Variable | For |
 |---|---|
-| `ANTHROPIC_API_KEY` | Claude (or `ant auth login`) |
+| `GEMINI_API_KEY` | Gemini. Free key at aistudio.google.com/apikey. `GEMINI_MODEL` overrides `gemini-3.5-flash` |
 | `ANYMAILFINDER_API_KEY` | `--find-email`. Paid. Only a verified address goes in `To:` |
 | `GMAIL_ADDRESS`, `GMAIL_APP_PASSWORD` | `--gmail`. A Google app password, which needs 2-step verification |
 

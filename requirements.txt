@@ -3,6 +3,9 @@
 # scripts/fetch_search.py - LinkedIn and Indeed through JobSpy
 python-jobspy>=1.1.82
 
-# scripts/apply.py and pipeline.py - Claude
-anthropic
+# scripts/apply.py - Gemini
+google-genai
 pydantic>=2
+
+# pipeline.py - Claude
+anthropic
