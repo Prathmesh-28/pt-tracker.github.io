@@ -3702,6 +3702,20 @@
   "title": "YouTube & Content - Internship",
   "url": "https://job-boards.eu.greenhouse.io/groww/jobs/4967486101"
  },
+ "greenhouse:groww:4970739101": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "groww",
+  "first_seen": "2026-09-14",
+  "last_seen": "2026-09-14",
+  "location": "Bengaluru-VTP, India",
+  "min_years": null,
+  "posted": "2026-09-14",
+  "reposted": false,
+  "title": "Assistant Manager - Internal Audit",
+  "url": "https://job-boards.eu.greenhouse.io/groww/jobs/4970739101"
+ },
  "greenhouse:hone:4110121009": {
   "age_days": 235,
   "closed": false,
@@ -8097,8 +8111,8 @@
  },
  "lever:paytm:03f256bd-ba54-4fd3-84c0-cea409d4b989": {
   "age_days": 60,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-14",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-14",
@@ -8262,6 +8276,20 @@
   "reposted": false,
   "title": "Relationship Manager - HNI Customers - Paytm Money Ltd",
   "url": "https://jobs.lever.co/paytm/0c8e02de-6720-4e2c-9742-aa4f35ec8327"
+ },
+ "lever:paytm:0ff90fbd-29a5-4436-b312-8d5ead429dca": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-14",
+  "last_seen": "2026-09-14",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 6,
+  "posted": "2026-09-14",
+  "reposted": false,
+  "title": "Frontend  Lead",
+  "url": "https://jobs.lever.co/paytm/0ff90fbd-29a5-4436-b312-8d5ead429dca"
  },
  "lever:paytm:11bf5c25-3c9c-451f-8844-4f6d9b5817da": {
   "age_days": 32,
@@ -8797,8 +8825,8 @@
  },
  "lever:paytm:3ad2b446-028d-4e00-945d-2d9f6e0f988a": {
   "age_days": 83,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-14",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-14",
@@ -8951,8 +8979,8 @@
  },
  "lever:paytm:44dc260c-5683-477c-a731-7b49995be503": {
   "age_days": 1,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-14",
   "company": "paytm",
   "first_seen": "2026-09-14",
   "last_seen": "2026-09-14",
@@ -9088,6 +9116,20 @@
   "reposted": false,
   "title": "Growth Management- DGM/ GM- Lending EMI",
   "url": "https://jobs.lever.co/paytm/4c6e737e-0e89-4e06-985f-e7cb6e9481c5"
+ },
+ "lever:paytm:4ee74e43-4001-457f-9ad8-f574689991d5": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-14",
+  "last_seen": "2026-09-14",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 3,
+  "posted": "2026-09-14",
+  "reposted": false,
+  "title": "Product Management - UPI Product | Experience : 3-5 yrs",
+  "url": "https://jobs.lever.co/paytm/4ee74e43-4001-457f-9ad8-f574689991d5"
  },
  "lever:paytm:51f3a9e9-1534-4bd6-8aff-52f134e18ae6": {
   "age_days": 62,
@@ -9424,6 +9466,20 @@
   "reposted": false,
   "title": "Technical Project Manager - Paytm",
   "url": "https://jobs.lever.co/paytm/6a812d19-9ec8-4d97-a641-cafe50a24f81"
+ },
+ "lever:paytm:6aabe883-3771-4be4-90eb-734fd3336863": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-14",
+  "last_seen": "2026-09-14",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": null,
+  "posted": "2026-09-14",
+  "reposted": false,
+  "title": "Hotel Operations - Team Lead - Paytm Travel",
+  "url": "https://jobs.lever.co/paytm/6aabe883-3771-4be4-90eb-734fd3336863"
  },
  "lever:paytm:6cee2f1c-6cae-4e46-9533-d62283f56734": {
   "age_days": 45,
@@ -9872,6 +9928,20 @@
   "reposted": false,
   "title": "Business Analyst",
   "url": "https://jobs.lever.co/paytm/8a118b61-3e1a-4d5c-835a-04d05197c2aa"
+ },
+ "lever:paytm:8c4d24b4-62d4-466d-9daa-b3c7804c5a67": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-14",
+  "last_seen": "2026-09-14",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 7,
+  "posted": "2026-09-14",
+  "reposted": false,
+  "title": "Analytics Lead - UPI Product | Experience : 7-9 yrs",
+  "url": "https://jobs.lever.co/paytm/8c4d24b4-62d4-466d-9daa-b3c7804c5a67"
  },
  "lever:paytm:8d9bb9c3-cd95-4c97-b4b3-f68f2da10946": {
   "age_days": 115,
@@ -10741,6 +10811,20 @@
   "title": "Enterprise GTM Lead, Inference and Agentic AI",
   "url": "https://jobs.lever.co/paytm/e5145511-6cbd-4168-a5ad-24bc925487db"
  },
+ "lever:paytm:e5a7c0f3-cbb8-4283-b455-5d9d53b503c1": {
+  "age_days": 1,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-14",
+  "last_seen": "2026-09-14",
+  "location": "Aligarh, Uttar Pradesh",
+  "min_years": null,
+  "posted": "2026-09-13",
+  "reposted": false,
+  "title": "Field Sales - Team Lead - LRM_Aligarh",
+  "url": "https://jobs.lever.co/paytm/e5a7c0f3-cbb8-4283-b455-5d9d53b503c1"
+ },
  "lever:paytm:e78736f2-8d5a-49bb-88da-4cc5a6561d18": {
   "age_days": 154,
   "closed": false,
@@ -11006,6 +11090,20 @@
   "reposted": false,
   "title": "Field Sales - Team Lead - LRM_Rohtak",
   "url": "https://jobs.lever.co/paytm/f5afd6fa-850f-496b-afd4-0484b1882b96"
+ },
+ "lever:paytm:f6cf73fc-27e3-4a51-a25d-df54bbe47fab": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-14",
+  "last_seen": "2026-09-14",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 7,
+  "posted": "2026-09-14",
+  "reposted": false,
+  "title": "Deputy General Manager- Product Analyst Lead",
+  "url": "https://jobs.lever.co/paytm/f6cf73fc-27e3-4a51-a25d-df54bbe47fab"
  },
  "lever:paytm:fa5befe1-43f5-417f-a1de-a989264e1871": {
   "age_days": 39,
