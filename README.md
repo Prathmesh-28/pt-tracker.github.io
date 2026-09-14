@@ -98,7 +98,7 @@ tailoring" workflow does, against this tracker's roles:
 | Fit filter | GPT-4o-mini | Claude, low effort: apply, stretch or skip, with matches and gaps |
 | Tailored resume | GPT-4o, saved as a Google Doc | Claude, high effort: `resume.md`, `.html`, `.docx` |
 | Contact | Anymail Finder | Anymail Finder with `--find-email`; an address in the posting is used first |
-| Email | Gmail draft | `email.eml` always; a Gmail draft with `--gmail` |
+| Email | Gmail draft | Off by default. `email.eml` with `--email`; a Gmail draft with `--gmail` |
 
 The resume is rewritten from facts already in it: reordered, cut and reworded,
 never added to. Check `changes.md` in each folder against the original anyway.
@@ -109,10 +109,10 @@ public and Pages serves its root. Never commit your resume.**
 
 ```bash
 python scripts/apply.py --dry-run                     # which roles it would pick
-python scripts/apply.py                               # 5 newest fresher-OK roles
+python scripts/apply.py                               # screen + tailor the 5 newest fresher-OK roles
 python scripts/apply.py --tier open,unstated --family Product --city Bengaluru --limit 10
 python scripts/apply.py --key 'linkedin:meridian:li-4464567231'
-python scripts/apply.py --find-email --gmail
+python scripts/apply.py --email --find-email --gmail
 ```
 
 | Variable | For |

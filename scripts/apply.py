@@ -10,7 +10,9 @@ run against this tracker's roles instead of an Apify LinkedIn scrape:
   GPT-4o resume rewrite     -> tailor(), Claude at high effort
   Google Doc per job        -> private/applications/<role>/resume.{md,html,docx}
   Anymail Finder            -> find_contact(), only with --find-email
-  Gmail draft               -> email.eml always; a real Gmail draft with --gmail
+  Gmail draft               -> email.eml with --email; a real Gmail draft with --gmail
+
+By default it only screens and tailors. --find-email and --gmail imply --email.
 
 Nothing is ever sent. Every draft waits for you to read it.
 
@@ -28,7 +30,7 @@ Usage:
   python scripts/apply.py                           # 5 newest fresher-OK roles
   python scripts/apply.py --tier open,unstated --family Product --city Bengaluru --limit 10
   python scripts/apply.py --key linkedin:meridian:li-4464567231 --force
-  python scripts/apply.py --find-email --gmail
+  python scripts/apply.py --email --find-email --gmail
 """
 
 from __future__ import annotations
@@ -92,10 +94,12 @@ def schemas():
     class Tailored(BaseModel):
         resume_markdown: str
         changes: list[str] = Field(description="What was reordered, cut or reworded, and why")
+
+    class Pitched(Tailored):
         email_subject: str
         email_body: str
 
-    return Fit, Tailored
+    return Fit, Tailored, Pitched
 
 
 # --------------------------------------------------------------------------
@@ -135,7 +139,7 @@ def posting_block(role: dict, description: str) -> str:
 
 
 def screen(resume: str, role: dict, description: str):
-    Fit, _ = schemas()
+    Fit, _, _ = schemas()
     return parse(Fit, (
         "Judge whether this candidate should apply to this role, the way a "
         "recruiter screening for an entry-level hire would.\n\n"
@@ -143,15 +147,20 @@ def screen(resume: str, role: dict, description: str):
         '"apply": the resume meets the core asks. "stretch": it meets most and '
         'the gaps are learnable on the job. "skip": a hard requirement (a degree, '
         "a licence, years the candidate does not have, a language, a location) is "
-        "missing, or the role is a different function altogether."
+        "missing, the role starts before the candidate can join (check the "
+        "graduation year against a full-time start date; an internship can fit "
+        "while a full-time role does not), or the role is a different function "
+        "altogether."
     ), effort="low", max_tokens=4_000)
 
 
-def tailor(resume: str, role: dict, description: str, fit):
-    _, Tailored = schemas()
-    return parse(Tailored, (
-        "Rewrite this resume for the role below, and draft a short email to "
-        "someone at the company about it.\n\n"
+def tailor(resume: str, role: dict, description: str, fit, *, email: bool):
+    _, Tailored, Pitched = schemas()
+    ask = ("Rewrite this resume for the role below, and draft a short email to "
+           "someone at the company about it." if email else
+           "Rewrite this resume for the role below.")
+    return parse(Pitched if email else Tailored, (
+        f"{ask}\n\n"
         f"<resume>\n{resume}\n</resume>\n\n{posting_block(role, description)}\n\n"
         f"A screen already found these matches: {'; '.join(fit.matched) or 'none'}. "
         f"And these gaps: {'; '.join(fit.gaps) or 'none'}.\n\n"
@@ -163,14 +172,15 @@ def tailor(resume: str, role: dict, description: str, fit):
         "inflate a number. A gap stays a gap.\n"
         "- Keep the contact details and education exactly as written.\n"
         "- It should fit on one page: roughly 450 words at most.\n"
-        "- Markdown: # for the name, ## for sections, - for bullets.\n\n"
-        "The email:\n"
+        "- Markdown: # for the name, ## for sections, - for bullets."
+        + (
+        "\n\nThe email:\n"
         "- Under 120 words, plain text, no greeting name (the recipient is not "
         "yet known; open with \"Hi,\").\n"
         "- Name the role, give the two strongest concrete matches from the "
         "resume, and say the resume is attached. No flattery of the company, no "
         "filler about passion.\n"
-        "- Sign off with the candidate's name from the resume."
+        "- Sign off with the candidate's name from the resume." if email else "")
     ), effort="high")
 
 
@@ -301,23 +311,36 @@ def slug(text: str, n: int = 40) -> str:
 
 
 def md_to_html(md: str, title: str) -> str:
-    """Enough markdown for a resume: headings, bullets, bold, italics, links."""
+    """Enough markdown for a resume: headings, bullets, tables, bold, italics, links."""
     def inline(t: str) -> str:
         t = html.escape(t)
         t = re.sub(r"\[([^\]]+)\]\((https?://[^)\s]+|mailto:[^)\s]+)\)", r'<a href="\2">\1</a>', t)
         t = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", t)
         return re.sub(r"(?<![*\w])\*(?!\s)(.+?)(?<!\s)\*(?!\w)", r"<i>\1</i>", t)
 
-    out, in_list = [], False
+    out, in_list, in_table = [], False, False
     for line in md.splitlines():
         s = line.strip()
         bullet = re.match(r"^[-*]\s+(.*)", s)
+        row = s.startswith("|") and s.endswith("|")
         if in_list and not bullet:
             out.append("</ul>")
             in_list = False
+        if in_table and not row:
+            out.append("</table>")
+            in_table = False
         if not s:
             continue
-        if bullet:
+        if row:
+            cells = [c.strip() for c in s.strip("|").split("|")]
+            if all(re.fullmatch(r":?-{3,}:?", c) for c in cells):
+                continue  # the |---|---| separator
+            tag = "td" if in_table else "th"
+            if not in_table:
+                out.append("<table>")
+                in_table = True
+            out.append("<tr>" + "".join(f"<{tag}>{inline(c)}</{tag}>" for c in cells) + "</tr>")
+        elif bullet:
             if not in_list:
                 out.append("<ul>")
                 in_list = True
@@ -329,13 +352,16 @@ def md_to_html(md: str, title: str) -> str:
             out.append(f"<p>{inline(s)}</p>")
     if in_list:
         out.append("</ul>")
+    if in_table:
+        out.append("</table>")
     return (
         f"<!doctype html><html><head><meta charset='utf-8'><title>{html.escape(title)}</title>"
         "<style>body{font:10.5pt/1.35 Georgia,serif;max-width:7in;margin:.5in auto;color:#111}"
         "h1{font-size:18pt;margin:0 0 4pt}h2{font-size:11pt;text-transform:uppercase;"
         "letter-spacing:.06em;border-bottom:1px solid #999;margin:12pt 0 4pt}"
         "h3{font-size:10.5pt;margin:6pt 0 2pt}p{margin:2pt 0}ul{margin:2pt 0;padding-left:16pt}"
-        "li{margin:1pt 0}a{color:inherit}</style></head><body>"
+        "li{margin:1pt 0}a{color:inherit}table{border-collapse:collapse;width:100%;margin:4pt 0}"
+        "th,td{text-align:left;padding:1pt 6pt 1pt 0}th{border-bottom:1px solid #999}</style></head><body>"
         + "\n".join(out) + "</body></html>"
     )
 
@@ -386,10 +412,12 @@ def main() -> None:
     ap.add_argument("--key", action="append", help="a role key from the page; repeatable")
     ap.add_argument("--force", action="store_true", help="redo roles already drafted, and draft skips")
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--email", action="store_true", help="also draft a pitch email (email.eml)")
     ap.add_argument("--find-email", action="store_true", help="look up a contact (Anymail Finder)")
     ap.add_argument("--contact", default="hr,ceo", help="Anymail Finder decision_maker_category")
     ap.add_argument("--gmail", action="store_true", help="also save each draft to Gmail Drafts")
     args = ap.parse_args()
+    args.email = args.email or args.find_email or args.gmail
 
     site = load_json(paths.SITE_DATA, {})
     postings = {f"{p['ats']}:{p['slug']}:{p['id']}": p for p in load_json(paths.POSTINGS, [])}
@@ -430,7 +458,7 @@ def main() -> None:
             continue
 
         try:
-            out = tailor(resume, role, description, fit)
+            out = tailor(resume, role, description, fit, email=args.email)
         except Exception as exc:
             print(f"  tailoring failed: {exc}", file=sys.stderr)
             continue
@@ -454,15 +482,17 @@ def main() -> None:
             if done.returncode == 0:
                 attachment = docx
 
-        contact = find_contact(role, posting, args.contact.split(",")) if args.find_email else {}
-        if contact:
-            (folder / "contact.json").write_text(json.dumps(contact, indent=2))
-        msg = build_email(contact.get("email", ""), out.email_subject, out.email_body, attachment)
-        (folder / "email.eml").write_bytes(msg.as_bytes())
-        drafted = gmail_draft(msg) if args.gmail else False
+        contact, drafted = {}, False
+        if args.email:
+            contact = find_contact(role, posting, args.contact.split(",")) if args.find_email else {}
+            if contact:
+                (folder / "contact.json").write_text(json.dumps(contact, indent=2))
+            msg = build_email(contact.get("email", ""), out.email_subject, out.email_body, attachment)
+            (folder / "email.eml").write_bytes(msg.as_bytes())
+            drafted = gmail_draft(msg) if args.gmail else False
 
         entry.update(folder=str(folder.relative_to(paths.ROOT)), to=contact.get("email", ""),
-                     gmail_draft=drafted, drafted=today)
+                     gmail_draft=drafted, tailored=today)
         log[role["key"]] = entry
         paths.APPLIED_LOG.write_text(json.dumps(log, indent=1))
         print(f"  -> {entry['folder']}" + (" + Gmail draft" if drafted else ""), file=sys.stderr)
