@@ -4,8 +4,9 @@ Entry-level, business-track job openings in India, pulled from company
 applicant-tracking feeds and from LinkedIn and Indeed searches, with a local
 script that tailors your resume and drafts a pitch for the ones worth applying to.
 
-**On this Mac:** http://127.0.0.1:8765, refreshed every morning at 8. See
-[Running it on this Mac](#running-it-on-this-mac).
+**On this Mac:** the roles page at http://127.0.0.1:8765 and the dashboard at
+http://127.0.0.1:8765/dashboard.html, refreshed every morning at 8. See
+[The dashboard](#the-dashboard) and [Running it on this Mac](#running-it-on-this-mac).
 **Public copy:** the Pages deployment for this repo.
 
 ## What it does
@@ -149,6 +150,26 @@ python scripts/apply.py --email --find-email --gmail
 Roles already screened or drafted are logged in `private/applications.json`
 and skipped next time; `--force` redoes them.
 
+## The dashboard
+
+http://127.0.0.1:8765/dashboard.html, served by `scripts/serve.py`.
+
+| Tab | What it is for |
+|---|---|
+| Overview | Roles tracked, open to your batch, new today; your applications by stage; last and next run; LinkedIn and Indeed cooldown; how the pipeline fits together |
+| Applications | Every role you track: Saved, Resume tailored, Applied, Interviewing, Offer, Rejected, Withdrawn, Not a fit. Change status inline; open one for dates, follow-up, notes, the tailored resume files, the role's details and its timeline. Add roles found elsewhere by hand. |
+| Workflows | The daily schedule, the search cooldown, Refresh now, every pipeline run with its steps and log, and resume-tailoring runs |
+| Sources | What LinkedIn, Indeed and each company board returned, and why Glassdoor, Naukri and Google Jobs are not used |
+| History | Roles ever seen, still live, and new per day by source |
+| Data | Every file the tracker keeps, what it holds, how big, when it changed, and whether it is public, this Mac only, or private |
+| Settings | Graduation year, daily refresh time, Gemini key |
+
+The Shortlist and Applied buttons on the roles page write to the same tracker
+(`private/tracker.db`, SQLite) when the page is served from this Mac; marks made
+in a browser before that move over the first time. Tailoring a resume from an
+application runs `scripts/apply.py` for that role and records the verdict and
+files against it. `scripts/store.py` owns the database.
+
 ## Running it on this Mac
 
 ```bash
@@ -210,7 +231,7 @@ data/history/            one snapshot per run
 data/search_cache.json   last LinkedIn/Indeed results without descriptions
 data/raw/                regenerated each run, not versioned; logs in data/raw/logs/
 data/archive/            every search, gzipped; not versioned
-private/                 your resume, tailored copies, drafts; gitignored
+private/                 your resume, tailored copies, tracker.db, settings, .env; gitignored
 
 scripts/paths.py         every file location, in one place
 scripts/probe_boards.py  find which employers expose a board
@@ -218,7 +239,9 @@ scripts/probe_funded.py  same, using the funded list as candidates
 scripts/fetch_jobs.py    pull postings, filter to India and business-track
 scripts/fetch_search.py  add LinkedIn and Indeed results via JobSpy
 scripts/refresh.sh       one locked, logged pipeline run
-scripts/serve.py         the local site and its refresh endpoint
+scripts/serve.py         the local site, the dashboard and its API
+scripts/store.py         applications, their timeline and settings (private/tracker.db)
+dashboard.html           the dashboard
 scripts/schedule_mac.sh  install the 8 AM refresh and the local site
 scripts/apply.py         screen, tailor the resume, draft the pitch
 scripts/enrich.py        read descriptions, extract the experience requirement

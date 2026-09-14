@@ -1,3 +1,4 @@
+<meta charset="utf-8">
 <title>Fresher Desk</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -210,6 +211,7 @@ footer{margin-top:46px;padding-top:18px;border-top:1px solid var(--line);
       <div>Pulled <b id="gen">—</b></div>
       <div><b id="cov-emp">—</b> employers · <b id="cov-boards">—</b> live feeds</div>
       <div><b id="cov-scan">—</b> postings scanned</div>
+      <div id="dash" hidden><a href="./dashboard.html"><b>Open dashboard →</b></a></div>
     </div>
   </div>
 </header>
@@ -402,6 +404,7 @@ function rowHTML(r){
   if (r.deadline) bits.push(`<span class="mono">closes ${esc(r.deadline)}</span>`);
   if (r.pay) bits.push(`<span class="mono">${esc(r.pay)}</span>`);
   if (r.reposted) bits.push(`<span title="Edited after it was first published">reposted</span>`);
+  if (local && STATUS_LABEL[tracked[r.key]]) bits.push(`<a href="./dashboard.html#applications?open=${encodeURIComponent(r.key)}"><b>${esc(STATUS_LABEL[tracked[r.key]])}</b></a>`);
   if (r.source === "search") bits.push(`<span title="Found through a job-board search, not the employer's own feed">via ${esc(SITE_NAMES[r.ats] || r.ats)}</span>`);
   const age = r.age_days;
   const ageTag = age === null || age === undefined ? ""
@@ -467,7 +470,45 @@ function paintRounds(){
 }
 
 /* ---------- persistence ---------- */
+/* Served by scripts/serve.py on this Mac, marks are applications in
+   private/tracker.db, shared with the dashboard. Elsewhere they stay in this browser. */
+let local = false;
+let tracked = {};  // key -> tracker status
+const TO_MARK = {saved:"shortlist", tailored:"shortlist", applied:"applied", interview:"applied", offer:"applied"};
+const STATUS_LABEL = {tailored:"Resume tailored", interview:"Interviewing", offer:"Offer", rejected:"Rejected", withdrawn:"Withdrawn", skipped:"Not a fit"};
+
+async function loadTracked(){
+  const res = await fetch("/api/applications", {cache: "no-store"});
+  if (!res.ok) throw new Error(res.status);
+  const {applications} = await res.json();
+  marks = {}; tracked = {};
+  applications.forEach(a => { tracked[a.key] = a.status; if (TO_MARK[a.status]) marks[a.key] = TO_MARK[a.status]; });
+}
+
+async function post(path, body){
+  const res = await fetch(path, {method: "POST", headers: {"Content-Type": "application/json"}, body: JSON.stringify(body)});
+  if (!res.ok) throw new Error((await res.json().catch(() => ({}))).error || res.status);
+  return res.json();
+}
+
 async function connect(){
+  try {
+    await loadTracked();
+    local = true;
+    // Marks made in this browser before the tracker existed move over once.
+    let old = {};
+    try { old = JSON.parse(localStorage.getItem("fresher-marks") || "{}"); } catch {}
+    if (Object.keys(old).length){
+      await post("/api/applications/import", {marks: old});
+      try { localStorage.removeItem("fresher-marks"); } catch {}
+      await loadTracked();
+    }
+    el("saved").innerHTML = `Marks go to your application tracker · <a href="./dashboard.html#applications">Dashboard</a>`;
+    el("dash").hidden = false;
+    render();
+    return;
+  } catch {/* not served from this Mac */}
+
   try { db = await window.claude?.use?.("db"); } catch { db = null; }
   if (!db){
     try {
@@ -494,6 +535,21 @@ async function connect(){
 }
 
 async function setMark(key, value){
+  if (local){
+    const current = tracked[key];
+    try {
+      if (marks[key] === value){
+        // Pressing a lit button again: Applied steps back to Saved; Shortlist stops tracking.
+        if (value === "applied") await post("/api/applications", {key, status: "saved"});
+        else if (!current || current === "saved") await post("/api/applications/delete", {key});
+      } else {
+        await post("/api/applications", {key, status: value === "applied" ? "applied" : "saved"});
+      }
+      await loadTracked();
+    } catch (err){ el("saved").textContent = `Not saved: ${err.message}`; }
+    render();
+    return;
+  }
   if (marks[key] === value) { delete marks[key]; value = null; }
   else marks[key] = value;
   render();

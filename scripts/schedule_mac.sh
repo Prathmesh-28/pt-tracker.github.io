@@ -3,6 +3,7 @@
 # up at http://127.0.0.1:8765 whenever you are logged in.
 #
 #   ./scripts/schedule_mac.sh install [HH:MM]   # default 08:00, local time
+#   ./scripts/schedule_mac.sh set-time HH:MM     # change only the refresh time
 #   ./scripts/schedule_mac.sh status
 #   ./scripts/schedule_mac.sh run               # start a refresh now
 #   ./scripts/schedule_mac.sh uninstall
@@ -38,7 +39,30 @@ PLIST
   launchctl bootstrap "$DOMAIN" "$AGENTS/$1.plist"
 }
 
+daily() {  # HH:MM
+  [[ "$1" =~ ^([01][0-9]|2[0-3]):[0-5][0-9]$ ]] || { echo "Time must be HH:MM, 24-hour."; exit 1; }
+  HOUR=$((10#${1%%:*})); MINUTE=$((10#${1##*:}))
+  plist "$DAILY" "<string>$ROOT/scripts/refresh.sh</string>" \
+    "<key>StartCalendarInterval</key><dict><key>Hour</key><integer>$HOUR</integer><key>Minute</key><integer>$MINUTE</integer></dict>
+  <key>EnvironmentVariables</key><dict><key>PT_TRIGGER</key><string>schedule</string></dict>
+  <key>LowPriorityIO</key><true/>"
+  mkdir -p "$ROOT/private"
+  "$ROOT/.venv/bin/python" - "$1" <<'PY'
+import json, sys, pathlib
+f = pathlib.Path("private/settings.json")
+s = json.loads(f.read_text()) if f.exists() else {}
+s["refresh_time"] = sys.argv[1]
+f.write_text(json.dumps(s, indent=1))
+PY
+}
+
 case "${1:-}" in
+  set-time)
+    [ -n "${2:-}" ] || { echo "Usage: $0 set-time HH:MM"; exit 1; }
+    mkdir -p "$ROOT/data/raw/logs" "$AGENTS"
+    daily "$2"
+    echo "Refresh now runs daily at $2."
+    ;;
   install)
     case "$ROOT" in "$HOME/Downloads"*|"$HOME/Documents"*|"$HOME/Desktop"*)
       echo "Move the project out of $ROOT first; macOS blocks background jobs there."; exit 1;;
@@ -46,16 +70,12 @@ case "${1:-}" in
     [ -x "$ROOT/.venv/bin/python" ] || {
       echo "No .venv. Run: python3.11 -m venv .venv && .venv/bin/pip install -r requirements.txt"; exit 1; }
     TIME="${2:-08:00}"
-    HOUR=$((10#${TIME%%:*})); MINUTE=$((10#${TIME##*:}))
     mkdir -p "$ROOT/data/raw/logs" "$AGENTS"
-
-    plist "$DAILY" "<string>$ROOT/scripts/refresh.sh</string>" \
-      "<key>StartCalendarInterval</key><dict><key>Hour</key><integer>$HOUR</integer><key>Minute</key><integer>$MINUTE</integer></dict>
-  <key>LowPriorityIO</key><true/>"
+    daily "$TIME"
     plist "$SERVER" "<string>$ROOT/.venv/bin/python</string><string>$ROOT/scripts/serve.py</string>" \
       "<key>RunAtLoad</key><true/><key>KeepAlive</key><true/>"
 
-    printf "Refresh scheduled daily at %02d:%02d.\nSite: http://127.0.0.1:8765\n" "$HOUR" "$MINUTE"
+    printf "Refresh scheduled daily at %s.\nSite: http://127.0.0.1:8765\nDashboard: http://127.0.0.1:8765/dashboard.html\n" "$TIME"
     ;;
   status)
     for label in "$DAILY" "$SERVER"; do
@@ -81,6 +101,6 @@ case "${1:-}" in
     echo "Removed the daily refresh and the local site."
     ;;
   *)
-    sed -n '2,14p' "$0"; exit 1
+    sed -n '2,15p' "$0"; exit 1
     ;;
 esac

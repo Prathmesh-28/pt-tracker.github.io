@@ -56,6 +56,11 @@ from typing import Literal
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import paths
+import store
+
+# The dashboard's Settings page saves the Gemini key to private/.env.
+for _name, _value in store.env().items():
+    os.environ.setdefault(_name, _value)
 
 # Flash is on the free tier. A pro model writes better resumes if you have quota.
 MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.5-flash")
@@ -251,7 +256,7 @@ def fits_grad(role: dict, year: int) -> bool:
     return role.get("kind") == "internship" or role["tier"] != "walled"
 
 
-def pick(args, roles: list[dict], log: dict) -> list[dict]:
+def pick(args, roles: list[dict], done: set[str]) -> list[dict]:
     tiers = {t.strip() for t in args.tier.split(",")}
 
     def hit(value: str, wanted: str | None) -> bool:
@@ -275,7 +280,7 @@ def pick(args, roles: list[dict], log: dict) -> list[dict]:
         ]
         chosen.sort(key=lambda r: r.get("posted") or "", reverse=True)
     if not args.force:
-        chosen = [r for r in chosen if r["key"] not in log]
+        chosen = [r for r in chosen if r["key"] not in done]
     return chosen[: args.limit] if not args.key else chosen
 
 
@@ -452,8 +457,11 @@ def main() -> None:
 
     site = load_json(paths.SITE_DATA, {})
     postings = {f"{p['ats']}:{p['slug']}:{p['id']}": p for p in load_json(paths.POSTINGS, [])}
-    log = load_json(paths.APPLIED_LOG, {})
-    chosen = pick(args, site.get("roles", []), log)
+    db = store.connect()
+    store.import_legacy(db)
+    # Screened or tailored before: skip unless --force.
+    done = {a["key"] for a in store.applications(db) if a["fit_verdict"] or a["folder"]}
+    chosen = pick(args, site.get("roles", []), done)
 
     if not chosen:
         print("No roles match, or every match is already drafted (see --force).", file=sys.stderr)
@@ -481,11 +489,13 @@ def main() -> None:
             print(f"  screen failed: {exc}", file=sys.stderr)
             continue
         print(f"  {fit.verdict} ({fit.score}): {fit.reason}", file=sys.stderr)
-        entry = {"company": role["company"], "title": role["title"], "url": role["url"],
-                 "verdict": fit.verdict, "score": fit.score, "screened": today}
+        current = (store.get(db, role["key"]) or {}).get("status")
+        entry = dict(company=role["company"], title=role["title"], url=role["url"],
+                     city=role.get("city"), source=role.get("ats"),
+                     fit_verdict=fit.verdict, fit_score=fit.score, fit_reason=fit.reason)
         if fit.verdict == "skip" and not args.force:
-            log[role["key"]] = entry
-            paths.APPLIED_LOG.write_text(json.dumps(log, indent=1))
+            # A role you saved stays saved; the verdict sits beside it for you to judge.
+            store.upsert(db, role["key"], **entry, **({} if current else {"status": "skipped"}))
             continue
 
         try:
@@ -522,10 +532,12 @@ def main() -> None:
             (folder / "email.eml").write_bytes(msg.as_bytes())
             drafted = gmail_draft(msg) if args.gmail else False
 
-        entry.update(folder=str(folder.relative_to(paths.ROOT)), to=contact.get("email", ""),
-                     gmail_draft=drafted, tailored=today)
-        log[role["key"]] = entry
-        paths.APPLIED_LOG.write_text(json.dumps(log, indent=1))
+        entry["folder"] = str(folder.relative_to(paths.ROOT))
+        # Tailoring moves a new, saved or skipped role forward; it never pulls
+        # back one you have already applied to.
+        if current in (None, "saved", "skipped"):
+            entry["status"] = "tailored"
+        store.upsert(db, role["key"], **entry)
         print(f"  -> {entry['folder']}" + (" + Gmail draft" if drafted else ""), file=sys.stderr)
 
 

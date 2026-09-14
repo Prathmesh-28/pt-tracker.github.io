@@ -24,7 +24,7 @@ trap 'rm -rf "$LOCK"' EXIT
 LOG="data/raw/logs/$(date +%Y-%m-%d-%H%M%S).log"
 ln -sf "$(basename "$LOG")" data/raw/logs/latest.log
 {
-  echo "started $(date '+%Y-%m-%d %H:%M:%S')"
+  echo "started $(date '+%Y-%m-%d %H:%M:%S') via ${PT_TRIGGER:-manual}"
   ./scripts/run_all.sh "$@"
   status=$?
   echo "finished $(date '+%Y-%m-%d %H:%M:%S') exit $status"

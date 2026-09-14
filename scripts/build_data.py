@@ -16,7 +16,16 @@ from fetch_search import QUERIES, SEARCH_SITES
 TODAY = date.today().isoformat()
 
 # The page's "Open to N grads" filter is worked out against this year.
-GRAD_YEAR = int(os.environ.get("PT_GRAD_YEAR", "2027"))
+def _grad_year() -> int:
+    if os.environ.get("PT_GRAD_YEAR"):
+        return int(os.environ["PT_GRAD_YEAR"])
+    try:  # set from the dashboard's Settings page
+        return int(json.loads((paths.PRIVATE / "settings.json").read_text())["grad_year"])
+    except (FileNotFoundError, KeyError, ValueError):
+        return 2027
+
+
+GRAD_YEAR = _grad_year()
 
 FAMILIES = [
     ("Business analyst", r"business analyst|data analyst|risk analyst|financial analyst"),

@@ -1,0 +1,880 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fresher Desk · Dashboard</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --paper:#F4F3EE; --card:#FBFAF6; --ink:#181A1B; --body:#33373A; --muted:#71767B;
+  --line:#DEDCD3; --line-soft:#E9E7DF;
+  --accent:#A85D00; --accent-soft:#F0E2CC;
+  --open:#126B4F; --open-soft:#D8E9E0;
+  --walled:#8B9096; --walled-soft:#E4E3DD;
+  --bad:#B42318; --bad-soft:#F6DEDA;
+  --series-1:#2a78d6; --series-2:#eb6834;
+  --shadow:0 1px 2px rgba(24,26,27,.05); --r:7px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --paper:#131517; --card:#1B1E21; --ink:#F1EFE9; --body:#C7C9CB; --muted:#8B9096;
+    --line:#2C3034; --line-soft:#242629;
+    --accent:#E8A13C; --accent-soft:#3A2C15;
+    --open:#4FBE92; --open-soft:#153229;
+    --walled:#767B81; --walled-soft:#25282B;
+    --bad:#F07A6E; --bad-soft:#3B1D1A;
+    --series-1:#3987e5; --series-2:#d95926;
+    --shadow:0 1px 2px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --paper:#131517; --card:#1B1E21; --ink:#F1EFE9; --body:#C7C9CB; --muted:#8B9096;
+  --line:#2C3034; --line-soft:#242629;
+  --accent:#E8A13C; --accent-soft:#3A2C15;
+  --open:#4FBE92; --open-soft:#153229;
+  --walled:#767B81; --walled-soft:#25282B;
+  --bad:#F07A6E; --bad-soft:#3B1D1A;
+  --series-1:#3987e5; --series-2:#d95926;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--body);font:450 14.5px/1.55 "IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1240px;margin:0 auto;padding-inline:20px;padding-block:0 72px}
+a{color:inherit}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;color:var(--ink);margin:0;text-wrap:balance}
+h2{font-size:19px;font-weight:700;letter-spacing:-.01em}
+h3{font-size:15px;font-weight:700}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+.muted{color:var(--muted)}
+.small{font-size:12.5px}
+button,input,select,textarea{font:inherit;color:inherit}
+
+/* ---------- top bar ---------- */
+.top{display:flex;flex-wrap:wrap;gap:12px 20px;align-items:center;justify-content:space-between;padding-block:22px 14px;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:baseline;gap:10px}
+.brand h1{font-size:24px;font-weight:800;letter-spacing:-.02em}
+.brand h1 em{font-style:normal;color:var(--accent)}
+.brand a{font-size:13px;color:var(--muted)}
+.runbox{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+nav.tabs{display:flex;gap:2px;overflow-x:auto;padding-block:10px;margin-bottom:22px;border-bottom:1px solid var(--line);scrollbar-width:none}
+nav.tabs a{padding:7px 12px;border-radius:var(--r);text-decoration:none;font-weight:500;font-size:14px;color:var(--muted);white-space:nowrap}
+nav.tabs a:hover{color:var(--ink);background:var(--line-soft)}
+nav.tabs a[aria-current="page"]{color:var(--ink);background:var(--card);box-shadow:inset 0 0 0 1px var(--line)}
+nav.tabs .n{font-size:11.5px;margin-left:5px;color:var(--muted)}
+
+/* ---------- building blocks ---------- */
+.btn{appearance:none;border:1px solid var(--line);background:var(--card);border-radius:var(--r);padding:7px 13px;font-size:13.5px;font-weight:600;cursor:pointer;color:var(--ink);white-space:nowrap}
+.btn:hover{border-color:var(--muted)}
+.btn.primary{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.btn.primary:hover{opacity:.9}
+.btn.danger{color:var(--bad)}
+.btn:disabled{opacity:.5;cursor:default}
+.pill{display:inline-flex;align-items:center;gap:5px;font-size:11.5px;font-weight:600;letter-spacing:.02em;padding:2px 8px;border-radius:99px;background:var(--line-soft);color:var(--body);white-space:nowrap}
+.pill.ok{background:var(--open-soft);color:var(--open)}
+.pill.warn{background:var(--accent-soft);color:var(--accent)}
+.pill.bad{background:var(--bad-soft);color:var(--bad)}
+.pill.run{background:var(--accent-soft);color:var(--accent)}
+.pill.run::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor;animation:pulse 1.2s infinite}
+@keyframes pulse{50%{opacity:.3}}
+@media (prefers-reduced-motion:reduce){.pill.run::before{animation:none}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow);padding:18px 18px 16px}
+.card > h2,.card > h3{margin-bottom:10px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+.section{margin-bottom:26px}
+.section-head{display:flex;flex-wrap:wrap;gap:8px 16px;align-items:baseline;justify-content:space-between;margin-bottom:12px}
+.lede{margin:4px 0 0;color:var(--muted);max-width:74ch}
+
+.tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:22px}
+.tile{background:var(--card);padding:14px 16px 13px;display:flex;flex-direction:column;gap:3px;text-decoration:none}
+a.tile:hover{background:var(--accent-soft)}
+.tile .v{font-family:"Bricolage Grotesque",sans-serif;font-size:30px;font-weight:700;line-height:1.05;color:var(--ink);font-variant-numeric:tabular-nums}
+.tile .k{font-size:12.5px;font-weight:600;color:var(--body)}
+.tile .h{font-size:11.5px;color:var(--muted);line-height:1.4}
+
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:6px 14px;margin:0;font-size:13.5px}
+dl.facts dt{color:var(--muted)}
+dl.facts dd{margin:0;color:var(--ink);min-width:0;overflow-wrap:anywhere}
+
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th{text-align:left;font-weight:600;font-size:12px;letter-spacing:.02em;color:var(--muted);padding:9px 12px;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--card);position:sticky;top:0}
+td{padding:9px 12px;border-bottom:1px solid var(--line-soft);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+tbody tr.click{cursor:pointer}
+tbody tr.click:hover td{background:var(--line-soft)}
+td .sub{display:block;color:var(--muted);font-size:12.5px}
+.empty{padding:28px;text-align:center;color:var(--muted)}
+
+.toolbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:12px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{appearance:none;border:1px solid var(--line);background:var(--card);border-radius:99px;padding:4px 11px;font-size:12.5px;font-weight:500;cursor:pointer;color:var(--body)}
+.chip[aria-pressed="true"]{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+.chip .c{font-variant-numeric:tabular-nums;opacity:.7;margin-left:4px}
+input[type=search],input[type=text],input[type=number],input[type=date],input[type=time],input[type=password],input[type=url],select,textarea{
+  border:1px solid var(--line);border-radius:var(--r);background:var(--card);padding:7px 10px;font-size:14px;min-width:0;max-width:100%}
+input[type=search]{flex:1 1 220px}
+textarea{width:100%;min-height:110px;resize:vertical}
+select.status{padding:4px 8px;font-size:13px}
+label.field{display:flex;flex-direction:column;gap:4px;font-size:12.5px;font-weight:600;color:var(--muted)}
+label.field > *{font-weight:450;color:var(--ink)}
+.form{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:12px;margin-bottom:12px}
+
+/* ---------- pipeline bars ---------- */
+.bars{display:flex;flex-direction:column;gap:7px}
+.bar{display:grid;grid-template-columns:minmax(110px,150px) 1fr 42px;gap:10px;align-items:center;font-size:13px;text-decoration:none}
+.bar .track{height:12px;background:var(--line-soft);border-radius:4px;overflow:hidden}
+.bar .fill{height:100%;background:var(--accent);border-radius:0 4px 4px 0;min-width:0}
+.bar.end .fill{background:var(--walled)}
+.bar .n{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600}
+a.bar:hover .track{outline:1px solid var(--line)}
+
+/* ---------- flow ---------- */
+ol.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,150px),1fr));gap:10px;counter-reset:step}
+ol.flow li{counter-increment:step;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:12px 13px;position:relative}
+ol.flow li::before{content:counter(step);position:absolute;top:10px;right:12px;font:600 12px "IBM Plex Mono",monospace;color:var(--muted)}
+ol.flow b{display:block;color:var(--ink);font-size:13.5px;margin-bottom:3px;padding-right:18px}
+ol.flow p{margin:0;font-size:12.5px;color:var(--muted);line-height:1.45}
+ol.flow code{font-size:11.5px;color:var(--body);overflow-wrap:anywhere}
+ol.flow li.done{border-color:color-mix(in srgb,var(--open) 45%,var(--line))}
+ol.flow li.now{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+
+/* ---------- chart ---------- */
+.chart{position:relative}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart .grid line{stroke:var(--line-soft)}
+.chart .axis text{fill:var(--muted);font:11px "IBM Plex Mono",monospace}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12.5px;color:var(--body);margin:0 0 8px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:6px;vertical-align:-1px}
+.tip{position:fixed;z-index:30;pointer-events:none;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:var(--r);box-shadow:0 4px 16px rgba(0,0,0,.12);padding:8px 10px;font-size:12.5px;line-height:1.5;min-width:150px}
+.tip b{display:block;margin-bottom:2px}
+.tip .row{display:flex;justify-content:space-between;gap:14px}
+.tip i{display:inline-block;width:8px;height:8px;border-radius:2px;margin-right:6px}
+
+pre.log{margin:0;max-height:460px;overflow:auto;background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:12px;font:12px/1.55 "IBM Plex Mono",monospace;white-space:pre-wrap;overflow-wrap:anywhere}
+
+/* ---------- drawer ---------- */
+dialog.drawer{border:0;padding:0;margin:0 0 0 auto;height:100dvh;max-height:100dvh;width:min(560px,100vw);max-width:100vw;background:var(--paper);color:var(--body);box-shadow:-8px 0 30px rgba(0,0,0,.18)}
+dialog.drawer::backdrop{background:rgba(10,12,14,.35)}
+.drawer .inner{padding:20px 20px 40px;display:flex;flex-direction:column;gap:16px}
+.drawer header{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
+.drawer h2{font-size:20px}
+.timeline{list-style:none;margin:0;padding:0;font-size:13px;display:flex;flex-direction:column;gap:6px}
+.timeline li{display:flex;gap:10px}
+.timeline .mono{color:var(--muted);font-size:12px;white-space:nowrap}
+.files{display:flex;flex-wrap:wrap;gap:6px}
+.notice{border:1px solid var(--line);border-left:3px solid var(--accent);background:var(--card);border-radius:var(--r);padding:10px 12px;font-size:13.5px}
+.notice.bad{border-left-color:var(--bad)}
+.notice.ok{border-left-color:var(--open)}
+.toast{position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:var(--ink);color:var(--paper);padding:8px 14px;border-radius:var(--r);font-size:13.5px;z-index:40;max-width:calc(100vw - 32px)}
+.vis-public{background:var(--line-soft);color:var(--body)}
+.vis-local{background:var(--accent-soft);color:var(--accent)}
+.vis-private{background:var(--open-soft);color:var(--open)}
+@media (max-width:640px){
+  .bar{grid-template-columns:100px 1fr 34px}
+  dl.facts{grid-template-columns:1fr}
+  dl.facts dt{margin-top:6px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">
+      <h1>Fresher <em>Desk</em></h1>
+      <a href="./index.html">Roles page ↗</a>
+    </div>
+    <div class="runbox">
+      <span id="runpill" class="pill">…</span>
+      <button class="btn primary" id="refresh">Refresh everything</button>
+    </div>
+  </div>
+  <nav class="tabs" aria-label="Dashboard sections">
+    <a href="#overview">Overview</a>
+    <a href="#applications">Applications<span class="n" id="n-apps"></span></a>
+    <a href="#workflows">Workflows</a>
+    <a href="#sources">Sources</a>
+    <a href="#history">History</a>
+    <a href="#data">Data</a>
+    <a href="#settings">Settings</a>
+  </nav>
+  <main id="view" aria-live="polite"></main>
+</div>
+
+<div id="tip" class="tip" hidden></div>
+
+<dialog class="drawer" id="drawer" aria-labelledby="d-title">
+  <div class="inner" id="drawer-body"></div>
+</dialog>
+
+<script>
+"use strict";
+/* ============================================================
+   Plumbing
+   ============================================================ */
+const $ = sel => document.querySelector(sel);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const safeUrl = u => /^https?:\/\//i.test(u || "") ? u : "";
+const fmtNum = n => (n ?? 0).toLocaleString("en-IN");
+const SITE = {linkedin:"LinkedIn", indeed:"Indeed", naukri:"Naukri", glassdoor:"Glassdoor", google:"Google Jobs",
+              greenhouse:"Greenhouse", lever:"Lever", ashby:"Ashby", manual:"Added by hand"};
+
+async function api(path, body){
+  const opts = body === undefined ? {cache:"no-store"}
+    : {method:"POST", headers:{"Content-Type":"application/json"}, body: JSON.stringify(body)};
+  const res = await fetch(path, opts);
+  let data = null;
+  try { data = await res.json(); } catch {}
+  if (!res.ok) { const e = new Error((data && data.error) || `${res.status} ${res.statusText}`); e.status = res.status; e.data = data; throw e; }
+  return data;
+}
+
+function when(iso, withDate = true){
+  if (!iso) return "—";
+  const d = new Date(iso);
+  if (isNaN(d)) return esc(iso);
+  const today = new Date(); const same = d.toDateString() === today.toDateString();
+  const t = d.toLocaleTimeString([], {hour:"2-digit", minute:"2-digit"});
+  if (same) return `today ${t}`;
+  const y = new Date(today); y.setDate(today.getDate() - 1);
+  if (d.toDateString() === y.toDateString()) return `yesterday ${t}`;
+  return withDate ? d.toLocaleDateString([], {day:"numeric", month:"short"}) + " " + t : t;
+}
+const day = iso => iso ? new Date(iso + (iso.length === 10 ? "T00:00" : "")).toLocaleDateString([], {day:"numeric", month:"short", year:"numeric"}) : "—";
+const dur = s => s == null ? "—" : s < 60 ? `${s}s` : `${Math.floor(s/60)}m ${String(s%60).padStart(2,"0")}s`;
+
+let toastTimer;
+function toast(msg){
+  let t = $(".toast"); if (!t){ t = document.createElement("div"); t.className = "toast"; t.setAttribute("role","status"); document.body.appendChild(t); }
+  t.textContent = msg; t.hidden = false;
+  clearTimeout(toastTimer); toastTimer = setTimeout(() => t.hidden = true, 3200);
+}
+
+function nextRun(hhmm){
+  if (!hhmm) return null;
+  const [h, m] = hhmm.split(":").map(Number);
+  const d = new Date(); d.setHours(h, m, 0, 0);
+  if (d <= new Date()) d.setDate(d.getDate() + 1);
+  return d;
+}
+
+const tip = $("#tip");
+function showTip(evt, html){
+  tip.innerHTML = html; tip.hidden = false;
+  const pad = 14, r = tip.getBoundingClientRect();
+  let x = evt.clientX + pad, y = evt.clientY + pad;
+  if (x + r.width > innerWidth - 8) x = evt.clientX - r.width - pad;
+  if (y + r.height > innerHeight - 8) y = evt.clientY - r.height - pad;
+  tip.style.left = Math.max(8, x) + "px"; tip.style.top = Math.max(8, y) + "px";
+}
+const hideTip = () => tip.hidden = true;
+
+/* ============================================================
+   Run status in the top bar (polls while a run is going)
+   ============================================================ */
+let runState = {running:false};
+let pollTimer = null;
+async function pollStatus(){
+  try { runState = await api("/api/status"); }
+  catch { $("#runpill").className = "pill bad"; $("#runpill").textContent = "Server unreachable"; return; }
+  const pill = $("#runpill"), btn = $("#refresh");
+  if (runState.running){
+    const step = (runState.log || []).filter(l => l.startsWith("== ")).slice(-1)[0];
+    pill.className = "pill run"; pill.textContent = step ? `Refreshing · ${step.slice(3)}` : "Refreshing…";
+    btn.disabled = true;
+    clearTimeout(pollTimer); pollTimer = setTimeout(async () => {
+      await pollStatus();
+      if (!runState.running){ toast("Refresh finished"); render(); }
+    }, 2500);
+  } else {
+    const fin = (runState.log || []).find(l => l.startsWith("finished"));
+    const ok = !fin || /exit 0$/.test(fin);
+    pill.className = "pill " + (ok ? "ok" : "bad");
+    pill.textContent = fin ? (ok ? "Idle · last run OK" : "Last run failed") : "Idle";
+    btn.disabled = false;
+  }
+}
+$("#refresh").addEventListener("click", async () => {
+  $("#refresh").disabled = true;
+  try { await api("/api/refresh", {}); toast(runState.search_allowed_now ? "Refresh started, including LinkedIn and Indeed" : "Refresh started; LinkedIn and Indeed reuse their last results (cooldown)"); }
+  catch (e){ if (e.status !== 409) toast(`Could not start: ${e.message}`); }
+  setTimeout(pollStatus, 800);
+});
+
+/* ============================================================
+   Router
+   ============================================================ */
+const VIEWS = {overview: vOverview, applications: vApplications, workflows: vWorkflows, sources: vSources,
+               history: vHistory, data: vData, settings: vSettings};
+async function render(){
+  const name = (location.hash.slice(1).split("?")[0]) || "overview";
+  const view = VIEWS[name] ? name : "overview";
+  document.querySelectorAll("nav.tabs a").forEach(a => a.setAttribute("aria-current", a.getAttribute("href") === "#" + view ? "page" : "false"));
+  const main = $("#view");
+  if (!main.dataset.view || main.dataset.view !== view) main.innerHTML = `<p class="muted">Loading…</p>`;
+  main.dataset.view = view;
+  try { await VIEWS[view](main, new URLSearchParams(location.hash.split("?")[1] || "")); }
+  catch (e){
+    main.innerHTML = e.status === 404 || e instanceof TypeError
+      ? `<div class="notice bad"><b>This dashboard needs the tracker's local server.</b><br>
+         Open <a href="http://127.0.0.1:8765/dashboard.html">http://127.0.0.1:8765/dashboard.html</a> on the Mac that runs it.
+         If that does not load, run <code>./scripts/schedule_mac.sh install</code> in the project folder.</div>`
+      : `<div class="notice bad">Something went wrong loading this page: ${esc(e.message)}</div>`;
+  }
+}
+addEventListener("hashchange", render);
+
+/* ============================================================
+   Overview
+   ============================================================ */
+const PIPE = ["saved","tailored","applied","interview","offer"];
+const ENDS = ["rejected","withdrawn","skipped"];
+
+async function vOverview(main){
+  const o = await api("/api/overview");
+  const a = o.applications, L = o.labels;
+  const active = PIPE.reduce((s, k) => s + a[k], 0);
+  const max = Math.max(1, ...Object.values(a));
+  const s = o.search, lr = o.last_run, nxt = nextRun(o.schedule.time);
+  $("#n-apps").textContent = active ? active : "";
+  const bar = (k, end) => `<a class="bar ${end ? "end" : ""}" href="#applications?status=${k}">
+      <span>${esc(L[k])}</span><span class="track"><span class="fill" style="width:${(a[k] / max * 100).toFixed(1)}%"></span></span>
+      <span class="n">${a[k]}</span></a>`;
+  const searchCounts = Object.entries(s.counts || {}).map(([k, n]) => `${SITE[k] || k} ${fmtNum(n)}`).join(" · ");
+
+  main.innerHTML = `
+  <div class="tiles">
+    <a class="tile" href="./index.html"><span class="v">${fmtNum(o.roles)}</span><span class="k">Roles tracked</span><span class="h">Business-track, India · built ${esc(day(o.generated))}</span></a>
+    <a class="tile" href="./index.html"><span class="v">${fmtNum(o.open_to_grad)}</span><span class="k">Open to ${o.grad_year} grads</span><span class="h">Internships, roles naming ${o.grad_year}, and fresher roles naming no batch</span></a>
+    <div class="tile"><span class="v">${fmtNum(o.new_today)}</span><span class="k">New today</span><span class="h">First seen in today's pulls</span></div>
+    <div class="tile"><span class="v">${fmtNum(o.internships)}</span><span class="k">Internships</span><span class="h">By title or listing type</span></div>
+    <div class="tile"><span class="v">${fmtNum(o.tier1)}</span><span class="k">In Tier 1 cities</span><span class="h">Metros plus NCR and Mumbai satellites</span></div>
+    <a class="tile" href="#applications"><span class="v">${fmtNum(active)}</span><span class="k">Applications in progress</span><span class="h">Saved through offer</span></a>
+  </div>
+
+  <div class="grid g2 section">
+    <div class="card">
+      <div class="section-head"><h2>Your applications</h2><a class="small" href="#applications">Open tracker →</a></div>
+      ${active + ENDS.reduce((x, k) => x + a[k], 0) ? `
+      <div class="bars" role="list">${PIPE.map(k => bar(k)).join("")}</div>
+      <div class="bars" role="list" style="margin-top:12px;padding-top:12px;border-top:1px solid var(--line-soft)">${ENDS.map(k => bar(k, true)).join("")}</div>`
+      : `<p class="muted">Nothing tracked yet. On the <a href="./index.html">roles page</a>, press <b>Shortlist</b> on a role and it appears here; or <a href="#applications?add=1">add one by hand</a>.</p>`}
+      ${o.follow_ups.length ? `<div class="notice" style="margin-top:14px"><b>${o.follow_ups.length} follow-up${o.follow_ups.length > 1 ? "s" : ""} due:</b>
+        ${o.follow_ups.map(f => `<a href="#applications?open=${encodeURIComponent(f.key)}">${esc(f.company)} · ${esc(f.title)}</a>`).join(", ")}</div>` : ""}
+    </div>
+
+    <div class="card">
+      <div class="section-head"><h2>Workflow</h2><a class="small" href="#workflows">All runs →</a></div>
+      <dl class="facts">
+        <dt>Last run</dt><dd>${lr ? `${runPill(lr.state)} ${when(lr.started)} · ${dur(lr.seconds)} · ${esc({schedule:"daily schedule", dashboard:"from the dashboard", page:"from the roles page", manual:"from the terminal", unrecorded:"trigger not recorded"}[lr.trigger] || lr.trigger)}` : "No runs logged yet"}</dd>
+        <dt>Next scheduled</dt><dd>${o.schedule.installed ? `${nxt ? when(nxt.toISOString()) : "—"} <span class="muted">(daily at ${esc(o.schedule.time)})</span>` : `<span class="pill bad">Not scheduled</span> run <code>./scripts/schedule_mac.sh install</code>`}</dd>
+        <dt>LinkedIn &amp; Indeed</dt><dd>searched ${when(s.searched_at)}${searchCounts ? ` <span class="muted">(${esc(searchCounts)})</span>` : ""}
+          ${(s.blocked || []).length ? `<br><span class="pill bad">Blocked: ${esc(s.blocked.map(k => SITE[k] || k).join(", "))}</span> earlier results kept` : ""}</dd>
+        <dt>Next search</dt><dd>${s.search_allowed_now ? `<span class="pill ok">Allowed now</span> the next refresh searches them` : `after ${when(s.next_search_after)} <span class="muted">(4-hour cooldown keeps LinkedIn from blocking you)</span>`}</dd>
+        <dt>Company boards</dt><dd>${o.boards} Greenhouse, Lever and Ashby boards, every run</dd>
+        <dt>This week</dt><dd>${o.runs_7d} runs${o.failed_7d ? `, <span class="pill bad">${o.failed_7d} failed</span>` : ", none failed"}</dd>
+      </dl>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><div><h2>How it works</h2>
+      <p class="lede">Every morning at ${esc(o.schedule.time)}, and whenever you press Refresh, these steps run in order on this Mac. Each one reads what the step before it wrote.</p></div></div>
+    ${flowSteps(lr)}
+  </div>`;
+}
+
+function runPill(state){
+  return {ok:`<span class="pill ok">OK</span>`, failed:`<span class="pill bad">Failed</span>`,
+          running:`<span class="pill run">Running</span>`, interrupted:`<span class="pill warn">Interrupted</span>`}[state] || "";
+}
+
+const FLOW = [
+  ["Company boards", "Company boards", "Reads every posting from 15 employers' Greenhouse, Lever and Ashby boards.", "data/raw/all_postings.json"],
+  ["LinkedIn and Indeed", "LinkedIn and Indeed", "Searches 15 queries with JobSpy, at most once every 4 hours, and merges them in. Every search is archived.", "data/archive/"],
+  ["Reading descriptions", "Read descriptions", "Pulls the years of experience, batch years and internship-or-not out of each posting's own text.", "all_postings.json"],
+  ["Funding news", "Funding news", "Reads Entrackr, Inc42 and YourStory for recent rounds.", "data/raw/rounds.json"],
+  ["History", "History", "Marks first seen, last seen and closed for every role, and snapshots the day.", "data/seen.json, data/history/"],
+  ["Building the page", "Build the pages", "Filters to India business-track roles, tiers cities, flags funded employers, writes the roles page and bundle.", "data/latest.json, index.html"],
+];
+function flowSteps(run){
+  const steps = run ? run.steps : [];
+  const live = run && run.state === "running";
+  return `<ol class="flow">${FLOW.map(([log, name, what, out]) => {
+    const i = steps.indexOf(log);
+    const cls = i === -1 ? "" : (live && i === steps.length - 1 ? "now" : "done");
+    return `<li class="${cls}"><b>${esc(name)}</b><p>${esc(what)}</p><p style="margin-top:6px"><code>${esc(out)}</code></p></li>`;
+  }).join("")}
+  <li><b>You</b><p>Shortlist roles on the roles page, tailor a resume from the Applications tab, and move each one along as you hear back.</p><p style="margin-top:6px"><code>private/tracker.db</code></p></li></ol>`;
+}
+
+/* ============================================================
+   Applications
+   ============================================================ */
+let appsCache = null;
+async function vApplications(main, params){
+  const res = await api("/api/applications");
+  appsCache = res;
+  const {labels, statuses} = res;
+  const apps = res.applications;
+  const counts = Object.fromEntries(statuses.map(s => [s, apps.filter(a => a.status === s).length]));
+  const state = {status: params.get("status") || "", q: ""};
+  $("#n-apps").textContent = apps.filter(a => PIPE.includes(a.status)).length || "";
+
+  main.innerHTML = `
+  <div class="section-head"><div><h2>Applications</h2>
+    <p class="lede">Every role you are tracking, from the moment you shortlist it to the answer. Change a status in the table; open a row for dates, notes, the tailored resume and its history.</p></div>
+    <button class="btn primary" id="add">Add application</button></div>
+  <div class="toolbar">
+    <div class="chips" id="chips" role="group" aria-label="Filter by status">
+      <button class="chip" data-s="">All<span class="c">${apps.length}</span></button>
+      ${statuses.map(s => `<button class="chip" data-s="${s}">${esc(labels[s])}<span class="c">${counts[s]}</span></button>`).join("")}
+    </div>
+    <input type="search" id="q" placeholder="Search company, role, notes" aria-label="Search applications">
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>Role</th><th>Status</th><th>Fit</th><th>Applied</th><th>Follow up</th><th>Listing</th><th>Updated</th></tr></thead>
+    <tbody id="rows"></tbody></table></div>`;
+
+  const paint = () => {
+    document.querySelectorAll("#chips .chip").forEach(c => c.setAttribute("aria-pressed", String(c.dataset.s === state.status)));
+    const list = apps.filter(a => (!state.status || a.status === state.status) &&
+      (!state.q || `${a.company} ${a.title} ${a.notes || ""} ${a.city || ""}`.toLowerCase().includes(state.q)));
+    const today = new Date().toISOString().slice(0, 10);
+    $("#rows").innerHTML = list.length ? list.map(a => `
+      <tr class="click" data-key="${esc(a.key)}">
+        <td><b style="color:var(--ink)">${esc(a.company || "—")}</b><span class="sub">${esc(a.title || "")}${a.city ? " · " + esc(a.city) : ""}${a.role && a.role.kind === "internship" ? " · Internship" : ""}</span></td>
+        <td><select class="status" data-key="${esc(a.key)}" aria-label="Status">${statuses.map(s => `<option value="${s}" ${s === a.status ? "selected" : ""}>${esc(labels[s])}</option>`).join("")}</select></td>
+        <td>${a.fit_verdict ? `<span class="pill ${a.fit_verdict === "apply" ? "ok" : a.fit_verdict === "skip" ? "bad" : "warn"}">${esc(a.fit_verdict)}</span> <span class="mono small">${a.fit_score ?? ""}</span>` : `<span class="muted small">—</span>`}</td>
+        <td class="mono small">${a.applied_on ? esc(a.applied_on) : "—"}</td>
+        <td class="mono small">${a.follow_up ? `<span class="${a.follow_up <= today && ["applied","interview"].includes(a.status) ? "pill warn" : ""}">${esc(a.follow_up)}</span>` : "—"}</td>
+        <td class="small">${a.listing === "listed" ? `<span class="pill ok">Listed</span>` : a.listing === "closed" ? `<span class="pill">Closed</span>` : `<span class="muted">${esc(a.listing)}</span>`}</td>
+        <td class="small muted">${when(a.updated_at)}</td>
+      </tr>`).join("")
+      : `<tr><td colspan="7"><div class="empty">${apps.length ? "Nothing matches this filter." :
+        `Nothing tracked yet. On the <a href="./index.html">roles page</a>, press <b>Shortlist</b> or <b>Applied</b> on a role, or use <b>Add application</b> for a role you found elsewhere.`}</div></td></tr>`;
+  };
+  paint();
+
+  $("#chips").addEventListener("click", e => { const c = e.target.closest(".chip"); if (!c) return; state.status = c.dataset.s; paint(); });
+  $("#q").addEventListener("input", e => { state.q = e.target.value.trim().toLowerCase(); paint(); });
+  $("#rows").addEventListener("change", async e => {
+    const sel = e.target.closest("select.status"); if (!sel) return;
+    try { await api("/api/applications", {key: sel.dataset.key, status: sel.value}); toast(`Moved to ${labels[sel.value]}`); render(); }
+    catch (err){ toast(`Not saved: ${err.message}`); }
+  });
+  $("#rows").addEventListener("click", e => {
+    if (e.target.closest("select,a")) return;
+    const tr = e.target.closest("tr.click"); if (tr) openApp(tr.dataset.key);
+  });
+  $("#add").addEventListener("click", () => openNew());
+  if (params.get("open")) openApp(params.get("open"));
+  if (params.get("add")) openNew();
+}
+
+const drawer = $("#drawer");
+drawer.addEventListener("click", e => { if (e.target === drawer) drawer.close(); });
+drawer.addEventListener("close", () => { if (/[?&](open|add)=/.test(location.hash)) history.replaceState(null, "", "#applications"); });
+
+function openNew(){
+  $("#drawer-body").innerHTML = `
+    <header><h2 id="d-title">Add an application</h2><button class="btn" data-close>Close</button></header>
+    <p class="muted small" style="margin:0">For a role you found outside the tracker. Roles on the roles page are added with its Shortlist and Applied buttons.</p>
+    <div class="form">
+      <label class="field">Company<input type="text" id="n-company" required></label>
+      <label class="field">Role<input type="text" id="n-title" required></label>
+      <label class="field">City<input type="text" id="n-city"></label>
+      <label class="field">Link to posting<input type="url" id="n-url" placeholder="https://"></label>
+      <label class="field">Status<select id="n-status">${appsCache.statuses.map(s => `<option value="${s}">${esc(appsCache.labels[s])}</option>`).join("")}</select></label>
+      <label class="field">Applied on<input type="date" id="n-applied"></label>
+    </div>
+    <label class="field">Notes<textarea id="n-notes"></textarea></label>
+    <div><button class="btn primary" id="n-save">Add</button></div>`;
+  drawer.showModal();
+  drawer.querySelector("[data-close]").onclick = () => drawer.close();
+  $("#n-save").onclick = async () => {
+    const body = {company: $("#n-company").value.trim(), title: $("#n-title").value.trim(), city: $("#n-city").value.trim(),
+      url: safeUrl($("#n-url").value.trim()), status: $("#n-status").value, notes: $("#n-notes").value, source: "manual"};
+    if ($("#n-applied").value) body.applied_on = $("#n-applied").value;
+    try { await api("/api/applications", body); drawer.close(); toast("Added"); render(); }
+    catch (e){ toast(e.message); }
+  };
+}
+
+let taskTimer = null;
+async function openApp(key){
+  const a = (appsCache.applications || []).find(x => x.key === key);
+  if (!a){ toast("That application is not in the tracker"); return; }
+  const {labels, statuses} = appsCache;
+  const r = a.role || {};
+  const timeline = await api(`/api/timeline?key=${encodeURIComponent(key)}`);
+  const fileLink = (name, label) => a.files.includes(name)
+    ? `<a class="btn" href="/api/file?key=${encodeURIComponent(key)}&name=${name}" target="_blank" rel="noopener">${label}</a>` : "";
+  const url = safeUrl(a.url);
+  $("#drawer-body").innerHTML = `
+    <header><div><h2 id="d-title">${esc(a.company || "—")}</h2><div class="muted">${esc(a.title || "")}</div></div>
+      <button class="btn" data-close>Close</button></header>
+    ${url ? `<div><a class="btn" href="${esc(url)}" target="_blank" rel="noopener noreferrer">Open posting ↗</a></div>` : ""}
+    <div class="form">
+      <label class="field">Status<select id="e-status">${statuses.map(s => `<option value="${s}" ${s === a.status ? "selected" : ""}>${esc(labels[s])}</option>`).join("")}</select></label>
+      <label class="field">Applied on<input type="date" id="e-applied" value="${esc(a.applied_on || "")}"></label>
+      <label class="field">Follow up on<input type="date" id="e-follow" value="${esc(a.follow_up || "")}"></label>
+    </div>
+    <label class="field">Notes<textarea id="e-notes" placeholder="Who you spoke to, referral, interview rounds, what to prepare">${esc(a.notes || "")}</textarea></label>
+    <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn primary" id="e-save">Save</button>
+      <button class="btn danger" id="e-delete">Stop tracking</button></div>
+
+    <div class="card"><h3>Resume for this role</h3>
+      ${a.fit_verdict ? `<p style="margin:0 0 8px"><span class="pill ${a.fit_verdict === "apply" ? "ok" : a.fit_verdict === "skip" ? "bad" : "warn"}">${esc(a.fit_verdict)}</span> <span class="mono">${a.fit_score ?? ""}/100</span> ${esc(a.fit_reason || "")}</p>` : ""}
+      ${a.files.length ? `<div class="files">${fileLink("resume.html","Resume")}${fileLink("resume.docx","Word file")}${fileLink("changes.md","What changed")}${fileLink("posting.md","Posting")}${fileLink("fit.json","Fit check")}${fileLink("email.eml","Email draft")}</div>
+        <p class="small muted" style="margin:8px 0 0">Read <b>What changed</b> against your master resume before you send it.</p>`
+        : `<p class="small muted" style="margin:0 0 8px">No tailored resume yet. Gemini checks the fit first, then rewrites your master resume for this posting using only what is already in it.</p>`}
+      ${r.tier ? `<div style="margin-top:10px"><button class="btn" id="e-tailor">${a.files.length ? "Tailor again" : "Tailor my resume"}</button></div><div id="e-task" class="small" style="margin-top:8px"></div>`
+        : `<p class="small muted" style="margin:8px 0 0">This role is not in the latest pull, so there is no posting to tailor against.</p>`}
+    </div>
+
+    <div class="card"><h3>The role</h3>
+      <dl class="facts">
+        <dt>Location</dt><dd>${esc(r.location || a.city || "—")}${r.city_tier ? ` <span class="pill">${esc(r.city_tier)}</span>` : ""}</dd>
+        <dt>Type</dt><dd>${esc(r.kind || "—")}${(r.batches || []).length ? ` · names ${esc(r.batches.join("/"))} batch` : ""}</dd>
+        <dt>Experience</dt><dd>${r.min_years == null ? (r.tier ? "not stated" : "—") : `${r.min_years}+ years`}</dd>
+        <dt>Function</dt><dd>${esc(r.family || "—")}</dd>
+        <dt>Posted</dt><dd>${esc(r.posted || "—")}</dd>
+        <dt>Pay</dt><dd>${esc(r.pay || "not published")}</dd>
+        <dt>Employer</dt><dd>${r.funded ? `VC-funded · ${esc(r.funded.round)} ${esc(r.funded.date || "")}` : "not in the funding list"}</dd>
+        <dt>Source</dt><dd>${esc(SITE[a.source] || a.source || "—")} · <span class="${a.listing === "listed" ? "" : "muted"}">${esc(a.listing)}</span></dd>
+      </dl>
+    </div>
+
+    <div class="card"><h3>History</h3>
+      <ul class="timeline">${timeline.map(t => `<li><span class="mono">${esc(when(t.at))}</span><span>${t.kind === "status" ? `Status: <b>${esc(labels[t.detail] || t.detail)}</b>` : esc(t.detail || t.kind)}</span></li>`).join("") || `<li class="muted">No changes yet</li>`}
+        <li><span class="mono">${esc(when(a.created_at))}</span><span class="muted">Started tracking</span></li></ul>
+    </div>`;
+  if (!drawer.open) drawer.showModal();
+  drawer.querySelector("[data-close]").onclick = () => drawer.close();
+  $("#e-save").onclick = async () => {
+    try {
+      await api("/api/applications", {key, status: $("#e-status").value, applied_on: $("#e-applied").value || null,
+        follow_up: $("#e-follow").value || null, notes: $("#e-notes").value});
+      toast("Saved"); await refreshApps(key);
+    } catch (e){ toast(`Not saved: ${e.message}`); }
+  };
+  $("#e-delete").onclick = async () => {
+    if (!confirm(`Stop tracking ${a.company} · ${a.title}? Its tailored files stay in private/applications.`)) return;
+    await api("/api/applications/delete", {key}); drawer.close(); toast("Removed"); render();
+  };
+  const tbtn = $("#e-tailor");
+  if (tbtn) tbtn.onclick = async () => {
+    tbtn.disabled = true;
+    try { await api("/api/tailor", {key}); watchTask(key); }
+    catch (e){ $("#e-task").innerHTML = `<div class="notice bad">${esc(e.message)}${/Settings/.test(e.message) ? ` <a href="#settings" onclick="drawer.close()">Open Settings</a>` : ""}</div>`; tbtn.disabled = false; }
+  };
+  const running = (await api("/api/tasks")).find(t => t.running && t.key === key);
+  if (running) watchTask(key);
+}
+
+async function refreshApps(key){
+  appsCache = await api("/api/applications");
+  if (location.hash.startsWith("#applications")){ await vApplications($("#view"), new URLSearchParams()); }
+  if (key && drawer.open) openApp(key);
+}
+
+function watchTask(key){
+  clearTimeout(taskTimer);
+  const tick = async () => {
+    const task = (await api("/api/tasks")).find(t => t.key === key);
+    const box = $("#e-task"); if (!box || !task) return;
+    const out = (task.output || []).slice(-4).map(esc).join("<br>");
+    if (task.running){
+      box.innerHTML = `<span class="pill run">Tailoring</span><div class="mono" style="margin-top:6px">${out}</div>`;
+      $("#e-tailor") && ($("#e-tailor").disabled = true);
+      taskTimer = setTimeout(tick, 2500);
+    } else {
+      box.innerHTML = task.exit_code === 0 ? `<span class="pill ok">Done</span>` : `<span class="pill bad">Failed</span><div class="mono" style="margin-top:6px">${out}</div>`;
+      if (task.exit_code === 0){ toast("Resume tailored"); refreshApps(key); }
+      else $("#e-tailor") && ($("#e-tailor").disabled = false);
+    }
+  };
+  tick();
+}
+
+/* ============================================================
+   Workflows
+   ============================================================ */
+async function vWorkflows(main){
+  const [w, tasks] = await Promise.all([api("/api/runs"), api("/api/tasks")]);
+  const s = w.status, nxt = nextRun(w.schedule.time), last = w.runs[0];
+  main.innerHTML = `
+  <div class="section-head"><div><h2>Workflows</h2>
+    <p class="lede">What runs, when, and how each run went. A lock stops the morning run and a Refresh from overlapping.</p></div></div>
+  <div class="grid g3 section">
+    <div class="card"><h3>Daily refresh</h3>
+      <dl class="facts">
+        <dt>Schedule</dt><dd>${w.schedule.installed ? `every day at <b>${esc(w.schedule.time)}</b>` : `<span class="pill bad">Not installed</span>`}</dd>
+        <dt>Next</dt><dd>${w.schedule.installed && nxt ? when(nxt.toISOString()) : "—"}</dd>
+        <dt>If asleep</dt><dd>Runs as soon as the Mac wakes</dd>
+        <dt>If shut down</dt><dd>That morning is skipped</dd>
+      </dl>
+      <p class="small" style="margin:12px 0 0"><a href="#settings">Change the time →</a></p>
+    </div>
+    <div class="card"><h3>LinkedIn &amp; Indeed</h3>
+      <dl class="facts">
+        <dt>Last search</dt><dd>${when(s.searched_at)}</dd>
+        <dt>Found</dt><dd>${Object.entries(s.counts || {}).map(([k, n]) => `${esc(SITE[k] || k)} ${fmtNum(n)}`).join(" · ") || "—"}</dd>
+        <dt>Next search</dt><dd>${s.search_allowed_now ? `<span class="pill ok">allowed now</span>` : `after ${when(s.next_search_after)}`}</dd>
+        <dt>Blocked</dt><dd>${(s.blocked || []).length ? `<span class="pill bad">${esc(s.blocked.map(k => SITE[k] || k).join(", "))}</span>` : "none last time"}</dd>
+      </dl>
+    </div>
+    <div class="card"><h3>Now</h3>
+      ${s.running ? `<p style="margin:0 0 8px"><span class="pill run">Running</span></p>${flowMini(last)}`
+        : `<p style="margin:0 0 10px">${last ? `Last run ${runPill(last.state)} ${when(last.started)}, ${dur(last.seconds)}.` : "No runs yet."}</p>
+           <button class="btn primary" id="w-refresh">Refresh everything</button>
+           <p class="small muted" style="margin:8px 0 0">${s.search_allowed_now ? "Includes a LinkedIn and Indeed search." : "LinkedIn and Indeed reuse their last results until the cooldown ends."}</p>`}
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><h2>Pipeline runs</h2><span class="small muted">${w.runs.length} kept · click a run for its log</span></div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Started</th><th>How</th><th>Result</th><th class="num">Took</th><th>What happened</th></tr></thead>
+      <tbody id="runs">${w.runs.map(r => `
+        <tr class="click" data-name="${esc(r.name)}">
+          <td class="mono small">${when(r.started)}</td>
+          <td class="small">${esc({schedule:"Daily schedule", dashboard:"Dashboard", page:"Roles page", manual:"Terminal", unrecorded:"Not recorded"}[r.trigger] || r.trigger)}</td>
+          <td>${runPill(r.state)}</td>
+          <td class="num mono small">${dur(r.seconds)}</td>
+          <td class="small">${r.state === "running" ? "" : `<span class="pill ${r.searched ? "ok" : ""}">${r.searched ? "Searched LinkedIn & Indeed" : "Reused LinkedIn & Indeed results"}</span><br>`}${r.summary.map(esc).join("<br>") || "—"}${r.problems.length ? `<br><span class="pill warn">${r.problems.length} warning${r.problems.length > 1 ? "s" : ""}</span>` : ""}</td>
+        </tr>`).join("") || `<tr><td colspan="5"><div class="empty">No runs logged yet.</div></td></tr>`}</tbody>
+    </table></div>
+    <div id="logview" style="margin-top:12px"></div>
+  </div>
+
+  <div class="section">
+    <div class="section-head"><h2>Resume tailoring runs</h2></div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Started</th><th>Role</th><th>Result</th><th>Output</th></tr></thead>
+      <tbody>${tasks.map(t => `<tr>
+        <td class="mono small">${when(t.started_at)}</td>
+        <td class="small"><a href="#applications?open=${encodeURIComponent(t.key)}">${esc(t.key)}</a></td>
+        <td>${t.running ? `<span class="pill run">Running</span>` : t.exit_code === 0 ? `<span class="pill ok">Done</span>` : `<span class="pill bad">Failed</span>`}</td>
+        <td class="mono small">${(t.output || []).slice(-3).map(esc).join("<br>")}</td></tr>`).join("")
+        || `<tr><td colspan="4"><div class="empty">None yet. Open an application and press <b>Tailor my resume</b>.</div></td></tr>`}</tbody>
+    </table></div>
+  </div>`;
+
+  $("#w-refresh") && ($("#w-refresh").onclick = () => $("#refresh").click());
+  $("#runs").addEventListener("click", async e => {
+    const tr = e.target.closest("tr.click"); if (!tr) return;
+    const log = await api(`/api/log?name=${encodeURIComponent(tr.dataset.name)}`);
+    $("#logview").innerHTML = `<div class="section-head"><h3>${esc(log.name)}</h3><button class="btn" id="closelog">Close log</button></div>
+      <pre class="log">${log.lines.map(l => l.startsWith("== ") ? `<b>${esc(l)}</b>` : esc(l)).join("\n")}</pre>`;
+    $("#closelog").onclick = () => $("#logview").innerHTML = "";
+    $("#logview").scrollIntoView({behavior:"smooth", block:"start"});
+  });
+}
+function flowMini(run){
+  return `<ul class="timeline">${FLOW.map(([log, name]) => {
+    const i = run ? run.steps.indexOf(log) : -1;
+    const now = run && i === run.steps.length - 1;
+    return `<li><span class="mono">${i === -1 ? "·" : now ? "…" : "✓"}</span><span class="${i === -1 ? "muted" : ""}">${esc(name)}</span></li>`;
+  }).join("")}</ul>`;
+}
+
+/* ============================================================
+   Sources
+   ============================================================ */
+async function vSources(main){
+  const s = await api("/api/sources");
+  main.innerHTML = `
+  <div class="section-head"><div><h2>Sources</h2>
+    <p class="lede">Where the roles come from and what each source gave on the last run. A board with postings but none shown usually means none were in India or on the business track.</p></div></div>
+  <div class="grid g2 section">
+    <div class="card"><h3>Job sites</h3>
+      <div class="tablewrap" style="border:0"><table>
+        <thead><tr><th>Site</th><th class="num">Found</th><th class="num">On roles page</th><th>Status</th></tr></thead>
+        <tbody>${s.sites.map(x => `<tr><td><b style="color:var(--ink)">${esc(SITE[x.site] || x.site)}</b></td>
+          <td class="num mono">${x.found == null ? "—" : fmtNum(x.found)}</td><td class="num mono">${fmtNum(x.shown)}</td>
+          <td>${x.blocked ? `<span class="pill bad">Blocked last search</span>` : `<span class="pill ok">Working</span>`}</td></tr>`).join("")}</tbody>
+      </table></div>
+      <p class="small muted" style="margin:10px 0 0">Last searched ${when(s.search.searched_at)}. "Found" is before removing duplicates and roles outside the business track.</p>
+    </div>
+    <div class="card"><h3>Not used, and why</h3>
+      <dl class="facts">${s.not_used.map(n => `<dt>${esc(n.site)}</dt><dd>${esc(n.why)}</dd>`).join("")}</dl>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-head"><h2>Company boards</h2><span class="small muted">${s.boards.length} boards, read in full on every run</span></div>
+    <div class="tablewrap"><table>
+      <thead><tr><th>Employer board</th><th>System</th><th class="num">Postings</th><th class="num">In India</th><th class="num">Business track</th><th class="num">On roles page</th></tr></thead>
+      <tbody>${s.boards.map(b => `<tr><td><b style="color:var(--ink)">${esc(b.slug)}</b></td><td class="small">${esc(SITE[b.ats] || b.ats)}</td>
+        <td class="num mono">${fmtNum(b.postings)}</td><td class="num mono">${fmtNum(b.india)}</td><td class="num mono">${fmtNum(b.business)}</td>
+        <td class="num mono">${b.postings === 0 ? `<span class="pill warn">empty</span>` : fmtNum(b.shown)}</td></tr>`).join("")}</tbody>
+    </table></div>
+  </div>`;
+}
+
+/* ============================================================
+   History
+   ============================================================ */
+async function vHistory(main){
+  const h = await api("/api/history");
+  const days = h.days;
+  const latest = days[days.length - 1] || {};
+  main.innerHTML = `
+  <div class="section-head"><div><h2>History</h2>
+    <p class="lede">Every role the tracker has ever seen is kept with the day it first appeared and, for company boards, the day it closed. LinkedIn and Indeed roles are never marked closed: dropping out of a search is not the same as closing.</p></div></div>
+  <div class="tiles">
+    <div class="tile"><span class="v">${fmtNum(h.total)}</span><span class="k">Roles ever seen</span><span class="h">All sources, all days</span></div>
+    <div class="tile"><span class="v">${fmtNum(h.live)}</span><span class="k">Still live</span><span class="h">Not marked closed</span></div>
+    <div class="tile"><span class="v">${fmtNum((latest.new_board || 0) + (latest.new_search || 0))}</span><span class="k">New on ${esc(day(latest.day))}</span><span class="h">Most recent day</span></div>
+    <div class="tile"><span class="v">${days.length}</span><span class="k">Days recorded</span><span class="h">Since ${esc(day(days[0] && days[0].day))}</span></div>
+  </div>
+  <div class="card section">
+    <div class="section-head"><h2>New roles per day</h2><button class="btn" id="asTable" aria-pressed="false">Show as table</button></div>
+    <div class="legend"><span><i style="background:var(--series-1)"></i>Company boards</span><span><i style="background:var(--series-2)"></i>LinkedIn &amp; Indeed</span></div>
+    <div id="chartbox"></div>
+  </div>`;
+  const box = $("#chartbox");
+  const table = () => `<div class="tablewrap"><table><thead><tr><th>Day</th><th class="num">New from boards</th><th class="num">New from LinkedIn &amp; Indeed</th><th class="num">Closed</th><th class="num">Live that day</th></tr></thead>
+    <tbody>${days.slice().reverse().map(d => `<tr><td class="mono small">${esc(d.day)}</td><td class="num mono">${fmtNum(d.new_board)}</td><td class="num mono">${fmtNum(d.new_search)}</td><td class="num mono">${fmtNum(d.closed)}</td><td class="num mono">${d.tracked == null ? "—" : fmtNum(d.tracked)}</td></tr>`).join("")}</tbody></table></div>`;
+  let showTable = false;
+  const draw = () => { box.innerHTML = showTable ? table() : stackedBars(days); if (!showTable) wireBars(box, days); };
+  $("#asTable").onclick = e => { showTable = !showTable; e.target.setAttribute("aria-pressed", String(showTable)); e.target.textContent = showTable ? "Show as chart" : "Show as table"; draw(); };
+  draw();
+  addEventListener("resize", () => { if (location.hash.startsWith("#history") && !showTable) draw(); }, {once:true});
+}
+
+/* Stacked bars, one per day: boards at the base, search on top. Thin marks,
+   rounded data ends, a 2px surface gap between the two segments. */
+function stackedBars(days){
+  if (!days.length) return `<div class="empty">No history yet.</div>`;
+  const W = Math.max(320, $("#chartbox").clientWidth || 800), H = 240;
+  const m = {t: 12, r: 8, b: 26, l: 44};
+  const iw = W - m.l - m.r, ih = H - m.t - m.b;
+  const totals = days.map(d => d.new_board + d.new_search);
+  const max = Math.max(1, ...totals);
+  const step = niceStep(max), top = Math.ceil(max / step) * step;
+  const y = v => m.t + ih - v / top * ih;
+  const band = iw / days.length, bw = Math.max(3, Math.min(34, band * .62));
+  const ticks = []; for (let v = 0; v <= top; v += step) ticks.push(v);
+  const every = Math.ceil(days.length / Math.max(1, Math.floor(iw / 70)));
+  const seg = (x, y0, y1, roundTop) => {
+    const h = Math.max(0, y0 - y1); if (h <= 0) return "";
+    const r = Math.min(4, h, bw / 2);
+    return roundTop
+      ? `M${x},${y0}V${y1 + r}Q${x},${y1} ${x + r},${y1}H${x + bw - r}Q${x + bw},${y1} ${x + bw},${y1 + r}V${y0}Z`
+      : `M${x},${y0}V${y1}H${x + bw}V${y0}Z`;
+  };
+  return `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="New roles per day, stacked by source">
+    <g class="grid">${ticks.map(v => `<line x1="${m.l}" x2="${W - m.r}" y1="${y(v)}" y2="${y(v)}"/>`).join("")}</g>
+    <g class="axis">${ticks.map(v => `<text x="${m.l - 8}" y="${y(v) + 4}" text-anchor="end">${fmtNum(v)}</text>`).join("")}
+      ${days.map((d, i) => i % every === 0 ? `<text x="${m.l + band * i + band / 2}" y="${H - 8}" text-anchor="middle">${esc(d.day.slice(5))}</text>` : "").join("")}</g>
+    <g>${days.map((d, i) => {
+      const x = m.l + band * i + (band - bw) / 2;
+      const b0 = y(0), b1 = y(d.new_board), s1 = y(d.new_board + d.new_search);
+      const gap = d.new_board && d.new_search ? 2 : 0;
+      return `<path d="${seg(x, b0, b1, !d.new_search)}" fill="var(--series-1)"/>
+        <path d="${seg(x, b1 - gap, Math.min(s1, b1 - gap), true)}" fill="var(--series-2)"/>
+        <rect class="hit" data-i="${i}" x="${m.l + band * i}" y="${m.t}" width="${band}" height="${ih}" fill="transparent"/>`;
+    }).join("")}</g>
+  </svg></div>`;
+}
+function niceStep(max){
+  const raw = max / 4, p = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / p;
+  return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 5 ? 5 : 10) * p;
+}
+function wireBars(box, days){
+  box.querySelectorAll("rect.hit").forEach(r => {
+    const d = days[+r.dataset.i];
+    r.addEventListener("mousemove", e => showTip(e, `<b>${esc(day(d.day))}</b>
+      <div class="row"><span><i style="background:var(--series-1)"></i>Company boards</span><span class="mono">${fmtNum(d.new_board)}</span></div>
+      <div class="row"><span><i style="background:var(--series-2)"></i>LinkedIn &amp; Indeed</span><span class="mono">${fmtNum(d.new_search)}</span></div>
+      <div class="row muted"><span>Closed</span><span class="mono">${fmtNum(d.closed)}</span></div>`));
+    r.addEventListener("mouseleave", hideTip);
+  });
+}
+
+/* ============================================================
+   Data
+   ============================================================ */
+async function vData(main){
+  const d = await api("/api/data");
+  const badge = v => `<span class="pill vis-${v}">${{public:"Public data", local:"This Mac", private:"Private"}[v]}</span>`;
+  main.innerHTML = `
+  <div class="section-head"><div><h2>Where everything is stored</h2>
+    <p class="lede">Everything lives in one folder on this Mac: <code class="mono">${esc(d.root)}</code></p></div>
+    <button class="btn" id="copyroot">Copy folder path</button></div>
+  <div class="grid g3 section">
+    ${["public","local","private"].map(v => `<div class="card">${badge(v)}<p style="margin:8px 0 0" class="small">${esc(d.visibility[v])}.</p>
+      <p style="margin:6px 0 0" class="small muted">${{public:"Job postings and funding news: nothing about you.",
+        local:"Big working files and logs, rebuilt or added to on every run.",
+        private:"Your resume, applications, notes and key. Ignored by git, and the local server will not hand them to other sites."}[v]}</p></div>`).join("")}
+  </div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>File or folder</th><th>What it holds</th><th>Kind</th><th class="num">Records</th><th class="num">Size</th><th>Updated</th></tr></thead>
+    <tbody>${d.items.map(it => `<tr>
+      <td class="mono small">${it.view ? `<a href="./${esc(it.view)}" target="_blank" rel="noopener">${esc(it.path)}</a>` : esc(it.path)}</td>
+      <td class="small">${esc(it.what)}</td><td>${badge(it.visibility)}</td>
+      <td class="num small">${it.exists ? esc(it.records || "—") : `<span class="muted">not created yet</span>`}</td>
+      <td class="num mono small">${esc(it.size || "—")}</td>
+      <td class="mono small">${it.modified ? when(it.modified) : "—"}</td></tr>`).join("")}</tbody>
+  </table></div>`;
+  $("#copyroot").onclick = async () => { try { await navigator.clipboard.writeText(d.root); toast("Folder path copied"); } catch { toast(d.root); } };
+}
+
+/* ============================================================
+   Settings
+   ============================================================ */
+async function vSettings(main){
+  const s = await api("/api/settings");
+  main.innerHTML = `
+  <div class="section-head"><div><h2>Settings</h2><p class="lede">Saved on this Mac in <code>private/</code>.</p></div></div>
+  <div class="grid g2">
+    <div class="card"><h3>You</h3>
+      <div class="form">
+        <label class="field">Graduation year<input type="number" id="s-year" min="2020" max="2035" value="${esc(s.grad_year)}"></label>
+      </div>
+      <p class="small muted" style="margin:0 0 12px">Drives "Open to ${esc(s.grad_year)} grads" on the roles page and the overview. Changing it rebuilds the page in a second or two.</p>
+      <p class="small" style="margin:0 0 12px">Master resume: ${s.resume ? `<span class="pill ok">private/resume.md</span>` : `<span class="pill bad">missing</span> put it at <code>private/resume.md</code>`}</p>
+      <button class="btn primary" id="s-save-you">Save</button>
+    </div>
+    <div class="card"><h3>Daily refresh</h3>
+      <div class="form"><label class="field">Time<input type="time" id="s-time" value="${esc(s.refresh_time)}"></label></div>
+      <p class="small muted" style="margin:0 0 12px">${s.schedule.installed ? "Scheduled on this Mac. If it is asleep then, the refresh runs when it wakes." : `<span class="pill bad">Not installed</span> run <code>./scripts/schedule_mac.sh install</code> once.`}</p>
+      <button class="btn primary" id="s-save-time">Save time</button>
+    </div>
+    <div class="card"><h3>Gemini key</h3>
+      <p class="small" style="margin:0 0 10px">${s.gemini_key_set ? `<span class="pill ok">Saved</span> resume tailoring is ready.` : `<span class="pill warn">Not set</span> needed only for tailoring resumes. Get a free key at <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">aistudio.google.com/apikey</a>.`}</p>
+      <div class="form"><label class="field">${s.gemini_key_set ? "Replace key" : "Paste key"}<input type="password" id="s-key" autocomplete="off" spellcheck="false"></label></div>
+      <p class="small muted" style="margin:0 0 12px">Stored in <code>private/.env</code>, readable only by your user account, never committed.</p>
+      <div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn primary" id="s-save-key">Save key</button>${s.gemini_key_set ? `<button class="btn danger" id="s-clear-key">Remove key</button>` : ""}</div>
+    </div>
+    <div class="card"><h3>Project</h3>
+      <dl class="facts"><dt>Folder</dt><dd class="mono small">${esc(s.root)}</dd>
+        <dt>Roles page</dt><dd><a href="./index.html">127.0.0.1:8765</a></dd>
+        <dt>This dashboard</dt><dd>127.0.0.1:8765/dashboard.html</dd>
+        <dt>Terminal</dt><dd class="mono small">./scripts/schedule_mac.sh status</dd></dl>
+    </div>
+  </div>`;
+  const save = async (body, msg) => { try { await api("/api/settings", body); toast(msg); render(); } catch (e){ toast(e.message); } };
+  $("#s-save-you").onclick = () => save({grad_year: +$("#s-year").value}, "Saved; rebuilding the page");
+  $("#s-save-time").onclick = () => save({refresh_time: $("#s-time").value}, `Daily refresh now at ${$("#s-time").value}`);
+  $("#s-save-key").onclick = () => { const k = $("#s-key").value.trim(); if (!k) return toast("Paste a key first"); save({gemini_key: k}, "Key saved"); };
+  $("#s-clear-key") && ($("#s-clear-key").onclick = () => save({gemini_key: ""}, "Key removed"));
+}
+
+/* ============================================================ */
+pollStatus();
+render();
+setInterval(() => { if (!runState.running) pollStatus(); }, 30000);
+</script>
+</body>
+</html>
