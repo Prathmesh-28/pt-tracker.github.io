@@ -1271,8 +1271,8 @@
  },
  "ashby:sarvam:6d849a05-e924-4aef-a6a4-f5e082358517": {
   "age_days": 4,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-15",
   "company": "sarvam",
   "first_seen": "2026-09-11",
   "last_seen": "2026-09-15",
@@ -1408,6 +1408,20 @@
   "reposted": false,
   "title": "Strategic Deployment Engineer, Chanakya",
   "url": "https://jobs.ashbyhq.com/sarvam/87d5a5af-ea7d-4b94-a0fa-81dc64e54907"
+ },
+ "ashby:sarvam:8925c0ea-ab20-4971-b427-9a44e93d932b": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "sarvam",
+  "first_seen": "2026-09-15",
+  "last_seen": "2026-09-15",
+  "location": "Bengaluru",
+  "min_years": null,
+  "posted": "2026-09-15",
+  "reposted": false,
+  "title": "Audio\u2013Video Editor (AI Dubbing Pipeline)",
+  "url": "https://jobs.ashbyhq.com/sarvam/8925c0ea-ab20-4971-b427-9a44e93d932b"
  },
  "ashby:sarvam:8dfa8130-cfb3-4c31-8658-54260d217f86": {
   "age_days": 91,
@@ -1548,6 +1562,20 @@
   "reposted": false,
   "title": "Embedded Infrastructure Engineer, Chanakya",
   "url": "https://jobs.ashbyhq.com/sarvam/b2201b5e-1e96-497a-962c-bca1768f75fd"
+ },
+ "ashby:sarvam:b60ac66f-a2d7-4354-b67a-aa0de5ad7e3e": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "sarvam",
+  "first_seen": "2026-09-15",
+  "last_seen": "2026-09-15",
+  "location": "Bengaluru",
+  "min_years": 8,
+  "posted": "2026-09-15",
+  "reposted": false,
+  "title": "Staff Software Engineer - Frontend",
+  "url": "https://jobs.ashbyhq.com/sarvam/b60ac66f-a2d7-4354-b67a-aa0de5ad7e3e"
  },
  "ashby:sarvam:bd5d2769-7dc3-47c5-9afb-c011b6d22c19": {
   "age_days": 22,
@@ -6759,6 +6787,20 @@
   "title": "Senior Manager \u2013 Business Finance",
   "url": "https://jobs.lever.co/fampay/d101de11-7603-42c1-bfa4-55ab6b19c980"
  },
+ "lever:fampay:df8548ac-a0e4-4cd6-a97c-427231b4b3e9": {
+  "age_days": 747,
+  "closed": false,
+  "closed_on": "",
+  "company": "fampay",
+  "first_seen": "2026-09-15",
+  "last_seen": "2026-09-15",
+  "location": "Bengaluru",
+  "min_years": null,
+  "posted": "2024-08-29",
+  "reposted": false,
+  "title": "Security Engineer 2",
+  "url": "https://jobs.lever.co/fampay/df8548ac-a0e4-4cd6-a97c-427231b4b3e9"
+ },
  "lever:fampay:e908a557-dd9e-41d0-849c-b57914f3ed13": {
   "age_days": 103,
   "closed": false,
@@ -7255,6 +7297,20 @@
   "title": "Assistant Manager Finance \u2013 Logistics Intelligence",
   "url": "https://jobs.lever.co/meesho/3032374b-0010-4d19-8dd1-26c37c396cba"
  },
+ "lever:meesho:341136b5-5ea1-4782-8e49-41ff0f564b1b": {
+  "age_days": 229,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-15",
+  "last_seen": "2026-09-15",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-01-29",
+  "reposted": false,
+  "title": "Manager \u2013 HRBP & ER",
+  "url": "https://jobs.lever.co/meesho/341136b5-5ea1-4782-8e49-41ff0f564b1b"
+ },
  "lever:meesho:35a98774-fbca-4826-93a0-cc2b19bf2354": {
   "age_days": 315,
   "closed": false,
@@ -7394,6 +7450,20 @@
   "reposted": false,
   "title": "Cluster Head  ( Security & Investigation)",
   "url": "https://jobs.lever.co/meesho/5cc451b2-7bb1-44e0-8ae8-85faa50e4711"
+ },
+ "lever:meesho:5dca8c71-9993-438f-ad51-da3c7f4be692": {
+  "age_days": 28,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-15",
+  "last_seen": "2026-09-15",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-08-18",
+  "reposted": false,
+  "title": "Product Manager II - User Discovery",
+  "url": "https://jobs.lever.co/meesho/5dca8c71-9993-438f-ad51-da3c7f4be692"
  },
  "lever:meesho:60e0d986-abe8-42ee-b172-0d9aecb307b7": {
   "age_days": 99,
@@ -7691,8 +7761,8 @@
  },
  "lever:meesho:d6a0019f-60a6-4c58-9175-3a455f3b1d8c": {
   "age_days": 22,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-15",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-15",
@@ -7744,6 +7814,20 @@
   "reposted": false,
   "title": "Senior Manager - User Experience : F&E",
   "url": "https://jobs.lever.co/meesho/e03deae3-a5f2-428d-b2f3-3c275f8c433b"
+ },
+ "lever:meesho:e1771bdd-0601-4af4-8f20-53553b4d3f10": {
+  "age_days": 4,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-15",
+  "last_seen": "2026-09-15",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-09-11",
+  "reposted": false,
+  "title": "Manager - Performance Marketing",
+  "url": "https://jobs.lever.co/meesho/e1771bdd-0601-4af4-8f20-53553b4d3f10"
  },
  "lever:meesho:e640ec64-9e6b-482a-b21e-82261334bcd0": {
   "age_days": 28,
@@ -8335,8 +8419,8 @@
  },
  "lever:paytm:11bf5c25-3c9c-451f-8844-4f6d9b5817da": {
   "age_days": 33,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-15",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-15",
@@ -8461,8 +8545,8 @@
  },
  "lever:paytm:19100ec9-9016-40d1-8ea0-6694a989bfae": {
   "age_days": 33,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-15",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-15",
@@ -8881,8 +8965,8 @@
  },
  "lever:paytm:3ba275a6-47e6-4cf6-906a-bfc5052bba69": {
   "age_days": 28,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-15",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-15",
@@ -9105,8 +9189,8 @@
  },
  "lever:paytm:494a9ea6-28af-4334-b887-5d1e6b57060c": {
   "age_days": 34,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-15",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-15",
@@ -10405,6 +10489,20 @@
   "title": "Growth Management - Senior Manager - User Growth",
   "url": "https://jobs.lever.co/paytm/b9933ff7-4d2e-41d7-bd1f-98970f1488b5"
  },
+ "lever:paytm:bc89569c-2551-436d-947d-a80da48167c6": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-15",
+  "last_seen": "2026-09-15",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 7,
+  "posted": "2026-09-15",
+  "reposted": false,
+  "title": "KAM - Manager/ Senior Manager - Paytm Ads",
+  "url": "https://jobs.lever.co/paytm/bc89569c-2551-436d-947d-a80da48167c6"
+ },
  "lever:paytm:bcd1320b-72a8-47e1-a062-15241381fdb3": {
   "age_days": 151,
   "closed": false,
@@ -10981,8 +11079,8 @@
  },
  "lever:paytm:eb6549d8-0e20-4ca1-ac22-c1ca201ee7a0": {
   "age_days": 26,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-15",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-15",
@@ -11174,6 +11272,20 @@
   "reposted": false,
   "title": "Deputy General Manager- Product Analyst Lead",
   "url": "https://jobs.lever.co/paytm/f6cf73fc-27e3-4a51-a25d-df54bbe47fab"
+ },
+ "lever:paytm:f8649b65-be80-43fc-8abb-4f4d3ceb2984": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-15",
+  "last_seen": "2026-09-15",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": null,
+  "posted": "2026-09-15",
+  "reposted": false,
+  "title": "Internship - Talent Acquisition",
+  "url": "https://jobs.lever.co/paytm/f8649b65-be80-43fc-8abb-4f4d3ceb2984"
  },
  "lever:paytm:fa5befe1-43f5-417f-a1de-a989264e1871": {
   "age_days": 40,
@@ -11766,6 +11878,20 @@
   "title": "Lead / Manager Data Reliability Engineering",
   "url": "https://jobs.lever.co/zeta/32ea9654-98a8-445b-98ef-e6ada520d35a"
  },
+ "lever:zeta:42c3b097-4b5c-48b6-83f6-04f09f1cab56": {
+  "age_days": 12,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-09-15",
+  "last_seen": "2026-09-15",
+  "location": "Bangalore - WF",
+  "min_years": null,
+  "posted": "2026-09-03",
+  "reposted": false,
+  "title": "Associate/Sr Associate- People Experience",
+  "url": "https://jobs.lever.co/zeta/42c3b097-4b5c-48b6-83f6-04f09f1cab56"
+ },
  "lever:zeta:500c585f-65ba-4f6a-b515-7d73680038c3": {
   "age_days": 60,
   "closed": false,
@@ -11810,8 +11936,8 @@
  },
  "lever:zeta:72ee1884-8e8b-447b-ab96-aa76605b5f4a": {
   "age_days": 4,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-15",
   "company": "zeta",
   "first_seen": "2026-09-14",
   "last_seen": "2026-09-15",

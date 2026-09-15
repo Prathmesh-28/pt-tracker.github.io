@@ -2,26 +2,6 @@
   "generated": "2026-09-15",
   "roles": [
     {
-      "age_days": 4,
-      "first_seen": "2026-09-11",
-      "reposted": false,
-      "title": "Strategy and Operations Intern",
-      "company": "Sarvam AI",
-      "city": "Bengaluru",
-      "location": "Bengaluru",
-      "pay": "",
-      "url": "https://jobs.ashbyhq.com/sarvam/6d849a05-e924-4aef-a6a4-f5e082358517",
-      "posted": "2026-09-11",
-      "deadline": "",
-      "team": "Operations",
-      "family": "Strategy",
-      "min_years": 0,
-      "tier": "open",
-      "ats": "ashby",
-      "batch": "",
-      "key": "ashby:sarvam:6d849a05-e924-4aef-a6a4-f5e082358517"
-    },
-    {
       "age_days": 14,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -840,26 +820,6 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:paytm:3d396d95-cef6-4a5f-bd07-8b21944533a0"
-    },
-    {
-      "age_days": 34,
-      "first_seen": "2026-09-10",
-      "reposted": false,
-      "title": "Data Analyst (Finance)",
-      "company": "Paytm",
-      "city": "Noida",
-      "location": "Noida, Uttar Pradesh",
-      "pay": "",
-      "url": "https://jobs.lever.co/paytm/494a9ea6-28af-4334-b887-5d1e6b57060c",
-      "posted": "2026-08-12",
-      "deadline": "",
-      "team": "Accounting",
-      "family": "Business analyst",
-      "min_years": 2,
-      "tier": "walled",
-      "ats": "lever",
-      "batch": "",
-      "key": "lever:paytm:494a9ea6-28af-4334-b887-5d1e6b57060c"
     },
     {
       "age_days": 35,
@@ -3527,15 +3487,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 20,
+  "closed_tracked": 28,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 621,
-    "postings_india": 460,
-    "business_track": 78,
-    "open": 7,
+    "postings_scanned": 622,
+    "postings_india": 461,
+    "business_track": 76,
+    "open": 6,
     "unstated": 22,
-    "walled": 49
+    "walled": 48
   }
 }
