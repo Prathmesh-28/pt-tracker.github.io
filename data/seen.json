@@ -3577,8 +3577,8 @@
  },
  "greenhouse:druva:8760341002": {
   "age_days": 13,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-16",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-16",
@@ -3616,6 +3616,20 @@
   "reposted": false,
   "title": "Senior Partner Sales Engineer",
   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8779833002/?gh_jid=8779833002"
+ },
+ "greenhouse:druva:8793808002": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "druva",
+  "first_seen": "2026-09-16",
+  "last_seen": "2026-09-16",
+  "location": "Pune, Maharashtra, India",
+  "min_years": 5,
+  "posted": "2026-09-16",
+  "reposted": false,
+  "title": "Senior Data Analyst",
+  "url": "https://www.druva.com/why-druva/explore/careers/jobs/8793808002/?gh_jid=8793808002"
  },
  "greenhouse:glide:4020741007": {
   "age_days": 1219,
@@ -7397,8 +7411,8 @@
  },
  "lever:meesho:4891a891-f431-4e98-99ae-0e31a21f0190": {
   "age_days": 0,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-16",
   "company": "meesho",
   "first_seen": "2026-09-16",
   "last_seen": "2026-09-16",
@@ -10505,8 +10519,8 @@
  },
  "lever:paytm:ab166330-5876-488e-b90c-749df6e871b1": {
   "age_days": 26,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-16",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-16",
@@ -12202,8 +12216,8 @@
  },
  "lever:zeta:db110756-b496-49a2-bde5-49ab46e963b8": {
   "age_days": 7,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-16",
   "company": "zeta",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-16",

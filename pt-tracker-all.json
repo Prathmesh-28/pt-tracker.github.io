@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 81,
+    "open_roles_scraped": 80,
     "roles_open_to_freshers": 6,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 864,
+    "postings_tracked_in_history": 865,
     "benchmark_families": 0
   },
   "companies": [
@@ -4476,26 +4476,6 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:paytm:552ba2c8-ffb8-4342-8d8c-ca1903800a68"
-    },
-    {
-      "age_days": 0,
-      "first_seen": "2026-09-16",
-      "reposted": false,
-      "title": "Product Manager I",
-      "company": "Meesho",
-      "city": "Bengaluru",
-      "location": "Bangalore, Karnataka",
-      "pay": "",
-      "url": "https://jobs.lever.co/meesho/4891a891-f431-4e98-99ae-0e31a21f0190",
-      "posted": "2026-09-16",
-      "deadline": "",
-      "team": "Product",
-      "family": "Product",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "batch": "",
-      "key": "lever:meesho:4891a891-f431-4e98-99ae-0e31a21f0190"
     },
     {
       "age_days": 4,
