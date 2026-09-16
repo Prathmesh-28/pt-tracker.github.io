@@ -122,6 +122,26 @@
       "key": "lever:paytm:552ba2c8-ffb8-4342-8d8c-ca1903800a68"
     },
     {
+      "age_days": 0,
+      "first_seen": "2026-09-16",
+      "reposted": false,
+      "title": "Product Manager I",
+      "company": "Meesho",
+      "city": "Bengaluru",
+      "location": "Bangalore, Karnataka",
+      "pay": "",
+      "url": "https://jobs.lever.co/meesho/4891a891-f431-4e98-99ae-0e31a21f0190",
+      "posted": "2026-09-16",
+      "deadline": "",
+      "team": "Product",
+      "family": "Product",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:meesho:4891a891-f431-4e98-99ae-0e31a21f0190"
+    },
+    {
       "age_days": 4,
       "first_seen": "2026-09-13",
       "reposted": false,
@@ -560,6 +580,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:mindtickle:e5f69583-dd88-4b86-af6b-5582df1548d8"
+    },
+    {
+      "age_days": 0,
+      "first_seen": "2026-09-16",
+      "reposted": false,
+      "title": "Associate - TA Tech",
+      "company": "Paytm",
+      "city": "Noida",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/55fa4f0c-09b4-426c-bd7f-5b43140f5ed5",
+      "posted": "2026-09-16",
+      "deadline": "",
+      "team": "Recruitment",
+      "family": "Support & other",
+      "min_years": 2,
+      "tier": "walled",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:paytm:55fa4f0c-09b4-426c-bd7f-5b43140f5ed5"
     },
     {
       "age_days": 1,
@@ -3547,15 +3587,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 38,
+  "closed_tracked": 42,
   "coverage": {
     "boards": 15,
     "employers": 15,
     "postings_scanned": 619,
-    "postings_india": 467,
-    "business_track": 79,
+    "postings_india": 468,
+    "business_track": 81,
     "open": 6,
-    "unstated": 22,
-    "walled": 51
+    "unstated": 23,
+    "walled": 52
   }
 }

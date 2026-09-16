@@ -3521,8 +3521,8 @@
  },
  "greenhouse:druva:8745192002": {
   "age_days": 16,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-16",
   "company": "druva",
   "first_seen": "2026-09-11",
   "last_seen": "2026-09-16",
@@ -4631,8 +4631,8 @@
  },
  "greenhouse:postman:7701509003": {
   "age_days": 154,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-16",
   "company": "postman",
   "first_seen": "2026-09-11",
   "last_seen": "2026-09-16",
@@ -4841,8 +4841,8 @@
  },
  "greenhouse:postman:7770445003": {
   "age_days": 62,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-16",
   "company": "postman",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-16",
@@ -7395,6 +7395,20 @@
   "title": "Manager-  Legal",
   "url": "https://jobs.lever.co/meesho/46754b37-ceb3-4a85-b59d-76b27a453f83"
  },
+ "lever:meesho:4891a891-f431-4e98-99ae-0e31a21f0190": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-16",
+  "last_seen": "2026-09-16",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-09-16",
+  "reposted": false,
+  "title": "Product Manager I",
+  "url": "https://jobs.lever.co/meesho/4891a891-f431-4e98-99ae-0e31a21f0190"
+ },
  "lever:meesho:489fe662-5d28-4305-953e-91ee21e8538c": {
   "age_days": 1041,
   "closed": false,
@@ -7467,8 +7481,8 @@
  },
  "lever:meesho:5dca8c71-9993-438f-ad51-da3c7f4be692": {
   "age_days": 29,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-16",
   "company": "meesho",
   "first_seen": "2026-09-15",
   "last_seen": "2026-09-16",
@@ -8991,6 +9005,20 @@
   "title": "Supply chain, Logistics and Operations Executive \u2013 Indonesia",
   "url": "https://jobs.lever.co/paytm/37c37776-1133-44b8-b72d-333bb57fb12b"
  },
+ "lever:paytm:3876b70d-85d2-4128-b3b1-91f078c10eb0": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-16",
+  "last_seen": "2026-09-16",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 0,
+  "posted": "2026-09-16",
+  "reposted": false,
+  "title": "Product Design Intern- Paytm",
+  "url": "https://jobs.lever.co/paytm/3876b70d-85d2-4128-b3b1-91f078c10eb0"
+ },
  "lever:paytm:3ad2b446-028d-4e00-945d-2d9f6e0f988a": {
   "age_days": 85,
   "closed": true,
@@ -9327,6 +9355,20 @@
   "title": "Product Management - UPI Product | Experience : 3-5 yrs",
   "url": "https://jobs.lever.co/paytm/4ee74e43-4001-457f-9ad8-f574689991d5"
  },
+ "lever:paytm:4f0b8508-1fae-45ae-bc09-67291ea3c447": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-16",
+  "last_seen": "2026-09-16",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 0,
+  "posted": "2026-09-16",
+  "reposted": false,
+  "title": "Visual Design Intern- Paytm",
+  "url": "https://jobs.lever.co/paytm/4f0b8508-1fae-45ae-bc09-67291ea3c447"
+ },
  "lever:paytm:51f3a9e9-1534-4bd6-8aff-52f134e18ae6": {
   "age_days": 64,
   "closed": false,
@@ -9382,6 +9424,20 @@
   "reposted": false,
   "title": "Tele caller - Associate",
   "url": "https://jobs.lever.co/paytm/552ba2c8-ffb8-4342-8d8c-ca1903800a68"
+ },
+ "lever:paytm:55fa4f0c-09b4-426c-bd7f-5b43140f5ed5": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-16",
+  "last_seen": "2026-09-16",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 2,
+  "posted": "2026-09-16",
+  "reposted": false,
+  "title": "Associate - TA Tech",
+  "url": "https://jobs.lever.co/paytm/55fa4f0c-09b4-426c-bd7f-5b43140f5ed5"
  },
  "lever:paytm:5607f65c-97d3-444b-ae76-71c4cc4ece1b": {
   "age_days": 127,
@@ -11043,7 +11099,7 @@
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-16",
   "location": "Mumbai, Maharashtra",
-  "min_years": 5,
+  "min_years": null,
   "posted": "2026-07-02",
   "reposted": false,
   "title": "Sales Executive",
@@ -11992,8 +12048,8 @@
  },
  "lever:zeta:500c585f-65ba-4f6a-b515-7d73680038c3": {
   "age_days": 61,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-16",
   "company": "zeta",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-16",
@@ -12034,11 +12090,11 @@
  },
  "lever:zeta:72ee1884-8e8b-447b-ab96-aa76605b5f4a": {
   "age_days": 5,
-  "closed": true,
-  "closed_on": "2026-09-15",
+  "closed": false,
+  "closed_on": "",
   "company": "zeta",
   "first_seen": "2026-09-14",
-  "last_seen": "2026-09-15",
+  "last_seen": "2026-09-16",
   "location": "Bangalore - EC",
   "min_years": null,
   "posted": "2026-09-11",
