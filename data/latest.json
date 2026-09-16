@@ -1062,26 +1062,6 @@
       "key": "lever:paytm:6a812d19-9ec8-4d97-a641-cafe50a24f81"
     },
     {
-      "age_days": 57,
-      "first_seen": "2026-09-10",
-      "reposted": true,
-      "title": "Enterprise Account Executive",
-      "company": "Postman",
-      "city": "Bengaluru",
-      "location": "Bengaluru, Karnataka, India",
-      "pay": "",
-      "url": "https://job-boards.greenhouse.io/postman/jobs/7802294003",
-      "posted": "2026-07-21",
-      "deadline": "",
-      "team": "",
-      "family": "Business development",
-      "min_years": 13,
-      "tier": "walled",
-      "ats": "greenhouse",
-      "batch": "",
-      "key": "greenhouse:postman:7802294003"
-    },
-    {
       "age_days": 72,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -3567,15 +3547,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 46,
+  "closed_tracked": 103,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 616,
-    "postings_india": 466,
-    "business_track": 80,
+    "postings_scanned": 559,
+    "postings_india": 461,
+    "business_track": 79,
     "open": 6,
     "unstated": 22,
-    "walled": 52
+    "walled": 51
   }
 }
