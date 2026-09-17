@@ -1411,8 +1411,8 @@
  },
  "ashby:sarvam:8925c0ea-ab20-4971-b427-9a44e93d932b": {
   "age_days": 2,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-17",
   "company": "sarvam",
   "first_seen": "2026-09-15",
   "last_seen": "2026-09-17",
@@ -4235,6 +4235,20 @@
   "reposted": false,
   "title": "Solutions Engineer \u2013 Mexico",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4732521005"
+ },
+ "greenhouse:netradyne:4735299005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-09-17",
+  "last_seen": "2026-09-17",
+  "location": "Nashville, Tennessee, United States; San Diego, California, United States; San Francisco, California, United States",
+  "min_years": 3,
+  "posted": "2026-09-17",
+  "reposted": false,
+  "title": "Product Manager - Integrations",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4735299005"
  },
  "greenhouse:porter:4397947009": {
   "age_days": 8,
