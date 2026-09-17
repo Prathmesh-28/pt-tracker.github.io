@@ -3958,8 +3958,8 @@
  },
  "greenhouse:netradyne:4712365005": {
   "age_days": 71,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-17",
   "company": "netradyne",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-17",
@@ -10559,6 +10559,20 @@
   "title": "Growth Management - Senior Manager - User Growth (UPI)",
   "url": "https://jobs.lever.co/paytm/96a54691-f0c2-46d8-88d1-ee0a84b3b046"
  },
+ "lever:paytm:99417427-aa53-454d-a483-3b7d2aa20c0c": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-17",
+  "last_seen": "2026-09-17",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 2,
+  "posted": "2026-09-17",
+  "reposted": false,
+  "title": "Business Analyst - Assistant Manager - Lending",
+  "url": "https://jobs.lever.co/paytm/99417427-aa53-454d-a483-3b7d2aa20c0c"
+ },
  "lever:paytm:9afb1ec6-d38e-45ea-b906-7fc7c54ca6dd": {
   "age_days": 48,
   "closed": true,
@@ -12381,6 +12395,20 @@
   "reposted": false,
   "title": "Associate Director - Legal",
   "url": "https://jobs.lever.co/zeta/892ad297-ed0e-4f9c-98b8-fd30358a5517"
+ },
+ "lever:zeta:8b83fe6a-ec31-4532-9738-bb753d9d9ad7": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-09-17",
+  "last_seen": "2026-09-17",
+  "location": "Bangalore - DD",
+  "min_years": null,
+  "posted": "2026-09-17",
+  "reposted": false,
+  "title": "Director - Strategy & Operations",
+  "url": "https://jobs.lever.co/zeta/8b83fe6a-ec31-4532-9738-bb753d9d9ad7"
  },
  "lever:zeta:aa98c726-9336-4d99-be08-20050eaf309c": {
   "age_days": 35,

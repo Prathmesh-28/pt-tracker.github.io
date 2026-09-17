@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 72,
+    "open_roles_scraped": 73,
     "roles_open_to_freshers": 6,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 881,
+    "postings_tracked_in_history": 883,
     "benchmark_families": 0
   },
   "companies": [
@@ -4936,6 +4936,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:paytm:1a17dea6-e1a5-424a-a0cb-0f0cb73d060c"
+    },
+    {
+      "age_days": 0,
+      "first_seen": "2026-09-17",
+      "reposted": false,
+      "title": "Business Analyst - Assistant Manager - Lending",
+      "company": "Paytm",
+      "city": "Noida",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/99417427-aa53-454d-a483-3b7d2aa20c0c",
+      "posted": "2026-09-17",
+      "deadline": "",
+      "team": "Lending",
+      "family": "Business analyst",
+      "min_years": 2,
+      "tier": "walled",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:paytm:99417427-aa53-454d-a483-3b7d2aa20c0c"
     },
     {
       "age_days": 1,
