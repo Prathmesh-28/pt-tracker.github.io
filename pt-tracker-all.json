@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 74,
+    "open_roles_scraped": 75,
     "roles_open_to_freshers": 7,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 889,
+    "postings_tracked_in_history": 891,
     "benchmark_families": 0
   },
   "companies": [
@@ -4496,6 +4496,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:paytm:552ba2c8-ffb8-4342-8d8c-ca1903800a68"
+    },
+    {
+      "age_days": 0,
+      "first_seen": "2026-09-18",
+      "reposted": false,
+      "title": "Product Manager I",
+      "company": "Zeta",
+      "city": "Bengaluru",
+      "location": "Bangalore - EC",
+      "pay": "",
+      "url": "https://jobs.lever.co/zeta/8623c195-f912-4d87-952f-7114cd258413",
+      "posted": "2026-09-18",
+      "deadline": "",
+      "team": "Product Management",
+      "family": "Product",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:zeta:8623c195-f912-4d87-952f-7114cd258413"
     },
     {
       "age_days": 6,

@@ -3367,8 +3367,8 @@
  },
  "greenhouse:druva:8651197002": {
   "age_days": 32,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-18",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-18",
@@ -12466,6 +12466,20 @@
   "title": "Lead Site Reliability Engineer",
   "url": "https://jobs.lever.co/zeta/803792f5-0e9c-45bc-82ce-c0a552ce0cf8"
  },
+ "lever:zeta:8623c195-f912-4d87-952f-7114cd258413": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-09-18",
+  "last_seen": "2026-09-18",
+  "location": "Bangalore - EC",
+  "min_years": null,
+  "posted": "2026-09-18",
+  "reposted": false,
+  "title": "Product Manager I",
+  "url": "https://jobs.lever.co/zeta/8623c195-f912-4d87-952f-7114cd258413"
+ },
  "lever:zeta:892ad297-ed0e-4f9c-98b8-fd30358a5517": {
   "age_days": 53,
   "closed": false,
@@ -12563,6 +12577,20 @@
   "reposted": false,
   "title": "Executive Assistant/Senior Executive Assistant",
   "url": "https://jobs.lever.co/zeta/db110756-b496-49a2-bde5-49ab46e963b8"
+ },
+ "lever:zeta:dbefd5b1-cc6a-4fe6-86d8-89800acee903": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-09-18",
+  "last_seen": "2026-09-18",
+  "location": "Bangalore - EC",
+  "min_years": null,
+  "posted": "2026-09-18",
+  "reposted": false,
+  "title": "Product Manager II",
+  "url": "https://jobs.lever.co/zeta/dbefd5b1-cc6a-4fe6-86d8-89800acee903"
  },
  "lever:zeta:e21ca17d-7bf2-4781-94bb-bcfc8943aae0": {
   "age_days": 59,

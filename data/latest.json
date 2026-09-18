@@ -142,6 +142,26 @@
       "key": "lever:paytm:552ba2c8-ffb8-4342-8d8c-ca1903800a68"
     },
     {
+      "age_days": 0,
+      "first_seen": "2026-09-18",
+      "reposted": false,
+      "title": "Product Manager I",
+      "company": "Zeta",
+      "city": "Bengaluru",
+      "location": "Bangalore - EC",
+      "pay": "",
+      "url": "https://jobs.lever.co/zeta/8623c195-f912-4d87-952f-7114cd258413",
+      "posted": "2026-09-18",
+      "deadline": "",
+      "team": "Product Management",
+      "family": "Product",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:zeta:8623c195-f912-4d87-952f-7114cd258413"
+    },
+    {
       "age_days": 6,
       "first_seen": "2026-09-13",
       "reposted": false,
@@ -3447,15 +3467,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 146,
+  "closed_tracked": 147,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 540,
-    "postings_india": 439,
-    "business_track": 74,
+    "postings_scanned": 541,
+    "postings_india": 440,
+    "business_track": 75,
     "open": 7,
-    "unstated": 21,
+    "unstated": 22,
     "walled": 46
   }
 }
