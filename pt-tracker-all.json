@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 73,
-    "roles_open_to_freshers": 6,
+    "open_roles_scraped": 74,
+    "roles_open_to_freshers": 7,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 884,
+    "postings_tracked_in_history": 889,
     "benchmark_families": 0
   },
   "companies": [
@@ -4396,6 +4396,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:paytm:20d54134-b6e5-4816-8da9-42e3a3ed8f57"
+    },
+    {
+      "age_days": 31,
+      "first_seen": "2026-09-10",
+      "reposted": false,
+      "title": "CST - Associate - Bill Payments CST",
+      "company": "Paytm",
+      "city": "Noida",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/271d28ce-e61c-4216-b7d4-adddd79eefa6",
+      "posted": "2026-08-18",
+      "deadline": "",
+      "team": "Bill Payments-CST",
+      "family": "Support & other",
+      "min_years": 1,
+      "tier": "open",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:paytm:271d28ce-e61c-4216-b7d4-adddd79eefa6"
     },
     {
       "age_days": 46,

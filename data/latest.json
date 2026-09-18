@@ -42,6 +42,26 @@
       "key": "lever:paytm:20d54134-b6e5-4816-8da9-42e3a3ed8f57"
     },
     {
+      "age_days": 31,
+      "first_seen": "2026-09-10",
+      "reposted": false,
+      "title": "CST - Associate - Bill Payments CST",
+      "company": "Paytm",
+      "city": "Noida",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/271d28ce-e61c-4216-b7d4-adddd79eefa6",
+      "posted": "2026-08-18",
+      "deadline": "",
+      "team": "Bill Payments-CST",
+      "family": "Support & other",
+      "min_years": 1,
+      "tier": "open",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:paytm:271d28ce-e61c-4216-b7d4-adddd79eefa6"
+    },
+    {
       "age_days": 46,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -3427,14 +3447,14 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 138,
+  "closed_tracked": 143,
   "coverage": {
     "boards": 15,
     "employers": 15,
     "postings_scanned": 543,
     "postings_india": 441,
-    "business_track": 73,
-    "open": 6,
+    "business_track": 74,
+    "open": 7,
     "unstated": 21,
     "walled": 46
   }
