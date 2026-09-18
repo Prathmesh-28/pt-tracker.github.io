@@ -977,8 +977,8 @@
  },
  "ashby:sarvam:12fddb90-b98a-44bd-b9a0-76d679391618": {
   "age_days": 52,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-18",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-18",
@@ -1733,8 +1733,8 @@
  },
  "ashby:sarvam:e5232e72-b037-4690-9976-38676bf9b8e0": {
   "age_days": 35,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-18",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-18",
@@ -3916,8 +3916,8 @@
  },
  "greenhouse:netradyne:4705986005": {
   "age_days": 95,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-18",
   "company": "netradyne",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-18",
