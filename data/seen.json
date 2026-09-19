@@ -5945,8 +5945,8 @@
  },
  "greenhouse:zenoti:7729931003": {
   "age_days": 131,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-19",
   "company": "zenoti",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-19",
@@ -6197,8 +6197,8 @@
  },
  "greenhouse:zenoti:7806710003": {
   "age_days": 64,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-19",
   "company": "zenoti",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-19",
