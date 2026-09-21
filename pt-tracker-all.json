@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 75,
+    "open_roles_scraped": 76,
     "roles_open_to_freshers": 7,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 892,
+    "postings_tracked_in_history": 896,
     "benchmark_families": 0
   },
   "companies": [
@@ -4496,6 +4496,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:paytm:552ba2c8-ffb8-4342-8d8c-ca1903800a68"
+    },
+    {
+      "age_days": 0,
+      "first_seen": "2026-09-21",
+      "reposted": false,
+      "title": "Project Manager- Warehouse Automation",
+      "company": "Meesho",
+      "city": "Bengaluru",
+      "location": "Bangalore, Karnataka",
+      "pay": "",
+      "url": "https://jobs.lever.co/meesho/113ff930-b5bf-42c7-a07d-aa66a9de89d9",
+      "posted": "2026-09-21",
+      "deadline": "",
+      "team": "Hardware",
+      "family": "Operations",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:meesho:113ff930-b5bf-42c7-a07d-aa66a9de89d9"
     },
     {
       "age_days": 3,

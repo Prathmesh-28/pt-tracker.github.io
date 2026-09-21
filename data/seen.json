@@ -3746,8 +3746,8 @@
  },
  "greenhouse:groww:4728765101": {
   "age_days": 283,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-21",
   "company": "groww",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-21",
@@ -7325,6 +7325,20 @@
   "untracked": true,
   "url": "https://jobs.lever.co/glide/fa60c24f-26d7-4820-92c4-f6afa2405515"
  },
+ "lever:meesho:113ff930-b5bf-42c7-a07d-aa66a9de89d9": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-21",
+  "last_seen": "2026-09-21",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-09-21",
+  "reposted": false,
+  "title": "Project Manager- Warehouse Automation",
+  "url": "https://jobs.lever.co/meesho/113ff930-b5bf-42c7-a07d-aa66a9de89d9"
+ },
  "lever:meesho:122c2edd-ea44-41fd-a06f-ecc79588f6c6": {
   "age_days": 82,
   "closed": false,
@@ -8095,6 +8109,20 @@
   "title": "Head of Meesho Foundation",
   "url": "https://jobs.lever.co/meesho/faa90cf7-c5d7-450c-aeeb-142c9954a5b1"
  },
+ "lever:meesho:fcceab83-4d26-4ea3-a5bc-b137b7e5ee5a": {
+  "age_days": 168,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-21",
+  "last_seen": "2026-09-21",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-04-06",
+  "reposted": false,
+  "title": "Forward Deployed Engineer - II",
+  "url": "https://jobs.lever.co/meesho/fcceab83-4d26-4ea3-a5bc-b137b7e5ee5a"
+ },
  "lever:mindtickle:166a3fea-6a19-48da-9a7d-bbff7d3c2f95": {
   "age_days": 291,
   "closed": false,
@@ -8531,8 +8559,8 @@
  },
  "lever:paytm:099f54ff-f447-4bb2-9a9b-7a5f0efbbe82": {
   "age_days": 140,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-21",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-21",
@@ -9257,6 +9285,20 @@
   "title": "Product Design Intern- Paytm",
   "url": "https://jobs.lever.co/paytm/3876b70d-85d2-4128-b3b1-91f078c10eb0"
  },
+ "lever:paytm:388c0e5a-48ba-4a3c-bc44-9356ea7f2db9": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-21",
+  "last_seen": "2026-09-21",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 6,
+  "posted": "2026-09-21",
+  "reposted": false,
+  "title": "Senior Corporate Development",
+  "url": "https://jobs.lever.co/paytm/388c0e5a-48ba-4a3c-bc44-9356ea7f2db9"
+ },
  "lever:paytm:3a937ec5-b1a3-45f5-ba1e-90944b6775a6": {
   "age_days": 4,
   "closed": false,
@@ -9340,6 +9382,20 @@
   "reposted": false,
   "title": "Taxation",
   "url": "https://jobs.lever.co/paytm/3d3ee995-ba39-4d3a-95fd-ef391b7f3b58"
+ },
+ "lever:paytm:3d47c253-0804-46f9-80e4-6e0f04133869": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-21",
+  "last_seen": "2026-09-21",
+  "location": "Bangalore, Karnataka",
+  "min_years": 3,
+  "posted": "2026-09-21",
+  "reposted": false,
+  "title": "HRBP",
+  "url": "https://jobs.lever.co/paytm/3d47c253-0804-46f9-80e4-6e0f04133869"
  },
  "lever:paytm:3db438be-5917-4f31-96ca-f8e26f0ff5bc": {
   "age_days": 265,
@@ -9721,8 +9777,8 @@
  },
  "lever:paytm:5607f65c-97d3-444b-ae76-71c4cc4ece1b": {
   "age_days": 132,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-21",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-21",
@@ -10533,8 +10589,8 @@
  },
  "lever:paytm:8d9bb9c3-cd95-4c97-b4b3-f68f2da10946": {
   "age_days": 122,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-21",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-21",
@@ -10771,8 +10827,8 @@
  },
  "lever:paytm:a6c913a1-aa46-472c-b74c-65115d83255b": {
   "age_days": 13,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-21",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-21",
@@ -11093,8 +11149,8 @@
  },
  "lever:paytm:cbece8b7-5505-4904-b079-166f18346c88": {
   "age_days": 54,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-21",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-21",
@@ -11681,8 +11737,8 @@
  },
  "lever:paytm:f39af236-8df5-42f7-9401-53b5a1cc9775": {
   "age_days": 117,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-21",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-21",
