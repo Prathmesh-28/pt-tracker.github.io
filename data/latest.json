@@ -602,6 +602,26 @@
       "key": "lever:mindtickle:e5f69583-dd88-4b86-af6b-5582df1548d8"
     },
     {
+      "age_days": 0,
+      "first_seen": "2026-09-22",
+      "reposted": false,
+      "title": "Campaign Management- User Growth",
+      "company": "Paytm",
+      "city": "Noida",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/9f059149-ed57-4539-9e06-0855096e7842",
+      "posted": "2026-09-22",
+      "deadline": "",
+      "team": "User Growth",
+      "family": "Growth",
+      "min_years": 2,
+      "tier": "walled",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:paytm:9f059149-ed57-4539-9e06-0855096e7842"
+    },
+    {
       "age_days": 5,
       "first_seen": "2026-09-17",
       "reposted": false,
@@ -3367,15 +3387,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 183,
+  "closed_tracked": 185,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 512,
-    "postings_india": 412,
-    "business_track": 70,
+    "postings_scanned": 513,
+    "postings_india": 413,
+    "business_track": 71,
     "open": 7,
     "unstated": 23,
-    "walled": 40
+    "walled": 41
   }
 }
