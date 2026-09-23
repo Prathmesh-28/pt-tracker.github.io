@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 69,
-    "roles_open_to_freshers": 7,
+    "open_roles_scraped": 70,
+    "roles_open_to_freshers": 8,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 910,
+    "postings_tracked_in_history": 914,
     "benchmark_families": 0
   },
   "companies": [
@@ -4357,6 +4357,26 @@
     }
   ],
   "open_roles": [
+    {
+      "age_days": 0,
+      "first_seen": "2026-09-23",
+      "reposted": false,
+      "title": "Growth Marketing Intern",
+      "company": "Sarvam AI",
+      "city": "Bengaluru",
+      "location": "Bengaluru",
+      "pay": "",
+      "url": "https://jobs.ashbyhq.com/sarvam/1eb3008a-2014-4a6c-8a35-cfa7caf8a60f",
+      "posted": "2026-09-23",
+      "deadline": "",
+      "team": "Marketing",
+      "family": "Growth",
+      "min_years": 0,
+      "tier": "open",
+      "ats": "ashby",
+      "batch": "",
+      "key": "ashby:sarvam:1eb3008a-2014-4a6c-8a35-cfa7caf8a60f"
+    },
     {
       "age_days": 22,
       "first_seen": "2026-09-10",

@@ -2,6 +2,26 @@
   "generated": "2026-09-23",
   "roles": [
     {
+      "age_days": 0,
+      "first_seen": "2026-09-23",
+      "reposted": false,
+      "title": "Growth Marketing Intern",
+      "company": "Sarvam AI",
+      "city": "Bengaluru",
+      "location": "Bengaluru",
+      "pay": "",
+      "url": "https://jobs.ashbyhq.com/sarvam/1eb3008a-2014-4a6c-8a35-cfa7caf8a60f",
+      "posted": "2026-09-23",
+      "deadline": "",
+      "team": "Marketing",
+      "family": "Growth",
+      "min_years": 0,
+      "tier": "open",
+      "ats": "ashby",
+      "batch": "",
+      "key": "ashby:sarvam:1eb3008a-2014-4a6c-8a35-cfa7caf8a60f"
+    },
+    {
       "age_days": 22,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -3351,10 +3371,10 @@
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 505,
-    "postings_india": 404,
-    "business_track": 69,
-    "open": 7,
+    "postings_scanned": 509,
+    "postings_india": 406,
+    "business_track": 70,
+    "open": 8,
     "unstated": 22,
     "walled": 40
   }
