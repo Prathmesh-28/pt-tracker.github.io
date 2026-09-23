@@ -222,26 +222,6 @@
       "key": "ashby:sarvam:6e8354d0-8e75-4e31-a361-21dfd91bfdfa"
     },
     {
-      "age_days": 29,
-      "first_seen": "2026-09-10",
-      "reposted": false,
-      "title": "capital partnerships",
-      "company": "CRED",
-      "city": "Bengaluru",
-      "location": "bengaluru, mumbai",
-      "pay": "",
-      "url": "https://jobs.lever.co/cred/5b8e2c1a-06eb-4127-914f-db56b3078158",
-      "posted": "2026-08-25",
-      "deadline": "",
-      "team": "business",
-      "family": "Business development",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "batch": "",
-      "key": "lever:cred:5b8e2c1a-06eb-4127-914f-db56b3078158"
-    },
-    {
       "age_days": 33,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -600,6 +580,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:mindtickle:e5f69583-dd88-4b86-af6b-5582df1548d8"
+    },
+    {
+      "age_days": 1,
+      "first_seen": "2026-09-23",
+      "reposted": false,
+      "title": "Growth Management - Telco I Experience 2-4 Years",
+      "company": "Paytm",
+      "city": "Noida",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/f9b0515d-3760-4bba-a564-74aa2b192668",
+      "posted": "2026-09-22",
+      "deadline": "",
+      "team": "Telco",
+      "family": "Growth",
+      "min_years": 2,
+      "tier": "walled",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:paytm:f9b0515d-3760-4bba-a564-74aa2b192668"
     },
     {
       "age_days": 1,
@@ -1060,26 +1060,6 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:paytm:96a54691-f0c2-46d8-88d1-ee0a84b3b046"
-    },
-    {
-      "age_days": 82,
-      "first_seen": "2026-09-10",
-      "reposted": false,
-      "title": "Business Analyst",
-      "company": "Paytm",
-      "city": "Noida",
-      "location": "Noida, Uttar Pradesh",
-      "pay": "",
-      "url": "https://jobs.lever.co/paytm/8a118b61-3e1a-4d5c-835a-04d05197c2aa",
-      "posted": "2026-07-03",
-      "deadline": "",
-      "team": "Procurement",
-      "family": "Business analyst",
-      "min_years": 2,
-      "tier": "walled",
-      "ats": "lever",
-      "batch": "",
-      "key": "lever:paytm:8a118b61-3e1a-4d5c-835a-04d05197c2aa"
     },
     {
       "age_days": 84,
@@ -3367,15 +3347,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 197,
+  "closed_tracked": 202,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 501,
-    "postings_india": 401,
-    "business_track": 70,
+    "postings_scanned": 505,
+    "postings_india": 404,
+    "business_track": 69,
     "open": 7,
-    "unstated": 23,
+    "unstated": 22,
     "walled": 40
   }
 }

@@ -3689,11 +3689,11 @@
  },
  "greenhouse:druva:8793808002": {
   "age_days": 7,
-  "closed": true,
-  "closed_on": "2026-09-22",
+  "closed": false,
+  "closed_on": "",
   "company": "druva",
   "first_seen": "2026-09-16",
-  "last_seen": "2026-09-21",
+  "last_seen": "2026-09-23",
   "location": "Pune, Maharashtra, India",
   "min_years": 5,
   "posted": "2026-09-16",
@@ -6491,8 +6491,8 @@
  },
  "lever:cred:5b8e2c1a-06eb-4127-914f-db56b3078158": {
   "age_days": 29,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-23",
   "company": "cred",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-23",
@@ -6603,11 +6603,11 @@
  },
  "lever:cred:f846af12-7da9-4737-a0b1-3770c55830fc": {
   "age_days": 310,
-  "closed": true,
-  "closed_on": "2026-09-22",
+  "closed": false,
+  "closed_on": "",
   "company": "cred",
   "first_seen": "2026-09-10",
-  "last_seen": "2026-09-22",
+  "last_seen": "2026-09-23",
   "location": "bengaluru",
   "min_years": null,
   "posted": "2025-11-17",
@@ -6982,6 +6982,20 @@
   "reposted": false,
   "title": "Tech Lead Manager - Product Engineering",
   "url": "https://jobs.lever.co/fampay/a069072e-dfe5-44e5-be3e-31e78b129906"
+ },
+ "lever:fampay:bbbbbfd2-1855-4991-82d5-84ef57607c24": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "fampay",
+  "first_seen": "2026-09-23",
+  "last_seen": "2026-09-23",
+  "location": "Bengaluru",
+  "min_years": null,
+  "posted": "2026-09-23",
+  "reposted": false,
+  "title": "Security Engineer Intern",
+  "url": "https://jobs.lever.co/fampay/bbbbbfd2-1855-4991-82d5-84ef57607c24"
  },
  "lever:fampay:bc1060ed-d15a-4f62-a560-856cc344201e": {
   "age_days": 320,
@@ -7465,6 +7479,20 @@
   "title": "Assistant Manager - Performance Marketing",
   "url": "https://jobs.lever.co/meesho/1f2462b8-3548-466e-908f-dcae91cfaee1"
  },
+ "lever:meesho:22bd899a-f442-419f-9d3f-5046b715c40d": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-23",
+  "last_seen": "2026-09-23",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-09-23",
+  "reposted": false,
+  "title": "Deputy Manager- Procurement",
+  "url": "https://jobs.lever.co/meesho/22bd899a-f442-419f-9d3f-5046b715c40d"
+ },
  "lever:meesho:22c4a7a0-43be-439e-9473-2f8074b3e8d5": {
   "age_days": 125,
   "closed": false,
@@ -7901,8 +7929,8 @@
  },
  "lever:meesho:a84c770c-6f20-4093-99fa-5a7f2bad5837": {
   "age_days": 35,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-23",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-23",
@@ -7915,8 +7943,8 @@
  },
  "lever:meesho:ae2aa625-4bd0-44f0-a43a-87fda957c009": {
   "age_days": 61,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-23",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-23",
@@ -8010,6 +8038,20 @@
   "reposted": false,
   "title": "Manager - HR COE",
   "url": "https://jobs.lever.co/meesho/cb7c1852-78d9-437c-b9f5-e5653fa0f1b0"
+ },
+ "lever:meesho:cb7d016b-5071-409e-b8d8-a10e19b2946e": {
+  "age_days": 481,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-23",
+  "last_seen": "2026-09-23",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2025-05-30",
+  "reposted": false,
+  "title": "Director - Design",
+  "url": "https://jobs.lever.co/meesho/cb7d016b-5071-409e-b8d8-a10e19b2946e"
  },
  "lever:meesho:d4c4d777-d41b-4940-9407-e2100fb5dcd1": {
   "age_days": 100,
@@ -8109,6 +8151,20 @@
   "title": "Manager - User Experience : F&E",
   "url": "https://jobs.lever.co/meesho/e640ec64-9e6b-482a-b21e-82261334bcd0"
  },
+ "lever:meesho:f110ad65-8402-4e8d-83e9-0e6e59b4389c": {
+  "age_days": 425,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-23",
+  "last_seen": "2026-09-23",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2025-07-25",
+  "reposted": false,
+  "title": "Lead Product Designer",
+  "url": "https://jobs.lever.co/meesho/f110ad65-8402-4e8d-83e9-0e6e59b4389c"
+ },
  "lever:meesho:f2de8c5f-1636-428d-aaea-af1400142975": {
   "age_days": 97,
   "closed": false,
@@ -8139,8 +8195,8 @@
  },
  "lever:meesho:faa90cf7-c5d7-450c-aeeb-142c9954a5b1": {
   "age_days": 112,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-23",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-23",
@@ -8178,6 +8234,20 @@
   "reposted": false,
   "title": "Customer Success Engineer - II",
   "url": "https://jobs.lever.co/mindtickle/166a3fea-6a19-48da-9a7d-bbff7d3c2f95"
+ },
+ "lever:mindtickle:1f42a6e5-0cfa-4b7d-b22f-f8a26e56a7bd": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "mindtickle",
+  "first_seen": "2026-09-23",
+  "last_seen": "2026-09-23",
+  "location": "Remote, US",
+  "min_years": 8,
+  "posted": "2026-09-23",
+  "reposted": false,
+  "title": "Principal Product Marketing Manager -  Go-To-Market",
+  "url": "https://jobs.lever.co/mindtickle/1f42a6e5-0cfa-4b7d-b22f-f8a26e56a7bd"
  },
  "lever:mindtickle:203fff0a-f8cc-48cf-bc6f-fcd97a469674": {
   "age_days": 202,
@@ -9021,8 +9091,8 @@
  },
  "lever:paytm:2693cac4-ad24-4693-894b-93592bf45539": {
   "age_days": 82,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-23",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-23",
@@ -9091,8 +9161,8 @@
  },
  "lever:paytm:2a61ae9d-b901-4017-a7d1-5f0035fe6043": {
   "age_days": 148,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-23",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-23",
@@ -9774,6 +9844,20 @@
   "reposted": false,
   "title": "Program Management - Deputy General Manager - EDC",
   "url": "https://jobs.lever.co/paytm/5349a015-04af-4ddc-b504-51c1bdd2d805"
+ },
+ "lever:paytm:535dbc67-3694-42df-9652-072981446f44": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-23",
+  "last_seen": "2026-09-23",
+  "location": "Mumbai, Maharashtra",
+  "min_years": 5,
+  "posted": "2026-09-23",
+  "reposted": false,
+  "title": "Govt. Ad Sales - Senior Manager/DGM - Paytm Ads - Mumbai",
+  "url": "https://jobs.lever.co/paytm/535dbc67-3694-42df-9652-072981446f44"
  },
  "lever:paytm:53b29559-bfbc-4e37-a0ab-a4dd71f9547b": {
   "age_days": 9,
@@ -10589,8 +10673,8 @@
  },
  "lever:paytm:8a118b61-3e1a-4d5c-835a-04d05197c2aa": {
   "age_days": 82,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-23",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-23",
@@ -11090,6 +11174,20 @@
   "reposted": false,
   "title": "Product Management - Product Manager - Lending Platform",
   "url": "https://jobs.lever.co/paytm/bcd1320b-72a8-47e1-a062-15241381fdb3"
+ },
+ "lever:paytm:bd3569a5-cc0b-4bf5-9130-2f968da3140d": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-23",
+  "last_seen": "2026-09-23",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 2,
+  "posted": "2026-09-23",
+  "reposted": false,
+  "title": "Talent Acquisition- Tech Hiring",
+  "url": "https://jobs.lever.co/paytm/bd3569a5-cc0b-4bf5-9130-2f968da3140d"
  },
  "lever:paytm:be484058-3628-4b82-9342-6d1864c2d4a0": {
   "age_days": 40,
@@ -11917,6 +12015,20 @@
   "title": "Internship - Talent Acquisition",
   "url": "https://jobs.lever.co/paytm/f8649b65-be80-43fc-8abb-4f4d3ceb2984"
  },
+ "lever:paytm:f9b0515d-3760-4bba-a564-74aa2b192668": {
+  "age_days": 1,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-23",
+  "last_seen": "2026-09-23",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 2,
+  "posted": "2026-09-22",
+  "reposted": false,
+  "title": "Growth Management - Telco I Experience 2-4 Years",
+  "url": "https://jobs.lever.co/paytm/f9b0515d-3760-4bba-a564-74aa2b192668"
+ },
  "lever:paytm:fa5befe1-43f5-417f-a1de-a989264e1871": {
   "age_days": 48,
   "closed": false,
@@ -12563,6 +12675,20 @@
   "reposted": false,
   "title": "Lead Site Reliability Engineer",
   "url": "https://jobs.lever.co/zeta/5eb7a75b-312c-4759-8813-70e67b5d4109"
+ },
+ "lever:zeta:66fc10b7-8b22-4cf2-8d9a-557f9d517bbc": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-09-23",
+  "last_seen": "2026-09-23",
+  "location": "Bangalore - DD",
+  "min_years": null,
+  "posted": "2026-09-23",
+  "reposted": false,
+  "title": "Executive Assistant",
+  "url": "https://jobs.lever.co/zeta/66fc10b7-8b22-4cf2-8d9a-557f9d517bbc"
  },
  "lever:zeta:72ee1884-8e8b-447b-ab96-aa76605b5f4a": {
   "age_days": 12,
