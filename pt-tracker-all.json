@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 70,
+    "open_roles_scraped": 69,
     "roles_open_to_freshers": 8,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 916,
+    "postings_tracked_in_history": 918,
     "benchmark_families": 0
   },
   "companies": [
@@ -4736,26 +4736,6 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:epifi:1b3fb7e6-495d-43ec-a82f-06df53822a09"
-    },
-    {
-      "age_days": 58,
-      "first_seen": "2026-09-10",
-      "reposted": false,
-      "title": "Assistant Manager - Ops",
-      "company": "Meesho",
-      "city": "Bengaluru",
-      "location": "Bangalore, Karnataka",
-      "pay": "",
-      "url": "https://jobs.lever.co/meesho/5afe596f-17a2-4e8b-a498-ca46b2c7a869",
-      "posted": "2026-07-28",
-      "deadline": "",
-      "team": "Meesho Mall",
-      "family": "Operations",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "batch": "",
-      "key": "lever:meesho:5afe596f-17a2-4e8b-a498-ca46b2c7a869"
     },
     {
       "age_days": 87,

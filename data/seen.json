@@ -3521,8 +3521,8 @@
  },
  "greenhouse:druva:8720215002": {
   "age_days": 14,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-24",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-24",
@@ -6657,6 +6657,20 @@
   "title": "credit card bill payments growth",
   "url": "https://jobs.lever.co/cred/b3fdba2a-802c-4e03-b445-5284c5e3c157"
  },
+ "lever:cred:b532b595-bc8d-4b51-a2e6-7228ef1cabfc": {
+  "age_days": 62,
+  "closed": false,
+  "closed_on": "",
+  "company": "cred",
+  "first_seen": "2026-09-24",
+  "last_seen": "2026-09-24",
+  "location": "bengaluru",
+  "min_years": null,
+  "posted": "2026-07-24",
+  "reposted": false,
+  "title": "business development & partnerships \u2013 commercial lead",
+  "url": "https://jobs.lever.co/cred/b532b595-bc8d-4b51-a2e6-7228ef1cabfc"
+ },
  "lever:cred:e7edcd33-9faa-4e2f-8a87-4a88719f94ec": {
   "age_days": 34,
   "closed": false,
@@ -7789,8 +7803,8 @@
  },
  "lever:meesho:5afe596f-17a2-4e8b-a498-ca46b2c7a869": {
   "age_days": 58,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-24",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-24",
@@ -8293,8 +8307,8 @@
  },
  "lever:meesho:fcceab83-4d26-4ea3-a5bc-b137b7e5ee5a": {
   "age_days": 171,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-24",
   "company": "meesho",
   "first_seen": "2026-09-21",
   "last_seen": "2026-09-24",
@@ -10363,6 +10377,20 @@
   "title": "Field Sales - Team Lead - LRM_Sonipat",
   "url": "https://jobs.lever.co/paytm/6fec7cc2-d2f2-454d-afbf-7fd526d493d2"
  },
+ "lever:paytm:7097240e-c9be-430b-816e-259e96fee507": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-24",
+  "last_seen": "2026-09-24",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 1,
+  "posted": "2026-09-24",
+  "reposted": false,
+  "title": "Client Onboarding - Paytm Pi Agent (SMB)",
+  "url": "https://jobs.lever.co/paytm/7097240e-c9be-430b-816e-259e96fee507"
+ },
  "lever:paytm:715e52dd-0a51-4ff7-be68-855112e56b99": {
   "age_days": 52,
   "closed": false,
@@ -12003,8 +12031,8 @@
  },
  "lever:paytm:f3af0e48-ad1e-4bee-bd06-b84fbf45b116": {
   "age_days": 168,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-24",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-24",
@@ -12776,8 +12804,8 @@
  },
  "lever:zeta:72ee1884-8e8b-447b-ab96-aa76605b5f4a": {
   "age_days": 13,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-24",
   "company": "zeta",
   "first_seen": "2026-09-14",
   "last_seen": "2026-09-24",
@@ -12888,8 +12916,8 @@
  },
  "lever:zeta:d80d21c8-6510-410e-bc1a-372f0c6bcbbd": {
   "age_days": 160,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-24",
   "company": "zeta",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-24",
