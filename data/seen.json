@@ -3325,8 +3325,8 @@
  },
  "greenhouse:druva:8628555002": {
   "age_days": 50,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-25",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-25",
@@ -7437,6 +7437,20 @@
   "untracked": true,
   "url": "https://jobs.lever.co/glide/fa60c24f-26d7-4820-92c4-f6afa2405515"
  },
+ "lever:meesho:07d86780-64fb-4ecf-b1d1-9b4602b436de": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-25",
+  "last_seen": "2026-09-25",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-09-25",
+  "reposted": false,
+  "title": "Deputy Manager - Revenue Intelligence and Governance",
+  "url": "https://jobs.lever.co/meesho/07d86780-64fb-4ecf-b1d1-9b4602b436de"
+ },
  "lever:meesho:113ff930-b5bf-42c7-a07d-aa66a9de89d9": {
   "age_days": 4,
   "closed": false,
@@ -7492,6 +7506,20 @@
   "reposted": false,
   "title": "Senior Talent Partner ( Non-Tech Hiring)",
   "url": "https://jobs.lever.co/meesho/1690adaa-ec47-4246-a40e-995b859545f2"
+ },
+ "lever:meesho:1969c4c1-fbcc-455a-850b-092d1d83eb2b": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-25",
+  "last_seen": "2026-09-25",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-09-25",
+  "reposted": false,
+  "title": "Manager - Risk Analytics - User Lending",
+  "url": "https://jobs.lever.co/meesho/1969c4c1-fbcc-455a-850b-092d1d83eb2b"
  },
  "lever:meesho:19d34992-cc3d-4066-9de4-69c17f952ba1": {
   "age_days": 137,
@@ -7786,6 +7814,20 @@
   "reposted": false,
   "title": "Senior Manager, CEO's Office",
   "url": "https://jobs.lever.co/meesho/534e9923-b091-4250-a178-b28c7c5c99be"
+ },
+ "lever:meesho:538d386d-a584-41ed-91dc-607f83ca1c91": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-25",
+  "last_seen": "2026-09-25",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-09-25",
+  "reposted": false,
+  "title": "Deputy Manager - Logistics Intelligence",
+  "url": "https://jobs.lever.co/meesho/538d386d-a584-41ed-91dc-607f83ca1c91"
  },
  "lever:meesho:5425e38f-1717-497c-abe1-bcc7f04dd8b0": {
   "age_days": 24,
@@ -12748,11 +12790,11 @@
  },
  "lever:zeta:500c585f-65ba-4f6a-b515-7d73680038c3": {
   "age_days": 70,
-  "closed": true,
-  "closed_on": "2026-09-16",
+  "closed": false,
+  "closed_on": "",
   "company": "zeta",
   "first_seen": "2026-09-10",
-  "last_seen": "2026-09-16",
+  "last_seen": "2026-09-25",
   "location": "Bangalore - DD",
   "min_years": null,
   "posted": "2026-07-17",
