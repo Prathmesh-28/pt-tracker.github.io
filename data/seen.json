@@ -71,8 +71,8 @@
  },
  "ashby:atlan:aea0a9e5-6555-4e35-9753-3a443bcf2624": {
   "age_days": 39,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-28",
   "company": "atlan",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-28",
@@ -3409,8 +3409,8 @@
  },
  "greenhouse:druva:8651200002": {
   "age_days": 41,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-28",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-28",
@@ -7067,6 +7067,20 @@
   "title": "Senior Director- Revenue & Partnerships",
   "url": "https://jobs.lever.co/fampay/90a5d3d5-8fb6-4961-ab7a-43a8f8b48ef7"
  },
+ "lever:fampay:984b6eab-0d12-4009-b692-20a4de00fa55": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "fampay",
+  "first_seen": "2026-09-28",
+  "last_seen": "2026-09-28",
+  "location": "Bengaluru",
+  "min_years": null,
+  "posted": "2026-09-28",
+  "reposted": false,
+  "title": "Data Engineering Intern",
+  "url": "https://jobs.lever.co/fampay/984b6eab-0d12-4009-b692-20a4de00fa55"
+ },
  "lever:fampay:a069072e-dfe5-44e5-be3e-31e78b129906": {
   "age_days": 609,
   "closed": false,
@@ -7605,6 +7619,20 @@
   "title": "Assistant Manager - Performance Marketing",
   "url": "https://jobs.lever.co/meesho/1f2462b8-3548-466e-908f-dcae91cfaee1"
  },
+ "lever:meesho:2028b73c-2ae0-4fca-903e-481b8c500629": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-28",
+  "last_seen": "2026-09-28",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-09-28",
+  "reposted": false,
+  "title": "Senior Product Manager",
+  "url": "https://jobs.lever.co/meesho/2028b73c-2ae0-4fca-903e-481b8c500629"
+ },
  "lever:meesho:22bd899a-f442-419f-9d3f-5046b715c40d": {
   "age_days": 5,
   "closed": false,
@@ -8038,6 +8066,20 @@
   "reposted": false,
   "title": "Creative Manager",
   "url": "https://jobs.lever.co/meesho/974e9975-c536-4219-bdaa-9cd0f2d4d030"
+ },
+ "lever:meesho:97ce9e5a-a8bb-446d-a8db-9078603b106f": {
+  "age_days": 5,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-09-28",
+  "last_seen": "2026-09-28",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-09-23",
+  "reposted": false,
+  "title": "Senior Product Manager - Data & Analytics Platform",
+  "url": "https://jobs.lever.co/meesho/97ce9e5a-a8bb-446d-a8db-9078603b106f"
  },
  "lever:meesho:9e5eca47-258b-4b3e-83a6-938ae51792fc": {
   "age_days": 81,
@@ -10603,8 +10645,8 @@
  },
  "lever:paytm:7e710f5d-be1b-4377-9054-d455244b8ff5": {
   "age_days": 13,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-28",
   "company": "paytm",
   "first_seen": "2026-09-15",
   "last_seen": "2026-09-28",
@@ -12745,6 +12787,20 @@
   "title": "Growth Marketer - Digital Marketing",
   "untracked": true,
   "url": "https://jobs.lever.co/vogo/b8b905e7-e6b9-4ee0-92ef-bcc7b3416ce3"
+ },
+ "lever:zeta:0d256e24-19cb-4d1d-8d30-9572aa142f11": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-09-28",
+  "last_seen": "2026-09-28",
+  "location": "Bangalore/Hyderabad",
+  "min_years": null,
+  "posted": "2026-09-28",
+  "reposted": false,
+  "title": "Manager - Talent Management",
+  "url": "https://jobs.lever.co/zeta/0d256e24-19cb-4d1d-8d30-9572aa142f11"
  },
  "lever:zeta:2d533970-99a7-444b-b410-39921d0c96f7": {
   "age_days": 139,

@@ -365,7 +365,7 @@
       "age_days": 52,
       "first_seen": "2026-09-10",
       "reposted": false,
-      "title": "Product Manager  (Internal Platform)",
+      "title": "Product Manager  - Platforms",
       "company": "Meesho",
       "city": "Bengaluru",
       "location": "Bangalore, Karnataka",
@@ -680,26 +680,6 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:paytm:99417427-aa53-454d-a483-3b7d2aa20c0c"
-    },
-    {
-      "age_days": 13,
-      "first_seen": "2026-09-15",
-      "reposted": false,
-      "title": "Offline Partnerships & Cross-Sell- Paytm Gold I Exp- 8- 12 Years",
-      "company": "Paytm",
-      "city": "Noida",
-      "location": "Noida, Uttar Pradesh",
-      "pay": "",
-      "url": "https://jobs.lever.co/paytm/7e710f5d-be1b-4377-9054-d455244b8ff5",
-      "posted": "2026-09-15",
-      "deadline": "",
-      "team": "Gold",
-      "family": "Business development",
-      "min_years": 8,
-      "tier": "walled",
-      "ats": "lever",
-      "batch": "",
-      "key": "lever:paytm:7e710f5d-be1b-4377-9054-d455244b8ff5"
     },
     {
       "age_days": 13,
@@ -3327,15 +3307,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 227,
+  "closed_tracked": 230,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 493,
-    "postings_india": 395,
-    "business_track": 68,
+    "postings_scanned": 494,
+    "postings_india": 396,
+    "business_track": 67,
     "open": 8,
     "unstated": 22,
-    "walled": 38
+    "walled": 37
   }
 }
