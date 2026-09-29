@@ -1201,8 +1201,8 @@
  },
  "ashby:sarvam:50cc51f1-0229-460a-b60b-bf747059f034": {
   "age_days": 55,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-29",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-29",
@@ -1215,8 +1215,8 @@
  },
  "ashby:sarvam:51a0c7e5-7109-49e7-b552-dbe915cb3f94": {
   "age_days": 35,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-29",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-29",
@@ -4098,8 +4098,8 @@
  },
  "greenhouse:netradyne:4718630005": {
   "age_days": 64,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-29",
   "company": "netradyne",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-29",
@@ -4333,6 +4333,20 @@
   "reposted": false,
   "title": "Product Manager - Integrations",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4735299005"
+ },
+ "greenhouse:netradyne:4736544005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-09-29",
+  "last_seen": "2026-09-29",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 3,
+  "posted": "2026-09-29",
+  "reposted": false,
+  "title": "Associate Technical Program Manager",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4736544005"
  },
  "greenhouse:porter:4397947009": {
   "age_days": 20,
@@ -6693,7 +6707,7 @@
   "first_seen": "2026-09-28",
   "last_seen": "2026-09-29",
   "location": "hyderabad",
-  "min_years": null,
+  "min_years": 4,
   "posted": "2026-09-28",
   "reposted": false,
   "title": "accounts payable manager",
@@ -7080,6 +7094,20 @@
   "reposted": false,
   "title": "Senior Product Designer",
   "url": "https://jobs.lever.co/fampay/71660518-13c5-48ee-826c-fa0963dfadfc"
+ },
+ "lever:fampay:751d9bef-0cc3-43b3-ae59-7431010ba53b": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "fampay",
+  "first_seen": "2026-09-29",
+  "last_seen": "2026-09-29",
+  "location": "Bengaluru",
+  "min_years": null,
+  "posted": "2026-09-29",
+  "reposted": false,
+  "title": "People and Culture Manager",
+  "url": "https://jobs.lever.co/fampay/751d9bef-0cc3-43b3-ae59-7431010ba53b"
  },
  "lever:fampay:76e5974a-aa6f-4342-81f3-2a99821c2adc": {
   "age_days": 85,
@@ -7747,8 +7775,8 @@
  },
  "lever:meesho:2f1dba8f-bc99-4490-8200-d2cd7f92f544": {
   "age_days": 53,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-29",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-29",
@@ -8615,8 +8643,8 @@
  },
  "lever:mindtickle:9cdd2a84-394e-42c1-83ac-3017ad987b70": {
   "age_days": 60,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-29",
   "company": "mindtickle",
   "first_seen": "2026-09-10",
   "last_seen": "2026-09-29",
@@ -11637,6 +11665,20 @@
   "title": "Team Leader",
   "url": "https://jobs.lever.co/paytm/cedbe7de-4a9d-4dad-b6fc-a0e7efefd13a"
  },
+ "lever:paytm:cee9ed93-5400-4dee-a84f-28a18c802340": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-29",
+  "last_seen": "2026-09-29",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 6,
+  "posted": "2026-09-29",
+  "reposted": false,
+  "title": "Process Trainer - Manager - Lending (North & East)",
+  "url": "https://jobs.lever.co/paytm/cee9ed93-5400-4dee-a84f-28a18c802340"
+ },
  "lever:paytm:cf8e7e47-2871-405f-8e19-aa95fa5e6996": {
   "age_days": 145,
   "closed": false,
@@ -11860,6 +11902,20 @@
   "reposted": false,
   "title": "Head of Commercial/ Sales, Paytm Europe",
   "url": "https://jobs.lever.co/paytm/dcb4b151-091f-4e1a-abbd-93b188b8eefa"
+ },
+ "lever:paytm:dcc0e5d5-79c9-4021-84be-a435f54c71d3": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-29",
+  "last_seen": "2026-09-29",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 5,
+  "posted": "2026-09-29",
+  "reposted": false,
+  "title": "Product Management - Payment Product | Experience : 5-8 yrs",
+  "url": "https://jobs.lever.co/paytm/dcc0e5d5-79c9-4021-84be-a435f54c71d3"
  },
  "lever:paytm:dfb96764-5924-4f32-8861-a898bc3c2b71": {
   "age_days": 16,

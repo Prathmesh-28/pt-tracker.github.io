@@ -7,7 +7,7 @@
     "open_roles_scraped": 67,
     "roles_open_to_freshers": 8,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 932,
+    "postings_tracked_in_history": 936,
     "benchmark_families": 0
   },
   "companies": [
@@ -4718,26 +4718,6 @@
       "key": "lever:mindtickle:4365dc2a-87b1-4751-bd30-c90c70dea92c"
     },
     {
-      "age_days": 53,
-      "first_seen": "2026-09-10",
-      "reposted": false,
-      "title": "Product Manager  - Platforms",
-      "company": "Meesho",
-      "city": "Bengaluru",
-      "location": "Bangalore, Karnataka",
-      "pay": "",
-      "url": "https://jobs.lever.co/meesho/2f1dba8f-bc99-4490-8200-d2cd7f92f544",
-      "posted": "2026-08-07",
-      "deadline": "",
-      "team": "Product",
-      "family": "Product",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "batch": "",
-      "key": "lever:meesho:2f1dba8f-bc99-4490-8200-d2cd7f92f544"
-    },
-    {
       "age_days": 92,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -4956,6 +4936,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:mindtickle:e5f69583-dd88-4b86-af6b-5582df1548d8"
+    },
+    {
+      "age_days": 0,
+      "first_seen": "2026-09-29",
+      "reposted": false,
+      "title": "Associate Technical Program Manager",
+      "company": "Netradyne",
+      "city": "Bengaluru",
+      "location": "Bengaluru, Karnataka, India",
+      "pay": "",
+      "url": "https://www.netradyne.com/company/careers?gh_jid=4736544005",
+      "posted": "2026-09-29",
+      "deadline": "",
+      "team": "",
+      "family": "Operations",
+      "min_years": 3,
+      "tier": "walled",
+      "ats": "greenhouse",
+      "batch": "",
+      "key": "greenhouse:netradyne:4736544005"
     },
     {
       "age_days": 7,
