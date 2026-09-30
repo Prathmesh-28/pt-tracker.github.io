@@ -4348,6 +4348,20 @@
   "title": "Associate Technical Program Manager",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4736544005"
  },
+ "greenhouse:netradyne:4739224005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 5,
+  "posted": "2026-09-30",
+  "reposted": false,
+  "title": "Senior Staff Machine Learning Engineer",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4739224005"
+ },
  "greenhouse:porter:4397947009": {
   "age_days": 21,
   "closed": false,
@@ -6407,8 +6421,8 @@
  },
  "greenhouse:zenoti:7959333003": {
   "age_days": 13,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-30",
   "company": "zenoti",
   "first_seen": "2026-09-17",
   "last_seen": "2026-09-30",
@@ -6421,8 +6435,8 @@
  },
  "greenhouse:zenoti:7959372003": {
   "age_days": 13,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-09-30",
   "company": "zenoti",
   "first_seen": "2026-09-17",
   "last_seen": "2026-09-30",
@@ -6721,7 +6735,7 @@
   "first_seen": "2026-09-28",
   "last_seen": "2026-09-30",
   "location": "hyderabad",
-  "min_years": 4,
+  "min_years": null,
   "posted": "2026-09-28",
   "reposted": false,
   "title": "accounts payable manager",
@@ -9145,6 +9159,20 @@
   "title": "Internal Audit - Risk Advisory",
   "url": "https://jobs.lever.co/paytm/12ba9ea0-bc18-4a55-8d80-b7d338b8c9f0"
  },
+ "lever:paytm:12c936fe-3718-42c4-b9d6-5c48a3b54e17": {
+  "age_days": 110,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 5,
+  "posted": "2026-06-12",
+  "reposted": false,
+  "title": "Revenue Manager",
+  "url": "https://jobs.lever.co/paytm/12c936fe-3718-42c4-b9d6-5c48a3b54e17"
+ },
  "lever:paytm:1486e470-b4f5-43d9-9d2e-e121db0437ef": {
   "age_days": 29,
   "closed": true,
@@ -10698,6 +10726,20 @@
   "reposted": false,
   "title": "Product Management - Senior Product Manager - Lending Platform",
   "url": "https://jobs.lever.co/paytm/75992181-c0d0-44e7-805a-6dddfd0fe23b"
+ },
+ "lever:paytm:772f3cdd-4343-4f8d-9140-b40f3b64449a": {
+  "age_days": 8,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-09-30",
+  "last_seen": "2026-09-30",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": null,
+  "posted": "2026-09-22",
+  "reposted": false,
+  "title": "Campaign Management- Traffic Management- Growth",
+  "url": "https://jobs.lever.co/paytm/772f3cdd-4343-4f8d-9140-b40f3b64449a"
  },
  "lever:paytm:77434aa9-51b5-49ac-b8a8-bf27add66336": {
   "age_days": 27,

@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 67,
+    "open_roles_scraped": 68,
     "roles_open_to_freshers": 8,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 937,
+    "postings_tracked_in_history": 940,
     "benchmark_families": 0
   },
   "companies": [
@@ -4536,6 +4536,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:cred:b3fdba2a-802c-4e03-b445-5284c5e3c157"
+    },
+    {
+      "age_days": 8,
+      "first_seen": "2026-09-30",
+      "reposted": false,
+      "title": "Campaign Management- Traffic Management- Growth",
+      "company": "Paytm",
+      "city": "Noida",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/772f3cdd-4343-4f8d-9140-b40f3b64449a",
+      "posted": "2026-09-22",
+      "deadline": "",
+      "team": "Growth",
+      "family": "Growth",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:paytm:772f3cdd-4343-4f8d-9140-b40f3b64449a"
     },
     {
       "age_days": 9,
