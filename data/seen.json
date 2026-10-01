@@ -3617,6 +3617,20 @@
   "title": "Account Executive, LATAM",
   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8747276002/?gh_jid=8747276002"
  },
+ "greenhouse:druva:8747431002": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "druva",
+  "first_seen": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "location": "Santa Clara, CA",
+  "min_years": 1,
+  "posted": "2026-10-01",
+  "reposted": false,
+  "title": "Sales Development Representative",
+  "url": "https://www.druva.com/why-druva/explore/careers/jobs/8747431002/?gh_jid=8747431002"
+ },
  "greenhouse:druva:8750704002": {
   "age_days": 22,
   "closed": false,
@@ -6533,8 +6547,8 @@
  },
  "greenhouse:zenoti:7989657003": {
   "age_days": 14,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-01",
   "company": "zenoti",
   "first_seen": "2026-09-17",
   "last_seen": "2026-10-01",
