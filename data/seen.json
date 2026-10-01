@@ -85,8 +85,8 @@
  },
  "ashby:atlan:b2b880ed-63cd-4f56-8313-87f143fa9807": {
   "age_days": 99,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-01",
   "company": "atlan",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-01",
@@ -3227,8 +3227,8 @@
  },
  "greenhouse:druva:8564138002": {
   "age_days": 58,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-01",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-01",
@@ -6631,8 +6631,8 @@
  },
  "greenhouse:zenoti:8004525003": {
   "age_days": 0,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-01",
   "company": "zenoti",
   "first_seen": "2026-10-01",
   "last_seen": "2026-10-01",
@@ -6651,7 +6651,7 @@
   "first_seen": "2026-09-29",
   "last_seen": "2026-10-01",
   "location": "Hyderabad, Telangana, India",
-  "min_years": null,
+  "min_years": 5,
   "posted": "2026-09-29",
   "reposted": false,
   "title": "System Administrator - IT",
@@ -7209,8 +7209,8 @@
  },
  "lever:fampay:984b6eab-0d12-4009-b692-20a4de00fa55": {
   "age_days": 3,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-01",
   "company": "fampay",
   "first_seen": "2026-09-28",
   "last_seen": "2026-10-01",
@@ -8318,6 +8318,20 @@
   "reposted": false,
   "title": "Associate Director - Business Finance",
   "url": "https://jobs.lever.co/meesho/b7f20190-5e8c-4cbc-901a-44a05bfec9be"
+ },
+ "lever:meesho:bff1bcf3-ae0e-4218-94e0-38c45f2a9177": {
+  "age_days": 842,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2024-06-11",
+  "reposted": false,
+  "title": "Manager- Program Strategy - Fulfilment & Experience",
+  "url": "https://jobs.lever.co/meesho/bff1bcf3-ae0e-4218-94e0-38c45f2a9177"
  },
  "lever:meesho:c428c9f1-d06c-47a3-aa61-7bd445401816": {
   "age_days": 231,
@@ -11777,6 +11791,20 @@
   "title": "Process Trainer - Manager - Lending (North & East)",
   "url": "https://jobs.lever.co/paytm/cee9ed93-5400-4dee-a84f-28a18c802340"
  },
+ "lever:paytm:cf1076c8-e8be-4fc4-8112-aa55051de742": {
+  "age_days": 1,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 3,
+  "posted": "2026-09-30",
+  "reposted": false,
+  "title": "Product Management - Associate Product Manager - Travel.",
+  "url": "https://jobs.lever.co/paytm/cf1076c8-e8be-4fc4-8112-aa55051de742"
+ },
  "lever:paytm:cf8e7e47-2871-405f-8e19-aa95fa5e6996": {
   "age_days": 147,
   "closed": false,
@@ -13123,6 +13151,20 @@
   "reposted": false,
   "title": "Lead Site Reliability Engineer",
   "url": "https://jobs.lever.co/zeta/5eb7a75b-312c-4759-8813-70e67b5d4109"
+ },
+ "lever:zeta:632d6320-6db1-4504-8640-a89aed0bbd2b": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-10-01",
+  "last_seen": "2026-10-01",
+  "location": "Bangalore - DD",
+  "min_years": null,
+  "posted": "2026-10-01",
+  "reposted": false,
+  "title": "Product Manager II",
+  "url": "https://jobs.lever.co/zeta/632d6320-6db1-4504-8640-a89aed0bbd2b"
  },
  "lever:zeta:66fc10b7-8b22-4cf2-8d9a-557f9d517bbc": {
   "age_days": 8,

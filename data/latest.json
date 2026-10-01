@@ -582,6 +582,26 @@
       "key": "lever:meesho:1de2fc88-e203-4f1a-8046-55df700de4be"
     },
     {
+      "age_days": 842,
+      "first_seen": "2026-10-01",
+      "reposted": false,
+      "title": "Manager- Program Strategy - Fulfilment & Experience",
+      "company": "Meesho",
+      "city": "Bengaluru",
+      "location": "Bangalore, Karnataka",
+      "pay": "",
+      "url": "https://jobs.lever.co/meesho/bff1bcf3-ae0e-4218-94e0-38c45f2a9177",
+      "posted": "2024-06-11",
+      "deadline": "",
+      "team": "Experience",
+      "family": "Strategy",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:meesho:bff1bcf3-ae0e-4218-94e0-38c45f2a9177"
+    },
+    {
       "age_days": 941,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -600,6 +620,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:mindtickle:e5f69583-dd88-4b86-af6b-5582df1548d8"
+    },
+    {
+      "age_days": 1,
+      "first_seen": "2026-10-01",
+      "reposted": false,
+      "title": "Product Management - Associate Product Manager - Travel.",
+      "company": "Paytm",
+      "city": "Noida",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/cf1076c8-e8be-4fc4-8112-aa55051de742",
+      "posted": "2026-09-30",
+      "deadline": "",
+      "team": "Travel",
+      "family": "Product",
+      "min_years": 3,
+      "tier": "walled",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:paytm:cf1076c8-e8be-4fc4-8112-aa55051de742"
     },
     {
       "age_days": 2,
@@ -685,7 +725,7 @@
       "age_days": 14,
       "first_seen": "2026-09-17",
       "reposted": false,
-      "title": "Business Analyst - Assistant Manager - Lending",
+      "title": "Business Analyst - Assistant Manager - Lending Reserve",
       "company": "Paytm",
       "city": "Noida",
       "location": "Noida, Uttar Pradesh",
@@ -3327,15 +3367,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 243,
+  "closed_tracked": 247,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 497,
-    "postings_india": 404,
-    "business_track": 68,
+    "postings_scanned": 496,
+    "postings_india": 403,
+    "business_track": 70,
     "open": 8,
-    "unstated": 22,
-    "walled": 38
+    "unstated": 23,
+    "walled": 39
   }
 }
