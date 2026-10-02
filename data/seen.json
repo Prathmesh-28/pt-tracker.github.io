@@ -3339,8 +3339,8 @@
  },
  "greenhouse:druva:8631457002": {
   "age_days": 79,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-02",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-02",
