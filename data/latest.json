@@ -825,26 +825,6 @@
       "age_days": 32,
       "first_seen": "2026-09-10",
       "reposted": false,
-      "title": "Product Ops \u2013 LMS (Assistant Manager)",
-      "company": "Paytm",
-      "city": "Noida",
-      "location": "Noida, Uttar Pradesh",
-      "pay": "",
-      "url": "https://jobs.lever.co/paytm/a8a0e9eb-2838-466e-a60f-19f3cff63541",
-      "posted": "2026-08-31",
-      "deadline": "",
-      "team": "Lending",
-      "family": "Product",
-      "min_years": 4,
-      "tier": "walled",
-      "ats": "lever",
-      "batch": "",
-      "key": "lever:paytm:a8a0e9eb-2838-466e-a60f-19f3cff63541"
-    },
-    {
-      "age_days": 32,
-      "first_seen": "2026-09-10",
-      "reposted": false,
       "title": "Growth Manager - Postpaid",
       "company": "Paytm",
       "city": "Noida",
@@ -3373,9 +3353,9 @@
     "employers": 15,
     "postings_scanned": 496,
     "postings_india": 403,
-    "business_track": 70,
+    "business_track": 69,
     "open": 8,
     "unstated": 23,
-    "walled": 39
+    "walled": 38
   }
 }
