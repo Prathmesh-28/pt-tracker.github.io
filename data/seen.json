@@ -12017,8 +12017,8 @@
  },
  "lever:paytm:dbf7f79d-64f8-415f-b0d3-178a39a0b7e0": {
   "age_days": 80,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-03",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-03",
@@ -12056,6 +12056,20 @@
   "reposted": false,
   "title": "Product Management - Payment Product | Experience : 5-8 yrs",
   "url": "https://jobs.lever.co/paytm/dcc0e5d5-79c9-4021-84be-a435f54c71d3"
+ },
+ "lever:paytm:df935f72-9721-414e-9a3b-e20a679fef07": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-03",
+  "last_seen": "2026-10-03",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": null,
+  "posted": "2026-10-03",
+  "reposted": false,
+  "title": "Associate - User Growth (Market intelligence)",
+  "url": "https://jobs.lever.co/paytm/df935f72-9721-414e-9a3b-e20a679fef07"
  },
  "lever:paytm:dfb96764-5924-4f32-8861-a898bc3c2b71": {
   "age_days": 20,

@@ -162,6 +162,26 @@
       "key": "lever:paytm:552ba2c8-ffb8-4342-8d8c-ca1903800a68"
     },
     {
+      "age_days": 0,
+      "first_seen": "2026-10-03",
+      "reposted": false,
+      "title": "Associate - User Growth (Market intelligence)",
+      "company": "Paytm",
+      "city": "Noida",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/df935f72-9721-414e-9a3b-e20a679fef07",
+      "posted": "2026-10-03",
+      "deadline": "",
+      "team": "Social PR",
+      "family": "Growth",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:paytm:df935f72-9721-414e-9a3b-e20a679fef07"
+    },
+    {
       "age_days": 9,
       "first_seen": "2026-09-24",
       "reposted": false,
@@ -3347,15 +3367,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 249,
+  "closed_tracked": 250,
   "coverage": {
     "boards": 15,
     "employers": 15,
     "postings_scanned": 495,
     "postings_india": 403,
-    "business_track": 69,
+    "business_track": 70,
     "open": 8,
-    "unstated": 23,
+    "unstated": 24,
     "walled": 38
   }
 }
