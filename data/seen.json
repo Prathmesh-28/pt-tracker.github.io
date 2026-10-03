@@ -7719,8 +7719,8 @@
  },
  "lever:meesho:19d34992-cc3d-4066-9de4-69c17f952ba1": {
   "age_days": 145,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-03",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-03",
@@ -10365,8 +10365,8 @@
  },
  "lever:paytm:5a5868af-2997-499e-9d94-3950485343cc": {
   "age_days": 354,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-03",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-03",
