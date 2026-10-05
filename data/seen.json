@@ -8083,8 +8083,8 @@
  },
  "lever:meesho:5dca8c71-9993-438f-ad51-da3c7f4be692": {
   "age_days": 48,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-05",
   "company": "meesho",
   "first_seen": "2026-09-15",
   "last_seen": "2026-10-05",
@@ -8319,6 +8319,20 @@
   "title": "Senior Manager \u2013 Latent Last Mile",
   "url": "https://jobs.lever.co/meesho/ae2aa625-4bd0-44f0-a43a-87fda957c009"
  },
+ "lever:meesho:b56573f0-c701-422a-abfa-ac8bbdbfa645": {
+  "age_days": 54,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-10-05",
+  "last_seen": "2026-10-05",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-08-12",
+  "reposted": false,
+  "title": "Product Manager II",
+  "url": "https://jobs.lever.co/meesho/b56573f0-c701-422a-abfa-ac8bbdbfa645"
+ },
  "lever:meesho:b7f20190-5e8c-4cbc-901a-44a05bfec9be": {
   "age_days": 585,
   "closed": false,
@@ -8515,6 +8529,20 @@
   "title": "Manager - Performance Marketing",
   "url": "https://jobs.lever.co/meesho/e1771bdd-0601-4af4-8f20-53553b4d3f10"
  },
+ "lever:meesho:e403c75f-4646-41fc-9161-90d2899910ef": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-10-05",
+  "last_seen": "2026-10-05",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-10-05",
+  "reposted": false,
+  "title": "Lead Copy",
+  "url": "https://jobs.lever.co/meesho/e403c75f-4646-41fc-9161-90d2899910ef"
+ },
  "lever:meesho:e640ec64-9e6b-482a-b21e-82261334bcd0": {
   "age_days": 48,
   "closed": false,
@@ -8556,6 +8584,20 @@
   "reposted": false,
   "title": "Security Architect - AI-Powered Security Engineering",
   "url": "https://jobs.lever.co/meesho/f2de8c5f-1636-428d-aaea-af1400142975"
+ },
+ "lever:meesho:f46dc6f7-f812-4b36-b1fe-bcb93de75b18": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-10-05",
+  "last_seen": "2026-10-05",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-10-05",
+  "reposted": false,
+  "title": "Senior Copywriter",
+  "url": "https://jobs.lever.co/meesho/f46dc6f7-f812-4b36-b1fe-bcb93de75b18"
  },
  "lever:meesho:f8bdf9a3-74a5-441d-b0b3-9eac7b9836ad": {
   "age_days": 4,
