@@ -1523,8 +1523,8 @@
  },
  "ashby:sarvam:a0188ff6-c03d-41e2-bf11-78678b2c794d": {
   "age_days": 152,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-06",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-06",
@@ -1562,6 +1562,20 @@
   "reposted": false,
   "title": "Product Marketing Manager",
   "url": "https://jobs.ashbyhq.com/sarvam/ae56bf44-44fd-4966-afe0-eeaceb3bfb20"
+ },
+ "ashby:sarvam:ae7aa8a8-1f60-45f2-ac9d-09b48d4adbef": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "sarvam",
+  "first_seen": "2026-10-06",
+  "last_seen": "2026-10-06",
+  "location": "Bengaluru",
+  "min_years": 8,
+  "posted": "2026-10-06",
+  "reposted": false,
+  "title": "Staff Engineer - Telephony",
+  "url": "https://jobs.ashbyhq.com/sarvam/ae7aa8a8-1f60-45f2-ac9d-09b48d4adbef"
  },
  "ashby:sarvam:af865840-f90e-4e16-bf15-8a3a9c0b434c": {
   "age_days": 146,
@@ -1716,6 +1730,20 @@
   "reposted": false,
   "title": "DevOps Engineer",
   "url": "https://jobs.ashbyhq.com/sarvam/d2d593e6-be5a-4431-b1fa-86f18d1c7edf"
+ },
+ "ashby:sarvam:d71ec2a3-3de6-4380-95f6-41cfc2bbdbf2": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "sarvam",
+  "first_seen": "2026-10-06",
+  "last_seen": "2026-10-06",
+  "location": "Bengaluru",
+  "min_years": 8,
+  "posted": "2026-10-06",
+  "reposted": false,
+  "title": "Staff Engineer - Systems Engineering",
+  "url": "https://jobs.ashbyhq.com/sarvam/d71ec2a3-3de6-4380-95f6-41cfc2bbdbf2"
  },
  "ashby:sarvam:dc047f4f-97be-4bb3-a9f1-cebbfc4de3e6": {
   "age_days": 172,
@@ -3255,11 +3283,11 @@
  },
  "greenhouse:druva:8598308002": {
   "age_days": 63,
-  "closed": true,
-  "closed_on": "2026-09-18",
+  "closed": false,
+  "closed_on": "",
   "company": "druva",
   "first_seen": "2026-09-10",
-  "last_seen": "2026-09-18",
+  "last_seen": "2026-10-06",
   "location": "Pune, Maharashtra, India",
   "min_years": 6,
   "posted": "2026-08-04",
@@ -6586,6 +6614,20 @@
   "reposted": false,
   "title": "Senior Product Specialist - Implementation/Onboarding",
   "url": "https://job-boards.greenhouse.io/zenoti/jobs/7990656003"
+ },
+ "greenhouse:zenoti:8004393003": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zenoti",
+  "first_seen": "2026-10-06",
+  "last_seen": "2026-10-06",
+  "location": "Seattle, Washington, United States",
+  "min_years": 3,
+  "posted": "2026-10-06",
+  "reposted": false,
+  "title": "Director of Payment Operations & Strategy",
+  "url": "https://job-boards.greenhouse.io/zenoti/jobs/8004393003"
  },
  "greenhouse:zenoti:8004492003": {
   "age_days": 7,
@@ -11021,6 +11063,20 @@
   "title": "Head of Financial Crime & MLRO Paytm Europe",
   "url": "https://jobs.lever.co/paytm/80765e94-9cc8-493e-99c4-23a5df5e24d1"
  },
+ "lever:paytm:8189b29c-887f-477d-8db6-dbde30065e8c": {
+  "age_days": 1,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-06",
+  "last_seen": "2026-10-06",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 4,
+  "posted": "2026-10-05",
+  "reposted": false,
+  "title": "Growth Management - Merchant Lending",
+  "url": "https://jobs.lever.co/paytm/8189b29c-887f-477d-8db6-dbde30065e8c"
+ },
  "lever:paytm:81b25ade-e9f2-486a-a66a-c89279096773": {
   "age_days": 110,
   "closed": true,
@@ -11594,6 +11650,20 @@
   "reposted": false,
   "title": "Program Manager- Manager- Vendor & Partnership Management",
   "url": "https://jobs.lever.co/paytm/b0206e19-c969-443a-9e4d-3497befa696d"
+ },
+ "lever:paytm:b671fa55-dccf-4f1f-acc4-10e78d74c8b4": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-06",
+  "last_seen": "2026-10-06",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 2,
+  "posted": "2026-10-06",
+  "reposted": false,
+  "title": "Talent Acquisition Specialist - IT Recruitment",
+  "url": "https://jobs.lever.co/paytm/b671fa55-dccf-4f1f-acc4-10e78d74c8b4"
  },
  "lever:paytm:b7538973-5914-4e7a-927d-3d46689ddd5a": {
   "age_days": 55,

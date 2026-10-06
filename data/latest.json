@@ -662,6 +662,26 @@
       "key": "lever:mindtickle:e5f69583-dd88-4b86-af6b-5582df1548d8"
     },
     {
+      "age_days": 1,
+      "first_seen": "2026-10-06",
+      "reposted": false,
+      "title": "Growth Management - Merchant Lending",
+      "company": "Paytm",
+      "city": "Noida",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/8189b29c-887f-477d-8db6-dbde30065e8c",
+      "posted": "2026-10-05",
+      "deadline": "",
+      "team": "Lending",
+      "family": "Growth",
+      "min_years": 4,
+      "tier": "walled",
+      "ats": "lever",
+      "batch": "",
+      "key": "lever:paytm:8189b29c-887f-477d-8db6-dbde30065e8c"
+    },
+    {
       "age_days": 6,
       "first_seen": "2026-10-01",
       "reposted": false,
@@ -3391,11 +3411,11 @@
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 495,
-    "postings_india": 404,
-    "business_track": 71,
+    "postings_scanned": 500,
+    "postings_india": 408,
+    "business_track": 72,
     "open": 8,
     "unstated": 25,
-    "walled": 38
+    "walled": 39
   }
 }
