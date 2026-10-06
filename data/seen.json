@@ -1033,8 +1033,8 @@
  },
  "ashby:sarvam:255816b4-c44d-481c-a093-73ae114d1952": {
   "age_days": 172,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-06",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-06",
@@ -1061,8 +1061,8 @@
  },
  "ashby:sarvam:2d72a541-c805-4bd9-81cd-ac2db98611fa": {
   "age_days": 138,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-06",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-06",
@@ -1103,8 +1103,8 @@
  },
  "ashby:sarvam:3652221b-d408-486b-9ad1-ab073aaf1071": {
   "age_days": 49,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-06",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-06",
@@ -1355,8 +1355,8 @@
  },
  "ashby:sarvam:730c1766-ad62-4d5d-aa75-b5b0e03409aa": {
   "age_days": 62,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-06",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-06",
@@ -1691,8 +1691,8 @@
  },
  "ashby:sarvam:c770b621-363c-46ba-ac24-8407ecee4af5": {
   "age_days": 172,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-06",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-06",
@@ -1887,8 +1887,8 @@
  },
  "ashby:sarvam:fdf3a5c1-64b6-4c55-b3ed-a940f3835b29": {
   "age_days": 152,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-06",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-06",
@@ -4417,6 +4417,20 @@
   "reposted": false,
   "title": "Senior Staff Machine Learning Engineer",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4739224005"
+ },
+ "greenhouse:netradyne:4739230005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-10-06",
+  "last_seen": "2026-10-06",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 3,
+  "posted": "2026-10-06",
+  "reposted": false,
+  "title": "Senior QA Engineer - Vehicle Networks and Telematics",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4739230005"
  },
  "greenhouse:porter:4397947009": {
   "age_days": 27,
@@ -7237,8 +7251,8 @@
  },
  "lever:fampay:8dd19bb5-f4ef-4608-bfc4-436221bc5bce": {
   "age_days": 405,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-06",
   "company": "fampay",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-06",
@@ -8809,6 +8823,20 @@
   "title": "Group Product Manager (Manager Effectiveness)",
   "url": "https://jobs.lever.co/mindtickle/4365dc2a-87b1-4751-bd30-c90c70dea92c"
  },
+ "lever:mindtickle:729831a1-3b5d-42b1-8fae-de4ee21a1dc4": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "mindtickle",
+  "first_seen": "2026-10-06",
+  "last_seen": "2026-10-06",
+  "location": "Bengaluru, Karnataka",
+  "min_years": 6,
+  "posted": "2026-10-06",
+  "reposted": false,
+  "title": "Lead Product Designer",
+  "url": "https://jobs.lever.co/mindtickle/729831a1-3b5d-42b1-8fae-de4ee21a1dc4"
+ },
  "lever:mindtickle:864ac315-d7c5-4cd5-ab44-0e33d08f48f1": {
   "age_days": 27,
   "closed": false,
@@ -8892,6 +8920,20 @@
   "reposted": false,
   "title": "Software Engineer, Business Systems",
   "url": "https://jobs.lever.co/mindtickle/b6e024c2-42c2-463c-8bc8-ca0aa0826845"
+ },
+ "lever:mindtickle:d22d1e61-9a11-4e19-ae78-2f170efbb0c2": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "mindtickle",
+  "first_seen": "2026-10-06",
+  "last_seen": "2026-10-06",
+  "location": "Bengaluru, Karnataka",
+  "min_years": 5,
+  "posted": "2026-10-06",
+  "reposted": false,
+  "title": "Senior Product Designer",
+  "url": "https://jobs.lever.co/mindtickle/d22d1e61-9a11-4e19-ae78-2f170efbb0c2"
  },
  "lever:mindtickle:d62b36db-b088-48c7-a606-4ed458e30208": {
   "age_days": 46,
@@ -11832,6 +11874,20 @@
   "reposted": false,
   "title": "Staff AI Platform Engineer - Inference & Agentic Systems",
   "url": "https://jobs.lever.co/paytm/c298cc86-560a-4b3b-87fb-40fb0b9c8ee5"
+ },
+ "lever:paytm:c2fc6a36-bbb3-44bb-88ca-e41f4ffc7119": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-06",
+  "last_seen": "2026-10-06",
+  "location": "Bangalore, Karnataka",
+  "min_years": 5,
+  "posted": "2026-10-06",
+  "reposted": false,
+  "title": "Growth Management - Merchant Lending (GM/DGM)",
+  "url": "https://jobs.lever.co/paytm/c2fc6a36-bbb3-44bb-88ca-e41f4ffc7119"
  },
  "lever:paytm:c53fa192-71f2-4566-afde-a6523d6b75e6": {
   "age_days": 19,
