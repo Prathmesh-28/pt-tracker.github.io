@@ -642,6 +642,26 @@
       "key": "lever:mindtickle:e5f69583-dd88-4b86-af6b-5582df1548d8"
     },
     {
+      "age_days": 0,
+      "first_seen": "2026-10-07",
+      "reposted": false,
+      "title": "Product Manager (RASP)",
+      "company": "Bureau",
+      "city": "Bengaluru",
+      "location": "Bangalore",
+      "pay": "",
+      "url": "https://jobs.ashbyhq.com/bureau/bc97c429-c6d2-46d5-a5a8-addc8d6e7576",
+      "posted": "2026-10-07",
+      "deadline": "",
+      "team": "Product",
+      "family": "Product",
+      "min_years": 2,
+      "tier": "walled",
+      "ats": "ashby",
+      "batch": "",
+      "key": "ashby:bureau:bc97c429-c6d2-46d5-a5a8-addc8d6e7576"
+    },
+    {
       "age_days": 1,
       "first_seen": "2026-10-06",
       "reposted": false,
@@ -3367,15 +3387,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 280,
+  "closed_tracked": 279,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 488,
-    "postings_india": 398,
-    "business_track": 70,
+    "postings_scanned": 491,
+    "postings_india": 399,
+    "business_track": 71,
     "open": 8,
     "unstated": 24,
-    "walled": 38
+    "walled": 39
   }
 }

@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 70,
+    "open_roles_scraped": 71,
     "roles_open_to_freshers": 8,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 971,
+    "postings_tracked_in_history": 973,
     "benchmark_families": 0
   },
   "companies": [
@@ -4996,6 +4996,26 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:mindtickle:e5f69583-dd88-4b86-af6b-5582df1548d8"
+    },
+    {
+      "age_days": 0,
+      "first_seen": "2026-10-07",
+      "reposted": false,
+      "title": "Product Manager (RASP)",
+      "company": "Bureau",
+      "city": "Bengaluru",
+      "location": "Bangalore",
+      "pay": "",
+      "url": "https://jobs.ashbyhq.com/bureau/bc97c429-c6d2-46d5-a5a8-addc8d6e7576",
+      "posted": "2026-10-07",
+      "deadline": "",
+      "team": "Product",
+      "family": "Product",
+      "min_years": 2,
+      "tier": "walled",
+      "ats": "ashby",
+      "batch": "",
+      "key": "ashby:bureau:bc97c429-c6d2-46d5-a5a8-addc8d6e7576"
     },
     {
       "age_days": 1,

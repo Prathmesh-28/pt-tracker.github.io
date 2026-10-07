@@ -454,6 +454,20 @@
   "title": "Senior Sales Enterprise Manager (NBFC)",
   "url": "https://jobs.ashbyhq.com/bureau/b78f1e7a-a964-4d1b-a595-bcc21fe35190"
  },
+ "ashby:bureau:bc97c429-c6d2-46d5-a5a8-addc8d6e7576": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "bureau",
+  "first_seen": "2026-10-07",
+  "last_seen": "2026-10-07",
+  "location": "Bangalore",
+  "min_years": 2,
+  "posted": "2026-10-07",
+  "reposted": false,
+  "title": "Product Manager (RASP)",
+  "url": "https://jobs.ashbyhq.com/bureau/bc97c429-c6d2-46d5-a5a8-addc8d6e7576"
+ },
  "ashby:bureau:c7e22c94-8d94-4397-b686-efcc6cc73dd2": {
   "age_days": 49,
   "closed": false,
@@ -3841,6 +3855,20 @@
   "title": "Senior Staff Engineer, Product Security",
   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8814777002/?gh_jid=8814777002"
  },
+ "greenhouse:druva:8871456002": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "druva",
+  "first_seen": "2026-10-07",
+  "last_seen": "2026-10-07",
+  "location": "Santa Clara, CA",
+  "min_years": 3,
+  "posted": "2026-10-07",
+  "reposted": false,
+  "title": "GTM Finance Manager",
+  "url": "https://www.druva.com/why-druva/explore/careers/jobs/8871456002/?gh_jid=8871456002"
+ },
  "greenhouse:glide:4020741007": {
   "age_days": 1240,
   "closed": false,
@@ -4168,11 +4196,11 @@
  },
  "greenhouse:netradyne:4717651005": {
   "age_days": 77,
-  "closed": true,
-  "closed_on": "2026-09-28",
+  "closed": false,
+  "closed_on": "",
   "company": "netradyne",
   "first_seen": "2026-09-10",
-  "last_seen": "2026-09-28",
+  "last_seen": "2026-10-07",
   "location": "USA",
   "min_years": 3,
   "posted": "2026-07-22",
