@@ -1047,8 +1047,8 @@
  },
  "ashby:sarvam:2cb7b4f9-4b09-450d-945a-78a9d597c734": {
   "age_days": 173,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1145,8 +1145,8 @@
  },
  "ashby:sarvam:44ba25a3-d262-429e-ad5b-c8711565f6e3": {
   "age_days": 125,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1229,8 +1229,8 @@
  },
  "ashby:sarvam:5494ecdf-373b-4eb8-839d-1bbd110e7ec9": {
   "age_days": 49,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1257,8 +1257,8 @@
  },
  "ashby:sarvam:5fafff38-0438-4a6b-afa1-bfcb750b3c9b": {
   "age_days": 58,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1299,8 +1299,8 @@
  },
  "ashby:sarvam:6ad226cd-9400-41b6-9c64-db35b7d24516": {
   "age_days": 125,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1411,8 +1411,8 @@
  },
  "ashby:sarvam:7ee2ff5d-32a2-4b0a-9ae9-117ba8b626d1": {
   "age_days": 155,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1425,8 +1425,8 @@
  },
  "ashby:sarvam:86ae80f8-b7eb-43a4-afde-fef58e77e23e": {
   "age_days": 173,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1467,8 +1467,8 @@
  },
  "ashby:sarvam:8dfa8130-cfb3-4c31-8658-54260d217f86": {
   "age_days": 113,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1481,8 +1481,8 @@
  },
  "ashby:sarvam:929e2e12-7a2f-4e28-9d27-f220910b2125": {
   "age_days": 135,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1579,8 +1579,8 @@
  },
  "ashby:sarvam:af865840-f90e-4e16-bf15-8a3a9c0b434c": {
   "age_days": 147,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1593,8 +1593,8 @@
  },
  "ashby:sarvam:b07dfd8a-208d-43c1-a811-f1c447df26f9": {
   "age_days": 128,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1677,8 +1677,8 @@
  },
  "ashby:sarvam:c4bb3b2c-7608-4d57-8761-650b4222ac13": {
   "age_days": 173,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1761,8 +1761,8 @@
  },
  "ashby:sarvam:de7eba10-6fff-4fa3-8d70-526f2cf58eb7": {
   "age_days": 50,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -1815,6 +1815,20 @@
   "title": "ML Ops Engineer, Chanakya",
   "url": "https://jobs.ashbyhq.com/sarvam/e7f783e8-6378-4158-97d5-48a397a91698"
  },
+ "ashby:sarvam:e9fb1269-fc4b-4879-aa35-0b75a8c83611": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "sarvam",
+  "first_seen": "2026-10-07",
+  "last_seen": "2026-10-07",
+  "location": "Bengaluru",
+  "min_years": 3,
+  "posted": "2026-10-07",
+  "reposted": false,
+  "title": "ML Engineer (Training Infra), Foundational Models",
+  "url": "https://jobs.ashbyhq.com/sarvam/e9fb1269-fc4b-4879-aa35-0b75a8c83611"
+ },
  "ashby:sarvam:ef7f079b-6a1f-4b27-9cfb-a5f68fe825c7": {
   "age_days": 20,
   "closed": false,
@@ -1831,8 +1845,8 @@
  },
  "ashby:sarvam:f3376204-1c2d-42a8-bf4a-1a0eec2fbc3c": {
   "age_days": 140,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -4361,6 +4375,20 @@
   "reposted": false,
   "title": "Assistant Manager \u2013 Financial Reporting, Inventory and Intercompany Accounting",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4728633005"
+ },
+ "greenhouse:netradyne:4729961005": {
+  "age_days": 35,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-10-07",
+  "last_seen": "2026-10-07",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 2,
+  "posted": "2026-09-02",
+  "reposted": true,
+  "title": "Database Engineer",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4729961005"
  },
  "greenhouse:netradyne:4731685005": {
   "age_days": 29,
@@ -7831,8 +7859,8 @@
  },
  "lever:meesho:1c610094-fbc4-42b0-b7f2-4b05c5569e9a": {
   "age_days": 43,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -8013,8 +8041,8 @@
  },
  "lever:meesho:3a980a2a-6ae4-4738-b06d-9c6483526992": {
   "age_days": 394,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -8559,8 +8587,8 @@
  },
  "lever:meesho:d4c4d777-d41b-4940-9407-e2100fb5dcd1": {
   "age_days": 114,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-07",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-07",
@@ -9088,6 +9116,20 @@
   "reposted": false,
   "title": "Senior Instructional Designer",
   "url": "https://jobs.lever.co/mindtickle/efead581-0fc4-4056-8320-4c1816d18732"
+ },
+ "lever:mindtickle:f1903a4c-dde6-488b-baad-9d29ef74ff79": {
+  "age_days": 251,
+  "closed": false,
+  "closed_on": "",
+  "company": "mindtickle",
+  "first_seen": "2026-10-07",
+  "last_seen": "2026-10-07",
+  "location": "Bengaluru, Karnataka",
+  "min_years": null,
+  "posted": "2026-01-29",
+  "reposted": false,
+  "title": "Product Engagement Manager",
+  "url": "https://jobs.lever.co/mindtickle/f1903a4c-dde6-488b-baad-9d29ef74ff79"
  },
  "lever:paytm:00099566-d2c0-4071-a9c0-8c09bfb5f9f3": {
   "age_days": 154,
@@ -10222,6 +10264,20 @@
   "reposted": false,
   "title": "Program Management (Business product) - DGM/GM- Lending EMI",
   "url": "https://jobs.lever.co/paytm/41fc393a-8693-4640-bbf2-e72ec3afd8d4"
+ },
+ "lever:paytm:426a6834-1397-4e65-94af-69874c790805": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-07",
+  "last_seen": "2026-10-07",
+  "location": "Gurugram, Haryana",
+  "min_years": null,
+  "posted": "2026-10-07",
+  "reposted": false,
+  "title": "Intern - Talent Acquisition",
+  "url": "https://jobs.lever.co/paytm/426a6834-1397-4e65-94af-69874c790805"
  },
  "lever:paytm:43dba495-81ea-47a0-99f0-f8d99d7f09bd": {
   "age_days": 22,

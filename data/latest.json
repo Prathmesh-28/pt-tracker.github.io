@@ -442,26 +442,6 @@
       "key": "lever:meesho:d7924eb1-301e-4098-ab7b-f3a4c92c210a"
     },
     {
-      "age_days": 114,
-      "first_seen": "2026-09-10",
-      "reposted": false,
-      "title": "Manager - DAU Growth",
-      "company": "Meesho",
-      "city": "Bengaluru",
-      "location": "Bangalore, Karnataka",
-      "pay": "",
-      "url": "https://jobs.lever.co/meesho/d4c4d777-d41b-4940-9407-e2100fb5dcd1",
-      "posted": "2026-06-15",
-      "deadline": "",
-      "team": "All Teams",
-      "family": "Growth",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "batch": "",
-      "key": "lever:meesho:d4c4d777-d41b-4940-9407-e2100fb5dcd1"
-    },
-    {
       "age_days": 120,
       "first_seen": "2026-09-10",
       "reposted": true,
@@ -1242,26 +1222,6 @@
       "key": "ashby:sarvam:6390e602-7b98-4700-baa9-ced5be8b1651"
     },
     {
-      "age_days": 135,
-      "first_seen": "2026-09-10",
-      "reposted": false,
-      "title": "Product Manager, Growth",
-      "company": "Sarvam AI",
-      "city": "Bengaluru",
-      "location": "Bengaluru",
-      "pay": "",
-      "url": "https://jobs.ashbyhq.com/sarvam/929e2e12-7a2f-4e28-9d27-f220910b2125",
-      "posted": "2026-05-25",
-      "deadline": "",
-      "team": "Product",
-      "family": "Growth",
-      "min_years": 2,
-      "tier": "walled",
-      "ats": "ashby",
-      "batch": "",
-      "key": "ashby:sarvam:929e2e12-7a2f-4e28-9d27-f220910b2125"
-    },
-    {
       "age_days": 148,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -1320,26 +1280,6 @@
       "ats": "lever",
       "batch": "",
       "key": "lever:paytm:861b9aba-b3d5-4c96-8ccb-7f711d3c0ab3"
-    },
-    {
-      "age_days": 173,
-      "first_seen": "2026-09-10",
-      "reposted": false,
-      "title": "Product Manager",
-      "company": "Sarvam AI",
-      "city": "Bengaluru",
-      "location": "Bengaluru",
-      "pay": "",
-      "url": "https://jobs.ashbyhq.com/sarvam/c4bb3b2c-7608-4d57-8761-650b4222ac13",
-      "posted": "2026-04-17",
-      "deadline": "",
-      "team": "Product",
-      "family": "Product",
-      "min_years": 3,
-      "tier": "walled",
-      "ats": "ashby",
-      "batch": "",
-      "key": "ashby:sarvam:c4bb3b2c-7608-4d57-8761-650b4222ac13"
     },
     {
       "age_days": 173,
@@ -3427,15 +3367,15 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 263,
+  "closed_tracked": 280,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 501,
-    "postings_india": 411,
-    "business_track": 73,
+    "postings_scanned": 488,
+    "postings_india": 398,
+    "business_track": 70,
     "open": 8,
-    "unstated": 25,
-    "walled": 40
+    "unstated": 24,
+    "walled": 38
   }
 }
