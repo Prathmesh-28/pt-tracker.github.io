@@ -1,0 +1,442 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Japan, English Only</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;450;500;600&display=swap">
+<style>
+:root{
+  --paper:#F4F3EE;--card:#FBFAF6;--ink:#181A1B;--body:#33373A;--muted:#6B7075;
+  --line:#DEDCD3;--line-soft:#E9E7DF;
+  --accent:#A85D00;--accent-soft:#F0E2CC;
+  --open:#126B4F;--open-soft:#D8E9E0;
+  --plus:#3D5A99;--plus-soft:#DFE5F2;
+  --walled:#7E8389;--walled-soft:#E4E3DD;
+  --urgent:#B3261E;--urgent-soft:#F6DCD9;
+  --shadow:0 1px 2px rgba(24,26,27,.05);--r:7px;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#131517;--card:#1B1E21;--ink:#F1EFE9;--body:#C7C9CB;--muted:#8B9096;
+    --line:#2C3034;--line-soft:#242629;
+    --accent:#E8A13C;--accent-soft:#3A2C15;
+    --open:#4FBE92;--open-soft:#153229;
+    --plus:#8FA8E0;--plus-soft:#1E2740;
+    --walled:#868B91;--walled-soft:#25282B;
+    --urgent:#F08C84;--urgent-soft:#3D1D1A;
+    --shadow:0 1px 2px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131517;--card:#1B1E21;--ink:#F1EFE9;--body:#C7C9CB;--muted:#8B9096;
+  --line:#2C3034;--line-soft:#242629;
+  --accent:#E8A13C;--accent-soft:#3A2C15;
+  --open:#4FBE92;--open-soft:#153229;
+  --plus:#8FA8E0;--plus-soft:#1E2740;
+  --walled:#868B91;--walled-soft:#25282B;
+  --urgent:#F08C84;--urgent-soft:#3D1D1A;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--body);
+  font:450 15px/1.55 "IBM Plex Sans",ui-sans-serif,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px 72px}
+@media (max-width:600px){.wrap{padding-inline:16px}}
+a{color:inherit}
+h1,h2,h3{font-family:"Bricolage Grotesque","IBM Plex Sans",sans-serif;color:var(--ink);text-wrap:balance;margin:0}
+.mono{font-family:"IBM Plex Mono",ui-monospace,monospace;font-variant-numeric:tabular-nums}
+input:focus-visible,select:focus-visible,button:focus-visible,a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+header{border-bottom:1px solid var(--line);margin-bottom:26px}
+.masthead{display:flex;flex-wrap:wrap;gap:20px;align-items:flex-end;justify-content:space-between;padding:34px 0 22px}
+h1{font-size:clamp(30px,5.4vw,46px);font-weight:800;letter-spacing:-.025em;line-height:1.02}
+h1 em{font-style:normal;color:var(--accent)}
+.sub{margin:9px 0 0;max-width:62ch;color:var(--muted);font-size:14.5px}
+.stamp{font-size:12px;color:var(--muted);text-align:right;line-height:1.7}
+.stamp b{color:var(--ink);font-weight:600}
+@media (max-width:600px){.stamp{text-align:left}}
+
+h2{font-size:21px;font-weight:700;letter-spacing:-.01em;margin:0 0 4px}
+.lede{font-size:13.5px;color:var(--muted);margin:0 0 14px;max-width:80ch}
+section{margin-bottom:40px}
+
+/* closing soon */
+.soon{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.soon a{display:flex;flex-direction:column;gap:4px;text-decoration:none;background:var(--card);
+  border:1px solid var(--line);border-radius:var(--r);padding:13px 15px;box-shadow:var(--shadow);transition:border-color .12s}
+.soon a:hover{border-color:var(--accent)}
+.soon .when{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.soon .date{font-size:12.5px;color:var(--muted)}
+.soon .left{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:19px;color:var(--ink);line-height:1}
+.soon .left.hot{color:var(--urgent)}
+.soon .org{font-weight:600;color:var(--ink);font-size:14px}
+.soon .nm{font-size:13px;line-height:1.4}
+
+/* tabs */
+.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:18px;overflow-x:auto}
+.tabs button{appearance:none;border:0;background:none;font:inherit;font-size:14px;font-weight:600;color:var(--muted);
+  padding:9px 12px;border-bottom:2px solid transparent;margin-bottom:-1px;cursor:pointer;white-space:nowrap}
+.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
+.tabs .n{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:500;color:var(--muted);margin-left:5px}
+
+/* gate */
+.gate{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);
+  border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin-bottom:14px}
+@media (max-width:720px){.gate{grid-template-columns:repeat(2,1fr)}}
+.gate button{appearance:none;border:0;text-align:left;cursor:pointer;font:inherit;background:var(--card);
+  color:var(--body);padding:13px 15px;display:flex;flex-direction:column;gap:3px;transition:background .12s}
+.gate button:hover{background:var(--accent-soft)}
+.gate button[aria-pressed="false"]{opacity:.55}
+.gate .n{font-family:"Bricolage Grotesque",sans-serif;font-size:25px;font-weight:700;line-height:1;color:var(--ink)}
+.gate .lbl{font-size:12.5px;font-weight:600}
+.gate .hint{font-size:11.5px;color:var(--muted);line-height:1.35}
+.gate .g-english_ok .n{color:var(--open)}
+.gate .g-japanese_plus .n{color:var(--plus)}
+.gate .g-unstated .n{color:var(--accent)}
+.gate .g-japanese_required .n{color:var(--walled)}
+
+/* controls */
+.controls{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:14px}
+.controls input[type=search]{flex:1 1 220px;min-width:0;font:inherit;font-size:14px;padding:8px 12px;
+  border:1px solid var(--line);border-radius:var(--r);background:var(--card);color:var(--ink)}
+.controls select{font:inherit;font-size:13.5px;padding:8px 10px;border:1px solid var(--line);
+  border-radius:var(--r);background:var(--card);color:var(--ink);max-width:100%}
+.controls label{font-size:13px;display:flex;gap:6px;align-items:center;color:var(--body)}
+.count{font-size:12.5px;color:var(--muted);margin-left:auto}
+
+/* rows */
+.list{display:flex;flex-direction:column;gap:8px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;box-shadow:var(--shadow);
+  display:grid;grid-template-columns:1fr auto;gap:6px 16px}
+.item.muted{opacity:.62}
+@media (max-width:640px){.item{grid-template-columns:1fr}}
+.item h3{font-size:16px;font-weight:700;line-height:1.3}
+.item h3 a{text-decoration:none}
+.item h3 a:hover{text-decoration:underline}
+.meta{font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:4px 12px}
+.meta b{color:var(--body);font-weight:600}
+.badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:2px}
+.b{font-size:11px;font-weight:600;letter-spacing:.02em;padding:2px 8px;border-radius:100px;white-space:nowrap;
+  background:var(--walled-soft);color:var(--walled)}
+.b.ok{background:var(--open-soft);color:var(--open)}
+.b.plus{background:var(--plus-soft);color:var(--plus)}
+.b.warn{background:var(--accent-soft);color:var(--accent)}
+.b.no{background:var(--walled-soft);color:var(--walled)}
+.b.hot{background:var(--urgent-soft);color:var(--urgent)}
+.notes{grid-column:1/-1;font-size:13.5px;display:grid;gap:4px}
+.notes p{margin:0}
+.notes .k{color:var(--muted);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;margin-right:6px}
+.ev{grid-column:1/-1;margin:2px 0 0;font-size:12.5px;color:var(--muted);border-left:2px solid var(--line);padding-left:10px}
+.side{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end;align-content:flex-start;max-width:240px}
+@media (max-width:640px){.side{justify-content:flex-start;max-width:none}}
+.btn{appearance:none;font:inherit;font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:var(--r);cursor:pointer;
+  border:1px solid var(--line);background:transparent;color:var(--body);text-decoration:none;white-space:nowrap}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{border-color:var(--accent);color:var(--accent)}
+.btn.primary:hover{background:var(--accent);color:var(--paper)}
+.btn[aria-pressed="true"]{background:var(--open-soft);border-color:var(--open);color:var(--open)}
+.empty{padding:28px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:var(--r)}
+
+/* sources */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:13.5px}
+th,td{text-align:left;padding:8px 12px;border-bottom:1px solid var(--line-soft);white-space:nowrap}
+th{font-size:12px;color:var(--muted);font-weight:600}
+td.num,th.num{text-align:right;font-family:"IBM Plex Mono",monospace}
+tr:last-child td{border-bottom:0}
+.err{color:var(--urgent)}
+footer{border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--muted)}
+footer code{font-family:"IBM Plex Mono",monospace;font-size:12.5px;background:var(--card);padding:1px 5px;border-radius:4px;border:1px solid var(--line-soft)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="masthead">
+    <div>
+      <h1>Japan, <em>English only</em></h1>
+      <p class="sub">Programs, hiring platforms and live entry-level roles in Japan for IIT students graduating in 2027 who speak English and no Japanese.</p>
+    </div>
+    <div class="stamp" id="stamp"></div>
+  </div>
+</header>
+
+<section id="soon-sec">
+  <h2>Closing soon</h2>
+  <p class="lede">Programs with a published deadline, soonest first. Days left count from today in your browser.</p>
+  <div class="soon" id="soon"></div>
+</section>
+
+<nav class="tabs" role="tablist">
+  <button role="tab" data-tab="programs" aria-selected="true">Programs<span class="n" id="n-programs"></span></button>
+  <button role="tab" data-tab="roles" aria-selected="false">Live roles<span class="n" id="n-roles"></span></button>
+  <button role="tab" data-tab="sources" aria-selected="false">Sources<span class="n" id="n-sources"></span></button>
+</nav>
+
+<section id="tab-programs">
+  <p class="lede">Read on each official page on the date at the top. <b>English only</b> means the program says Japanese is not required. <b>Depends on role</b> means some roles need none. <b>Japanese taught</b> means you can register without it and they teach it free before you join. Japanese-required entries are hidden by default; they show where the wall is.</p>
+  <div class="controls">
+    <input type="search" id="p-q" placeholder="Search programs" aria-label="Search programs">
+    <select id="p-lang" aria-label="Language">
+      <option value="open">English only, depends, or taught</option>
+      <option value="yes">English only</option>
+      <option value="all">Everything, including Japanese required</option>
+    </select>
+    <select id="p-status" aria-label="Status">
+      <option value="">Any status</option>
+      <option value="now">Open, rolling or pre-entry</option>
+      <option value="watch">Watch for next round</option>
+    </select>
+    <select id="p-track" aria-label="Track">
+      <option value="">Any track</option>
+      <option value="engineering">Engineering</option>
+      <option value="data-ai">Data and AI</option>
+      <option value="product">Product</option>
+      <option value="business">Business</option>
+      <option value="any">Any field (platforms)</option>
+    </select>
+    <span class="count" id="p-count"></span>
+  </div>
+  <div class="list" id="programs-list"></div>
+</section>
+
+<section id="tab-roles" hidden>
+  <p class="lede">Every posting in Japan pulled from company boards, VC portfolio boards, Japan Dev, LinkedIn and Indeed, filtered by default to entry-level roles where a visa is not ruled out. Each description is read twice: for what it says about Japanese, and for the graduation window it accepts. An IIT degree finishing in mid-2027 fits "28卒" (April 2027 to March 2028) but not "27卒" (by March 2027), MBA programs or 2027 summer internships. The sentences that decided both are quoted under each role. Click a box to show or hide that language group.</p>
+  <p class="lede" id="funnel"></p>
+  <div class="gate" id="gate"></div>
+  <div class="controls">
+    <input type="search" id="r-q" placeholder="Search title or company" aria-label="Search roles">
+    <select id="r-track" aria-label="Track">
+      <option value="">Any track</option>
+      <option value="engineering">Engineering</option>
+      <option value="data-ai">Data and AI</option>
+      <option value="product">Product</option>
+      <option value="business">Business</option>
+      <option value="other">Other</option>
+    </select>
+    <select id="r-level" aria-label="Experience">
+      <option value="entry">Entry level, new grad or intern</option>
+      <option value="noyears">Also roles that state no years</option>
+      <option value="all">Any experience level</option>
+    </select>
+    <select id="r-visa" aria-label="Visa">
+      <option value="ok">Visa not ruled out</option>
+      <option value="yes">States visa sponsorship</option>
+      <option value="all">Any visa situation</option>
+    </select>
+    <select id="r-grad" aria-label="Batch">
+      <option value="all">Any batch</option>
+      <option value="open">Fits or may fit a 2027 graduate</option>
+      <option value="fits">Dates show it fits a 2027 graduate</option>
+    </select>
+    <select id="r-source" aria-label="Source"><option value="">Any source</option></select>
+    <label><input type="checkbox" id="r-res" checked> Hide roles for people already in Japan</label>
+    <label><input type="checkbox" id="r-mine"> Saved or applied only</label>
+    <span class="count" id="r-count"></span>
+  </div>
+  <div class="list" id="roles-list"></div>
+</section>
+
+<section id="tab-sources" hidden>
+  <p class="lede">What each board returned on the last pull. Postings in Japan are counted from the location, the board's country field, or the whole board for Japan-only employers.</p>
+  <div class="tablewrap"><table id="sources-table"></table></div>
+  <p class="lede" id="search-note" style="margin-top:10px"></p>
+</section>
+
+<footer>
+  Refresh the live roles with <code>.venv/bin/python Japan/fetch_japan.py</code>, add <code>--search</code> for LinkedIn and Indeed in Tokyo. Edit <code>Japan/programs.json</code> to add or update a program, then run with <code>--render</code>. Saved and Applied marks stay in this browser only.
+</footer>
+</div>
+
+<script>
+const DATA = /*__DATA__*/null;
+
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const store = {
+  get(k, d) { try { const v = localStorage.getItem(k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch {} }
+};
+let marks = store.get("jp-marks", {});
+const mark = (key, kind) => { marks[key] = marks[key] === kind ? undefined : kind; if (!marks[key]) delete marks[key]; store.set("jp-marks", marks); };
+
+const today = new Date(); today.setHours(0,0,0,0);
+const fmt = iso => { if (!iso) return ""; const d = new Date(iso + "T00:00:00"); return d.toLocaleDateString("en-GB", {day:"numeric", month:"short", year:"numeric"}); };
+const daysLeft = iso => Math.round((new Date(iso + "T00:00:00") - today) / 864e5);
+
+const LANG_P = {yes:["English only","ok"], partly:["Depends on role","warn"], taught:["Japanese taught","plus"], no:["Japanese required","no"]};
+const FIT = {yes:["Fits a 2027 grad","ok"], partly:["Partly fits 2027","warn"], no:["Not for 2027 IIT grads","no"]};
+const STATUS = {open:["Open now","ok"], rolling:["Rolling","ok"], "pre-entry":["Pre-entry open","warn"], watch:["Watch","no"], closed:["Closed","no"]};
+const TRACK = {engineering:"Engineering","data-ai":"Data and AI",product:"Product",business:"Business",any:"Any field",other:"Other"};
+const KIND = {"new-grad":"New-grad hiring","internship-to-offer":"Internship to offer",internship:"Internship",platform:"Hiring platform","job-board":"Job board"};
+const GRAD = {
+  yes:["Fits 2027 grads","ok"], likely:["Likely fits 2027 grads","warn"], check:["New-grad role, no dates","plus"],
+  no:["Not for 2027 grads","no"], none:["No batch named",""]
+};
+const GRAD_OK = {open:["yes","likely","check"], fits:["yes","likely"]};
+const LEVEL = {intern:"Internship", new_grad:"New grad", entry:"Entry level", mid:"Mid level", senior:"Senior", unstated:"Level not stated"};
+const LANG_R = {
+  english_ok:["English OK","ok","Says Japanese is not required, or English or Japanese"],
+  japanese_plus:["Japanese a plus","plus","Japanese only under preferred"],
+  unstated:["Not stated","warn","English description, no Japanese asked"],
+  japanese_required:["Japanese required","no","Asks for a Japanese level or written in Japanese"]
+};
+
+// ---------- stamp
+document.getElementById("stamp").innerHTML =
+  `Programs checked <b>${fmt(DATA.checked)}</b><br>Roles pulled <b>${esc(DATA.generated.replace("T"," ").slice(0,16))}</b>`;
+
+// ---------- closing soon
+(function soon() {
+  const rows = DATA.programs.filter(p => p.deadline && p.english_only !== "no" && daysLeft(p.deadline) >= 0)
+    .sort((a, b) => a.deadline.localeCompare(b.deadline));
+  const el = document.getElementById("soon");
+  if (!rows.length) { document.getElementById("soon-sec").hidden = true; return; }
+  el.innerHTML = rows.map(p => {
+    const n = daysLeft(p.deadline);
+    return `<a href="${esc(p.apply_url)}" target="_blank" rel="noopener">
+      <span class="when"><span class="date">${fmt(p.deadline)}</span><span class="left ${n <= 10 ? "hot" : ""}">${n === 0 ? "today" : n + (n === 1 ? " day" : " days")}</span></span>
+      <span class="org">${esc(p.org)}</span><span class="nm">${esc(p.name)}</span>
+      <span class="badges"><span class="b ${LANG_P[p.english_only][1]}">${LANG_P[p.english_only][0]}</span><span class="b ${FIT[p.fits_2027][1]}">${FIT[p.fits_2027][0]}</span></span>
+    </a>`;
+  }).join("");
+})();
+
+// ---------- tabs
+const tabs = [...document.querySelectorAll("[role=tab]")];
+function showTab(name) {
+  tabs.forEach(t => t.setAttribute("aria-selected", t.dataset.tab === name));
+  ["programs","roles","sources"].forEach(n => document.getElementById("tab-" + n).hidden = n !== name);
+  store.set("jp-tab", name);
+}
+tabs.forEach(t => t.addEventListener("click", () => showTab(t.dataset.tab)));
+const fromHash = location.hash.slice(1);
+showTab(["programs", "roles", "sources"].includes(fromHash) ? fromHash : store.get("jp-tab", "programs"));
+
+// ---------- programs
+function markButtons(key) {
+  return `<button class="btn" data-mark="${esc(key)}" data-kind="saved" aria-pressed="${marks[key]==="saved"}">Saved</button>
+          <button class="btn" data-mark="${esc(key)}" data-kind="applied" aria-pressed="${marks[key]==="applied"}">Applied</button>`;
+}
+function renderPrograms() {
+  const q = document.getElementById("p-q").value.trim().toLowerCase();
+  const lang = document.getElementById("p-lang").value;
+  const status = document.getElementById("p-status").value;
+  const tr = document.getElementById("p-track").value;
+  const rows = DATA.programs.filter(p => {
+    if (lang === "open" && p.english_only === "no") return false;
+    if (lang === "yes" && p.english_only !== "yes") return false;
+    if (status === "now" && !["open","rolling","pre-entry"].includes(p.status)) return false;
+    if (status === "watch" && p.status !== "watch") return false;
+    if (tr && p.track !== tr) return false;
+    if (q && !(p.org + " " + p.name + " " + p.language_note + " " + p.fit_note).toLowerCase().includes(q)) return false;
+    return true;
+  });
+  const rank = {open:0,"pre-entry":1,rolling:2,watch:3,closed:4};
+  rows.sort((a, b) => (a.english_only === "no") - (b.english_only === "no") || rank[a.status] - rank[b.status]
+    || (a.deadline || "9999").localeCompare(b.deadline || "9999"));
+  document.getElementById("p-count").textContent = `${rows.length} of ${DATA.programs.length}`;
+  document.getElementById("n-programs").textContent = DATA.programs.filter(p => p.english_only !== "no").length;
+  document.getElementById("programs-list").innerHTML = rows.length ? rows.map(p => {
+    const dl = p.deadline ? `<span class="b ${daysLeft(p.deadline) <= 10 && daysLeft(p.deadline) >= 0 ? "hot" : "warn"}">Closes ${fmt(p.deadline)}</span>` : "";
+    return `<article class="item ${p.english_only === "no" || p.fits_2027 === "no" ? "muted" : ""}">
+      <div>
+        <h3><a href="${esc(p.apply_url)}" target="_blank" rel="noopener">${esc(p.org)}: ${esc(p.name)}</a></h3>
+        <div class="meta"><span>${KIND[p.kind] || esc(p.kind)}</span><span>${TRACK[p.track] || ""}</span>${p.joining ? `<span><b>Joining</b> ${esc(p.joining)}</span>` : ""}${p.pay ? `<span><b>Pay</b> ${esc(p.pay)}</span>` : ""}</div>
+        <div class="badges"><span class="b ${STATUS[p.status][1]}">${STATUS[p.status][0]}</span>${dl}<span class="b ${LANG_P[p.english_only][1]}">${LANG_P[p.english_only][0]}</span><span class="b ${FIT[p.fits_2027][1]}">${FIT[p.fits_2027][0]}</span></div>
+      </div>
+      <div class="side"><a class="btn primary" href="${esc(p.apply_url)}" target="_blank" rel="noopener">Apply or register</a><a class="btn" href="${esc(p.source_url)}" target="_blank" rel="noopener">Source</a>${markButtons("p:" + p.id)}</div>
+      <div class="notes">
+        ${p.language_note ? `<p><span class="k">Language</span>${esc(p.language_note)}</p>` : ""}
+        ${p.fit_note ? `<p><span class="k">Fit</span>${esc(p.fit_note)}</p>` : ""}
+        ${p.how ? `<p><span class="k">How</span>${esc(p.how)}</p>` : ""}
+        ${p.deadline_note ? `<p><span class="k">Dates</span>${esc(p.deadline_note)}</p>` : ""}
+      </div>
+    </article>`;
+  }).join("") : `<div class="empty">No programs match.</div>`;
+}
+["p-q","p-lang","p-status","p-track"].forEach(id => document.getElementById(id).addEventListener("input", renderPrograms));
+
+// ---------- roles
+let shown = store.get("jp-gate", {english_ok:true, japanese_plus:true, unstated:true, japanese_required:false});
+const latest = DATA.roles.reduce((m, r) => r.first_seen > m ? r.first_seen : m, "");
+const earliest = DATA.roles.reduce((m, r) => !m || r.first_seen < m ? r.first_seen : m, "");
+const srcSel = document.getElementById("r-source");
+[...new Set(DATA.roles.map(r => r.company))].sort().forEach(c => srcSel.insertAdjacentHTML("beforeend", `<option>${esc(c)}</option>`));
+
+function renderFunnel() {
+  const R = DATA.roles, eng = R.filter(r => r.language !== "japanese_required");
+  const sp = eng.filter(r => r.visa === "yes" && !r.residency), ent = sp.filter(r => r.entry);
+  document.getElementById("funnel").innerHTML =
+    `<b>${R.length}</b> roles in Japan → <b>${eng.length}</b> without a Japanese requirement → <b>${sp.length}</b> of those state visa sponsorship and take applicants from abroad → <b>${ent.length}</b> of those are entry level or open to 2027 graduates.`;
+}
+function renderGate() {
+  const counts = Object.fromEntries(Object.keys(LANG_R).map(k => [k, DATA.roles.filter(r => r.language === k).length]));
+  document.getElementById("gate").innerHTML = Object.entries(LANG_R).map(([k, [label, , hint]]) =>
+    `<button class="g-${k}" data-gate="${k}" aria-pressed="${!!shown[k]}"><span class="n">${counts[k]}</span><span class="lbl">${label}</span><span class="hint">${hint}</span></button>`).join("");
+  document.getElementById("n-roles").textContent = counts.english_ok + counts.japanese_plus + counts.unstated;
+}
+function renderRoles() {
+  const q = document.getElementById("r-q").value.trim().toLowerCase();
+  const tr = document.getElementById("r-track").value;
+  const src = srcSel.value;
+  const hideRes = document.getElementById("r-res").checked;
+  const mine = document.getElementById("r-mine").checked;
+  const grad = document.getElementById("r-grad").value;
+  const lvl = document.getElementById("r-level").value;
+  const vis = document.getElementById("r-visa").value;
+  const rows = DATA.roles.filter(r => shown[r.language]
+    && (grad === "all" || GRAD_OK[grad].includes(r.grad_2027 || "none"))
+    && (lvl === "all" || r.entry || (lvl === "noyears" && r.level === "unstated"))
+    && (vis === "all" || (vis === "yes" ? r.visa === "yes" : r.visa !== "no"))
+    && (!tr || r.track === tr) && (!src || r.company === src) && (!hideRes || !r.residency)
+    && (!mine || marks["r:" + r.key]) && (!q || (r.title + " " + r.company).toLowerCase().includes(q)));
+  document.getElementById("r-count").textContent = `${rows.length} shown`;
+  document.getElementById("roles-list").innerHTML = rows.length ? rows.map(r => {
+    const [label, cls] = LANG_R[r.language];
+    const isNew = r.first_seen === latest && latest !== earliest;
+    return `<article class="item ${r.language === "japanese_required" ? "muted" : ""}">
+      <div>
+        <h3><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></h3>
+        <div class="meta"><b>${esc(r.company)}</b><span>${esc(r.location)}</span>${r.posted ? `<span>Posted ${fmt(r.posted)}</span>` : ""}${r.deadline ? `<span><b>Closes</b> ${fmt(r.deadline)}</span>` : ""}<span>${TRACK[r.track] || ""}</span><span class="mono">${esc(r.source)}</span></div>
+        <div class="badges"><span class="b ${cls}">${label}</span>${r.grad_2027 && r.grad_2027 !== "none" ? `<span class="b ${GRAD[r.grad_2027][1]}">${GRAD[r.grad_2027][0]}</span>` : ""}${isNew ? `<span class="b hot">New</span>` : ""}${r.batch ? `<span class="b">Mentions ${esc(r.batch)}</span>` : ""}${r.visa === "yes" ? `<span class="b ok">Sponsors visa</span>` : r.visa === "no" ? `<span class="b no">No visa sponsorship</span>` : ""}${LEVEL[r.level] ? `<span class="b">${LEVEL[r.level]}${r.min_years != null ? ` · ${r.min_years}+ yrs` : ""}</span>` : ""}${r.via ? `<span class="b">via ${esc(r.via)}</span>` : ""}${r.residency ? `<span class="b no">Must already live in Japan</span>` : ""}</div>
+      </div>
+      <div class="side"><a class="btn primary" href="${esc(r.url)}" target="_blank" rel="noopener">Open posting</a>${markButtons("r:" + r.key)}</div>
+      ${r.evidence ? `<p class="ev"><b>Language:</b> ${esc(r.evidence)}</p>` : ""}
+      ${r.eligibility ? `<p class="ev"><b>Batch:</b> ${esc(r.eligibility)}</p>` : ""}
+      ${r.visa_evidence ? `<p class="ev"><b>Visa:</b> ${esc(r.visa_evidence)}</p>` : ""}
+    </article>`;
+  }).join("") : `<div class="empty">No roles match. Click a box above to show more groups.</div>`;
+}
+document.getElementById("gate").addEventListener("click", e => {
+  const b = e.target.closest("[data-gate]"); if (!b) return;
+  shown[b.dataset.gate] = !shown[b.dataset.gate]; store.set("jp-gate", shown); renderGate(); renderRoles();
+});
+["r-q","r-track","r-level","r-visa","r-grad","r-source","r-res","r-mine"].forEach(id => document.getElementById(id).addEventListener("input", renderRoles));
+
+document.addEventListener("click", e => {
+  const b = e.target.closest("[data-mark]"); if (!b) return;
+  mark(b.dataset.mark, b.dataset.kind);
+  b.dataset.mark.startsWith("p:") ? renderPrograms() : renderRoles();
+});
+
+// ---------- sources
+(function sources() {
+  const s = DATA.sources;
+  document.getElementById("n-sources").textContent = s.length;
+  document.getElementById("sources-table").innerHTML =
+    `<thead><tr><th>Employer</th><th>Board</th><th class="num">Postings</th><th class="num">In Japan</th><th class="num">Entry level</th><th class="num">English OK</th><th>Problem</th></tr></thead><tbody>` +
+    s.map(x => `<tr><td>${esc(x.company)}</td><td class="mono">${esc(x.ats)}</td><td class="num">${x.total}</td><td class="num">${x.japan}</td><td class="num">${x.entry}</td><td class="num">${x.english_ok}</td><td class="err">${esc(x.error)}</td></tr>`).join("") + "</tbody>";
+  const m = DATA.search || {};
+  document.getElementById("search-note").textContent = m.searched_at
+    ? `LinkedIn and Indeed (Tokyo) last searched ${m.searched_at.replace("T", " ").slice(0, 16)} UTC: ` + Object.entries(m.counts || {}).map(([k, v]) => `${v} entry-level roles from ${k}`).join(", ") + "."
+    : "LinkedIn and Indeed have not been searched yet. Run the script with --search.";
+})();
+
+renderPrograms(); renderFunnel(); renderGate(); renderRoles();
+</script>
+</body>
+</html>

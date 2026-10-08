@@ -1,0 +1,1362 @@
+[
+ {
+  "company": "Mercari",
+  "ats": "workable",
+  "total": 137,
+  "japan": 137,
+  "entry": 14,
+  "english_ok": 7,
+  "visa": 3,
+  "error": ""
+ },
+ {
+  "company": "SmartNews",
+  "ats": "workable",
+  "total": 26,
+  "japan": 24,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 7,
+  "error": ""
+ },
+ {
+  "company": "PayPay",
+  "ats": "greenhouse",
+  "total": 88,
+  "japan": 88,
+  "entry": 3,
+  "english_ok": 4,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "PayPay Card",
+  "ats": "greenhouse",
+  "total": 37,
+  "japan": 37,
+  "entry": 0,
+  "english_ok": 4,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "PayPay Securities",
+  "ats": "greenhouse",
+  "total": 19,
+  "japan": 19,
+  "entry": 0,
+  "english_ok": 4,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Woven by Toyota",
+  "ats": "lever",
+  "total": 147,
+  "japan": 123,
+  "entry": 5,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Mujin",
+  "ats": "lever",
+  "total": 91,
+  "japan": 86,
+  "entry": 10,
+  "english_ok": 2,
+  "visa": 16,
+  "error": ""
+ },
+ {
+  "company": "ispace",
+  "ats": "lever",
+  "total": 64,
+  "japan": 39,
+  "entry": 3,
+  "english_ok": 2,
+  "visa": 1,
+  "error": ""
+ },
+ {
+  "company": "Sony",
+  "ats": "workday",
+  "total": 13,
+  "japan": 13,
+  "entry": 9,
+  "english_ok": 2,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Amazon Japan",
+  "ats": "amazon",
+  "total": 827,
+  "japan": 827,
+  "entry": 57,
+  "english_ok": 8,
+  "visa": 3,
+  "error": ""
+ },
+ {
+  "company": "Datadog",
+  "ats": "greenhouse",
+  "total": 437,
+  "japan": 38,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Stripe",
+  "ats": "greenhouse",
+  "total": 728,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Coupang",
+  "ats": "greenhouse",
+  "total": 672,
+  "japan": 30,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Point72",
+  "ats": "greenhouse",
+  "total": 221,
+  "japan": 9,
+  "entry": 8,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Wrike",
+  "ats": "greenhouse",
+  "total": 57,
+  "japan": 2,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Dataiku",
+  "ats": "greenhouse",
+  "total": 20,
+  "japan": 2,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "CircleCI",
+  "ats": "greenhouse",
+  "total": 13,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 1,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Reaktor",
+  "ats": "ashby",
+  "total": 23,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Zscaler",
+  "ats": "greenhouse",
+  "total": 374,
+  "japan": 38,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Databricks",
+  "ats": "greenhouse",
+  "total": 895,
+  "japan": 33,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Agoda",
+  "ats": "greenhouse",
+  "total": 319,
+  "japan": 31,
+  "entry": 5,
+  "english_ok": 0,
+  "visa": 1,
+  "error": ""
+ },
+ {
+  "company": "OpenAI",
+  "ats": "ashby",
+  "total": 815,
+  "japan": 28,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Snowflake",
+  "ats": "ashby",
+  "total": 358,
+  "japan": 17,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Anthropic",
+  "ats": "greenhouse",
+  "total": 646,
+  "japan": 17,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 17,
+  "error": ""
+ },
+ {
+  "company": "Notion",
+  "ats": "ashby",
+  "total": 135,
+  "japan": 16,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "New Relic",
+  "ats": "greenhouse",
+  "total": 48,
+  "japan": 10,
+  "entry": 2,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Kraken Technologies",
+  "ats": "ashby",
+  "total": 65,
+  "japan": 7,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "MongoDB",
+  "ats": "greenhouse",
+  "total": 392,
+  "japan": 6,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Miro",
+  "ats": "ashby",
+  "total": 24,
+  "japan": 7,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Figma",
+  "ats": "greenhouse",
+  "total": 151,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Adyen",
+  "ats": "greenhouse",
+  "total": 230,
+  "japan": 6,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Airbnb",
+  "ats": "greenhouse",
+  "total": 161,
+  "japan": 5,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Asana",
+  "ats": "greenhouse",
+  "total": 103,
+  "japan": 5,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Okta",
+  "ats": "greenhouse",
+  "total": 365,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Elastic",
+  "ats": "greenhouse",
+  "total": 419,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "GitLab",
+  "ats": "greenhouse",
+  "total": 221,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Dropbox",
+  "ats": "greenhouse",
+  "total": 31,
+  "japan": 3,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Twilio",
+  "ats": "greenhouse",
+  "total": 134,
+  "japan": 2,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Grafana Labs",
+  "ats": "greenhouse",
+  "total": 111,
+  "japan": 2,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Cloudflare",
+  "ats": "greenhouse",
+  "total": 426,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Pinterest",
+  "ats": "greenhouse",
+  "total": 181,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Binance",
+  "ats": "lever",
+  "total": 33,
+  "japan": 0,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Roblox",
+  "ats": "greenhouse",
+  "total": 262,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Riot Games",
+  "ats": "greenhouse",
+  "total": 162,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Tripadvisor",
+  "ats": "greenhouse",
+  "total": 104,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Bosch",
+  "ats": "smartrecruiters",
+  "total": 105,
+  "japan": 105,
+  "entry": 20,
+  "english_ok": 1,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "ServiceNow",
+  "ats": "smartrecruiters",
+  "total": 27,
+  "japan": 27,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Roland Berger",
+  "ats": "smartrecruiters",
+  "total": 8,
+  "japan": 8,
+  "entry": 4,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Wise",
+  "ats": "smartrecruiters",
+  "total": 7,
+  "japan": 7,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Canva",
+  "ats": "smartrecruiters",
+  "total": 5,
+  "japan": 5,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Salesforce",
+  "ats": "workday",
+  "total": 47,
+  "japan": 41,
+  "entry": 1,
+  "english_ok": 1,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Citi",
+  "ats": "workday",
+  "total": 49,
+  "japan": 41,
+  "entry": 10,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Morgan Stanley",
+  "ats": "workday",
+  "total": 46,
+  "japan": 33,
+  "entry": 16,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Accenture",
+  "ats": "workday",
+  "total": 80,
+  "japan": 0,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Micron",
+  "ats": "workday",
+  "total": 270,
+  "japan": 228,
+  "entry": 8,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Hitachi",
+  "ats": "workday",
+  "total": 61,
+  "japan": 53,
+  "entry": 12,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "NVIDIA",
+  "ats": "workday",
+  "total": 26,
+  "japan": 23,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Mastercard",
+  "ats": "workday",
+  "total": 23,
+  "japan": 21,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Deutsche Bank",
+  "ats": "workday",
+  "total": 35,
+  "japan": 24,
+  "entry": 3,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "State Street",
+  "ats": "workday",
+  "total": 22,
+  "japan": 19,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "BlackRock",
+  "ats": "workday",
+  "total": 13,
+  "japan": 8,
+  "entry": 2,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "PwC",
+  "ats": "workday",
+  "total": 5,
+  "japan": 0,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Adobe",
+  "ats": "workday",
+  "total": 11,
+  "japan": 7,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Intel",
+  "ats": "workday",
+  "total": 11,
+  "japan": 6,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "P&G",
+  "ats": "workday",
+  "total": 13,
+  "japan": 9,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "3M",
+  "ats": "workday",
+  "total": 29,
+  "japan": 6,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Philips",
+  "ats": "workday",
+  "total": 30,
+  "japan": 17,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "AstraZeneca",
+  "ats": "workday",
+  "total": 53,
+  "japan": 48,
+  "entry": 2,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Pfizer",
+  "ats": "workday",
+  "total": 22,
+  "japan": 18,
+  "entry": 5,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Abbott",
+  "ats": "workday",
+  "total": 41,
+  "japan": 41,
+  "entry": 2,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Thermo Fisher",
+  "ats": "workday",
+  "total": 77,
+  "japan": 61,
+  "entry": 8,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "KLA",
+  "ats": "workday",
+  "total": 39,
+  "japan": 28,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Equinix",
+  "ats": "workday",
+  "total": 12,
+  "japan": 9,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "HP",
+  "ats": "workday",
+  "total": 9,
+  "japan": 5,
+  "entry": 2,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Analog Devices",
+  "ats": "workday",
+  "total": 10,
+  "japan": 9,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "JPMorganChase",
+  "ats": "oracle",
+  "total": 56,
+  "japan": 45,
+  "entry": 24,
+  "english_ok": 0,
+  "visa": 9,
+  "error": ""
+ },
+ {
+  "company": "Japan Dev",
+  "ats": "japandev",
+  "total": 239,
+  "japan": 239,
+  "entry": 9,
+  "english_ok": 99,
+  "visa": 150,
+  "error": ""
+ },
+ {
+  "company": "Headline",
+  "ats": "getro",
+  "total": 13,
+  "japan": 13,
+  "entry": 4,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Antler",
+  "ats": "getro",
+  "total": 55,
+  "japan": 55,
+  "entry": 5,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Accel",
+  "ats": "getro",
+  "total": 479,
+  "japan": 479,
+  "entry": 46,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "General Catalyst",
+  "ats": "getro",
+  "total": 216,
+  "japan": 216,
+  "entry": 10,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Insight Partners",
+  "ats": "getro",
+  "total": 55,
+  "japan": 55,
+  "entry": 7,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Underscore VC Portfolio Opportunities",
+  "ats": "getro",
+  "total": 1,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Notable Capital",
+  "ats": "getro",
+  "total": 39,
+  "japan": 39,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Khosla Ventures",
+  "ats": "getro",
+  "total": 242,
+  "japan": 242,
+  "entry": 18,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "8VC",
+  "ats": "getro",
+  "total": 45,
+  "japan": 45,
+  "entry": 5,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Techstars",
+  "ats": "getro",
+  "total": 20,
+  "japan": 20,
+  "entry": 2,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Thrive Capital",
+  "ats": "getro",
+  "total": 133,
+  "japan": 133,
+  "entry": 11,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Tricentis",
+  "ats": "workday",
+  "total": 1,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Atlys",
+  "ats": "ashby",
+  "total": 52,
+  "japan": 2,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Mistral AI",
+  "ats": "ashby",
+  "total": 209,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Heidi Health",
+  "ats": "ashby",
+  "total": 80,
+  "japan": 3,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Fundamental",
+  "ats": "ashby",
+  "total": 20,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "UiPath",
+  "ats": "ashby",
+  "total": 105,
+  "japan": 5,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "BeReal.",
+  "ats": "ashby",
+  "total": 28,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "CrowdStrike",
+  "ats": "workday",
+  "total": 14,
+  "japan": 13,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Netskope",
+  "ats": "greenhouse",
+  "total": 149,
+  "japan": 6,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "SentinelOne",
+  "ats": "greenhouse",
+  "total": 270,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Legora",
+  "ats": "ashby",
+  "total": 283,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Visa",
+  "ats": "workday",
+  "total": 29,
+  "japan": 24,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Fever",
+  "ats": "greenhouse",
+  "total": 565,
+  "japan": 10,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Chainalysis",
+  "ats": "ashby",
+  "total": 51,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Skydio",
+  "ats": "ashby",
+  "total": 153,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Applied Intuition",
+  "ats": "ashby",
+  "total": 320,
+  "japan": 21,
+  "entry": 3,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "ICEYE",
+  "ats": "ashby",
+  "total": 189,
+  "japan": 9,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Anduril",
+  "ats": "greenhouse",
+  "total": 2465,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Ping Identity",
+  "ats": "greenhouse",
+  "total": 51,
+  "japan": 0,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Cloudera",
+  "ats": "workday",
+  "total": 5,
+  "japan": 3,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Illumio",
+  "ats": "ashby",
+  "total": 63,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "DuckDuckGo",
+  "ats": "ashby",
+  "total": 10,
+  "japan": 2,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Workato",
+  "ats": "greenhouse",
+  "total": 74,
+  "japan": 5,
+  "entry": 2,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Diligent",
+  "ats": "greenhouse",
+  "total": 88,
+  "japan": 0,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Keeper Security",
+  "ats": "greenhouse",
+  "total": 94,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Gainsight",
+  "ats": "ashby",
+  "total": 16,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Wiz",
+  "ats": "greenhouse",
+  "total": 128,
+  "japan": 5,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "F5",
+  "ats": "workday",
+  "total": 10,
+  "japan": 10,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Rubrik",
+  "ats": "greenhouse",
+  "total": 132,
+  "japan": 3,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "X.ai",
+  "ats": "greenhouse",
+  "total": 307,
+  "japan": 3,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Cognition",
+  "ats": "ashby",
+  "total": 100,
+  "japan": 7,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "telnyx",
+  "ats": "greenhouse",
+  "total": 49,
+  "japan": 2,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "DataRobot",
+  "ats": "workday",
+  "total": 4,
+  "japan": 3,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Lazarus",
+  "ats": "greenhouse",
+  "total": 1,
+  "japan": 1,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Sprout.ai",
+  "ats": "ashby",
+  "total": 1,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Collectors",
+  "ats": "workday",
+  "total": 58,
+  "japan": 17,
+  "entry": 2,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Sierra",
+  "ats": "ashby",
+  "total": 197,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Polymer Capital",
+  "ats": "workable",
+  "total": 5,
+  "japan": 5,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Telexistence",
+  "ats": "lever",
+  "total": 46,
+  "japan": 46,
+  "entry": 2,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "MODE",
+  "ats": "ashby",
+  "total": 4,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "AI Robot Association (AIRoA)",
+  "ats": "workable",
+  "total": 46,
+  "japan": 46,
+  "entry": 7,
+  "english_ok": 0,
+  "visa": 1,
+  "error": ""
+ },
+ {
+  "company": "ZEALS",
+  "ats": "greenhouse",
+  "total": 1,
+  "japan": 1,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Alpaca",
+  "ats": "greenhouse",
+  "total": 77,
+  "japan": 4,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Rapyuta Robotics",
+  "ats": "workable",
+  "total": 38,
+  "japan": 31,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 2,
+  "error": ""
+ },
+ {
+  "company": "Omakase.ai",
+  "ats": "greenhouse",
+  "total": 1,
+  "japan": 0,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Ultra Tendency",
+  "ats": "greenhouse",
+  "total": 25,
+  "japan": 5,
+  "entry": 0,
+  "english_ok": 0,
+  "visa": 2,
+  "error": ""
+ },
+ {
+  "company": "Microsoft",
+  "ats": "pcsx",
+  "total": 100,
+  "japan": 100,
+  "entry": 3,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ },
+ {
+  "company": "Google",
+  "ats": "google",
+  "total": 81,
+  "japan": 81,
+  "entry": 1,
+  "english_ok": 0,
+  "visa": 0,
+  "error": ""
+ }
+]

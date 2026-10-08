@@ -7,3 +7,5 @@ data/raw/
 data/archive/
 # your resume, tailored copies and drafts; this repo is public
 private/
+# macOS folder metadata
+.DS_Store

@@ -58,7 +58,7 @@ from fetch_jobs import INDIA, entry_level_business
 PORT = int(os.environ.get("PT_PORT", "8765"))
 HOSTS = {f"127.0.0.1:{PORT}", f"localhost:{PORT}"}
 ORIGINS = {f"http://{h}" for h in HOSTS}
-HIDDEN = ("/private", "/.git", "/.venv", "/data/archive", "/data/raw")
+HIDDEN = ("/private", "/japan/private", "/madhura", "/.git", "/.venv", "/data/archive", "/data/raw")
 PY = str(paths.ROOT / ".venv" / "bin" / "python")
 LABEL_DAILY = "com.pttracker.daily"
 
