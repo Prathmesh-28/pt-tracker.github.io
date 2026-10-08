@@ -328,6 +328,20 @@
   "title": "Senior Enterprise Sales Manager (Digital Native)",
   "url": "https://jobs.ashbyhq.com/bureau/29161db4-2de1-46b7-a5c1-5b88db199f1c"
  },
+ "ashby:bureau:2b7f3dda-fba7-499c-934d-b0fdfb21fe08": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "bureau",
+  "first_seen": "2026-10-08",
+  "last_seen": "2026-10-08",
+  "location": "Bangalore",
+  "min_years": 1,
+  "posted": "2026-10-08",
+  "reposted": false,
+  "title": "Data Scientist",
+  "url": "https://jobs.ashbyhq.com/bureau/2b7f3dda-fba7-499c-934d-b0fdfb21fe08"
+ },
  "ashby:bureau:2cca944e-22a6-42b2-b25f-7787f002a86a": {
   "age_days": 58,
   "closed": false,
@@ -341,6 +355,20 @@
   "reposted": false,
   "title": "Manager - Technical Support",
   "url": "https://jobs.ashbyhq.com/bureau/2cca944e-22a6-42b2-b25f-7787f002a86a"
+ },
+ "ashby:bureau:3e012479-5e01-44a1-a4ab-5558127f7964": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "bureau",
+  "first_seen": "2026-10-08",
+  "last_seen": "2026-10-08",
+  "location": "Bangalore",
+  "min_years": 0,
+  "posted": "2026-10-08",
+  "reposted": false,
+  "title": "Product Analyst Intern",
+  "url": "https://jobs.ashbyhq.com/bureau/3e012479-5e01-44a1-a4ab-5558127f7964"
  },
  "ashby:bureau:51277b78-eb75-467f-b758-88828f9a7a03": {
   "age_days": 56,
@@ -3353,8 +3381,8 @@
  },
  "greenhouse:druva:8622899002": {
   "age_days": 85,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-08",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-08",
@@ -3871,8 +3899,8 @@
  },
  "greenhouse:druva:8857583002": {
   "age_days": 0,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-08",
   "company": "druva",
   "first_seen": "2026-10-08",
   "last_seen": "2026-10-08",
@@ -80391,6 +80419,34 @@
   "title": "Graphic Designer - Assistant Manager - Paytm Ads",
   "url": "https://jobs.lever.co/paytm/218ad602-32d8-45da-ae61-dc4a65fa6f5f"
  },
+ "lever:paytm:2294c39e-0394-472b-8ba0-736857fa24a8": {
+  "age_days": 444,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-08",
+  "last_seen": "2026-10-08",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": null,
+  "posted": "2025-07-21",
+  "reposted": false,
+  "title": "Product Management- Product Analyst- Telco",
+  "url": "https://jobs.lever.co/paytm/2294c39e-0394-472b-8ba0-736857fa24a8"
+ },
+ "lever:paytm:23070e12-22b3-4b77-b24b-0ecb64b9c5b0": {
+  "age_days": 30,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-08",
+  "last_seen": "2026-10-08",
+  "location": "Ludhiana, Punjab",
+  "min_years": 5,
+  "posted": "2026-09-08",
+  "reposted": false,
+  "title": "Collection Manager - Ludhiana - Lending Collections",
+  "url": "https://jobs.lever.co/paytm/23070e12-22b3-4b77-b24b-0ecb64b9c5b0"
+ },
  "lever:paytm:23534d2b-3e2e-4759-b498-0bb15b2fb995": {
   "age_days": 443,
   "closed": false,
@@ -81007,6 +81063,20 @@
   "title": "Growth Management- User Growth I Exp- 10-12 Years",
   "url": "https://jobs.lever.co/paytm/43dba495-81ea-47a0-99f0-f8d99d7f09bd"
  },
+ "lever:paytm:43fd4d7b-9d83-48c5-ae6b-34e0f5f2a9e4": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-08",
+  "last_seen": "2026-10-08",
+  "location": "Sonipat, Haryana",
+  "min_years": 4,
+  "posted": "2026-10-08",
+  "reposted": false,
+  "title": "Collection Manager-  Business- Lending Collections",
+  "url": "https://jobs.lever.co/paytm/43fd4d7b-9d83-48c5-ae6b-34e0f5f2a9e4"
+ },
  "lever:paytm:44dc260c-5683-477c-a731-7b49995be503": {
   "age_days": 25,
   "closed": true,
@@ -81203,6 +81273,20 @@
   "title": "Visual Design Intern- Paytm",
   "url": "https://jobs.lever.co/paytm/4f0b8508-1fae-45ae-bc09-67291ea3c447"
  },
+ "lever:paytm:4ffffb7c-7034-4de4-bc87-35bbe9e41438": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-08",
+  "last_seen": "2026-10-08",
+  "location": "Mumbai, Maharashtra",
+  "min_years": 5,
+  "posted": "2026-10-08",
+  "reposted": false,
+  "title": "Finance Control & Governance Manager",
+  "url": "https://jobs.lever.co/paytm/4ffffb7c-7034-4de4-bc87-35bbe9e41438"
+ },
  "lever:paytm:51f3a9e9-1534-4bd6-8aff-52f134e18ae6": {
   "age_days": 86,
   "closed": false,
@@ -81258,6 +81342,20 @@
   "reposted": false,
   "title": "Govt. Ad Sales - Senior Manager/DGM - Paytm Ads - Mumbai",
   "url": "https://jobs.lever.co/paytm/535dbc67-3694-42df-9652-072981446f44"
+ },
+ "lever:paytm:536dfd25-8537-4e2c-854a-6ccbfd471983": {
+  "age_days": 63,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-08",
+  "last_seen": "2026-10-08",
+  "location": "Jaipur, Rajasthan",
+  "min_years": 5,
+  "posted": "2026-08-06",
+  "reposted": false,
+  "title": "Area Collection Manager-  Manager -Jaipur - Lending Collections",
+  "url": "https://jobs.lever.co/paytm/536dfd25-8537-4e2c-854a-6ccbfd471983"
  },
  "lever:paytm:53b29559-bfbc-4e37-a0ab-a4dd71f9547b": {
   "age_days": 24,
@@ -82238,6 +82336,20 @@
   "reposted": false,
   "title": "Collection Manager - Team Lead- Lending Collections",
   "url": "https://jobs.lever.co/paytm/8f80d61d-6730-43b2-b6e7-3923897093ad"
+ },
+ "lever:paytm:90880e44-06b6-4fd3-a651-9b4a2616e730": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-08",
+  "last_seen": "2026-10-08",
+  "location": "Bangalore, Karnataka",
+  "min_years": 10,
+  "posted": "2026-10-08",
+  "reposted": false,
+  "title": "Zonal Collection Manager- Bangalore - lending Collections",
+  "url": "https://jobs.lever.co/paytm/90880e44-06b6-4fd3-a651-9b4a2616e730"
  },
  "lever:paytm:91ef4dc2-8cd8-427a-84cd-c9308753a203": {
   "age_days": 30,
@@ -84218,8 +84330,8 @@
  },
  "lever:zeta:5eb7a75b-312c-4759-8813-70e67b5d4109": {
   "age_days": 78,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-08",
   "company": "zeta",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-08",
