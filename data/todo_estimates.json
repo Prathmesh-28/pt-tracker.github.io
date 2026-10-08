@@ -1,0 +1,1392 @@
+[
+ {
+  "company": "CRED",
+  "round": "Series H",
+  "amount_raw": "5,090Cr",
+  "date": "2026-06-22",
+  "founded": "2018",
+  "investors": [
+   "Meta"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "KreditBee",
+  "round": "Series E",
+  "amount_raw": "2,040Cr",
+  "date": "2026-04-08",
+  "founded": "2017",
+  "investors": [
+   "Motilal Oswal[+6]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "udaan",
+  "round": "Series H",
+  "amount_raw": "1,540Cr",
+  "date": "2026-07-14",
+  "founded": "2016",
+  "investors": [
+   "Lightspeed Venture Partner"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Iscon Balaji Foods",
+  "round": "Series A",
+  "amount_raw": "1,450Cr",
+  "date": "2026-05-19",
+  "founded": "2012",
+  "investors": [
+   "Advent International"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Rideriver",
+  "round": "Series C",
+  "amount_raw": "970Cr",
+  "date": "2026-08-05",
+  "founded": "2020",
+  "investors": [
+   "Elev8 Venture Partners[+13]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Slice",
+  "round": "Series D",
+  "amount_raw": "945Cr",
+  "date": "2026-09-03",
+  "founded": "2015",
+  "investors": [
+   "Kado Capital[+5]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Square Yards",
+  "round": "Series C",
+  "amount_raw": "901Cr",
+  "date": "2026-06-23",
+  "founded": "2014",
+  "investors": [
+   "Muzinich & Co[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Sarvam",
+  "round": "Series B",
+  "amount_raw": "715Cr",
+  "date": "2026-08-04",
+  "founded": "2023",
+  "investors": [
+   "Activate[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Scapia",
+  "round": "Series C",
+  "amount_raw": "610Cr",
+  "date": "2026-05-20",
+  "founded": "2022",
+  "investors": [
+   "General Catalyst[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Yulu",
+  "round": "Series C",
+  "amount_raw": "601Cr",
+  "date": "2026-08-11",
+  "founded": "2017",
+  "investors": [
+   "GEF Capital Partners"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "BUSINESSNEXT",
+  "round": "Series B",
+  "amount_raw": "386Cr",
+  "date": "2026-07-23",
+  "founded": "2001",
+  "investors": [
+   "ServiceNow"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "VERIQUS",
+  "round": "Series C",
+  "amount_raw": "386Cr",
+  "date": "2026-07-20",
+  "founded": "2026",
+  "investors": [
+   "Norwest[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Raghu Vamsi",
+  "round": "Series B",
+  "amount_raw": "385Cr",
+  "date": "2026-07-20",
+  "founded": "1992",
+  "investors": [
+   "Norwest[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Vetic",
+  "round": "Series D",
+  "amount_raw": "377Cr",
+  "date": "2026-06-18",
+  "founded": "2022",
+  "investors": [
+   "Bessemer Venture Partners[+3]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Neo Wealth and Asset Management",
+  "round": "Series C",
+  "amount_raw": "351Cr",
+  "date": "2026-07-16",
+  "founded": "2021",
+  "investors": [
+   "Peak XV Partners"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Yuma Energy",
+  "round": "Series A",
+  "amount_raw": "335Cr",
+  "date": "2026-09-01",
+  "founded": "2023",
+  "investors": [
+   "Magna"
+  ],
+  "parent": "Yulu"
+ },
+ {
+  "company": "Sapiom",
+  "round": "Series A",
+  "amount_raw": "333Cr",
+  "date": "2026-08-05",
+  "founded": "2026",
+  "investors": [
+   "DRAGONFLY[+10]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Solfin",
+  "round": "Series C",
+  "amount_raw": "281Cr",
+  "date": "2026-05-21",
+  "founded": "2022",
+  "investors": [],
+  "parent": ""
+ },
+ {
+  "company": "Centricity",
+  "round": "Series A",
+  "amount_raw": "257Cr",
+  "date": "2026-08-13",
+  "founded": "2022",
+  "investors": [
+   "SMBC Asia Rising Fund[+5]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Inrisk Labs",
+  "round": "Series A",
+  "amount_raw": "257Cr",
+  "date": "2026-08-05",
+  "founded": "2024",
+  "investors": [
+   "Bessemer Venture Partners[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Arboreal",
+  "round": "Series A",
+  "amount_raw": "232Cr",
+  "date": "2026-07-21",
+  "founded": "2018",
+  "investors": [
+   "Omnivore[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Swish",
+  "round": "Series B",
+  "amount_raw": "228Cr",
+  "date": "2026-09-10",
+  "founded": "2024",
+  "investors": [
+   "Bertelsmann India Investments[+3]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Idfy",
+  "round": "Series F",
+  "amount_raw": "217Cr",
+  "date": "2026-06-22",
+  "founded": "2011",
+  "investors": [],
+  "parent": ""
+ },
+ {
+  "company": "Nava",
+  "round": "Series A",
+  "amount_raw": "203Cr",
+  "date": "2026-04-09",
+  "founded": "2025",
+  "investors": [
+   "Greenoaks[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Raydean",
+  "round": "Series B",
+  "amount_raw": "200Cr",
+  "date": "2026-07-24",
+  "founded": "2008",
+  "investors": [],
+  "parent": ""
+ },
+ {
+  "company": "NeoGeo",
+  "round": "Series A",
+  "amount_raw": "193Cr",
+  "date": "2026-07-15",
+  "founded": "2019",
+  "investors": [
+   "Aavishkaar Capital[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "RapteeHV",
+  "round": "Series A",
+  "amount_raw": "192Cr",
+  "date": "2026-08-18",
+  "founded": "2019",
+  "investors": [],
+  "parent": ""
+ },
+ {
+  "company": "Varaha",
+  "round": "Series B",
+  "amount_raw": "191Cr",
+  "date": "2026-08-14",
+  "founded": "2022",
+  "investors": [
+   "WestBridge Capital[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Zettaone",
+  "round": "Series B",
+  "amount_raw": "190Cr",
+  "date": "2026-08-18",
+  "founded": "2007",
+  "investors": [
+   "Jubilant Ingrevia"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Scimplify",
+  "round": "Series B",
+  "amount_raw": "181Cr",
+  "date": "2026-07-17",
+  "founded": "2023",
+  "investors": [
+   "Hitachi Ventures[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Mokobara",
+  "round": "Series C",
+  "amount_raw": "170Cr",
+  "date": "2026-09-05",
+  "founded": "2019",
+  "investors": [
+   "Sauce[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "C2I Semiconductors",
+  "round": "Series A",
+  "amount_raw": "161Cr",
+  "date": "2026-05-27",
+  "founded": "2024",
+  "investors": [
+   "TDK Ventures[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Fairdeal.market",
+  "round": "Series A",
+  "amount_raw": "143Cr",
+  "date": "2026-05-26",
+  "founded": "2022",
+  "investors": [
+   "Bertelsmann India Investments[+12]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Mitigata",
+  "round": "Series B",
+  "amount_raw": "142Cr",
+  "date": "2026-06-23",
+  "founded": "2021",
+  "investors": [
+   "Bessemer Venture Partners[+3]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Quick Clean",
+  "round": "Series B",
+  "amount_raw": "135Cr",
+  "date": "2026-07-16",
+  "founded": "2010",
+  "investors": [
+   "Stakeboat Capital[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "StrainX Biotech",
+  "round": "Series B",
+  "amount_raw": "125Cr",
+  "date": "2026-05-25",
+  "founded": "2023",
+  "investors": [
+   "Prime Venture Partners[+6]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "HomeRun",
+  "round": "Series A",
+  "amount_raw": "116Cr",
+  "date": "2026-07-25",
+  "founded": "2025",
+  "investors": [
+   "Nexus Venture Partners[+5]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Vasuki India",
+  "round": "Series A",
+  "amount_raw": "100Cr",
+  "date": "2026-08-06",
+  "founded": "2021",
+  "investors": [],
+  "parent": ""
+ },
+ {
+  "company": "Ekkaa",
+  "round": "Series A",
+  "amount_raw": "99.9Cr",
+  "date": "2026-07-20",
+  "founded": "2018",
+  "investors": [
+   "Abakkus Asset Manager"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "OFF BEAT",
+  "round": "Seed",
+  "amount_raw": "99.9Cr",
+  "date": "2026-04-07",
+  "founded": "2026",
+  "investors": [
+   "Bessemer Venture Partners"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Ringg AI",
+  "round": "Series A",
+  "amount_raw": "96.3Cr",
+  "date": "2026-07-22",
+  "founded": "2023",
+  "investors": [
+   "Peak XV Partners[+3]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Cyient Semiconductors",
+  "round": "Series A",
+  "amount_raw": "95.9Cr",
+  "date": "2026-05-25",
+  "founded": "2025",
+  "investors": [
+   "EAAA Alternatives"
+  ],
+  "parent": "Cyient"
+ },
+ {
+  "company": "Battery Smart",
+  "round": "Series B",
+  "amount_raw": "95.8Cr",
+  "date": "2026-06-24",
+  "founded": "2019",
+  "investors": [
+   "Rising Tide Fund[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Groyyo",
+  "round": "Series B",
+  "amount_raw": "90.8Cr",
+  "date": "2026-07-16",
+  "founded": "2021",
+  "investors": [
+   "Cornerstone Ventures"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Mitti Labs",
+  "round": "Series A",
+  "amount_raw": "90.3Cr",
+  "date": "2026-08-05",
+  "founded": "2023",
+  "investors": [
+   "Aramco Ventures[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Centre for Sight",
+  "round": "Series B",
+  "amount_raw": "90.2Cr",
+  "date": "2026-05-19",
+  "founded": "1996",
+  "investors": [
+   "Carillon Group[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Lifelong Online",
+  "round": "Series B",
+  "amount_raw": "77.8Cr",
+  "date": "2026-06-24",
+  "founded": "2015",
+  "investors": [
+   "Celeres Investments[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "SwitchOn",
+  "round": "Series A",
+  "amount_raw": "77.3Cr",
+  "date": "2026-07-16",
+  "founded": "2017",
+  "investors": [
+   "IvyCap Ventures[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "TIEA",
+  "round": "Series A",
+  "amount_raw": "77.1Cr",
+  "date": "2026-05-27",
+  "founded": "2020",
+  "investors": [
+   "IvyCap Ventures[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "E3 Electric",
+  "round": "Series A",
+  "amount_raw": "75.2Cr",
+  "date": "2026-07-15",
+  "founded": "2024",
+  "investors": [
+   "BluVenture Holdings"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Super Living",
+  "round": "Series A",
+  "amount_raw": "66Cr",
+  "date": "2026-06-25",
+  "founded": "2025",
+  "investors": [
+   "Lightspeed Venture Partners[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Blue Tokai Coffee Roasters",
+  "round": "Series C",
+  "amount_raw": "65Cr",
+  "date": "2026-06-23",
+  "founded": "2013",
+  "investors": [
+   "Bhoruka Supply Chain Solutions Holdings[+5]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Vaaree",
+  "round": "Series A",
+  "amount_raw": "65Cr",
+  "date": "2026-08-04",
+  "founded": "2022",
+  "investors": [
+   "Cap Alpha Ventures[+8]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "30 Sundays",
+  "round": "Series A",
+  "amount_raw": "64.6Cr",
+  "date": "2026-05-27",
+  "founded": "2022",
+  "investors": [
+   "Bessemer Venture Partners[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Zouk",
+  "round": "Series B",
+  "amount_raw": "60.6Cr",
+  "date": "2026-05-19",
+  "founded": "2016",
+  "investors": [
+   "Stellaris Venture Partners[+3]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Astranova",
+  "round": "Series A",
+  "amount_raw": "59.9Cr",
+  "date": "2026-04-09",
+  "founded": "2023",
+  "investors": [
+   "IvyCap Ventures[+3]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Karo Sambhav",
+  "round": "Seed",
+  "amount_raw": "56.6Cr",
+  "date": "2026-06-18",
+  "founded": "2017",
+  "investors": [
+   "Rainmatter"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Unico Housing Finance",
+  "round": "Series B",
+  "amount_raw": "55Cr",
+  "date": "2026-08-13",
+  "founded": "2023",
+  "investors": [
+   "Anicut Capital[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "ANSCER",
+  "round": "Series A",
+  "amount_raw": "52.3Cr",
+  "date": "2026-05-20",
+  "founded": "2020",
+  "investors": [
+   "Indian Angel Network[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Lissun",
+  "round": "Series A",
+  "amount_raw": "48.1Cr",
+  "date": "2026-08-18",
+  "founded": "2021",
+  "investors": [
+   "Colossa Ventures[+8]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Deployment",
+  "round": "Seed",
+  "amount_raw": "47.6Cr",
+  "date": "2026-08-10",
+  "founded": "",
+  "investors": [
+   "Cars24"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Ultrahuman",
+  "round": "Venture Debt",
+  "amount_raw": "47.2Cr",
+  "date": "2026-09-03",
+  "founded": "2019",
+  "investors": [
+   "Alteria Capital"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "GoSats",
+  "round": "Series A",
+  "amount_raw": "46.5Cr",
+  "date": "2026-04-06",
+  "founded": "2019",
+  "investors": [
+   "Konvoy Ventures[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Incuspaze",
+  "round": "Series A",
+  "amount_raw": "45.1Cr",
+  "date": "2026-05-25",
+  "founded": "2016",
+  "investors": [
+   "Pantomath Group"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Gabit",
+  "round": "Angel",
+  "amount_raw": "36.3Cr",
+  "date": "2026-05-22",
+  "founded": "2022",
+  "investors": [
+   "Deepak Gupta[+3]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Superleap",
+  "round": "Seed",
+  "amount_raw": "36Cr",
+  "date": "2026-08-04",
+  "founded": "2024",
+  "investors": [
+   "Peak XV Partners"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Benne",
+  "round": "Seed",
+  "amount_raw": "35.3Cr",
+  "date": "2026-08-07",
+  "founded": "2024",
+  "investors": [
+   "Claypond Capital[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Scripbox",
+  "round": "Series D",
+  "amount_raw": "34.8Cr",
+  "date": "2026-07-15",
+  "founded": "2012",
+  "investors": [
+   "Tria Asteria Ventures[+23]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "shatterdome",
+  "round": "Seed",
+  "amount_raw": "33.9Cr",
+  "date": "2026-05-21",
+  "founded": "2025",
+  "investors": [
+   "Transpose Platform[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "AlienKind",
+  "round": "Seed",
+  "amount_raw": "30.3Cr",
+  "date": "2026-06-24",
+  "founded": "2024",
+  "investors": [
+   "Redbrook[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Open Secret",
+  "round": "Series C",
+  "amount_raw": "30.1Cr",
+  "date": "2026-07-15",
+  "founded": "2019",
+  "investors": [
+   "Desai Brothers"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Kily",
+  "round": "Seed",
+  "amount_raw": "30Cr",
+  "date": "2026-07-27",
+  "founded": "2025",
+  "investors": [
+   "Sorin[+3]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Wiffy",
+  "round": "Series A",
+  "amount_raw": "29.1Cr",
+  "date": "2026-05-21",
+  "founded": "2019",
+  "investors": [
+   "Earthfund[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Scrubsy",
+  "round": "Seed",
+  "amount_raw": "27Cr",
+  "date": "2026-08-13",
+  "founded": "2025",
+  "investors": [
+   "V3 Ventures"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Newton School",
+  "round": "Series B",
+  "amount_raw": "26.4Cr",
+  "date": "2026-04-08",
+  "founded": "",
+  "investors": [
+   "Alteria Capital[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "PlayBlue",
+  "round": "Seed",
+  "amount_raw": "25.5Cr",
+  "date": "2026-06-20",
+  "founded": "2025",
+  "investors": [
+   "Centre Court Capital.[+7]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Hulp",
+  "round": "Seed",
+  "amount_raw": "24.7Cr",
+  "date": "2026-08-05",
+  "founded": "2025",
+  "investors": [
+   "Sparrow Capital[+10]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Alteon",
+  "round": "Seed",
+  "amount_raw": "24Cr",
+  "date": "2026-09-01",
+  "founded": "2023",
+  "investors": [
+   "Together[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "MeduLance",
+  "round": "Series A",
+  "amount_raw": "24Cr",
+  "date": "2026-09-04",
+  "founded": "2017",
+  "investors": [
+   "Auxano[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Ecoil",
+  "round": "Series A",
+  "amount_raw": "23.2Cr",
+  "date": "2026-04-07",
+  "founded": "2018",
+  "investors": [
+   "Fundalogical Ventures[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Consint",
+  "round": "Series A",
+  "amount_raw": "22Cr",
+  "date": "2026-08-06",
+  "founded": "2020",
+  "investors": [
+   "BIG Global Investments JSC[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "SatLeo Labs",
+  "round": "Seed",
+  "amount_raw": "20.5Cr",
+  "date": "2026-04-06",
+  "founded": "2023",
+  "investors": [
+   "Unicorn India Ventures[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Typsy Beauty",
+  "round": "Seed",
+  "amount_raw": "20.3Cr",
+  "date": "2026-07-21",
+  "founded": "2021",
+  "investors": [
+   "Saama[+5]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Connect and Heal",
+  "round": "Series A",
+  "amount_raw": "20Cr",
+  "date": "2026-04-05",
+  "founded": "2016",
+  "investors": [
+   "Pangram Venture Partners Trust"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "uppercase",
+  "round": "Series B",
+  "amount_raw": "19.9Cr",
+  "date": "2026-04-03",
+  "founded": "2021",
+  "investors": [
+   "Accel[+1]"
+  ],
+  "parent": "Acefour Accessories"
+ },
+ {
+  "company": "Kalki",
+  "round": "Seed",
+  "amount_raw": "19.1Cr",
+  "date": "2026-07-16",
+  "founded": "2026",
+  "investors": [
+   "Crane Venture Partners"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "IKIN Global",
+  "round": "Seed",
+  "amount_raw": "19Cr",
+  "date": "2026-06-24",
+  "founded": "2022",
+  "investors": [
+   "Unicorn India Ventures[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Finnovate",
+  "round": "Seed",
+  "amount_raw": "18.9Cr",
+  "date": "2026-06-26",
+  "founded": "2007",
+  "investors": [
+   "Ramakant Deshpande"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "H2LooP",
+  "round": "Seed",
+  "amount_raw": "18.6Cr",
+  "date": "2026-04-07",
+  "founded": "2024",
+  "investors": [
+   "Speciale Invest[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Helium Air",
+  "round": "Seed",
+  "amount_raw": "18.6Cr",
+  "date": "2026-04-07",
+  "founded": "2025",
+  "investors": [
+   "India Quotient"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Mandrake Bio",
+  "round": "Seed",
+  "amount_raw": "18.3Cr",
+  "date": "2026-05-22",
+  "founded": "2025",
+  "investors": [
+   "Antler[+7]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Science4Beauty",
+  "round": "Seed",
+  "amount_raw": "17.5Cr",
+  "date": "2026-09-03",
+  "founded": "",
+  "investors": [
+   "4growth VC[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "iKure",
+  "round": "Seed",
+  "amount_raw": "17.1Cr",
+  "date": "2026-09-10",
+  "founded": "2010",
+  "investors": [
+   "Worlddiabetesfoundation[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Ayati Devices",
+  "round": "Seed",
+  "amount_raw": "15Cr",
+  "date": "2026-08-11",
+  "founded": "2019",
+  "investors": [
+   "Inflexor"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "FlexPrice.io",
+  "round": "Seed",
+  "amount_raw": "14.3Cr",
+  "date": "2026-05-26",
+  "founded": "2024",
+  "investors": [
+   "Shastra[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Nyai",
+  "round": "Seed",
+  "amount_raw": "14.3Cr",
+  "date": "2026-08-04",
+  "founded": "2025",
+  "investors": [],
+  "parent": ""
+ },
+ {
+  "company": "Khare Classes",
+  "round": "Seed",
+  "amount_raw": "12.3Cr",
+  "date": "2026-08-13",
+  "founded": "2022",
+  "investors": [
+   "India Quotient[+4]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "ONO",
+  "round": "Seed",
+  "amount_raw": "11.6Cr",
+  "date": "2026-05-19",
+  "founded": "2021",
+  "investors": [
+   "Aeravti Ventures[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Vingo",
+  "round": "Seed",
+  "amount_raw": "11.4Cr",
+  "date": "2026-08-05",
+  "founded": "2026",
+  "investors": [
+   "India Quotient[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "MAKR",
+  "round": "Seed",
+  "amount_raw": "10.4Cr",
+  "date": "2026-09-03",
+  "founded": "2024",
+  "investors": [
+   "Bluehill VC[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Prithu",
+  "round": "Seed",
+  "amount_raw": "9.83Cr",
+  "date": "2026-04-07",
+  "founded": "2024",
+  "investors": [
+   "Transition VC"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Lifecyte",
+  "round": "Seed",
+  "amount_raw": "9.54Cr",
+  "date": "2026-08-12",
+  "founded": "2024",
+  "investors": [],
+  "parent": ""
+ },
+ {
+  "company": "TIST Media",
+  "round": "Seed",
+  "amount_raw": "8.53Cr",
+  "date": "2026-05-21",
+  "founded": "2016",
+  "investors": [
+   "Sthira Partners"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "eBik",
+  "round": "Seed",
+  "amount_raw": "7.51Cr",
+  "date": "2026-07-27",
+  "founded": "2017",
+  "investors": [
+   "Next Bharat Ventures"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "ProactAI",
+  "round": "Seed",
+  "amount_raw": "7.48Cr",
+  "date": "2026-06-18",
+  "founded": "2024",
+  "investors": [
+   "Ixigo"
+  ],
+  "parent": "Proact"
+ },
+ {
+  "company": "Vecton",
+  "round": "Seed",
+  "amount_raw": "6.82Cr",
+  "date": "2026-08-11",
+  "founded": "2025",
+  "investors": [
+   "Zeropearl"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Zoppler Systems",
+  "round": "Seed",
+  "amount_raw": "6.5Cr",
+  "date": "2026-08-04",
+  "founded": "2025",
+  "investors": [
+   "Finvolve[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Rumik",
+  "round": "Seed",
+  "amount_raw": "5.98Cr",
+  "date": "2026-06-25",
+  "founded": "2024",
+  "investors": [
+   "Info Edge Ventures[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Koparo",
+  "round": "Seed",
+  "amount_raw": "5.38Cr",
+  "date": "2026-07-20",
+  "founded": "2021",
+  "investors": [
+   "P4 Capital[+8]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "FreightFox",
+  "round": "Seed",
+  "amount_raw": "5Cr",
+  "date": "2026-08-11",
+  "founded": "2020",
+  "investors": [
+   "HighLeaf[+3]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Skill MetaVerse",
+  "round": "Seed",
+  "amount_raw": "$560K",
+  "date": "2026-04-03",
+  "founded": "2025",
+  "investors": [
+   "Innopark Ventures"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Oppex",
+  "round": "Seed",
+  "amount_raw": "4.75Cr",
+  "date": "2026-09-01",
+  "founded": "2025",
+  "investors": [
+   "Info Edge Ventures"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "AMIGO",
+  "round": "Seed",
+  "amount_raw": "4.5Cr",
+  "date": "2026-08-06",
+  "founded": "2021",
+  "investors": [
+   "Foxhog.vc"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Monk CI",
+  "round": "Seed",
+  "amount_raw": "4.26Cr",
+  "date": "2026-06-23",
+  "founded": "2025",
+  "investors": [
+   "Campus Fund[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Creedom",
+  "round": "Seed",
+  "amount_raw": "4.08Cr",
+  "date": "2026-09-02",
+  "founded": "2024",
+  "investors": [
+   "Raghunandan G[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Invisel",
+  "round": "Seed",
+  "amount_raw": "4Cr",
+  "date": "2026-08-13",
+  "founded": "2024",
+  "investors": [
+   "Indian Angel Network[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "72 Street",
+  "round": "Angel",
+  "amount_raw": "3.99Cr",
+  "date": "2026-09-01",
+  "founded": "2025",
+  "investors": [],
+  "parent": ""
+ },
+ {
+  "company": "Metafy",
+  "round": "Seed",
+  "amount_raw": "3.88Cr",
+  "date": "2026-05-21",
+  "founded": "2025",
+  "investors": [
+   "Lumikai[+3]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Vegrow",
+  "round": "Series C",
+  "amount_raw": "1.2Cr",
+  "date": "2026-04-07",
+  "founded": "2020",
+  "investors": [
+   "VentureSoul[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "ChefKart",
+  "round": "Series A",
+  "amount_raw": "1.07Cr",
+  "date": "2026-06-24",
+  "founded": "2020",
+  "investors": [
+   "Pravega Ventures[+1]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Reagvis",
+  "round": "Seed",
+  "amount_raw": "25L",
+  "date": "2026-09-07",
+  "founded": "2025",
+  "investors": [
+   "Runway Incubator"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Big Tree Entertainment",
+  "round": "Series D",
+  "amount_raw": "undisclosed",
+  "date": "2026-08-19",
+  "founded": "1999",
+  "investors": [
+   "KKR"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Eubrics",
+  "round": "Seed",
+  "amount_raw": "undisclosed",
+  "date": "2026-09-09",
+  "founded": "2021",
+  "investors": [
+   "Superset"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Lithium Urban Technologies",
+  "round": "Series B",
+  "amount_raw": "undisclosed",
+  "date": "2026-06-25",
+  "founded": "2015",
+  "investors": [
+   "JSW Group"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "LogiXair",
+  "round": "Seed",
+  "amount_raw": "undisclosed",
+  "date": "2026-08-10",
+  "founded": "2021",
+  "investors": [
+   "TCA[+2]"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Rungta Greentech",
+  "round": "Seed",
+  "amount_raw": "undisclosed",
+  "date": "2026-09-09",
+  "founded": "2005",
+  "investors": [
+   "360 One"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "SaffronStays",
+  "round": "Series A",
+  "amount_raw": "undisclosed",
+  "date": "2026-06-24",
+  "founded": "2014",
+  "investors": [
+   "Infinity Ventures"
+  ],
+  "parent": ""
+ },
+ {
+  "company": "Surat T Shirt",
+  "round": "Seed",
+  "amount_raw": "undisclosed",
+  "date": "2026-09-05",
+  "founded": "2026",
+  "investors": [],
+  "parent": ""
+ }
+]
