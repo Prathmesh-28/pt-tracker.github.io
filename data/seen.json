@@ -3395,8 +3395,8 @@
  },
  "greenhouse:druva:8624875002": {
   "age_days": 87,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-09",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-09",
@@ -6572,6 +6572,20 @@
   "reposted": false,
   "title": "Sales Development Representative (French Speaking)",
   "url": "https://job-boards.greenhouse.io/zenoti/jobs/7806566003"
+ },
+ "greenhouse:zenoti:7806709003": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zenoti",
+  "first_seen": "2026-10-09",
+  "last_seen": "2026-10-09",
+  "location": "Hyderabad, Telangana, India",
+  "min_years": 8,
+  "posted": "2026-10-09",
+  "reposted": false,
+  "title": "Lead Product Manager(SaaS + AI)",
+  "url": "https://job-boards.greenhouse.io/zenoti/jobs/7806709003"
  },
  "greenhouse:zenoti:7806710003": {
   "age_days": 84,
