@@ -4054,8 +4054,8 @@
  },
  "greenhouse:groww:4971575101": {
   "age_days": 0,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-09",
   "company": "groww",
   "first_seen": "2026-10-09",
   "last_seen": "2026-10-09",
@@ -4627,6 +4627,20 @@
   "reposted": false,
   "title": "Associate Sales Enablement Specialist",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4740318005"
+ },
+ "greenhouse:netradyne:4742329005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-10-09",
+  "last_seen": "2026-10-09",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 1,
+  "posted": "2026-10-09",
+  "reposted": false,
+  "title": "Manager Revenue Operations",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4742329005"
  },
  "greenhouse:porter:4397947009": {
   "age_days": 30,
@@ -6365,8 +6379,8 @@
  },
  "greenhouse:zenoti:7739178003": {
   "age_days": 122,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-09",
   "company": "zenoti",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-09",
@@ -6950,6 +6964,34 @@
   "reposted": false,
   "title": "System Administrator - IT",
   "url": "https://job-boards.greenhouse.io/zenoti/jobs/8004584003"
+ },
+ "greenhouse:zenoti:8004591003": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zenoti",
+  "first_seen": "2026-10-09",
+  "last_seen": "2026-10-09",
+  "location": "Hyderabad, Telangana, India",
+  "min_years": 4,
+  "posted": "2026-10-09",
+  "reposted": false,
+  "title": "Lead Site Reliability Engineer  -   Platform Engineering / SRE\u00a0 ",
+  "url": "https://job-boards.greenhouse.io/zenoti/jobs/8004591003"
+ },
+ "greenhouse:zenoti:8004593003": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zenoti",
+  "first_seen": "2026-10-09",
+  "last_seen": "2026-10-09",
+  "location": "Hyderabad, Telangana, India",
+  "min_years": 8,
+  "posted": "2026-10-09",
+  "reposted": false,
+  "title": "Lead Reliability Engineer - Network and Security",
+  "url": "https://job-boards.greenhouse.io/zenoti/jobs/8004593003"
  },
  "indeed:100ms:in-c6b6d97e3a4262df": {
   "age_days": 17,
@@ -83123,8 +83165,8 @@
  },
  "lever:meesho:f8bdf9a3-74a5-441d-b0b3-9eac7b9836ad": {
   "age_days": 8,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-09",
   "company": "meesho",
   "first_seen": "2026-10-05",
   "last_seen": "2026-10-09",
@@ -84607,8 +84649,8 @@
  },
  "lever:paytm:3ea5a52d-b38a-4e4a-ad74-b01e8e894f37": {
   "age_days": 88,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-09",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-09",
@@ -84817,8 +84859,8 @@
  },
  "lever:paytm:4a432a72-8763-465e-a107-721b6dd562b1": {
   "age_days": 22,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-09",
   "company": "paytm",
   "first_seen": "2026-09-29",
   "last_seen": "2026-10-09",
@@ -85489,8 +85531,8 @@
  },
  "lever:paytm:74c1f04f-1ecd-44aa-be32-6e627a0c7446": {
   "age_days": 140,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-09",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-09",
@@ -86424,6 +86466,20 @@
   "reposted": false,
   "title": "Product Management - Product Manager - Telco",
   "url": "https://jobs.lever.co/paytm/be484058-3628-4b82-9342-6d1864c2d4a0"
+ },
+ "lever:paytm:be6d5cf2-d4a5-4d1e-9e72-0ca85082d8d6": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-09",
+  "last_seen": "2026-10-09",
+  "location": "Mumbai, Maharashtra",
+  "min_years": null,
+  "posted": "2026-10-09",
+  "reposted": false,
+  "title": "Key Account Management - Assistant Manager - Nearbuy",
+  "url": "https://jobs.lever.co/paytm/be6d5cf2-d4a5-4d1e-9e72-0ca85082d8d6"
  },
  "lever:paytm:be8ab5e9-0d71-43d1-ba4f-435e88824c65": {
   "age_days": 26,

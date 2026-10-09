@@ -1,15 +1,7 @@
 {
   "generated": "2026-10-09",
   "grad_year": 2027,
-  "search": {
-    "searched_at": "2026-10-09T07:37:39+00:00",
-    "next_after": "2026-10-09T11:37:39+00:00",
-    "counts": {
-      "linkedin": 450,
-      "indeed": 450
-    },
-    "blocked": []
-  },
+  "search": {},
   "roles": [
     {
       "age_days": 0,
@@ -9318,32 +9310,6 @@
       "key": "linkedin:proctergamble:li-4463491248"
     },
     {
-      "age_days": 8,
-      "first_seen": "2026-10-05",
-      "reposted": false,
-      "title": "Associate - Operations",
-      "company": "Meesho",
-      "city": "Bengaluru",
-      "city_tier": "Tier 1",
-      "location": "Bangalore, Karnataka",
-      "pay": "",
-      "url": "https://jobs.lever.co/meesho/f8bdf9a3-74a5-441d-b0b3-9eac7b9836ad",
-      "posted": "2026-10-01",
-      "deadline": "",
-      "team": "Meesho Grocery - Category",
-      "family": "Operations",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "source": "board",
-      "apply_url": "",
-      "batch": "",
-      "batches": [],
-      "kind": "full-time",
-      "funded": null,
-      "key": "lever:meesho:f8bdf9a3-74a5-441d-b0b3-9eac7b9836ad"
-    },
-    {
       "age_days": 9,
       "first_seen": "2026-10-01",
       "reposted": false,
@@ -13030,32 +12996,6 @@
       "kind": "full-time",
       "funded": null,
       "key": "lever:meesho:d7924eb1-301e-4098-ab7b-f3a4c92c210a"
-    },
-    {
-      "age_days": 122,
-      "first_seen": "2026-09-10",
-      "reposted": true,
-      "title": "Implementation Consultant",
-      "company": "Zenoti",
-      "city": "Hyderabad",
-      "city_tier": "Tier 1",
-      "location": "Hyderabad, Telangana, India",
-      "pay": "",
-      "url": "https://job-boards.greenhouse.io/zenoti/jobs/7739178003",
-      "posted": "2026-06-09",
-      "deadline": "",
-      "team": "",
-      "family": "Consulting",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "greenhouse",
-      "source": "board",
-      "apply_url": "",
-      "batch": "",
-      "batches": [],
-      "kind": "full-time",
-      "funded": null,
-      "key": "greenhouse:zenoti:7739178003"
     },
     {
       "age_days": 128,
@@ -17845,32 +17785,6 @@
       "key": "lever:paytm:99417427-aa53-454d-a483-3b7d2aa20c0c"
     },
     {
-      "age_days": 22,
-      "first_seen": "2026-09-29",
-      "reposted": false,
-      "title": "Business Analyst - Assistant Manager - Lending",
-      "company": "Paytm",
-      "city": "Noida",
-      "city_tier": "Tier 1",
-      "location": "Noida, Uttar Pradesh",
-      "pay": "",
-      "url": "https://jobs.lever.co/paytm/4a432a72-8763-465e-a107-721b6dd562b1",
-      "posted": "2026-09-17",
-      "deadline": "",
-      "team": "Lending",
-      "family": "Business analyst",
-      "min_years": 2,
-      "tier": "walled",
-      "ats": "lever",
-      "source": "board",
-      "apply_url": "",
-      "batch": "",
-      "batches": [],
-      "kind": "full-time",
-      "funded": null,
-      "key": "lever:paytm:4a432a72-8763-465e-a107-721b6dd562b1"
-    },
-    {
       "age_days": 23,
       "first_seen": "2026-10-09",
       "reposted": false,
@@ -21069,16 +20983,16 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 282,
+  "closed_tracked": 288,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 1316,
+    "postings_scanned": 1314,
     "search_postings": 810,
     "postings_india": 1222,
-    "business_track": 730,
+    "business_track": 727,
     "open": 251,
-    "unstated": 261,
-    "walled": 218
+    "unstated": 259,
+    "walled": 217
   }
 }
