@@ -86357,8 +86357,8 @@
  },
  "lever:paytm:2360427b-4f04-497b-8040-43407412bec1": {
   "age_days": 27,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-10",
   "company": "paytm",
   "first_seen": "2026-09-14",
   "last_seen": "2026-10-10",
