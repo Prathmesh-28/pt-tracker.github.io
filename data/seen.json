@@ -86253,8 +86253,8 @@
  },
  "lever:fampay:71660518-13c5-48ee-826c-fa0963dfadfc": {
   "age_days": 207,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "fampay",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-12",
@@ -86376,6 +86376,20 @@
   "reposted": false,
   "title": "Tech Lead Manager - Product Engineering",
   "url": "https://jobs.lever.co/fampay/a069072e-dfe5-44e5-be3e-31e78b129906"
+ },
+ "lever:fampay:b11c81ce-fe5c-4eb6-a3e1-d268dd3ad926": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "fampay",
+  "first_seen": "2026-10-12",
+  "last_seen": "2026-10-12",
+  "location": "Bengaluru",
+  "min_years": 2,
+  "posted": "2026-10-12",
+  "reposted": false,
+  "title": "Product Manager",
+  "url": "https://jobs.lever.co/fampay/b11c81ce-fe5c-4eb6-a3e1-d268dd3ad926"
  },
  "lever:fampay:bbbbbfd2-1855-4991-82d5-84ef57607c24": {
   "age_days": 19,
@@ -87561,8 +87575,8 @@
  },
  "lever:meesho:cb7d016b-5071-409e-b8d8-a10e19b2946e": {
   "age_days": 500,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "meesho",
   "first_seen": "2026-09-23",
   "last_seen": "2026-10-12",
@@ -87659,8 +87673,8 @@
  },
  "lever:meesho:e1771bdd-0601-4af4-8f20-53553b4d3f10": {
   "age_days": 31,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "meesho",
   "first_seen": "2026-09-15",
   "last_seen": "2026-10-12",
@@ -89577,8 +89591,8 @@
  },
  "lever:paytm:51f3a9e9-1534-4bd6-8aff-52f134e18ae6": {
   "age_days": 90,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-12",
@@ -89969,8 +89983,8 @@
  },
  "lever:paytm:690d9a2b-03db-40bb-9568-2198749107f5": {
   "age_days": 98,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-12",
@@ -90277,8 +90291,8 @@
  },
  "lever:paytm:7f1de931-39c0-49cb-a57b-18a04827fe3b": {
   "age_days": 89,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-12",
@@ -90585,8 +90599,8 @@
  },
  "lever:paytm:8db4296d-0864-4d33-857a-41aa03759d24": {
   "age_days": 151,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-12",
@@ -91005,8 +91019,8 @@
  },
  "lever:paytm:b7538973-5914-4e7a-927d-3d46689ddd5a": {
   "age_days": 61,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-12",
@@ -91229,8 +91243,8 @@
  },
  "lever:paytm:c6dc7432-0a77-44db-aa77-83f4ffab1626": {
   "age_days": 81,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-12",
@@ -91761,8 +91775,8 @@
  },
  "lever:paytm:eaf9d5d9-87ae-4f27-a17d-1b70fe5f403d": {
   "age_days": 68,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-12",
@@ -92027,8 +92041,8 @@
  },
  "lever:paytm:fc452563-d171-4c0a-a4e6-01ecc4990039": {
   "age_days": 98,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-12",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-12",
@@ -92783,6 +92797,20 @@
   "reposted": false,
   "title": "Director - Strategy & Operations",
   "url": "https://jobs.lever.co/zeta/8b83fe6a-ec31-4532-9738-bb753d9d9ad7"
+ },
+ "lever:zeta:8bd120c7-51aa-4fc9-a50e-37d6e19f0935": {
+  "age_days": 151,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-10-12",
+  "last_seen": "2026-10-12",
+  "location": "Basking Ridge, New Jersey",
+  "min_years": null,
+  "posted": "2026-05-14",
+  "reposted": false,
+  "title": "Senior Data Reliability Engineer",
+  "url": "https://jobs.lever.co/zeta/8bd120c7-51aa-4fc9-a50e-37d6e19f0935"
  },
  "lever:zeta:aa98c726-9336-4d99-be08-20050eaf309c": {
   "age_days": 60,

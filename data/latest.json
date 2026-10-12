@@ -1,15 +1,7 @@
 {
   "generated": "2026-10-12",
   "grad_year": 2027,
-  "search": {
-    "searched_at": "2026-10-12T07:35:51+00:00",
-    "next_after": "2026-10-12T11:35:51+00:00",
-    "counts": {
-      "linkedin": 450,
-      "indeed": 450
-    },
-    "blocked": []
-  },
+  "search": {},
   "roles": [
     {
       "age_days": 0,
@@ -13238,6 +13230,32 @@
       "key": "linkedin:auroraenergyresearch:li-4477297097"
     },
     {
+      "age_days": 0,
+      "first_seen": "2026-10-12",
+      "reposted": false,
+      "title": "Product Manager",
+      "company": "FamPay",
+      "city": "Bengaluru",
+      "city_tier": "Tier 1",
+      "location": "Bengaluru",
+      "pay": "",
+      "url": "https://jobs.lever.co/fampay/b11c81ce-fe5c-4eb6-a3e1-d268dd3ad926",
+      "posted": "2026-10-12",
+      "deadline": "",
+      "team": "Product",
+      "family": "Product",
+      "min_years": 2,
+      "tier": "walled",
+      "ats": "lever",
+      "source": "board",
+      "apply_url": "",
+      "batch": "",
+      "batches": [],
+      "kind": "full-time",
+      "funded": null,
+      "key": "lever:fampay:b11c81ce-fe5c-4eb6-a3e1-d268dd3ad926"
+    },
+    {
       "age_days": 1,
       "first_seen": "2026-10-12",
       "reposted": false,
@@ -20691,16 +20709,16 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 293,
+  "closed_tracked": 304,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 1314,
+    "postings_scanned": 1305,
     "search_postings": 809,
-    "postings_india": 1223,
-    "business_track": 714,
+    "postings_india": 1216,
+    "business_track": 715,
     "open": 259,
     "unstated": 245,
-    "walled": 210
+    "walled": 211
   }
 }
