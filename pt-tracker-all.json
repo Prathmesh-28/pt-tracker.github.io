@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 620,
+    "open_roles_scraped": 619,
     "roles_open_to_freshers": 181,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 8692,
+    "postings_tracked_in_history": 8694,
     "benchmark_families": 0
   },
   "companies": [
@@ -16270,35 +16270,6 @@
       "kind": "full-time",
       "funded": null,
       "key": "lever:paytm:2294c39e-0394-472b-8ba0-736857fa24a8"
-    },
-    {
-      "age_days": 697,
-      "first_seen": "2026-10-13",
-      "reposted": false,
-      "title": "partnerships management - CRED Store",
-      "company": "CRED",
-      "city": "Bengaluru",
-      "city_tier": "Tier 1",
-      "location": "bengaluru",
-      "pay": "",
-      "url": "https://jobs.lever.co/cred/fd4bac8c-94ba-4549-bc10-41d942b0481c",
-      "posted": "2024-11-15",
-      "deadline": "",
-      "team": "partner management",
-      "family": "Business development",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "source": "board",
-      "apply_url": "",
-      "batch": "",
-      "batches": [],
-      "kind": "full-time",
-      "funded": {
-        "round": "Series H",
-        "date": "2026-06-22"
-      },
-      "key": "lever:cred:fd4bac8c-94ba-4549-bc10-41d942b0481c"
     },
     {
       "age_days": 854,

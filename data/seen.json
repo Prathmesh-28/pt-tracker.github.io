@@ -15,8 +15,8 @@
  },
  "ashby:atlan:20fe5046-b287-40f6-990f-842ad75526e5": {
   "age_days": 5,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-13",
   "company": "atlan",
   "first_seen": "2026-10-08",
   "last_seen": "2026-10-13",
@@ -87089,8 +87089,8 @@
  },
  "lever:cred:fd4bac8c-94ba-4549-bc10-41d942b0481c": {
   "age_days": 697,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-13",
   "company": "cred",
   "first_seen": "2026-10-13",
   "last_seen": "2026-10-13",
@@ -91115,6 +91115,20 @@
   "title": "KAM- Manager/ Senior Manager - Paytm Ads",
   "url": "https://jobs.lever.co/paytm/6701fe11-d9fc-4bbb-ba36-a851e53a2519"
  },
+ "lever:paytm:68383554-8eb6-4067-b801-fd474203289f": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-13",
+  "last_seen": "2026-10-13",
+  "location": "Mumbai, Maharashtra",
+  "min_years": 4,
+  "posted": "2026-10-13",
+  "reposted": false,
+  "title": "Regional HRBP",
+  "url": "https://jobs.lever.co/paytm/68383554-8eb6-4067-b801-fd474203289f"
+ },
  "lever:paytm:68813539-af3f-4a26-b61f-61b59d1abd6e": {
   "age_days": 284,
   "closed": false,
@@ -94029,6 +94043,20 @@
   "reposted": false,
   "title": "Specialist Total Rewards",
   "url": "https://jobs.lever.co/zeta/b099e4fe-87cf-44ad-89b6-21edfe60958b"
+ },
+ "lever:zeta:c92d46af-5d64-4152-bc75-c9844f1dccf7": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-10-13",
+  "last_seen": "2026-10-13",
+  "location": "Mumbai / Bangalore",
+  "min_years": null,
+  "posted": "2026-10-13",
+  "reposted": false,
+  "title": "Senior Associate Legal",
+  "url": "https://jobs.lever.co/zeta/c92d46af-5d64-4152-bc75-c9844f1dccf7"
  },
  "lever:zeta:cac1b9e2-b9fd-4450-8d20-16d3c4f37a10": {
   "age_days": 221,
