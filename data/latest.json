@@ -1,15 +1,7 @@
 {
   "generated": "2026-10-14",
   "grad_year": 2027,
-  "search": {
-    "searched_at": "2026-10-14T06:16:31+00:00",
-    "next_after": "2026-10-14T10:16:31+00:00",
-    "counts": {
-      "linkedin": 115,
-      "indeed": 450
-    },
-    "blocked": []
-  },
+  "search": {},
   "roles": [
     {
       "age_days": 0,
@@ -9664,32 +9656,6 @@
       "key": "lever:paytm:2294c39e-0394-472b-8ba0-736857fa24a8"
     },
     {
-      "age_days": 855,
-      "first_seen": "2026-10-01",
-      "reposted": false,
-      "title": "Manager- Program Strategy - Fulfilment & Experience",
-      "company": "Meesho",
-      "city": "Bengaluru",
-      "city_tier": "Tier 1",
-      "location": "Bangalore, Karnataka",
-      "pay": "",
-      "url": "https://jobs.lever.co/meesho/bff1bcf3-ae0e-4218-94e0-38c45f2a9177",
-      "posted": "2024-06-11",
-      "deadline": "",
-      "team": "Experience",
-      "family": "Strategy",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "source": "board",
-      "apply_url": "",
-      "batch": "",
-      "batches": [],
-      "kind": "full-time",
-      "funded": null,
-      "key": "lever:meesho:bff1bcf3-ae0e-4218-94e0-38c45f2a9177"
-    },
-    {
       "age_days": 954,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -12389,7 +12355,7 @@
       "age_days": 29,
       "first_seen": "2026-09-15",
       "reposted": false,
-      "title": "Growth Management- User Growth I Exp- 10-12 Years",
+      "title": "Growth Management- User Growth I Exp- 5-8 Years",
       "company": "Paytm",
       "city": "Noida",
       "city_tier": "Tier 1",
@@ -12400,7 +12366,7 @@
       "deadline": "",
       "team": "User Growth",
       "family": "Growth",
-      "min_years": 10,
+      "min_years": 5,
       "tier": "walled",
       "ats": "lever",
       "source": "board",
@@ -15142,16 +15108,16 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 311,
+  "closed_tracked": 315,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 1015,
+    "postings_scanned": 1020,
     "search_postings": 514,
-    "postings_india": 924,
-    "business_track": 502,
+    "postings_india": 928,
+    "business_track": 501,
     "open": 131,
-    "unstated": 242,
+    "unstated": 241,
     "walled": 129
   }
 }

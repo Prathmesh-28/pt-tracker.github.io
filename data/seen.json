@@ -41,6 +41,20 @@
   "title": "Senior Security Engineer - Corporate Security",
   "url": "https://jobs.ashbyhq.com/atlan/254c1250-953b-4323-8d18-9fe5e41d8d7d"
  },
+ "ashby:atlan:69d60d3b-8466-4abd-809b-0e37abcbf05f": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "atlan",
+  "first_seen": "2026-10-14",
+  "last_seen": "2026-10-14",
+  "location": "United States",
+  "min_years": 5,
+  "posted": "2026-10-14",
+  "reposted": false,
+  "title": "Senior Sales Engineer",
+  "url": "https://jobs.ashbyhq.com/atlan/69d60d3b-8466-4abd-809b-0e37abcbf05f"
+ },
  "ashby:atlan:8e3252f6-90fc-4ec5-abb7-6363df2df55a": {
   "age_days": 132,
   "closed": false,
@@ -3339,13 +3353,13 @@
  },
  "greenhouse:druva:8564138002": {
   "age_days": 71,
-  "closed": true,
-  "closed_on": "2026-10-02",
+  "closed": false,
+  "closed_on": "",
   "company": "druva",
   "first_seen": "2026-09-10",
-  "last_seen": "2026-10-01",
+  "last_seen": "2026-10-14",
   "location": "Pune, Maharashtra, India",
-  "min_years": 6,
+  "min_years": 5,
   "posted": "2026-08-04",
   "reposted": true,
   "title": "Senior Staff Software Engineer",
@@ -4390,6 +4404,20 @@
   "title": "Senior Business Process Manager",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4720458005"
  },
+ "greenhouse:netradyne:4720617005": {
+  "age_days": 72,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-10-14",
+  "last_seen": "2026-10-14",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 5,
+  "posted": "2026-08-03",
+  "reposted": true,
+  "title": "Associate Director - Program Management",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4720617005"
+ },
  "greenhouse:netradyne:4720619005": {
   "age_days": 63,
   "closed": true,
@@ -4683,6 +4711,20 @@
   "reposted": false,
   "title": "Manager Revenue Operations",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4742329005"
+ },
+ "greenhouse:netradyne:4743105005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-10-14",
+  "last_seen": "2026-10-14",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 6,
+  "posted": "2026-10-14",
+  "reposted": false,
+  "title": "Senior Staff Engineer - Backend & Data Engineering ",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4743105005"
  },
  "greenhouse:porter:4397947009": {
   "age_days": 35,
@@ -6155,11 +6197,11 @@
  },
  "greenhouse:zenoti:7490977003": {
   "age_days": 199,
-  "closed": true,
-  "closed_on": "2026-09-23",
+  "closed": false,
+  "closed_on": "",
   "company": "zenoti",
   "first_seen": "2026-09-10",
-  "last_seen": "2026-09-22",
+  "last_seen": "2026-10-14",
   "location": "Hyderabad, Telangana, India",
   "min_years": 5,
   "posted": "2026-03-29",
@@ -6231,7 +6273,7 @@
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-14",
   "location": "Hyderabad, Telangana, India",
-  "min_years": null,
+  "min_years": 5,
   "posted": "2026-06-10",
   "reposted": true,
   "title": "Senior Payments Specialist",
@@ -6796,6 +6838,20 @@
   "reposted": false,
   "title": "Data Operator",
   "url": "https://job-boards.greenhouse.io/zenoti/jobs/7959372003"
+ },
+ "greenhouse:zenoti:7971637003": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zenoti",
+  "first_seen": "2026-10-14",
+  "last_seen": "2026-10-14",
+  "location": "Hyderabad, Telangana, India",
+  "min_years": 4,
+  "posted": "2026-10-14",
+  "reposted": false,
+  "title": "Senior Product Specialist",
+  "url": "https://job-boards.greenhouse.io/zenoti/jobs/7971637003"
  },
  "greenhouse:zenoti:7977887003": {
   "age_days": 48,
@@ -89085,6 +89141,20 @@
   "untracked": true,
   "url": "https://jobs.lever.co/glide/fa60c24f-26d7-4820-92c4-f6afa2405515"
  },
+ "lever:meesho:0759d672-8d92-496a-a7c9-22bc2ec45d61": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-10-14",
+  "last_seen": "2026-10-14",
+  "location": "Jaipur, Rajasthan",
+  "min_years": null,
+  "posted": "2026-10-14",
+  "reposted": false,
+  "title": "Cluster Head -Last Mile - Rajasthan",
+  "url": "https://jobs.lever.co/meesho/0759d672-8d92-496a-a7c9-22bc2ec45d61"
+ },
  "lever:meesho:07d86780-64fb-4ecf-b1d1-9b4602b436de": {
   "age_days": 19,
   "closed": false,
@@ -89099,6 +89169,34 @@
   "title": "Deputy Manager - Revenue Intelligence and Governance",
   "url": "https://jobs.lever.co/meesho/07d86780-64fb-4ecf-b1d1-9b4602b436de"
  },
+ "lever:meesho:0a1226b1-1fff-4a4f-81a4-7e85087c8d08": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-10-14",
+  "last_seen": "2026-10-14",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-10-14",
+  "reposted": false,
+  "title": "Manager-  Fulfilment & Experience",
+  "url": "https://jobs.lever.co/meesho/0a1226b1-1fff-4a4f-81a4-7e85087c8d08"
+ },
+ "lever:meesho:102d5a7e-0292-4ddc-8ebc-ba191119349e": {
+  "age_days": 5,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-10-14",
+  "last_seen": "2026-10-14",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-10-09",
+  "reposted": false,
+  "title": "Senior Product Manager : F&E",
+  "url": "https://jobs.lever.co/meesho/102d5a7e-0292-4ddc-8ebc-ba191119349e"
+ },
  "lever:meesho:113ff930-b5bf-42c7-a07d-aa66a9de89d9": {
   "age_days": 23,
   "closed": false,
@@ -89112,6 +89210,20 @@
   "reposted": false,
   "title": "Project Manager- Warehouse Automation",
   "url": "https://jobs.lever.co/meesho/113ff930-b5bf-42c7-a07d-aa66a9de89d9"
+ },
+ "lever:meesho:1229feac-d439-4997-bbe3-4bbc15f5b3bc": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-10-14",
+  "last_seen": "2026-10-14",
+  "location": "Delhi, Delhi",
+  "min_years": null,
+  "posted": "2026-10-14",
+  "reposted": false,
+  "title": "Cluster Head- Last Mile",
+  "url": "https://jobs.lever.co/meesho/1229feac-d439-4997-bbe3-4bbc15f5b3bc"
  },
  "lever:meesho:122c2edd-ea44-41fd-a06f-ecc79588f6c6": {
   "age_days": 105,
@@ -89241,8 +89353,8 @@
  },
  "lever:meesho:2028b73c-2ae0-4fca-903e-481b8c500629": {
   "age_days": 16,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-14",
   "company": "meesho",
   "first_seen": "2026-09-28",
   "last_seen": "2026-10-14",
@@ -89829,8 +89941,8 @@
  },
  "lever:meesho:bff1bcf3-ae0e-4218-94e0-38c45f2a9177": {
   "age_days": 855,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-14",
   "company": "meesho",
   "first_seen": "2026-10-01",
   "last_seen": "2026-10-14",
@@ -90039,8 +90151,8 @@
  },
  "lever:meesho:e640ec64-9e6b-482a-b21e-82261334bcd0": {
   "age_days": 57,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-14",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-14",
@@ -90053,8 +90165,8 @@
  },
  "lever:meesho:f110ad65-8402-4e8d-83e9-0e6e59b4389c": {
   "age_days": 446,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-14",
   "company": "meesho",
   "first_seen": "2026-09-23",
   "last_seen": "2026-10-14",
@@ -90417,8 +90529,8 @@
  },
  "lever:mindtickle:dd65e840-9ff0-492f-879d-0e4dc65be2ad": {
   "age_days": 280,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-14",
   "company": "mindtickle",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-14",
@@ -90493,7 +90605,7 @@
   "first_seen": "2026-10-13",
   "last_seen": "2026-10-14",
   "location": "Remote, US",
-  "min_years": null,
+  "min_years": 3,
   "posted": "2025-06-19",
   "reposted": false,
   "title": "Professional Services Consultant",
@@ -91725,7 +91837,7 @@
   "first_seen": "2026-09-15",
   "last_seen": "2026-10-14",
   "location": "Noida, Uttar Pradesh",
-  "min_years": 10,
+  "min_years": 5,
   "posted": "2026-09-15",
   "reposted": false,
   "title": "Growth Management- User Growth I Exp- 10-12 Years",
@@ -92402,6 +92514,20 @@
   "reposted": false,
   "title": "Hotel Operations - Team Lead - Paytm Travel",
   "url": "https://jobs.lever.co/paytm/6aabe883-3771-4be4-90eb-734fd3336863"
+ },
+ "lever:paytm:6bfdc7fa-863c-4cba-8819-1846af25cecc": {
+  "age_days": 121,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-14",
+  "last_seen": "2026-10-14",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 3,
+  "posted": "2026-06-15",
+  "reposted": false,
+  "title": "Performance Marketing",
+  "url": "https://jobs.lever.co/paytm/6bfdc7fa-863c-4cba-8819-1846af25cecc"
  },
  "lever:paytm:6cee2f1c-6cae-4e46-9533-d62283f56734": {
   "age_days": 75,
@@ -95208,8 +95334,8 @@
  },
  "lever:zeta:8b83fe6a-ec31-4532-9738-bb753d9d9ad7": {
   "age_days": 27,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-14",
   "company": "zeta",
   "first_seen": "2026-09-17",
   "last_seen": "2026-10-14",
