@@ -3981,6 +3981,20 @@
   "title": "GTM Finance Manager",
   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8871456002/?gh_jid=8871456002"
  },
+ "greenhouse:druva:8871881002": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "druva",
+  "first_seen": "2026-10-15",
+  "last_seen": "2026-10-15",
+  "location": "New Jersey, US",
+  "min_years": 5,
+  "posted": "2026-10-15",
+  "reposted": false,
+  "title": "Regional Vice President, Alliances",
+  "url": "https://www.druva.com/why-druva/explore/careers/jobs/8871881002/?gh_jid=8871881002"
+ },
  "greenhouse:glide:4020741007": {
   "age_days": 1248,
   "closed": false,
@@ -93651,8 +93665,8 @@
  },
  "lever:meesho:b56573f0-c701-422a-abfa-ac8bbdbfa645": {
   "age_days": 64,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-15",
   "company": "meesho",
   "first_seen": "2026-10-05",
   "last_seen": "2026-10-15",
@@ -96113,6 +96127,20 @@
   "title": "Growth Manager - Postpaid",
   "url": "https://jobs.lever.co/paytm/5f453bde-148d-4098-996e-25bb73fdbaa5"
  },
+ "lever:paytm:5fbe9908-da47-4e83-a91a-b38c16a25d9e": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-15",
+  "last_seen": "2026-10-15",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 6,
+  "posted": "2026-10-15",
+  "reposted": false,
+  "title": "PPSL - Growth Management - GM/AVP",
+  "url": "https://jobs.lever.co/paytm/5fbe9908-da47-4e83-a91a-b38c16a25d9e"
+ },
  "lever:paytm:60e0c08c-a1b4-4d12-b0b4-2d9ed94ff79c": {
   "age_days": 98,
   "closed": false,
@@ -97344,6 +97372,20 @@
   "reposted": false,
   "title": "Growth Management - Senior Manager - User Growth",
   "url": "https://jobs.lever.co/paytm/b9933ff7-4d2e-41d7-bd1f-98970f1488b5"
+ },
+ "lever:paytm:bbeb1e2f-0bd0-4007-b141-a5ce3265898e": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-15",
+  "last_seen": "2026-10-15",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 6,
+  "posted": "2026-10-15",
+  "reposted": false,
+  "title": "PPSL - Growth Management - DGM/GM - P4B",
+  "url": "https://jobs.lever.co/paytm/bbeb1e2f-0bd0-4007-b141-a5ce3265898e"
  },
  "lever:paytm:bc89569c-2551-436d-947d-a80da48167c6": {
   "age_days": 30,
@@ -99058,8 +99100,8 @@
  },
  "lever:zeta:8623c195-f912-4d87-952f-7114cd258413": {
   "age_days": 27,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-15",
   "company": "zeta",
   "first_seen": "2026-09-18",
   "last_seen": "2026-10-15",
@@ -99226,8 +99268,8 @@
  },
  "lever:zeta:dbefd5b1-cc6a-4fe6-86d8-89800acee903": {
   "age_days": 27,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-15",
   "company": "zeta",
   "first_seen": "2026-09-18",
   "last_seen": "2026-10-15",
