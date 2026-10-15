@@ -130,6 +130,15 @@ and roles that say you must already live in Japan are hidden by default.
 .venv/bin/python Japan/fetch_japan.py --render     # rebuild the page from saved data
 ```
 
+**Indians work here.** A role is marked when its company is hiring in India right now,
+which means it employs Indians. Boards that list every job show their India postings
+(Greenhouse, Lever, Ashby, Workable); for the boards read only for Japan, the same API is
+asked once more, for India (Workday, Amazon, Google, Microsoft, Oracle, SmartRecruiters,
+and each company on the VC boards). Roles found on LinkedIn, Indeed or Japan Dev take the
+answer from the same company's board. A few companies whose India teams the boards do not
+show (Rakuten, Mercari, PayPay, Sony, JPMorgan, Indian IT firms) are in
+`india_presence.json`, each with its source. The reason shows under each role.
+
 All of this runs by itself on this Mac every morning at 8:00 IST, and whenever someone
 presses Refresh on the team site: `Japan/daily.sh` pulls the boards, runs that day's
 search set, refreshes Madhura's list, and syncs both to the team site.
@@ -183,6 +192,7 @@ Japan/
   boards.json          employer boards fetch_japan.py pulls
   fetch_japan.py       pull, classify, write data/ and index.html
   daily.sh             the 8:00 IST refresh and the site's Refresh button: pull, search, sync
+  india_presence.json  companies known to employ people in India that the boards do not show, with sources
   page.template.html   the page; fetch_japan.py fills in the data
   index.html           the page (generated)
   data/roles.json      live entry-level roles in Japan with their language label

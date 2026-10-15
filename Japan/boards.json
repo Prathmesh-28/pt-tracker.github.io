@@ -134,5 +134,11 @@
   {"ats": "greenhouse", "slug": "omakaseai", "company": "Omakase.ai"},
   {"ats": "greenhouse", "slug": "ultratendency", "company": "Ultra Tendency"},
   {"ats": "pcsx", "slug": "apply.careers.microsoft.com/microsoft.com", "company": "Microsoft"},
-  {"ats": "google", "slug": "google.com", "company": "Google", "japan_only": true}
+  {"ats": "google", "slug": "google.com", "company": "Google", "japan_only": true},
+  {"ats": "lever", "slug": "palantir", "company": "Palantir"},
+  {"ats": "greenhouse", "slug": "alixpartners", "company": "AlixPartners"},
+  {"ats": "greenhouse", "slug": "block", "company": "Block"},
+  {"ats": "greenhouse", "slug": "fastly", "company": "Fastly"},
+  {"ats": "greenhouse", "slug": "purestorage", "company": "Pure Storage"},
+  {"ats": "lever", "slug": "sophos", "company": "Sophos"}
 ]

@@ -41,6 +41,7 @@ import sys
 import time
 import urllib.error
 import urllib.request
+from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
@@ -59,6 +60,8 @@ SEEN = DATA / "seen.json"
 SEARCH_RAW = DATA / "search_raw.json"       # LinkedIn and Indeed rows with descriptions; gitignored
 BOARDS_RAW = DATA / "boards_raw.json"       # every board's Japan rows with descriptions; gitignored
 SEARCH_META = DATA / "search_meta.json"
+INDIA_LIST = HERE / "india_presence.json"   # companies known to employ people in India, checked by hand
+GETRO_INDIA_SEEN = DATA / "getro_india.json"  # the last answer for each VC-board company; gitignored
 
 UA = (
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
@@ -73,6 +76,43 @@ JAPAN = re.compile(
     r"日本|東京|大阪|福岡|京都|横浜|名古屋|札幌",
     re.I,
 )
+
+# Where a company is hiring in India now. A company with open roles in India employs Indians,
+# which is what the "Indians work here" mark on the team site says.
+INDIA = re.compile(r"\bindia\b|bengaluru|bangalore|hyderabad|\bpune\b|chennai|mumbai|gurugram|gurgaon|noida|"
+                   r"new delhi|\bdelhi\b|kolkata|ahmedabad|kochi|coimbatore|jaipur|chandigarh|mohali|"
+                   r"thiruvananthapuram|trivandrum|indore|vadodara|mysuru|mysore|nagpur|bhubaneswar|"
+                   r"visakhapatnam|lucknow", re.I)
+CITY = {"bangalore": "Bengaluru", "gurgaon": "Gurugram", "trivandrum": "Thiruvananthapuram", "mysore": "Mysuru",
+        "new delhi": "Delhi"}
+
+
+def india_summary(locations: list[str]) -> dict | None:
+    """{count, places} for the locations in India, the three most common cities first."""
+    cities, n = Counter(), 0
+    for loc in locations:
+        found = [m.group(0).lower() for m in INDIA.finditer(loc or "")]
+        if not found:
+            continue
+        n += 1
+        city = next((f for f in found if f != "india"), "india")
+        cities[CITY.get(city, "India" if city == "india" else city.title())] += 1
+    if not n:
+        return None
+    named = [c for c, _ in cities.most_common() if c != "India"] or ["India"]
+    return {"count": n, "places": named[:3]}
+
+
+def _searched(locations: list[str], total: int) -> dict | None:
+    """A keyword search for "India" also finds jobs that only mention it; trust its total only
+    when nearly all of the first page sits in India."""
+    s = india_summary(locations)
+    if not s:
+        return None
+    if s["count"] >= 0.8 * len(locations):
+        return dict(s, count=max(total, s["count"]))
+    return dict(s, more=total > len(locations))
+
 
 # A title that says outright it is for students or new graduates.
 ENTRY_STRONG = re.compile(
@@ -821,30 +861,60 @@ def pull_japandev(b: dict) -> list[dict]:
     return out
 
 
+GETRO_INDIA: dict[int, dict | None] = {}  # a company can sit in several networks; ask once a run
+UNKNOWN = "unknown"  # an India check that failed twice: keep the last answer rather than drop the mark
+
+
+def _last_getro() -> dict:
+    return json.loads(GETRO_INDIA_SEEN.read_text()) if GETRO_INDIA_SEEN.exists() else {}
+
+
+def getro_search(network: str, host: str, body: dict) -> dict:
+    req = urllib.request.Request(f"https://api.getro.com/api/v2/collections/{network}/search/jobs",
+                                 data=json.dumps(body).encode(),
+                                 headers={"User-Agent": UA, "Content-Type": "application/json",
+                                          "Accept": "application/json", "Origin": f"https://{host}",
+                                          "Referer": f"https://{host}/"})
+    return json.loads(urllib.request.urlopen(req, timeout=40).read().decode())["results"]
+
+
 def pull_getro(b: dict) -> list[dict]:
     """A VC portfolio job board on Getro; slug is "<network id>/<board host>"."""
     network, host = b["slug"].split("/", 1)
     out, page = [], 0
     while True:
         body = {"hitsPerPage": 100, "page": page, "filters": {"searchable_locations": ["Japan"]}, "query": ""}
-        req = urllib.request.Request(f"https://api.getro.com/api/v2/collections/{network}/search/jobs",
-                                     data=json.dumps(body).encode(),
-                                     headers={"User-Agent": UA, "Content-Type": "application/json",
-                                              "Accept": "application/json", "Origin": f"https://{host}",
-                                              "Referer": f"https://{host}/"})
-        res = json.loads(urllib.request.urlopen(req, timeout=40).read().decode())["results"]
+        res = getro_search(network, host, body)
         for j in res.get("jobs") or []:
             places = j.get("locations") or []
             out.append(row(b, id=str(j["id"]), title=j.get("title") or "",
                            company=(j.get("organization") or {}).get("name") or b["company"],
                            location=" / ".join(places), in_japan=True, url=j.get("url") or "",
                            posted=iso((j.get("created_at") or 0) * 1000), getro_level=j.get("seniority") or "",
-                           via=f"{b['company']} portfolio"))
+                           via=f"{b['company']} portfolio", org_id=(j.get("organization") or {}).get("id")))
         page += 1
         # Getro caps a page at 20 whatever hitsPerPage says, so count what came back.
         if not res.get("jobs") or len(out) >= (res.get("count") or 0):
             break
         time.sleep(1)
+    # The network spans hundreds of companies; ask about India for each one that hires in Japan.
+    last = _last_getro()
+    for oid in {r["org_id"] for r in out if r.get("org_id")}:
+        if oid not in GETRO_INDIA:
+            for attempt in range(2):
+                try:
+                    res = getro_search(network, host, {"hitsPerPage": 20, "page": 0, "query": "", "filters": {
+                        "searchable_locations": ["India"], "organization.id": [oid]}})
+                    s = india_summary([" / ".join(j.get("locations") or []) for j in res.get("jobs") or []])
+                    GETRO_INDIA[oid] = s and dict(s, count=max(res.get("count") or 0, s["count"]))
+                    break
+                except Exception:
+                    time.sleep(3)
+            time.sleep(0.3)
+        answer = GETRO_INDIA[oid] if oid in GETRO_INDIA else last.get(str(oid))  # failed twice: last answer
+        for r in out:
+            if r.get("org_id") == oid and answer:
+                r["india"] = answer
     return out
 
 
@@ -854,11 +924,61 @@ PULL = {"greenhouse": pull_greenhouse, "lever": pull_lever, "ashby": pull_ashby,
         "japandev": pull_japandev, "getro": pull_getro, "pcsx": pull_pcsx, "google": pull_google}
 
 
-def pull(board: dict) -> tuple[dict, list[dict], str]:
+def india_check(b: dict, rows: list[dict]) -> dict | None:
+    """The company's open jobs in India, or None. Boards that list every job show it in their
+    own rows; the ones read for Japan only are asked once more, for India."""
+    ats = b["ats"]
+    if ats in ("greenhouse", "lever", "ashby", "workable"):
+        return india_summary([r["location"] for r in rows if not r["in_japan"]])
+    if ats == "workday":
+        host, tenant, site = b["slug"].split("/")
+        page = http(f"https://{host}/wday/cxs/{tenant}/{site}/jobs",
+                    {"appliedFacets": {}, "limit": 20, "offset": 0, "searchText": "India"})
+        return _searched([j.get("locationsText") or "" for j in page.get("jobPostings") or []], page.get("total") or 0)
+    if ats == "oracle":
+        host, site = b["slug"].split("/")
+        items = (http(f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitions?onlyData=true"
+                      f"&finder=findReqs;siteNumber={site},limit=25,offset=0,keyword=%22India%22,"
+                      f"sortBy=POSTING_DATES_DESC").get("items") or [{}])[0]
+        return _searched([j.get("PrimaryLocation") or "" for j in items.get("requisitionList") or []],
+                         items.get("TotalJobsCount") or 0)
+    if ats == "amazon":
+        page = http("https://www.amazon.jobs/en/search.json?normalized_country_code%5B%5D=IND&result_limit=20&offset=0")
+        s = india_summary([j.get("normalized_location") or j.get("city") or "" for j in page.get("jobs") or []])
+        return s and dict(s, count=max(page.get("hits") or 0, s["count"]))
+    if ats == "smartrecruiters":
+        page = http(f"https://api.smartrecruiters.com/v1/companies/{b['slug']}/postings?country=in&limit=20")
+        s = india_summary([f"{(j.get('location') or {}).get('city') or ''}, India" for j in page.get("content") or []])
+        return s and dict(s, count=max(page.get("totalFound") or 0, s["count"]))
+    if ats == "pcsx":
+        host, domain = b["slug"].split("/", 1)
+        data = http(f"https://{host}/api/pcsx/search?domain={domain}&query=&location=India&start=0&num=10").get("data") or {}
+        s = india_summary([" / ".join(j.get("locations") or []) for j in data.get("positions") or []])
+        return s and dict(s, count=max(data.get("count") or 0, s["count"]))
+    if ats == "google":
+        url = "https://www.google.com/about/careers/applications/jobs/results/?location=India&page=1"
+        doc = urllib.request.urlopen(urllib.request.Request(url, headers={"User-Agent": UA}), timeout=40).read().decode("utf-8", "replace")
+        blocks = dict(re.findall(r"AF_initDataCallback\(\{key: '(ds:\d+)'.*?data:(.*?), sideChannel", doc, re.S))
+        data = json.loads(blocks["ds:1"])
+        s = india_summary([" / ".join(p[0] for p in (j[9] or []) if p) for j in data[0] or []])
+        total = data[2] if len(data) > 2 and isinstance(data[2], int) else 0
+        return s and dict(s, count=max(total, s["count"]))
+    return None  # Japan Dev and Getro: per company, elsewhere
+
+
+def pull(board: dict) -> tuple[dict, list[dict], str, dict | None]:
     try:
-        return board, PULL[board["ats"]](board), ""
+        rows = PULL[board["ats"]](board)
     except Exception as exc:
-        return board, [], f"{type(exc).__name__}: {exc}"
+        return board, [], f"{type(exc).__name__}: {exc}", UNKNOWN
+    india = UNKNOWN
+    for attempt in range(2):
+        try:
+            india = india_check(board, rows)
+            break
+        except Exception:
+            time.sleep(5)
+    return board, rows, "", india
 
 
 def pull_all(boards: list[dict]) -> list[tuple[dict, list[dict], str]]:
@@ -901,10 +1021,32 @@ def merge_sources(rows: list[dict]) -> list[dict]:
             if best["language"] == "unstated" and other["language"] != "unstated":
                 best["language"], best["evidence"] = other["language"], other["evidence"]
             best["residency"] = best["residency"] or other["residency"]
+            best["india"] = best.get("india") or other.get("india")
             if other.get("via") and other["via"] not in best.get("via", ""):
                 best["via"] = ", ".join(x for x in (best.get("via"), other["via"]) if x)
         out.append(best)
     return out
+
+
+CORP = re.compile(r"株式会社|有限会社|合同会社|㈱|\b(?:co|corp|corporation|inc|ltd|llc|kk|k\.k|gk|limited|plc|ag|"
+                  r"gmbh|japan|group|holdings?)\b\.?", re.I)
+
+
+def company_key(name: str) -> str:
+    return norm(CORP.sub(" ", name or ""))
+
+
+def indians_work_here(rows: list[dict]) -> None:
+    """LinkedIn, Indeed and Japan Dev rows name a company without its board: take the answer
+    from the same company's board, else from the list checked by hand."""
+    known = {company_key(r["company"]): r["india"] for r in rows if r.get("india")}
+    if INDIA_LIST.exists():
+        for c in json.loads(INDIA_LIST.read_text())["companies"]:
+            for name in [c["name"]] + c.get("aliases", []):
+                known.setdefault(company_key(name), {"note": c["why"], "source": c["source"]})
+    for r in rows:
+        if not r.get("india"):
+            r["india"] = known.get(company_key(r["company"]))
 
 
 def wanted(r: dict) -> bool:
@@ -951,7 +1093,7 @@ def classify(r: dict) -> dict:
         "level": lvl, "min_years": years, "entry": entry,
         "batch": batch_years(r["title"] + " " + text),
         "grad_2027": fit, "eligibility": eligibility, "deadline": deadline(text),
-        "via": r.get("via") or "",
+        "via": r.get("via") or "", "india": r.get("india"),
     }
 
 
@@ -1088,24 +1230,29 @@ def main() -> None:
     saved = json.loads(BOARDS_RAW.read_text()) if BOARDS_RAW.exists() else {}
     offline = "--reclassify" in args
     if offline:
-        results = [(b, None, "") for b in boards]
+        results = [(b, None, "", None) for b in boards]
     else:
         print(f"pulling {len(boards)} boards", file=sys.stderr)
         results = pull_all(boards)
     everything, sources, fresh = [], [], {}
-    for board, rows, error in results:
+    for board, rows, error, india in results:
         key = f"{board['ats']}:{board['slug']}"
         note = ""
         if rows is None or error:
             # Offline, or a board that failed: use the rows saved last time, so one bad run
             # does not empty it.
             last = saved.get(key) or {"total": 0, "rows": []}
-            total, japan = last["total"], last["rows"]
+            total, japan, india = last["total"], last["rows"], last.get("india")
             if error:
                 note = f"  FAILED {error}; using the {len(japan)} rows saved last time"
         else:
             total, japan = len(rows), [r for r in rows if r["in_japan"]]
-        fresh[key] = {"total": total, "rows": japan}
+            if india == UNKNOWN:
+                india = (saved.get(key) or {}).get("india")
+        fresh[key] = {"total": total, "rows": japan, "india": india}
+        for r in japan:
+            if india and not r.get("org_id"):  # Getro rows carry their own company's answer
+                r["india"] = india
         kept = merge_locations([classify(r) for r in japan if wanted(r)])
         everything += kept
         sources.append({"company": board["company"], "ats": board["ats"], "total": total,
@@ -1116,6 +1263,8 @@ def main() -> None:
               f"{sum(e['entry'] for e in kept):>3} entry level{note}", file=sys.stderr)
 
     BOARDS_RAW.write_text(json.dumps(fresh, ensure_ascii=False))
+    if GETRO_INDIA:
+        GETRO_INDIA_SEEN.write_text(json.dumps(dict(_last_getro(), **{str(k): v for k, v in GETRO_INDIA.items()})))
     searching = bool({"--search", "--force", "--wide", "--visa", "--rotate"} & args)
     mode = "visa" if "--visa" in args else "wide" if "--wide" in args else "tokyo"
     if "--rotate" in args:
@@ -1128,6 +1277,7 @@ def main() -> None:
         json.loads(SEARCH_RAW.read_text()) if SEARCH_RAW.exists() else [])
     everything += merge_locations([classify(r) for r in raw if wanted(r)])
     everything = merge_sources(everything)
+    indians_work_here(everything)
 
     # First and last seen, so the page can mark what is new.
     today = date.today().isoformat()
@@ -1141,11 +1291,15 @@ def main() -> None:
     order = {"english_ok": 0, "japanese_plus": 1, "unstated": 2, "japanese_required": 3}
     everything.sort(key=lambda r: r["posted"] or "", reverse=True)
     everything.sort(key=lambda r: order[r["language"]])
+    for r in everything:  # why the team site says "Indians work here"
+        i = r.get("india") or {}
+        r["indians"] = i.get("note") or (("Hiring in India now" if i.get("more") else f"{i['count']} open roles in India now")
+                                         + f" ({', '.join(i['places'])})" if i else "")
     ROLES_JSON.write_text(json.dumps(everything, indent=1, ensure_ascii=False))
     SOURCES_JSON.write_text(json.dumps(sources, indent=1))
     write_csv(ROLES_CSV, everything, ["company", "title", "location", "level", "min_years", "track", "grad_2027",
                                       "eligibility", "deadline", "language", "evidence", "visa", "visa_evidence",
-                                      "residency", "batch", "posted", "first_seen", "source", "via", "url"])
+                                      "residency", "batch", "posted", "first_seen", "source", "via", "indians", "url"])
 
     english = [r for r in everything if r["language"] != "japanese_required"]
     sponsor = [r for r in english if r["visa"] == "yes" and not r["residency"]]

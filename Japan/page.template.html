@@ -402,12 +402,13 @@ function renderRoles() {
       <div>
         <h3><a href="${esc(r.url)}" target="_blank" rel="noopener">${esc(r.title)}</a></h3>
         <div class="meta"><b>${esc(r.company)}</b><span>${esc(r.location)}</span>${r.posted ? `<span>Posted ${fmt(r.posted)}</span>` : ""}${r.deadline ? `<span><b>Closes</b> ${fmt(r.deadline)}</span>` : ""}<span>${TRACK[r.track] || ""}</span><span class="mono">${esc(r.source)}</span></div>
-        <div class="badges"><span class="b ${cls}">${label}</span>${r.grad_2027 && r.grad_2027 !== "none" ? `<span class="b ${GRAD[r.grad_2027][1]}">${GRAD[r.grad_2027][0]}</span>` : ""}${isNew ? `<span class="b hot">New</span>` : ""}${r.batch ? `<span class="b">Mentions ${esc(r.batch)}</span>` : ""}${r.visa === "yes" ? `<span class="b ok">Sponsors visa</span>` : r.visa === "no" ? `<span class="b no">No visa sponsorship</span>` : ""}${LEVEL[r.level] ? `<span class="b">${LEVEL[r.level]}${r.min_years != null ? ` · ${r.min_years}+ yrs` : ""}</span>` : ""}${r.via ? `<span class="b">via ${esc(r.via)}</span>` : ""}${r.residency ? `<span class="b no">Must already live in Japan</span>` : ""}</div>
+        <div class="badges"><span class="b ${cls}">${label}</span>${r.grad_2027 && r.grad_2027 !== "none" ? `<span class="b ${GRAD[r.grad_2027][1]}">${GRAD[r.grad_2027][0]}</span>` : ""}${isNew ? `<span class="b hot">New</span>` : ""}${r.batch ? `<span class="b">Mentions ${esc(r.batch)}</span>` : ""}${r.visa === "yes" ? `<span class="b ok">Sponsors visa</span>` : r.visa === "no" ? `<span class="b no">No visa sponsorship</span>` : ""}${LEVEL[r.level] ? `<span class="b">${LEVEL[r.level]}${r.min_years != null ? ` · ${r.min_years}+ yrs` : ""}</span>` : ""}${r.via ? `<span class="b">via ${esc(r.via)}</span>` : ""}${r.residency ? `<span class="b no">Must already live in Japan</span>` : ""}${r.indians ? `<span class="b ok">Indians work here</span>` : ""}</div>
       </div>
       <div class="side"><a class="btn primary" href="${esc(r.url)}" target="_blank" rel="noopener">Open posting</a>${markButtons("r:" + r.key)}</div>
       ${r.evidence ? `<p class="ev"><b>Language:</b> ${esc(r.evidence)}</p>` : ""}
       ${r.eligibility ? `<p class="ev"><b>Batch:</b> ${esc(r.eligibility)}</p>` : ""}
       ${r.visa_evidence ? `<p class="ev"><b>Visa:</b> ${esc(r.visa_evidence)}</p>` : ""}
+      ${r.indians ? `<p class="ev"><b>Indians work here:</b> ${esc(r.indians)}</p>` : ""}
     </article>`;
   }).join("") : `<div class="empty">No roles match. Click a box above to show more groups.</div>`;
 }
