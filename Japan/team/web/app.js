@@ -15,10 +15,15 @@ const store = {
 const S = {
   sb: null, session: null, me: null,
   jobs: [], apps: new Map(), members: [], resumes: [], events: [], settings: {}, cands: [], refresh: null,
-  cand: store.get("jt-cand", "prathmesh"), tab: store.get("jt-tab", "jobs"), shown: 60,
+  cand: store.get("jt-cand", "prathmesh"), tab: store.get("jt-tab", "jobs"), shown: 60, cshown: 40,
   f: Object.assign({ q: "", status: "open", level: "entry", visa: "ok", kind: "all", fit: "all", priority: false, sort: "smart",
-                     kansai: false, jp: "any", jt: "all", area: "any" },
+                     kansai: false, jp: "any", jt: "all", area: "any", indian: false },
                    store.get("jt-filters", {})),
+  cf: Object.assign({ q: "", status: "open", band: "all", route: false, kind: "all", soon: false, fit: "all", sort: "rank" },
+                    store.get("jt-cfilters", {})),
+  ishown: 60,
+  inf: Object.assign({ q: "", status: "open", family: "all", type: "all", timing: "all", sort: "priority", pay: false },
+                     store.get("jt-ifilters", {})),
 };
 
 const STATUS = {
@@ -28,6 +33,16 @@ const STATUS = {
 const LEVEL = { intern: "Internship", new_grad: "New grad", entry: "Entry level", mid: "Mid level", senior: "Senior", unstated: "Level not stated" };
 const LANG = { english_ok: ["No Japanese needed", "ok"], japanese_plus: ["Japanese a plus", "info"], unstated: ["Japanese not mentioned", "warn"] };
 const FIT = { yes: ["Fits 2027 grads", "ok"], likely: ["Likely fits 2027", "warn"], check: ["Check the batch", "info"], no: ["Not for 2027 grads", "bad"] };
+// Case competitions (CaseCompetitions/, from Unstop) share the jobs table as kind "competition". Their
+// statuses read differently: registering replaces applying, a round passed replaces an interview.
+const COMP_STATUS = {
+  claimed: ["Taking it on", "warn"], applied: ["Registered", "ok"], interview: ["Next round", "info"], offer: ["Won", "ok"],
+  rejected: ["Out", ""], withdrawn: ["Dropped", ""], skipped: ["Not doing", ""],
+};
+const BAND = { 1: ["IIT only", "ok"], 2: ["Top-paying employer", "ok"], 3: ["Select campuses or strong pay", "info"],
+               4: ["Big company, open to all", ""], 5: ["College fest or small organiser", ""] };
+const CHANNEL = { ppo: "PPO or job offer", ppi: "PPI", intern: "Internship" };
+const TIER_CLASS = { 1: "ok", 2: "info", 3: "" };
 
 // ---------------------------------------------------------------- helpers
 
@@ -60,6 +75,13 @@ function hoursLeft(a) {
 const candOf = j => (j && j.candidate) || "prathmesh";
 const person = () => S.cands.find(c => c.id === S.cand) || { id: S.cand, name: S.cand, lives_in_japan: false };
 const myJobs = () => S.jobs.filter(j => candOf(j) === S.cand);
+const isComp = j => j?.kind === "competition";
+// India roles (India/, with pay from AmbitionBox and campus offers) are rows of kind "india", in their own tab.
+const isIndia = j => j?.kind === "india";
+const myRoles = () => myJobs().filter(j => !isComp(j) && !isIndia(j));
+const myComps = () => myJobs().filter(isComp);
+const myIndia = () => myJobs().filter(isIndia);
+const statusOf = (j, s) => (isComp(j) ? COMP_STATUS : STATUS)[s] || [s, ""];
 const myResumes = () => S.resumes.filter(r => candOf(r) === S.cand);
 const jobByKey = key => S.jobs.find(j => j.key === key);
 const forMe = key => candOf(jobByKey(key)) === S.cand;
@@ -74,6 +96,9 @@ const WITHIN_HOUR = ["campus", "nankai", "osaka", "remote"];
 const jobType = j => j.extra?.job_type || (j.extra?.part_time ? "part-time" : "full-time");
 // Someone already living in Japan needs no sponsorship for now, so visa terms neither hide nor flag a job.
 const needsVisa = () => !person().lives_in_japan;
+// Why a company counts as one where Indians work: its open roles in India now, or a sourced note.
+const indiaWhy = i => i.note || `${i.more ? "Hiring in India now" : `${i.count} open roles in India now`} (${(i.places || []).join(", ")})`;
+const hasIndia = () => myRoles().some(j => j.extra?.india);
 const isEntry = j => j.kind !== "role" || ["intern", "new_grad", "entry"].includes(j.level) || ["yes", "likely", "check"].includes(j.grad_2027);
 
 async function call(fn, args, ok) {
@@ -253,7 +278,7 @@ function renderPending() {
 
 function counts() {
   const c = { open: 0, claimed: 0, applied: 0, interview: 0, offer: 0 };
-  for (const j of myJobs()) {
+  for (const j of myRoles()) {
     if (!j.is_open && !S.apps.has(j.key)) continue;
     const a = S.apps.get(j.key);
     if (!a || claimExpired(a)) { if (!j.do_not_apply && j.is_open) c.open++; continue; }
@@ -268,7 +293,8 @@ function counts() {
 // The page is three parts: tabs, counters, and the current view. A refresh that comes from
 // outside (a friend's change arriving live, the window regaining focus after a file picker)
 // updates the tabs and counters but never redraws a view with a form someone is filling in.
-const VIEWS = () => ({ jobs: viewJobs, mine: viewMine, activity: viewActivity, resumes: viewResumes, team: viewTeam, settings: viewSettings });
+const VIEWS = () => ({ jobs: viewJobs, india: viewIndia, comps: viewComps, mine: viewMine, activity: viewActivity,
+                       resumes: viewResumes, team: viewTeam, settings: viewSettings });
 const FORM_VIEWS = ["resumes", "settings"];
 
 function render() {
@@ -284,7 +310,7 @@ function refreshBox() {
   const busy = r && ["queued", "running"].includes(r.status);
   let line;
   if (r?.status === "queued") line = `Asked ${ago(r.requested_at)} by ${esc(who(r.requested_by))}. Starts within a minute while Prathmesh's Mac is on.`;
-  else if (r?.status === "running") line = `${esc(r.step || "Starting")} · started ${at(r.started_at)} IST${r.trigger === "schedule" ? " (the 8:00 run)" : ""}`;
+  else if (r?.status === "running") line = `${esc(r.step || "Starting")} · started ${at(r.started_at)} IST${r.trigger === "schedule" && at(r.started_at).startsWith("08:") ? " (the 8:00 run)" : ""}`;
   else if (r?.status === "done") line = `Refreshed ${at(r.finished_at)} IST · ${esc(r.summary)}`;
   else if (r?.status === "failed") line = `Last refresh stopped partway (${at(r.finished_at || r.updated_at)} IST). ${esc(r.summary)}`;
   else line = "Every morning at 8:00 IST, or now:";
@@ -299,15 +325,33 @@ function renderChrome() {
   const waiting = S.members.filter(m => !m.approved).length;
   $("#candbar").innerHTML = `<span class="muted">Applying for</span>${S.cands.map(c =>
     `<button class="pill" data-act="cand" data-cand="${esc(c.id)}" aria-pressed="${c.id === S.cand}">${esc(c.name)}<span class="n">${
-      S.jobs.filter(j => candOf(j) === c.id && j.is_open).length}</span></button>`).join("")}${refreshBox()}`;
-  const tabs = [["jobs", "Jobs", myJobs().filter(j => j.is_open).length], ["mine", "Mine", mine],
-                ["activity", "Activity", ""], ["resumes", "Resumes", myResumes().filter(r => r.active).length],
-                ["team", "Team", isOwner() && waiting ? `${waiting} waiting` : S.members.filter(m => m.approved).length]];
+      S.jobs.filter(j => candOf(j) === c.id && j.is_open && !isComp(j) && !isIndia(j)).length}</span></button>`).join("")}${refreshBox()}`;
+  const tabs = [["jobs", myIndia().length ? "Japan jobs" : "Jobs", myRoles().filter(j => j.is_open).length]];
+  if (myIndia().length) tabs.push(["india", "India jobs", myIndia().filter(j => j.is_open).length]);
+  if (myComps().length) tabs.push(["comps", "Competitions", myComps().filter(compOpen).length]);
+  tabs.push(["mine", "Mine", mine], ["activity", "Activity", ""], ["resumes", "Resumes", myResumes().filter(r => r.active).length],
+            ["team", "Team", isOwner() && waiting ? `${waiting} waiting` : S.members.filter(m => m.approved).length]);
   if (isOwner()) tabs.push(["settings", "Settings", ""]);
   if (!tabs.some(t => t[0] === S.tab)) S.tab = "jobs";
-  const c = counts();
   $("#tabsbar").innerHTML = tabs.map(([k, label, n]) =>
     `<button role="tab" aria-selected="${S.tab === k}" data-act="tab" data-tab="${k}">${label}${n !== "" ? `<span class="n">${esc(n)}</span>` : ""}</button>`).join("");
+  if (S.tab === "india") {
+    const k = indiaCounts();
+    $("#statsbar").innerHTML = `
+      <div><b>${k.open}</b><span>Open to apply</span></div><div><b>${k.product}</b><span>Product analyst and APM</span></div>
+      <div><b>${k.paid}</b><span>With the company's own pay</span></div><div><b>${k.startups} · ${k.mncs}</b><span>Startups · MNCs</span></div>
+      <div><b>${k.applied}</b><span>Applications sent</span></div>`;
+    return;
+  }
+  if (S.tab === "comps") {
+    const k = compCounts();
+    $("#statsbar").innerHTML = `
+      <div><b>${k.open}</b><span>Open to register</span></div><div><b>${k.top}</b><span>IIT only or top-paying</span></div>
+      <div><b>${k.route}</b><span>With a PPI, PPO or internship</span></div><div><b>${k.soon}</b><span>Closing within 7 days</span></div>
+      <div><b>${k.registered}</b><span>Registered</span></div>`;
+    return;
+  }
+  const c = counts();
   $("#statsbar").innerHTML = `
     <div><b>${c.open}</b><span>Open to claim</span></div><div><b>${c.claimed}</b><span>Claimed, not sent</span></div>
     <div><b>${c.applied}</b><span>Applications sent</span></div><div><b>${c.interview}</b><span>Interviews</span></div>
@@ -318,9 +362,10 @@ function backgroundRender() {
   if (!S.me?.approved || !$("#view")) return;
   renderChrome();
   if (FORM_VIEWS.includes(S.tab)) return;
-  const active = document.activeElement, keep = active && active.id === "f-q" ? [active.selectionStart, active.selectionEnd] : null;
+  const active = document.activeElement, id = active && ["f-q", "c-q", "i-q"].includes(active.id) ? active.id : null;
+  const keep = id ? [active.selectionStart, active.selectionEnd] : null;
   VIEWS()[S.tab]();
-  if (keep) { const q = $("#f-q"); if (q) { q.focus(); q.setSelectionRange(...keep); } }
+  if (keep) { const q = $(`#${id}`); if (q) { q.focus(); q.setSelectionRange(...keep); } }
 }
 
 // ---------------------------------------------------------------- jobs
@@ -347,6 +392,7 @@ function matches(j) {
   if (f.kind !== "all" && j.kind !== f.kind) return false;
   if (!hasExtras() && f.fit === "fits" && !["yes", "likely"].includes(j.grad_2027) && j.kind !== "program") return false;
   if (f.priority && !j.priority) return false;
+  if (f.indian && hasIndia() && !j.extra?.india) return false;
   if (f.q) {
     const hay = `${j.title} ${j.company} ${j.location} ${j.track}`.toLowerCase();
     if (!f.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false;
@@ -354,7 +400,7 @@ function matches(j) {
   return true;
 }
 
-const hasExtras = () => myJobs().some(j => j.extra && j.extra.japanese);
+const hasExtras = () => myRoles().some(j => j.extra && j.extra.japanese);
 
 function sorted(list) {
   const by = S.f.sort;
@@ -368,7 +414,7 @@ function sorted(list) {
 
 function jobCard(j) {
   const a = S.apps.get(j.key), expired = claimExpired(a), me = S.me.user_id;
-  const badges = [];
+  const badges = isIndia(j) ? indiaBadges(j) : [];
   if (j.priority) badges.push(`<span class="b warn">★ Owner's pick</span>`);
   if (j.do_not_apply) badges.push(`<span class="b bad">Do not apply</span>`);
   if (!j.is_open) badges.push(`<span class="b">Closed</span>`);
@@ -386,6 +432,7 @@ function jobCard(j) {
   if (j.extra?.students) badges.push(`<span class="b info">Students welcome</span>`);
   if (j.extra?.native_english) badges.push(`<span class="b warn">Asks for native English speakers</span>`);
   if (j.extra?.ssw) badges.push(`<span class="b info">Specified Skilled Worker route</span>`);
+  if (j.extra?.india) badges.push(`<span class="b ok" title="${esc(indiaWhy(j.extra.india))}">Indians work here</span>`);
   if (j.visa === "yes") badges.push(`<span class="b ok">Sponsors visa</span>`);
   if (j.visa === "no" && needsVisa()) badges.push(`<span class="b bad">No visa sponsorship</span>`);
   if (j.residency) badges.push(person().lives_in_japan ? `<span class="b ok">Must live in Japan (does)</span>` : `<span class="b bad">Must live in Japan</span>`);
@@ -436,6 +483,8 @@ function jobCard(j) {
       <h3><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></h3>
       <div class="meta"><b>${esc(j.company)}</b>${j.location ? `<span>${esc(j.location)}</span>` : ""}${j.posted ? `<span>Posted ${fmtDate(j.posted)}</span>` : ""}${j.via ? `<span>via ${esc(j.via)}</span>` : j.source ? `<span>${esc(j.source)}</span>` : ""}</div>
       <div class="badges">${badges.join("")}</div>
+      ${j.extra?.india ? `<p class="muted why">Indians work here: ${esc(indiaWhy(j.extra.india))}</p>` : ""}
+      ${isIndia(j) ? indiaLines(j) : ""}
       ${j.owner_note ? `<p class="muted" style="margin:6px 0 0;font-size:13px"><b>Owner:</b> ${esc(j.owner_note)}</p>` : ""}
     </div>
     <div class="actions">${actions.join("")}</div>
@@ -464,7 +513,7 @@ function listHead() {
 
 function viewJobs() {
   const f = S.f;
-  const list = sorted(myJobs().filter(matches));
+  const list = sorted(myRoles().filter(matches));
   $("#view").innerHTML = `
     <div class="controls">
       <input type="search" id="f-q" placeholder="Search title, company or city" value="${esc(f.q)}" aria-label="Search">
@@ -505,6 +554,7 @@ function viewJobs() {
         ${[["any", "Any Japanese level"], ["good", "Good fits: little Japanese, or foreigners work there"], ["n4", "States N4 or less, or none"]]
           .map(([v, l]) => `<option value="${v}" ${f.jp === v ? "selected" : ""}>${l}</option>`).join("")}
       </select>` : ""}
+      ${hasIndia() ? `<label title="The company is hiring in India now, or has an India office"><input type="checkbox" id="f-indian" ${f.indian ? "checked" : ""}> Indians work here</label>` : ""}
       <label><input type="checkbox" id="f-priority" ${f.priority ? "checked" : ""}> Owner's picks only</label>
       <button class="btn" data-act="addjob">+ Add a job</button>
       <span class="count">${list.length} shown</span>
@@ -520,8 +570,391 @@ function viewJobs() {
   bind("#f-q", "q", "input");
   ["status", "level", "visa", "kind", "fit", "sort"].forEach(k => bind(`#f-${k}`, k));
   bind("#f-priority", "priority", "change", el => el.checked);
+  bind("#f-indian", "indian", "change", el => el.checked);
   ["jt", "area", "jp"].forEach(k => bind(`#f-${k}`, k));
 }
+
+// ---------------------------------------------------------------- India
+
+const TYPE_CLASS = { MNC: "info", Startup: "ok", "Indian MNC": "info" };
+const lakhs = n => `₹${Number(n).toLocaleString("en-IN", { maximumFractionDigits: 1 })} lakh`;
+
+function indiaBadges(j) {
+  const x = j.extra || {}, out = [];
+  if (x.row_kind === "campus") out.push(`<span class="b ok">On campus (JAF)</span>`);
+  if (x.row_kind === "programme") out.push(`<span class="b info">Graduate programme</span>`);
+  if (x.ctc) {
+    const base = x.base ? ` · ${lakhs(x.base)} base${x.estimate_base ? " (est.)" : ""}` : "";
+    out.push(`<span class="b ok">${lakhs(x.ctc)} CTC${base}</span>`);
+  }
+  if (x.company_type) out.push(`<span class="b ${TYPE_CLASS[x.company_type] || ""}">${esc(x.company_type)}</span>`);
+  if (j.track && x.row_kind === "role") out.push(`<span class="b">${esc(j.track)}</span>`);
+  if (x.job_kind === "internship") out.push(`<span class="b info">Internship</span>`);
+  return out;
+}
+
+// Where the pay figure comes from, and when to apply by.
+function indiaLines(j) {
+  const x = j.extra || {};
+  const range = x.lo && x.hi && x.lo !== x.hi ? `, typical ${lakhs(x.lo)}–${lakhs(x.hi)}` : "";
+  const src = x.pay_source ? ` <a href="${esc(x.pay_source)}" target="_blank" rel="noopener">source</a>` : "";
+  const pay = x.basis ? `Pay: ${esc(x.basis)}${range}${x.estimate_base ? "; base estimated from the campus offers' base-to-CTC share" : ""}.${src}`
+                      : "Pay: no AmbitionBox figure for this role.";
+  const market = x.market?.ctc ? ` AmbitionBox average for comparison: ${lakhs(x.market.ctc)} CTC (${esc(x.market.span)}).` : "";
+  return `<p class="muted why">${esc(x.deadline_line || "")}${j.eligibility ? ` · ${esc(j.eligibility)}` : ""}</p>
+    <p class="muted why">${pay}${market}${x.notes ? ` ${esc(x.notes)}` : ""}</p>`;
+}
+
+function indiaCounts() {
+  const k = { open: 0, product: 0, paid: 0, startups: 0, mncs: 0, applied: 0 };
+  for (const j of myIndia()) {
+    const a = S.apps.get(j.key), x = j.extra || {};
+    if (a && ["applied", "interview", "offer"].includes(a.status)) k.applied++;
+    if (!j.is_open || j.do_not_apply || (a && !claimExpired(a))) continue;
+    k.open++;
+    if (/^Product/.test(j.track || "")) k.product++;
+    if (x.ctc && !/across India/.test(x.basis || "")) k.paid++;
+    if (x.company_type === "Startup") k.startups++;
+    if (/MNC/.test(x.company_type || "")) k.mncs++;
+  }
+  return k;
+}
+
+function indiaMatches(j) {
+  const f = S.inf, x = j.extra || {}, a = S.apps.get(j.key), expired = claimExpired(a);
+  const st = !a || expired ? "open" : a.status;
+  if (f.status === "open" && (st !== "open" || !j.is_open || j.do_not_apply)) return false;
+  if (f.status === "claimed" && st !== "claimed") return false;
+  if (f.status === "applied" && !["applied", "interview", "offer", "rejected", "withdrawn"].includes(st)) return false;
+  if (f.status === "skipped" && st !== "skipped") return false;
+  if (f.family !== "all" && j.track !== f.family) return false;
+  if (f.type === "mnc" && !/MNC/.test(x.company_type || "")) return false;
+  if (f.type === "startup" && x.company_type !== "Startup") return false;
+  if (f.type === "indian" && !/^Indian company/.test(x.company_type || "")) return false;
+  if (f.timing === "2027" && j.grad_2027 !== "yes") return false;
+  if (f.timing === "not_other" && j.grad_2027 === "no") return false;
+  if (f.pay && !x.ctc) return false;
+  if (f.q) {
+    const hay = `${j.title} ${j.company} ${j.location} ${j.track} ${x.company_type || ""}`.toLowerCase();
+    if (!f.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  return true;
+}
+
+function indiaSorted(list) {
+  const by = S.inf.sort, ctc = j => j.extra?.ctc || 0;
+  const due = j => j.deadline || "9999";
+  if (by === "pay") return list.sort((a, b) => ctc(b) - ctc(a) || (a.extra?.rank ?? 1e9) - (b.extra?.rank ?? 1e9));
+  if (by === "newest") return list.sort((a, b) => (b.posted || "").localeCompare(a.posted || "") || ctc(b) - ctc(a));
+  if (by === "deadline") return list.sort((a, b) => due(a).localeCompare(due(b)) || (b.posted || "").localeCompare(a.posted || ""));
+  if (by === "company") return list.sort((a, b) => a.company.localeCompare(b.company) || a.title.localeCompare(b.title));
+  return list.sort((a, b) => (b.priority - a.priority) || (a.extra?.rank ?? 1e9) - (b.extra?.rank ?? 1e9));
+}
+
+function indiaHead() {
+  let r = null;
+  try { r = JSON.parse(S.settings.refreshed_india || "null"); } catch {}
+  const when = r?.at ? new Date(r.at).toLocaleString("en-GB", { timeZone: "Asia/Kolkata", day: "numeric", month: "short",
+                                                               hour: "2-digit", minute: "2-digit", hour12: false }) : "";
+  return `<div class="listhead">
+    <p>Entry-level roles in India from LinkedIn, Indeed and company boards (the India tracker in this repo), kept to product analyst
+      and APM first, then business and data analyst, strategy, consulting, founder's office, management trainee and other early
+      business roles; ones asking two years or more are left out. Campus offers from the placement portal and graduate programmes
+      come first.</p>
+    <p>Pay is what freshers (0–1 years) in that role at that company report on AmbitionBox, India's salary site: CTC, the typical
+      range, and the base when it is reported, else estimated from the campus offers' base-to-CTC share. Glassdoor and Levels.fyi
+      block automated reading. Few postings state a deadline, so most show the date posted. ${esc(person().name)} graduates in May
+      2027: "Check the batch" means the posting names no batch.${when ? ` Last synced ${esc(when)} IST.` : ""}</p></div>`;
+}
+
+function viewIndia() {
+  const f = S.inf, list = indiaSorted(myIndia().filter(indiaMatches));
+  const families = [...new Set(myIndia().map(j => j.track).filter(Boolean))].sort().map(v => [v, v]);
+  $("#view").innerHTML = `
+    <div class="controls">
+      <input type="search" id="i-q" placeholder="Search title, company or city" value="${esc(f.q)}" aria-label="Search India roles">
+      <select id="i-status" aria-label="Status">${opts([["open", "Open to claim"], ["claimed", "Claimed"], ["applied", "Applied and later"],
+                                                         ["skipped", "Skipped"], ["all", "Everything"]], f.status)}</select>
+      <select id="i-family" aria-label="Kind of role">${opts([["all", "Every kind of role"], ...families], f.family)}</select>
+      <select id="i-type" aria-label="Company">${opts([["all", "Every company"], ["mnc", "MNCs"], ["startup", "Startups"],
+                                                       ["indian", "Indian companies"]], f.type)}</select>
+      <select id="i-timing" aria-label="Batch">${opts([["all", "Any batch"], ["not_other", "Not for other batches only"],
+                                                       ["2027", "Names the 2027 batch"]], f.timing)}</select>
+      <select id="i-sort" aria-label="Sort">${opts([["priority", "Product roles and campus first"], ["pay", "Pay, highest first"],
+                                                    ["newest", "Newest"], ["deadline", "Deadline"], ["company", "Company"]], f.sort)}</select>
+      <label><input type="checkbox" id="i-pay" ${f.pay ? "checked" : ""}> With a pay figure</label>
+      <span class="count">${list.length} shown</span>
+    </div>
+    ${indiaHead()}
+    <div class="list">${list.length ? list.slice(0, S.ishown).map(jobCard).join("") : `<div class="empty">No roles match these filters.</div>`}</div>
+    ${list.length > S.ishown ? `<button class="btn more" data-act="imore">Show more (${list.length - S.ishown} left)</button>` : ""}`;
+  const bind = (id, key, ev = "change", get = el => el.value) => $(id)?.addEventListener(ev, e => {
+    S.inf[key] = get(e.target); S.ishown = 60; store.set("jt-ifilters", S.inf);
+    if (key === "q") { clearTimeout(viewIndia.t); viewIndia.t = setTimeout(() => { viewIndia(); const q = $("#i-q"); q.focus(); q.setSelectionRange(q.value.length, q.value.length); }, 200); }
+    else viewIndia();
+  });
+  bind("#i-q", "q", "input");
+  ["status", "family", "type", "timing", "sort"].forEach(k => bind(`#i-${k}`, k));
+  bind("#i-pay", "pay", "change", el => el.checked);
+}
+
+// ---------------------------------------------------------------- competitions
+
+// When registration shuts: Unstop's exact time, else the end of the deadline day in India.
+const compDeadline = j => j.extra?.deadline_at ? new Date(j.extra.deadline_at) : j.deadline ? new Date(`${j.deadline}T23:59:00+05:30`) : null;
+// Days left counted in India calendar days: a deadline at 18:29 today is "today", not "1 day left".
+const istDate = d => Date.parse(d.toLocaleDateString("en-CA", { timeZone: "Asia/Kolkata" }));
+function daysLeft(j) {
+  const d = compDeadline(j);
+  return d ? Math.max(0, Math.round((istDate(d) - istDate(new Date())) / 864e5)) : null;
+}
+// Open to register: still listed, and the deadline not passed (the sync closes Unstop ones each morning;
+// ones the team added close when their deadline does).
+const compOpen = j => j.is_open && !(compDeadline(j)?.getTime() < Date.now());
+const istTime = d => d.toLocaleString("en-GB", { timeZone: "Asia/Kolkata", day: "numeric", month: "short", hour: "2-digit", minute: "2-digit", hour12: false });
+const shortDay = iso => iso ? new Date(iso).toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata", day: "numeric", month: "short" }) : "";
+const teamText = t => { const [lo, hi] = t || []; return lo === 1 && hi === 1 ? "Solo" : lo && hi && lo !== hi ? `Team of ${lo}–${hi}` : lo || hi ? `Team of ${lo || hi}` : ""; };
+const opts = (pairs, current) => pairs.map(([v, l]) => `<option value="${esc(v)}" ${current === v ? "selected" : ""}>${esc(l)}</option>`).join("");
+
+function compCounts() {
+  const k = { open: 0, top: 0, route: 0, soon: 0, registered: 0 };
+  for (const j of myComps()) {
+    const a = S.apps.get(j.key), x = j.extra || {}, left = daysLeft(j);
+    if (a && ["applied", "interview", "offer"].includes(a.status)) k.registered++;
+    if (!compOpen(j) || j.do_not_apply || (a && !claimExpired(a))) continue;
+    k.open++;
+    if (x.band <= 2) k.top++;
+    if ((x.channels || []).length) k.route++;
+    if (left !== null && left <= 7) k.soon++;
+  }
+  return k;
+}
+
+function compMatches(j) {
+  const f = S.cf, x = j.extra || {}, a = S.apps.get(j.key), left = daysLeft(j);
+  const st = !a || claimExpired(a) ? "open" : a.status;
+  if (f.status === "open" && (st !== "open" || !compOpen(j) || j.do_not_apply)) return false;
+  if (f.status === "ours" && ["open", "skipped"].includes(st)) return false;
+  if (f.status === "skipped" && st !== "skipped") return false;
+  if (f.band === "iit" && x.band !== 1) return false;
+  if (f.band === "top" && !(x.band <= 2)) return false;
+  if (f.band === "good" && !(x.band <= 3)) return false;
+  if (f.route && !(x.channels || []).length) return false;
+  if (f.kind !== "all" && j.via !== f.kind) return false;
+  if (f.soon && !(left !== null && left <= 7)) return false;
+  if (f.fit === "yes" && j.grad_2027 !== "yes") return false;
+  if (f.q) {
+    const hay = `${j.title} ${j.company} ${j.via} ${x.why || ""} ${x.festival || ""}`.toLowerCase();
+    if (!f.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  return true;
+}
+
+function compSorted(list) {
+  const by = S.cf.sort, end = j => compDeadline(j)?.getTime() ?? Infinity;
+  const pool = j => (j.extra?.prize_inr || 0) + (j.extra?.prize_usd || 0) * 85;
+  if (by === "deadline") return list.sort((a, b) => end(a) - end(b));
+  if (by === "prize") return list.sort((a, b) => pool(b) - pool(a) || end(a) - end(b));
+  if (by === "newest") return list.sort((a, b) => (b.created_at || "").localeCompare(a.created_at || ""));
+  return list.sort((a, b) => (b.priority - a.priority) || (a.extra?.band ?? 9) - (b.extra?.band ?? 9)
+    || (a.extra?.rank ?? 1e9) - (b.extra?.rank ?? 1e9) || end(a) - end(b));
+}
+
+function compCard(j) {
+  const x = j.extra || {}, a = S.apps.get(j.key), expired = claimExpired(a), me = S.me.user_id, k = esc(j.key);
+  const dl = compDeadline(j), left = daysLeft(j), open = compOpen(j);
+  const badges = [];
+  const [band, bandCls] = BAND[x.band] || [];
+  if (band) badges.push(`<span class="b ${bandCls}">${x.rank ? `#${x.rank} · ` : ""}${esc(band)}</span>`);
+  if (j.priority) badges.push(`<span class="b warn">★ Owner's pick</span>`);
+  if (j.do_not_apply) badges.push(`<span class="b bad">Do not enter</span>`);
+  if (!open) badges.push(`<span class="b">Registration closed</span>`);
+  else if (j.created_at && Date.now() - new Date(j.created_at).getTime() < 36 * 3600e3) badges.push(`<span class="b ok">New</span>`);
+  for (const c of x.channels || []) badges.push(`<span class="b ok">${esc(CHANNEL[c] || c)}</span>`);
+  if (x.prize) badges.push(`<span class="b info">${esc(x.prize)} in prizes${x.winners > 1 ? `, ${x.winners} winners` : ""}</span>`);
+  if (x.employer && x.employer.tier < 4) {
+    badges.push(`<span class="b ${TIER_CLASS[x.employer.tier]}">${esc(x.employer.label)}${x.employer.sponsor ? `: ${esc(x.employer.sponsor)}` : ""}</span>`);
+  }
+  if (j.via) badges.push(`<span class="b">${esc(j.via)}</span>`);
+  if (teamText(x.team)) badges.push(`<span class="b">${teamText(x.team)}</span>`);
+  if (j.grad_2027 === "check") badges.push(`<span class="b warn">Check: ${esc((x.reasons || []).join("; ") || "eligibility not stated")}</span>`);
+  if (x.paid) badges.push(`<span class="b warn">Entry fee</span>`);
+
+  let status = "";
+  const actions = [];
+  if (!a || expired) {
+    status = expired ? `<div class="status"><b>${esc(who(a.claimed_by))}</b> took this on but did not register in time; anyone can take it.</div>` : "";
+    if (open && !j.do_not_apply) {
+      actions.push(`<button class="btn primary" data-act="register" data-key="${k}">Mark registered</button>`,
+                   `<button class="btn" data-act="claim" data-key="${k}">I'll take it on</button>`,
+                   `<button class="btn" data-act="skip" data-key="${k}">Not doing</button>`);
+    }
+  } else {
+    const [label, cls] = statusOf(j, a.status), by = a.applied_by || a.claimed_by;
+    let line = `<span class="b ${cls}">${label}</span> by <b>${esc(who(by))}</b> · ${ago(a.applied_at || a.claimed_at)}`;
+    if (a.status === "claimed") line += ` · ${hoursLeft(a)}h left to register`;
+    if (a.applied_with) line += ` · with ${esc(a.applied_with)}`;
+    if (a.note) line += `<br><span class="muted">${esc(a.note)}</span>`;
+    status = `<div class="status">${line}</div>`;
+    const mineNow = by === me;
+    if (a.status === "claimed" && (mineNow || isOwner())) {
+      actions.push(`<button class="btn primary" data-act="register" data-key="${k}">Mark registered</button>`,
+                   `<button class="btn" data-act="release" data-key="${k}">Release</button>`);
+    }
+    if (["applied", "interview", "offer"].includes(a.status) && (mineNow || isOwner())) {
+      actions.push(`<select class="btn" data-act="setstatus" data-key="${k}" aria-label="Update status">
+        <option value="">Update…</option>${["interview", "offer", "rejected", "withdrawn"].filter(s => s !== a.status)
+          .map(s => `<option value="${s}">${COMP_STATUS[s][0]}</option>`).join("")}</select>`);
+    }
+    if (a.status === "skipped" && (mineNow || isOwner())) actions.push(`<button class="btn" data-act="release" data-key="${k}">Undo</button>`);
+    if (isOwner() && !["claimed", "skipped"].includes(a.status)) actions.push(`<button class="btn danger" data-act="reset" data-key="${k}">Reset</button>`);
+  }
+  actions.push(`<button class="btn" data-act="note" data-key="${k}">Note</button>`,
+               `<button class="btn" data-act="history" data-key="${k}">History</button>`);
+  if (isOwner()) {
+    actions.push(`<button class="btn" data-act="priority" data-key="${k}">${j.priority ? "Unpick" : "★ Pick"}</button>`,
+                 `<button class="btn danger" data-act="dna" data-key="${k}">${j.do_not_apply ? "Allow" : "Do not enter"}</button>`);
+  }
+
+  const rounds = (x.rounds || []).filter(r => r.title).map(r => `<li><b>${esc(r.title)}</b>${r.start || r.end
+    ? ` · ${[shortDay(r.start), shortDay(r.end)].filter(Boolean).join(" – ")}` : ""}${r.what ? `<br><span class="muted">${esc(r.what)}</span>` : ""}</li>`).join("");
+  const ranks = (x.ranks || []).filter(r => r.rank).map(r => `<li>${esc(r.rank)}${r.cash ? `: ${r.cur === "USD" ? "$" : "₹"}${Number(r.cash).toLocaleString("en-IN")}` : ""}${
+    r.perk ? ` · <span class="muted">${esc(r.perk)}</span>` : ""}</li>`).join("");
+  const campuses = (x.campuses || []).length
+    ? `<p><b>Campuses allowed (${x.campuses_n}):</b> ${esc(x.campuses.join("; "))}${x.campuses_n > x.campuses.length ? "; …" : ""}</p>` : "";
+  const deadline = dl ? `<span class="dl ${open && left <= 3 ? "soon" : ""}">${open ? "Closes" : "Closed"} ${istTime(dl)} IST${
+    open ? ` · ${left === 0 ? "today" : left === 1 ? "1 day left" : `${left} days left`}` : ""}</span>` : "";
+  const done = a && !expired && a.status !== "claimed";
+  return `<article class="item ${done ? "done" : ""}">
+    <div>
+      <h3><a href="${esc(j.url)}" target="_blank" rel="noopener">${esc(j.title)}</a></h3>
+      <div class="meta"><b>${esc(j.company)}</b>${deadline}${x.mode ? `<span>${x.mode === "online" ? "Online" : `In person${j.location ? `, ${esc(j.location)}` : ""}`}</span>` : ""}${
+        x.festival ? `<span>${esc(x.festival)}</span>` : ""}${x.registered ? `<span>${Number(x.registered).toLocaleString("en-IN")} registered</span>` : ""}</div>
+      <div class="badges">${badges.join("")}</div>
+      ${x.why ? `<p class="muted why">${esc(x.why)}</p>` : ""}
+      ${j.owner_note ? `<p class="muted" style="margin:6px 0 0;font-size:13px"><b>Owner:</b> ${esc(j.owner_note)}</p>` : ""}
+    </div>
+    <div class="actions">${actions.join("")}</div>
+    ${status}
+    <details class="more-info"><summary>What it is, the rounds and the prizes</summary>
+      ${x.summary ? `<p>${esc(x.summary)}${x.summary.length >= 420 ? "…" : ""}</p>` : ""}
+      ${j.eligibility ? `<p><b>Who can enter:</b> ${esc(j.eligibility)}</p>` : ""}${campuses}
+      ${rounds ? `<p><b>Rounds</b></p><ol class="rounds">${rounds}</ol>` : ""}
+      ${ranks ? `<p><b>Prizes</b></p><ul class="rounds">${ranks}</ul>` : ""}
+    </details>
+  </article>`;
+}
+
+function compHead() {
+  let r = null;
+  try { r = JSON.parse(S.settings.refreshed_competitions || "null"); } catch {}
+  const when = r?.at ? new Date(r.at).toLocaleString("en-GB", { timeZone: "Asia/Kolkata", day: "numeric", month: "short",
+                                                               hour: "2-digit", minute: "2-digit", hour12: false }) : "";
+  return `<div class="listhead">
+    <p>Ranked for an IIT Bombay B.Tech graduating in 2027. Competitions only IIT students may enter come first; then quant and
+      trading firms, investment banks, top consulting and big tech; then a short list of campuses or an employer that pays well;
+      then big companies open to everyone (Tata, ITC, Reliance, FMCG), which pay an IITian less; then college fests. Within each,
+      a PPO or PPI comes first, then the bigger prize. Ones ${esc(person().name)} cannot enter (MBA only, other batches, other
+      campuses) are left out.</p>
+    <p>${when ? `Pulled live from Unstop; this list was last synced ${esc(when)} IST. ` : ""}It refreshes every morning at 8:00 IST
+      and on Refresh. Deadlines are registration deadlines in India time.</p></div>`;
+}
+
+function watchSection() {
+  let w = null;
+  try { w = JSON.parse(S.settings.competitions_watch || "null"); } catch {}
+  const rows = w?.entries || [];
+  if (!rows.length) return "";
+  const forYou = { yes: ["Can enter", "ok"], check: ["Check the batch", "warn"], no: ["Can't enter", ""] };
+  const tierName = { 1: "Top pay", 2: "Strong pay", 3: "Pays an IITian less" };
+  const scopeName = { iit_only: ["IIT only", "ok"], premier: ["Premier campuses", "info"], b_schools: ["B-schools only", ""] };
+  const checked = rows.find(e => e.checked)?.checked;
+  const body = rows.map(e => {
+    const [fy, fyc] = forYou[e.for_2027] || ["", ""], [sc, scc] = scopeName[e.scope] || [];
+    const open = (e.open_now || []).map(o => `<a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.title)}</a>, closes ${shortDay(o.end)}`).join("<br>");
+    return `<tr>
+      <td><a href="${esc(e.url)}" target="_blank" rel="noopener"><b>${esc(e.name)}</b></a>${e.leads_to ? `<br><span class="muted">${esc(e.leads_to)}</span>` : ""}</td>
+      <td>${esc(e.employer)}<br><span class="b ${TIER_CLASS[e.tier] ?? ""}">${tierName[e.tier] || "Other"}</span>${sc ? ` <span class="b ${scc}">${sc}</span>` : ""}</td>
+      <td>${open ? `<span class="b ok">Open now</span><br>${open}` : esc(e.last || "")}</td>
+      <td>${esc(e.next || "")}${e.before_graduation && !open ? `<br><span class="muted">before graduating</span>` : ""}</td>
+      <td>${fy ? `<span class="b ${fyc}">${fy}</span>` : ""}${e.for_2027_note ? `<br><span class="muted">${esc(e.for_2027_note)}</span>` : ""}</td></tr>`;
+  }).join("");
+  return `<h2 class="section">When the big ones open</h2>
+    <p class="muted sectionnote">The competitions with a hiring route that matter most, between seasons. Those on Unstop are read live on every
+      refresh, every past edition with its dates; the ones run elsewhere (quant contests, bank hackathons) were checked by hand${checked ? ` on ${esc(fmtDate(checked))}` : ""}.</p>
+    <div class="tablewrap"><table class="watch"><thead><tr><th>Competition</th><th>Employer</th><th>Last edition</th><th>Next</th><th>${esc(person().name)}</th></tr></thead>
+      <tbody>${body}</tbody></table></div>`;
+}
+
+function viewComps() {
+  const f = S.cf, list = compSorted(myComps().filter(compMatches));
+  const kinds = [...new Set(myComps().map(j => j.via).filter(Boolean))].sort().map(v => [v, v]);
+  $("#view").innerHTML = `
+    <div class="controls">
+      <input type="search" id="c-q" placeholder="Search name, organiser or company" value="${esc(f.q)}" aria-label="Search competitions">
+      <select id="c-status" aria-label="Status">${opts([["open", "Open to register"], ["ours", "Taken on, registered and later"],
+                                                         ["skipped", "Not doing"], ["all", "Everything, closed too"]], f.status)}</select>
+      <select id="c-band" aria-label="Priority">${opts([["all", "Every priority"], ["iit", "IIT only"], ["top", "IIT only and top-paying employers"],
+                                                        ["good", "The top three priorities"]], f.band)}</select>
+      <select id="c-kind" aria-label="Type">${opts([["all", "Every type"], ...kinds], f.kind)}</select>
+      <select id="c-fit" aria-label="Eligibility">${opts([["all", "Eligible, or worth checking"], ["yes", "Clearly eligible"]], f.fit)}</select>
+      <select id="c-sort" aria-label="Sort">${opts([["rank", "Priority"], ["deadline", "Deadline, soonest first"], ["prize", "Prize pool"],
+                                                    ["newest", "Newest"]], f.sort)}</select>
+      <label><input type="checkbox" id="c-route" ${f.route ? "checked" : ""}> PPI, PPO or internship</label>
+      <label><input type="checkbox" id="c-soon" ${f.soon ? "checked" : ""}> Closing within 7 days</label>
+      <button class="btn" data-act="addcomp">+ Add a competition</button>
+      <span class="count">${list.length} shown</span>
+    </div>
+    ${compHead()}
+    <div class="list">${list.length ? list.slice(0, S.cshown).map(compCard).join("") : `<div class="empty">No competitions match these filters.</div>`}</div>
+    ${list.length > S.cshown ? `<button class="btn more" data-act="cmore">Show more (${list.length - S.cshown} left)</button>` : ""}
+    ${watchSection()}`;
+  const bind = (id, key, ev = "change", get = el => el.value) => $(id)?.addEventListener(ev, e => {
+    S.cf[key] = get(e.target); S.cshown = 40; store.set("jt-cfilters", S.cf);
+    if (key === "q") { clearTimeout(viewComps.t); viewComps.t = setTimeout(() => { viewComps(); const q = $("#c-q"); q.focus(); q.setSelectionRange(q.value.length, q.value.length); }, 200); }
+    else viewComps();
+  });
+  bind("#c-q", "q", "input");
+  ["status", "band", "kind", "fit", "sort"].forEach(k => bind(`#c-${k}`, k));
+  bind("#c-route", "route", "change", el => el.checked);
+  bind("#c-soon", "soon", "change", el => el.checked);
+}
+
+function registerDialog(j) {
+  openDialog(`<h2>Mark as registered</h2>
+    <p class="muted" style="margin:0">${esc(j.title)} · ${esc(j.company)}</p>
+    <label for="rg-with">Registered with (email or Unstop account)</label><input id="rg-with" type="text" placeholder="e.g. the IITB email on Unstop">
+    <label for="rg-note">Team and anything the group should know</label><textarea id="rg-note" placeholder="Teammates, the track picked, when the next round is"></textarea>
+    <div class="foot"><button class="btn" value="cancel">Cancel</button><button class="btn primary" type="submit">Mark registered</button></div>`,
+    async () => {
+      const a = await call("japan_register", { p_job: j.key, p_with: $("#rg-with").value.trim(), p_note: $("#rg-note").value.trim() },
+                           "Marked as registered");
+      if (a) { S.apps.set(j.key, a); render(); }
+      return !!a || false;
+    });
+}
+
+// A competition from outside Unstop: an IIT-only contest from a placement-cell mail, a company's own challenge.
+function addCompDialog() {
+  openDialog(`<h2>Add a competition to ${esc(person().name)}'s list</h2>
+    <p class="muted" style="margin:0">Found outside Unstop? Add it so it is ranked with the rest and nobody misses the deadline.</p>
+    <label for="nc-title">Competition</label><input id="nc-title" type="text" required>
+    <label for="nc-org">Organiser or company</label><input id="nc-org" type="text" required>
+    <label for="nc-url">Link</label><input id="nc-url" type="url" placeholder="https://">
+    <label for="nc-deadline">Registration deadline</label><input id="nc-deadline" type="date">
+    <label for="nc-band">Priority</label><select id="nc-band">${opts(Object.entries(BAND).map(([b, [l]]) => [b, l]), "1")}</select>
+    <label for="nc-note">Note (the prize, the PPI, who may enter)</label><input id="nc-note" type="text">
+    <div class="foot"><button class="btn" value="cancel">Cancel</button><button class="btn primary" type="submit">Add</button></div>`,
+    async () => {
+      const job = await call("japan_add_competition", { p_title: $("#nc-title").value, p_organiser: $("#nc-org").value,
+        p_url: $("#nc-url").value, p_deadline: $("#nc-deadline").value || null, p_band: Number($("#nc-band").value),
+        p_note: $("#nc-note").value, p_candidate: S.cand }, "Added to the list");
+      if (job) { S.jobs.push(job); render(); }
+      return !!job || false;
+    });
+}
+
+const card = j => isComp(j) ? compCard(j) : jobCard(j);
 
 // ---------------------------------------------------------------- other tabs
 
@@ -532,18 +965,22 @@ function viewMine() {
     .sort((x, y) => (y.updated_at || "").localeCompare(x.updated_at || ""));
   const claimed = mine.filter(a => a.status === "claimed"), rest = mine.filter(a => a.status !== "claimed");
   const block = (title, list, hint) => `<h2 style="margin-top:8px">${title}</h2><p class="muted" style="margin:0 0 10px">${hint}</p>
-    <div class="list">${list.length ? list.map(a => jobsBy.get(a.job_key)).filter(Boolean).map(jobCard).join("") : `<div class="empty">Nothing here.</div>`}</div>`;
+    <div class="list">${list.length ? list.map(a => jobsBy.get(a.job_key)).filter(Boolean).map(card).join("") : `<div class="empty">Nothing here.</div>`}</div>`;
   $("#view").innerHTML = block("Claimed by you", claimed, `Apply or release these; a claim lapses after ${claimHours()} hours.`)
     + `<div style="height:24px"></div>` + block("Your applications", rest, "Update them when you hear back.");
 }
 
 function eventLine(e) {
   const j = S.jobs.find(x => x.key === e.job_key);
-  const what = { claimed: "claimed", applied: "applied to", released: "released", skipped: "skipped", interview: "got an interview for",
-                 offer: "got an offer for", rejected: "was rejected for", withdrawn: "withdrew from", note: "left a note on",
-                 added: "added", reset: "reset" }[e.action] || e.action;
-  const job = j ? `<b>${esc(j.title)}</b> at ${esc(j.company)}` : esc(e.job_key || "");
-  const extra = e.detail ? (e.action === "applied" ? ` with the <b>${esc(e.detail)}</b> resume` : `: ${esc(e.detail)}`) : "";
+  const what = (isComp(j)
+    ? { claimed: "took on", registered: "registered for", released: "released", skipped: "is not doing", interview: "went through a round of",
+        offer: "won", rejected: "went out of", withdrawn: "dropped", note: "left a note on", reset: "reset" }
+    : { claimed: "claimed", applied: "applied to", released: "released", skipped: "skipped", interview: "got an interview for",
+        offer: "got an offer for", rejected: "was rejected for", withdrawn: "withdrew from", note: "left a note on",
+        added: "added", reset: "reset" })[e.action] || e.action;
+  const job = j ? `<b>${esc(j.title)}</b> ${isComp(j) ? "by" : "at"} ${esc(j.company)}` : esc(e.job_key || "");
+  const extra = e.detail ? (e.action === "applied" ? ` with the <b>${esc(e.detail)}</b> resume`
+                            : e.action === "registered" ? ` with ${esc(e.detail)}` : `: ${esc(e.detail)}`) : "";
   return `<li><b>${esc(who(e.actor))}</b> ${what} ${job}${extra}<time datetime="${esc(e.at)}">${ago(e.at)}</time></li>`;
 }
 
@@ -791,17 +1228,22 @@ document.addEventListener("click", async e => {
       }); break;
     case "reload": location.reload(); break;
     case "tab": S.tab = el.dataset.tab; store.set("jt-tab", S.tab); render(); break;
-    case "cand": S.cand = el.dataset.cand; store.set("jt-cand", S.cand); S.shown = 60; render(); break;
+    case "cand": S.cand = el.dataset.cand; store.set("jt-cand", S.cand); S.shown = 60; S.cshown = 40; render(); break;
     case "more": S.shown += 60; viewJobs(); break;
+    case "cmore": S.cshown += 40; viewComps(); break;
+    case "imore": S.ishown += 60; viewIndia(); break;
     case "claim": {
-      const others = sameCompany(j);
+      const others = isComp(j) ? [] : sameCompany(j);
       if (others.length && !confirm(`${others.length} other application(s) at ${j.company} already. Claim this one too?`)) break;
-      const a = await call("japan_claim", { p_job: key }, `Claimed. You have ${claimHours()} hours to apply.`);
+      const a = await call("japan_claim", { p_job: key }, isComp(j) ? `Yours to register within ${claimHours()} hours.`
+                                                                    : `Claimed. You have ${claimHours()} hours to apply.`);
       if (a) { S.apps.set(key, a); render(); }
       break;
     }
     case "apply": applyDialog(j); break;
-    case "skip": textDialog("Not a fit", "Why? (helps the others)", "e.g. needs N2 Japanese, 3+ years required", async text => {
+    case "register": registerDialog(j); break;
+    case "skip": textDialog(isComp(j) ? "Not doing this one" : "Not a fit", "Why? (helps the others)",
+                            isComp(j) ? "e.g. clashes with end-sems, MBA only after all" : "e.g. needs N2 Japanese, 3+ years required", async text => {
       const a = await call("japan_set_status", { p_job: key, p_status: "skipped", p_note: text }, "Skipped");
       if (a) { S.apps.set(key, a); render(); }
       return !!a || false;
@@ -816,6 +1258,7 @@ document.addEventListener("click", async e => {
       !!(await call("japan_note", { p_job: key, p_text: text }, "Noted")) || false); break;
     case "history": historyDialog(j); break;
     case "addjob": addJobDialog(); break;
+    case "addcomp": addCompDialog(); break;
     case "download": e.preventDefault(); download(el.dataset.id); break;
     case "priority": case "dna": {
       const patch = act === "priority" ? { priority: !j.priority } : { do_not_apply: !j.do_not_apply };
@@ -872,7 +1315,7 @@ document.addEventListener("change", async e => {
   const el = e.target;
   if (el.dataset?.act !== "setstatus" || !el.value) return;
   const key = el.dataset.key, status = el.value;
-  const a = await call("japan_set_status", { p_job: key, p_status: status, p_note: "" }, `Marked ${STATUS[status][0].toLowerCase()}`);
+  const a = await call("japan_set_status", { p_job: key, p_status: status, p_note: "" }, `Marked ${statusOf(jobOf(key), status)[0].toLowerCase()}`);
   if (a) { S.apps.set(key, a); render(); } else el.value = "";
 });
 

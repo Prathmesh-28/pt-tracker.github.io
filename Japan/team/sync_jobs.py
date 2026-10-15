@@ -24,6 +24,8 @@ Needs the service-role key, which bypasses row-level security. Keep it out of gi
 
   .venv/bin/python Japan/team/sync_jobs.py                       # Prathmesh's list
   .venv/bin/python Japan/team/sync_jobs.py --candidate madhura   # Madhura's list, from madhura/data
+  .venv/bin/python Japan/team/sync_jobs.py --competitions        # Prathmesh's case competitions, from CaseCompetitions/
+  .venv/bin/python Japan/team/sync_jobs.py --india               # Prathmesh's India roles with pay, from India/
   .venv/bin/python Japan/team/sync_jobs.py --dry-run             # count what would be sent
   .venv/bin/python Japan/team/sync_jobs.py --env <file>  # use another env file
 """
@@ -47,6 +49,10 @@ PROGRAMS = JAPAN / "programs.json"
 ENV_FILE = JAPAN / "private" / "team.env"
 MADHURA = JAPAN.parent / "madhura" / "data" / "roles.json"
 MADHURA_PROGRAMS = JAPAN.parent / "madhura" / "programs.json"
+COMPETITIONS = JAPAN.parent / "CaseCompetitions" / "data" / "competitions.json"
+COMPETITION_WATCH = JAPAN.parent / "CaseCompetitions" / "data" / "watchlist.json"
+# The full list, campus offers included, is private; the public copy in India/data/ leaves them out.
+INDIA_ROLES = JAPAN.parent / "India" / "private" / "roles.json"
 BATCH = 500
 MASS_CLOSE = 0.3  # closing more than this share of the open jobs in one run means a source failed
 
@@ -97,7 +103,7 @@ def role_rows(now: str) -> list[dict]:
             "residency": bool(r.get("residency")), "grad_2027": r.get("grad_2027") or "",
             "eligibility": (r.get("eligibility") or "")[:600], "deadline": day(r.get("deadline")),
             "track": r.get("track") or "", "posted": day(r.get("posted")), "is_open": True, "synced_at": now,
-            "candidate": "prathmesh", "extra": {},
+            "candidate": "prathmesh", "extra": {"india": r["india"]} if r.get("india") else {},
         })
     return rows
 
@@ -135,6 +141,54 @@ def madhura_rows(now: str) -> list[dict]:
                           "area": "", "wage": "", "foreigners": False, "students": False, "native_english": False,
                           "rank": -1},
             })
+    return rows
+
+
+COMPETITION_EXTRA = ("rank", "band", "band_label", "score", "why", "scope", "campuses_n", "employer", "channels",
+                     "prize", "prize_inr", "prize_usd", "winners", "ranks", "team", "mode", "rounds", "registered",
+                     "women_only", "paid", "official_email", "festival", "first_seen", "reasons", "who")
+
+
+def competition_rows(now: str) -> list[dict]:
+    """Prathmesh's case competitions, from CaseCompetitions/fetch_competitions.py: only the ranked ones,
+    so nothing he cannot enter and no cultural events."""
+    rows = []
+    for c in json.loads(COMPETITIONS.read_text())["competitions"]:
+        if not c.get("rank"):
+            continue
+        rows.append({
+            "key": c["key"], "kind": "competition", "company": c["organiser"] or "Unstop", "title": c["title"],
+            "location": c["city"] or ("Online" if c["mode"] == "online" else ""), "url": c["url"],
+            "source": "unstop", "via": c["kind"], "level": "", "min_years": None, "language": "", "visa": "",
+            "residency": False, "grad_2027": c["fit"],
+            "eligibility": "; ".join(x for x in [c["who"], *c["reasons"]] if x)[:600],
+            "deadline": day(c["deadline"]), "track": c["band_label"], "posted": day(c["opened"]),
+            "is_open": True, "synced_at": now, "candidate": "prathmesh",
+            "extra": {**{k: c.get(k) for k in COMPETITION_EXTRA}, "deadline_at": c["deadline"],
+                      "summary": (c.get("summary") or "")[:420], "campuses": (c.get("campuses") or [])[:15]},
+        })
+    return rows
+
+
+INDIA_EXTRA = ("rank", "family", "priority", "company_type", "ctc", "lo", "hi", "base", "estimate_base", "basis", "points",
+               "market", "row_kind", "deadline_line", "notes", "company_url", "fit_why", "funded", "city")
+INDIA_VIA = {"linkedin": "LinkedIn", "indeed": "Indeed", "campus": "Campus JAF", "programme": "Programme"}
+
+
+def india_rows(now: str) -> list[dict]:
+    """Prathmesh's India roles, campus offers and programmes, from India/fetch_india.py, with pay."""
+    rows = []
+    for x in json.loads(INDIA_ROLES.read_text())["roles"]:
+        rows.append({
+            "key": x["key"], "kind": "india", "company": x["company"] or "", "title": x["title"] or "",
+            "location": x.get("city") or x.get("location") or "", "url": x.get("url") or "", "source": x.get("source") or "",
+            "via": INDIA_VIA.get(x.get("source"), (x.get("source") or "").title()), "level": "",
+            "min_years": x.get("min_years"), "language": "", "visa": "", "residency": False, "grad_2027": x.get("fit") or "",
+            "eligibility": (x.get("fit_why") or "")[:600], "deadline": day(x.get("deadline")),
+            "track": x.get("family") or "", "posted": day(x.get("posted")), "is_open": True, "synced_at": now,
+            "candidate": "prathmesh", "extra": {**{k: x.get(k) for k in INDIA_EXTRA}, "pay_source": x.get("pay_source") or "",
+                                                "job_kind": x.get("kind") or ""},
+        })
     return rows
 
 
@@ -212,20 +266,30 @@ def link_known(rows: list[dict], known: list[dict], applied: set[str]) -> tuple[
 def main() -> None:
     args = sys.argv[1:]
     env_path = Path(args[args.index("--env") + 1]) if "--env" in args else ENV_FILE
-    candidate = args[args.index("--candidate") + 1] if "--candidate" in args else "prathmesh"
+    competitions, india = "--competitions" in args, "--india" in args
+    candidate = args[args.index("--candidate") + 1] if "--candidate" in args and not (competitions or india) else "prathmesh"
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    rows = madhura_rows(now) if candidate == "madhura" else program_rows(now) + role_rows(now)
-    print(f"{candidate}: {len(rows)} jobs to sync ({sum(r['kind'] == 'program' for r in rows)} programs, "
-          f"{sum(r['kind'] == 'role' for r in rows)} roles); {len({r['key'] for r in rows})} unique keys", file=sys.stderr)
+    if competitions or india:
+        rows = competition_rows(now) if competitions else india_rows(now)
+        print(f"{candidate}: {len(rows)} {'competitions' if competitions else 'India roles'} to sync; "
+              f"{len({r['key'] for r in rows})} unique keys", file=sys.stderr)
+    else:
+        rows = madhura_rows(now) if candidate == "madhura" else program_rows(now) + role_rows(now)
+        print(f"{candidate}: {len(rows)} jobs to sync ({sum(r['kind'] == 'program' for r in rows)} programs, "
+              f"{sum(r['kind'] == 'role' for r in rows)} roles); {len({r['key'] for r in rows})} unique keys",
+              file=sys.stderr)
     if "--dry-run" in args:
         return
+    # Each run owns its kinds: a job sync never closes a competition or an India role, nor the other way round.
+    kinds = ("competition",) if competitions else ("india",) if india else ("role", "program")
+    seen_kinds = kinds if competitions or india else ("role", "program", "manual")
 
     cfg = env(env_path)
     base, key = cfg.get("SUPABASE_URL", "").rstrip("/"), cfg.get("SUPABASE_SERVICE_ROLE_KEY", "")
     if not base or not key:
         raise SystemExit(f"Set SUPABASE_URL and SUPABASE_SERVICE_ROLE_KEY in {env_path} or the environment.")
     known = get_all(base, key, f"japan_jobs?select=key,kind,title,company,location,is_open,synced_at,candidate"
-                               f"&candidate=eq.{candidate}&order=key")
+                               f"&candidate=eq.{candidate}&kind=in.({','.join(seen_kinds)})&order=key")
     applied = {a["job_key"] for a in get_all(base, key, "japan_applications?select=job_key&order=job_key")}
     rows, relinked, dropped = link_known(rows, known, applied)
     known_keys = {k["key"] for k in known}
@@ -238,20 +302,30 @@ def main() -> None:
                 prefer="resolution=merge-duplicates,return=minimal")
         print(f"  upserted {min(i + BATCH, len(rows))}/{len(rows)}", file=sys.stderr)
 
-    # Anything from a source that this sync did not send has closed. Team-added jobs stay open.
-    was_open = [k for k in known if k["is_open"] and k["kind"] in ("role", "program")]
+    # Anything from a source that this sync did not send has closed. Team-added jobs and competitions stay open.
+    prefix = "comp:unstop:" if competitions else "india:" if india else ""
+    was_open = [k for k in known if k["is_open"] and k["kind"] in kinds and k["key"].startswith(prefix)]
     closing = [k for k in was_open if k["key"] not in sending]
     held = len(closing) > max(50, MASS_CLOSE * len(was_open)) and "--allow-mass-close" not in args
     if held:
         print(f"NOT closing {len(closing)} of {len(was_open)} open jobs: that many vanishing at once means a source "
               f"failed, not that the jobs closed. Run with --allow-mass-close if they really did.", file=sys.stderr)
     elif closing:
-        request("PATCH", f"{base}/rest/v1/japan_jobs?candidate=eq.{candidate}&kind=in.(role,program)"
-                f"&is_open=eq.true&synced_at=lt.{quote(now)}", key, {"is_open": False})
+        request("PATCH", f"{base}/rest/v1/japan_jobs?candidate=eq.{candidate}&kind=in.({','.join(kinds)})"
+                f"&is_open=eq.true&synced_at=lt.{quote(now)}{f'&key=like.{prefix}*' if prefix else ''}", key,
+                {"is_open": False})
     stats = {"at": now, "jobs": len(rows), "new": added, "closed": 0 if held else len(closing),
              "held": len(closing) if held else 0, "relinked": relinked, "skipped_manual": dropped}
-    request("POST", f"{base}/rest/v1/japan_settings?on_conflict=key", key,
-            [{"key": f"refreshed_{candidate}", "value": json.dumps(stats)}],
+    settings = [{"key": "refreshed_competitions" if competitions else "refreshed_india" if india else f"refreshed_{candidate}",
+                 "value": json.dumps(stats)}]
+    if competitions and COMPETITION_WATCH.exists():
+        # The big competitions between seasons, shown under the list: only what the site shows.
+        watch = json.loads(COMPETITION_WATCH.read_text())
+        keep = ("name", "url", "leads_to", "employer", "tier", "scope", "last", "next", "before_graduation",
+                "for_2027", "for_2027_note", "open_now", "checked")
+        watch["entries"] = [{k: e.get(k) for k in keep} for e in watch["entries"]]
+        settings.append({"key": "competitions_watch", "value": json.dumps(watch, ensure_ascii=False)})
+    request("POST", f"{base}/rest/v1/japan_settings?on_conflict=key", key, settings,
             prefer="resolution=merge-duplicates,return=minimal")
     print(f"done: {len(rows)} open, {added} new, {stats['closed']} closed, {relinked} found again under a new link "
           f"(kept their row), {dropped} already added by the team", file=sys.stderr)

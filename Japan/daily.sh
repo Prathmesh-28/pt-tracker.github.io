@@ -14,9 +14,10 @@
 # and whenever the site's Refresh button has queued one. To have the Mac awake at 8, once:
 #   sudo pmset repeat wakeorpoweron MTWRFSU 07:58:00
 #
-# Order: Prathmesh's company boards and sync first (most of his list), then Madhura's searches
-# and sync, then Prathmesh's LinkedIn and Indeed searches (one set a day in turn) and a second
-# sync. Searches keep their cooldowns (LinkedIn 4 hours, Madhura's part-time searches 1 hour),
+# Order: Prathmesh's company boards and sync first (most of his list), then his case competitions
+# from Unstop (CaseCompetitions/) and his India roles with pay (India/, from the India tracker's
+# data/latest.json) and their syncs, then Madhura's searches and sync, then Prathmesh's LinkedIn and
+# Indeed searches (one set a day in turn) and a second sync. Searches keep their cooldowns (LinkedIn 4 hours, Madhura's part-time searches 1 hour),
 # so pressing Refresh often re-reads the company boards without getting the searches blocked.
 # A step that fails is logged and skipped; the sync never mass-closes jobs because a source
 # was down. Progress goes to the site as it happens (Japan/team/refresh_queue.py).
@@ -111,7 +112,7 @@ ln -sf "$(basename "$LOG")" "$LOGS/latest.log"
 RID=$("$PY" Japan/team/refresh_queue.py start "$TRIGGER" 2>>"$LOG" | tail -1)
 report() { [ -z "$RID" ] || "$PY" Japan/team/refresh_queue.py "$1" "$RID" "${@:2}" || true; }
 failed=""   # a plain string: the bash 3.2 that macOS ships fails on empty arrays under set -u
-STEPS=6 n=0
+STEPS=10 n=0
 step() {
   local name="$1"; shift
   n=$((n + 1))
@@ -126,11 +127,15 @@ step() {
   echo "started $(ist '%Y-%m-%d %H:%M:%S') IST by the $TRIGGER${RID:+ (refresh $RID)}"
   step "Prathmesh: company boards" "$PY" Japan/fetch_japan.py
   step "Prathmesh: sync to the team site" "$PY" Japan/team/sync_jobs.py
+  step "Competitions: Unstop and the watchlist" "$PY" CaseCompetitions/fetch_competitions.py
+  step "Competitions: sync to the team site" "$PY" Japan/team/sync_jobs.py --competitions
+  step "India: pay and company type for the India roles" "$PY" India/fetch_india.py
+  step "India: sync to the team site" "$PY" Japan/team/sync_jobs.py --india
   if [ -f madhura/find_jobs.py ]; then
     step "Madhura: Indeed part-time, Guidable, LinkedIn, Indeed, Daijob" "$PY" madhura/find_jobs.py --search
     step "Madhura: sync to the team site" "$PY" Japan/team/sync_jobs.py --candidate madhura
   else
-    STEPS=4
+    STEPS=8
   fi
   step "Prathmesh: LinkedIn and Indeed (today's set)" "$PY" Japan/fetch_japan.py --reclassify --rotate
   step "Prathmesh: sync to the team site" "$PY" Japan/team/sync_jobs.py

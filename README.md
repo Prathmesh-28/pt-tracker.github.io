@@ -9,6 +9,11 @@ http://127.0.0.1:8765/dashboard.html, refreshed every morning at 8. See
 [The dashboard](#the-dashboard) and [Running it on this Mac](#running-it-on-this-mac).
 **Public copy:** the Pages deployment for this repo.
 
+**Also here:** [Japan/](Japan/README.md), roles in Japan for English speakers and the shared team
+site; [India/](India/README.md), the roles below narrowed to product and analyst roles with what
+each pays; [CaseCompetitions/](CaseCompetitions/README.md), case competitions and contests that lead
+to a PPI or PPO, ranked for an IIT Bombay 2027 graduate.
+
 ## What it does
 
 Four times a day a GitHub Action re-pulls every discovered board, reads each

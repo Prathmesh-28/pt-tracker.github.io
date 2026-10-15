@@ -143,3 +143,18 @@ dialog::backdrop{background:rgba(10,10,12,.45)}
 .refresh{margin-left:auto;display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end;max-width:100%}
 .refresh .muted{font-size:12.5px;max-width:52ch;text-align:right}
 @media (max-width:700px){.refresh{margin-left:0;width:100%;justify-content:space-between}.refresh .muted{text-align:left}}
+.why{margin:4px 0 0;font-size:12.5px}
+
+/* case competitions */
+.meta .dl{font-weight:600;color:var(--body)}
+.meta .dl.soon{color:var(--bad)}
+.more-info{grid-column:1/-1;font-size:13px}
+.more-info summary{cursor:pointer;color:var(--accent);font-weight:600;font-size:12.5px;width:max-content;max-width:100%}
+.more-info p{margin:6px 0 0;max-width:95ch}
+.rounds{margin:4px 0 0;padding-left:20px;max-width:95ch}
+.rounds li{margin:3px 0}
+h2.section{margin:30px 0 4px}
+.sectionnote{margin:0 0 10px;font-size:13px;max-width:95ch}
+.watch td{min-width:140px}
+.watch td:first-child{min-width:220px}
+.watch .b{display:inline-block;margin-top:3px}

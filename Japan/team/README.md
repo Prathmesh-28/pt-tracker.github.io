@@ -29,10 +29,55 @@ comes from `madhura/`, which stays private and out of this repo: part-time and
 full-time roles chosen for her, with her own labels (the Japanese each job asks for,
 the hourly pay, how far it is, whether foreigners or students already work there).
 A person marked as living in Japan gets no visa filter and no visa warnings.
+Prathmesh's roles carry **Indians work here** when the company is hiring in India now or
+has an India office (how that is decided: [../README.md](../README.md)), with the reason
+under the role and a filter to show only those.
 
 ```bash
 .venv/bin/python Japan/team/sync_jobs.py                       # Prathmesh's list
 .venv/bin/python Japan/team/sync_jobs.py --candidate madhura   # Madhura's list
+```
+
+## Case competitions
+
+Prathmesh's list has a **Competitions** tab: case competitions and other contests that lead to a
+PPI, a PPO or an internship, pulled live from Unstop and ranked for an IIT Bombay B.Tech graduating
+in 2027. IIT-only competitions come first, then top-paying employers (quant, banks, top consulting,
+big tech), then a short campus list or a strong-paying employer, then big companies open to all
+(Tata, ITC, FMCG), then college fests. How, and what each entry carries:
+[../../CaseCompetitions/README.md](../../CaseCompetitions/README.md).
+
+They are rows of `japan_jobs` with kind `competition`, so the claim rules, notes, history and live
+updates are the same as for jobs:
+
+| Button | What it does |
+|---|---|
+| I'll take it on | Claims it, as with a job; lapses after the same claim time if nobody registers |
+| Mark registered | Records who registered, with which account, and the team; needs no resume (`japan_register`) |
+| Update | Next round, Won, Out or Dropped |
+| Not doing | Skips it with a reason |
+| + Add a competition | One found outside Unstop, such as an IIT-only contest from a placement-cell mail, with its priority (`japan_add_competition`). The sync never closes these; they close when their deadline passes. |
+
+Under the list, **When the big ones open** shows the watchlist: each big competition's last
+edition and when the next is due, and whether a 2027 graduate can enter it.
+
+```bash
+.venv/bin/python CaseCompetitions/fetch_competitions.py        # pull and rank
+.venv/bin/python Japan/team/sync_jobs.py --competitions        # send them to the site
+```
+
+## India jobs
+
+Prathmesh's list also has an **India jobs** tab (the Jobs tab becomes **Japan jobs**): entry-level
+product analyst, APM, analyst and graduate roles in India from the India tracker at the repo root,
+each with what freshers there are paid (CTC, and base when known), whether the company is a startup,
+an MNC or an Indian company, the batch it is for and its deadline. Campus offers from the placement
+portal and graduate programmes come first. How: [../../India/README.md](../../India/README.md).
+They are rows of `japan_jobs` with kind `india`; claiming and applying work as for any job.
+
+```bash
+.venv/bin/python India/fetch_india.py              # pay and company type for each role
+.venv/bin/python Japan/team/sync_jobs.py --india   # send them to the site
 ```
 
 ## Fresh every morning, and on the Refresh button
@@ -46,9 +91,9 @@ second press while one waits or runs joins it, and a new one can start 10 minute
 the last finished. The Mac must be on: a refresh asked for while it sleeps starts when
 it wakes.
 
-Each refresh pulls every company board. Searches keep cooldowns so the job boards do
-not block us: LinkedIn and Indeed at most every 4 hours (Prathmesh's three search sets
-take turns, one a day), Madhura's part-time searches every hour.
+Each refresh pulls every company board and every open competition on Unstop. Searches keep
+cooldowns so the job boards do not block us: LinkedIn and Indeed at most every 4 hours
+(Prathmesh's three search sets take turns, one a day), Madhura's part-time searches every hour.
 
 **No job twice.** The sync (`sync_jobs.py`) matches jobs by title, employer and, on
 Madhura's part-time list, the branch:

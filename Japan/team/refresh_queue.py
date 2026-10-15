@@ -74,9 +74,14 @@ def finish(db: Db, rid: str, status: str) -> None:
     since = quote(row[0]["started_at"]) if row and row[0]["started_at"] else quote(now())
     bits = []
     for cid, name in CANDIDATES:
-        new = db.count(f"japan_jobs?select=key&candidate=eq.{cid}&created_at=gte.{since}")
-        open_ = db.count(f"japan_jobs?select=key&candidate=eq.{cid}&is_open=eq.true")
+        new = db.count(f"japan_jobs?select=key&candidate=eq.{cid}&kind=not.in.(competition,india)&created_at=gte.{since}")
+        open_ = db.count(f"japan_jobs?select=key&candidate=eq.{cid}&kind=not.in.(competition,india)&is_open=eq.true")
         bits.append(f"{name}: {open_:,} open, {new:,} new")
+    for kind, label in (("india", "India"), ("competition", "competitions")):
+        open_ = db.count(f"japan_jobs?select=key&kind=eq.{kind}&is_open=eq.true")
+        if open_:
+            new = db.count(f"japan_jobs?select=key&kind=eq.{kind}&created_at=gte.{since}")
+            bits.append(f"{label}: {open_:,} open, {new:,} new")
     summary = " · ".join(bits) + ("" if status == "done" else " · some sources failed; the rest is updated")
     db.patch(rid, status=status, finished_at=now(), step="", summary=summary)
     print(summary)
