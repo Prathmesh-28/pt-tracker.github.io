@@ -1,0 +1,31 @@
+{
+  "_about": [
+    "Graduate programmes and off-campus drives in India that take the 2027 batch, checked by hand.",
+    "Pay comes from AmbitionBox through `pay_title` (fetch_india.py looks it up like any role) unless `ctc_lpa` is given.",
+    "`fit`: yes, check or no for an IIT Bombay B.Tech graduating in May 2027. Add one per programme found."
+  ],
+  "checked": "2026-10-15",
+  "programs": [
+    {
+      "id": "goldman-sachs-new-analyst-2027", "org": "Goldman Sachs", "name": "New Analyst 2027 (India)",
+      "family": "Graduate programme", "city": "Bengaluru, Hyderabad",
+      "url": "https://higher.gs.com/roles/170478", "company_type": "MNC",
+      "window": "Opens 1 July each year for final-year students; apply on the Goldman Sachs portal while roles are listed",
+      "fit": "yes", "fit_why": "Full-time programme for final-year undergraduate and graduate students",
+      "notes": "Up to 4 business and location combinations per recruiting year. The listing linked is the Engineering division; other divisions list their own New Analyst roles.",
+      "pay_title": "Analyst", "pay_family": "Business analyst",
+      "sources": ["https://higher.gs.com/roles/170478", "https://internshala.com/blog/goldman-sachs-new-analyst-program/"]
+    },
+    {
+      "id": "zs-associates-2027", "org": "ZS Associates", "name": "Business Technology Solutions Associate and Decision Analytics Associate",
+      "family": "Graduate programme", "city": "Pune, Gurugram, Bengaluru, Chennai, Noida",
+      "url": "https://jobs.zs.com", "company_type": "MNC",
+      "window": "An aggregator lists an off-campus drive 25 Sep – 22 Oct 2026; confirm on jobs.zs.com",
+      "fit": "check", "fit_why": "Check the batch and branch on the posting (one source says BTSA takes CSE, IT and ECE only)",
+      "notes": "Online test, video assessment, case and fit interviews.",
+      "pay_title": "Decision Analytics Associate", "pay_family": "Business analyst",
+      "sources": ["https://offcampusjobs4u.com/zs-associates-recruitment-2026-associate-consultant-bts-pune-gurgaon",
+                  "https://www.naukri.com/code360/library/ways-to-join-zs"]
+    }
+  ]
+}
