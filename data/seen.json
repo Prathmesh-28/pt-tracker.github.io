@@ -98145,8 +98145,8 @@
  },
  "lever:paytm:edb4eabe-f52e-454b-84fd-3bd7468be17e": {
   "age_days": 44,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-15",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-15",
