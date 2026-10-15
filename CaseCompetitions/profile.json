@@ -1,0 +1,20 @@
+{
+  "_about": "Who the competitions are ranked for. Eligibility is checked against this; change it and run fetch_competitions.py again.",
+  "name": "Prathmesh",
+  "institute": "IIT Bombay",
+  "unstop_institute_ids": [
+    604
+  ],
+  "institute_pattern": "Indian Institute of Technology \\(IIT\\),? Bombay|\\bIIT,? Bombay\\b|\\bIITB\\b",
+  "not_institute_pattern": "Mehta|Management|SJMSOM|IDC|Design",
+  "degree": "B.Tech",
+  "unstop_courses": [
+    "btech"
+  ],
+  "branch": "Civil Engineering",
+  "branch_pattern": "civil|\\ball\\b",
+  "minor": "IEOR",
+  "passout_year": 2027,
+  "graduates_by": "2027-06",
+  "_graduates_by": "Rough. Only used to say whether a competition's next edition comes before or after the final semester."
+}

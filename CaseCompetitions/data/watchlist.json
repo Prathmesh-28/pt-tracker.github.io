@@ -1,0 +1,2477 @@
+{
+ "generated": "2026-10-15T12:59:51+05:30",
+ "entries": [
+  {
+   "id": "inter-iit-tech-meet",
+   "name": "Inter IIT Tech Meet",
+   "employer": "Problem statements set by companies",
+   "scope": "iit_only",
+   "leads_to": "The IIT-only national tech contest; companies submit the problem statements",
+   "how": "Each IIT chooses its own contingent through internal selections.",
+   "url": "https://www.askiitm.com/insightful-reads/what-is-the-inter-iit-tech-meet",
+   "last": "14.0 at IIT Patna, 11–14 Dec 2025",
+   "next": "15.0: no dates announced by 15 Oct 2026",
+   "next_month": "2026-12",
+   "for_2027": "yes",
+   "for_2027_note": "",
+   "sources": [
+    "https://patnapress.com/?p=50639",
+    "https://www.askiitm.com/insightful-reads/what-is-the-inter-iit-tech-meet"
+   ],
+   "checked": "2026-10-15",
+   "tier": 1,
+   "open_now": [],
+   "before_graduation": true
+  },
+  {
+   "id": "imagine-cup",
+   "name": "Microsoft Imagine Cup",
+   "employer": "Microsoft",
+   "scope": "open",
+   "leads_to": "Student startup competition with a global final",
+   "how": "",
+   "url": "https://imaginecup.microsoft.com",
+   "last": "2025: MVP submissions closed 22 Jan 2025",
+   "next": "2027: a third-party listing gives 8 Jan 2027 for registration and submission; not confirmed by Microsoft",
+   "next_month": "2027-01",
+   "for_2027": "yes",
+   "for_2027_note": "",
+   "sources": [
+    "https://internshala.com/competitions/2027-imagine-cup-competition/"
+   ],
+   "checked": "2026-10-15",
+   "tier": 1,
+   "open_now": [],
+   "before_graduation": true
+  },
+  {
+   "id": "worldquant-iqc",
+   "name": "WorldQuant International Quant Championship",
+   "employer": "WorldQuant",
+   "scope": "open",
+   "leads_to": "A quant firm's global modelling contest; US$100,000 in prizes in 2026",
+   "how": "Register on WorldQuant BRAIN; three stages, in teams.",
+   "url": "https://worldquantbrain.com/iqc",
+   "last": "2026: registration 17 Mar – 13 May; qualifier to 18 May; global finals in Singapore in September",
+   "next": "2027: not announced; registration opened in March in both 2025 and 2026",
+   "next_month": "2027-03",
+   "for_2027": "yes",
+   "for_2027_note": "Open to students and early-career professionals",
+   "sources": [
+    "https://targetjobs.co.uk/organisations/worldquant-brain/events/international-quant-championship-2026-worldquant-brains-global-quantitative-finance-modelling-competition",
+    "https://www.worldquant.com/ideas/worldquants-international-quant-championship-returns-for-its-sixth-year-following-record-global-participation-in-2025/"
+   ],
+   "checked": "2026-10-15",
+   "tier": 1,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1648204,
+     "title": "International Quant Championship 2026",
+     "url": "https://unstop.com/competitions/crp-international-quant-championship-2026-worldquant-1648204",
+     "start": "2026-02-25T10:09:01+05:30",
+     "end": "2026-05-13T23:59:01+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": true
+  },
+  {
+   "id": "imc-prosperity",
+   "name": "IMC Prosperity",
+   "employer": "IMC Trading",
+   "scope": "open",
+   "leads_to": "A trading firm's global algorithmic-trading challenge for university students",
+   "how": "",
+   "url": "https://job-boards.eu.greenhouse.io/imc/jobs/4790350101",
+   "last": "Prosperity 4 began 14 Apr 2026",
+   "next": "Prosperity 5: not announced",
+   "next_month": "2027-04",
+   "for_2027": "yes",
+   "for_2027_note": "Open to university students worldwide",
+   "sources": [
+    "https://job-boards.eu.greenhouse.io/imc/jobs/4790350101"
+   ],
+   "checked": "2026-10-15",
+   "tier": 1,
+   "open_now": [],
+   "before_graduation": true
+  },
+  {
+   "id": "loreal-brandstorm",
+   "name": "L'Oréal Brandstorm",
+   "employer": "L'Oréal",
+   "scope": "open",
+   "leads_to": "Global innovation competition with an international final in Paris",
+   "how": "",
+   "url": "https://brandstorm.loreal.com",
+   "last": "2026: national deadlines mid-March to mid-April (14 Mar in Singapore, 12 Apr in DACH); final in Paris in June",
+   "next": "2027: not announced",
+   "next_month": "2027-03",
+   "for_2027": "yes",
+   "for_2027_note": "Undergraduate and graduate students in participating countries",
+   "sources": [
+    "https://nus.edu.sg/cfg/events/details/03ed196db28a8f6d3d9768eb5f61ac59",
+    "https://www.stellenwerk.de/kiel/events/loreal-brandstorm-260109-258197"
+   ],
+   "checked": "2026-10-15",
+   "tier": 3,
+   "open_now": [],
+   "before_graduation": true
+  },
+  {
+   "id": "jpm-code-for-good",
+   "name": "J.P. Morgan Code for Good (India)",
+   "employer": "J.P. Morgan",
+   "scope": "open",
+   "leads_to": "A hackathon run by J.P. Morgan's campus recruiting",
+   "how": "",
+   "url": "https://careers.jpmorgan.com",
+   "last": "2026: held in Bengaluru; third-party guides say applications ran January – March",
+   "next": "2027: expect applications January – March",
+   "next_month": "2027-01",
+   "for_2027": "check",
+   "for_2027_note": "Check the batch on the posting",
+   "sources": [
+    "https://papersadda.com/article/jp-morgan-code-for-good-india-2026/"
+   ],
+   "checked": "2026-10-15",
+   "tier": 1,
+   "open_now": [],
+   "before_graduation": true
+  },
+  {
+   "id": "citadel-india",
+   "name": "Citadel India Datathon and The India Terminal",
+   "employer": "Citadel",
+   "scope": "open",
+   "leads_to": "Data and trading contests run by Citadel and Citadel Securities",
+   "how": "Apply through Correlation One, then a 60-minute assessment.",
+   "url": "https://www.citadel.com/careers/programs-and-events/datathons",
+   "last": "The India Terminal 2026: apply by 8 Mar, competition 23–30 Mar",
+   "next": "2027: not announced; watch from January",
+   "next_month": "2027-02",
+   "for_2027": "check",
+   "for_2027_note": "The 2026 India Datathon took undergraduates graduating Dec 2026 – Jun 2028",
+   "sources": [
+    "https://www.citadel.com/careers/programs-and-events/datathons",
+    "https://citadel.com/careers/the-data-open"
+   ],
+   "checked": "2026-10-15",
+   "tier": 1,
+   "open_now": [],
+   "before_graduation": true
+  },
+  {
+   "id": "gs-india-hackathon",
+   "name": "Goldman Sachs India Hackathon",
+   "employer": "Goldman Sachs",
+   "scope": "open",
+   "leads_to": "Top performers are fast-tracked to a pre-placement interview",
+   "how": "",
+   "url": "https://goldmansachs.com/careers/students/programs-and-internships/india/hackathon",
+   "last": "2026: registration 22 Apr – 10 May; quant round 23 May",
+   "next": "2027: expect April",
+   "next_month": "2027-04",
+   "for_2027": "check",
+   "for_2027_note": "The interview is for an internship, so the 2027 edition may be for later batches",
+   "sources": [
+    "https://goldmansachs.com/careers/students/programs-and-internships/india/hackathon",
+    "https://internshala.com/competitions/goldman-sachs-india-hackathon-2026/"
+   ],
+   "checked": "2026-10-15",
+   "tier": 1,
+   "open_now": [],
+   "before_graduation": true
+  },
+  {
+   "id": "iicpc-quantfest",
+   "name": "IICPC Global QuantFest",
+   "employer": "Optiver, Jane Street and Hudson River Trading (sponsors)",
+   "scope": "open",
+   "leads_to": "Probability, coding and trading-simulation rounds sponsored by trading firms",
+   "how": "",
+   "url": "https://internshala.com/competitions/about-iicpc-global-quantfest-2026/",
+   "last": "2026: prelims 23 Aug (11,000+ registered); top 600 to regionals; finale 17–20 Oct at IIT Madras Research Park",
+   "next": "2027: expect prelims in August",
+   "next_month": "2027-08",
+   "for_2027": "check",
+   "for_2027_note": "The next prelims come after the final semester",
+   "sources": [
+    "https://internshala.com/competitions/about-iicpc-global-quantfest-2026/",
+    "https://tower-research.com/building-the-future-of-quantitative-talent-tower-at-iicpc-quantfest-2025/"
+   ],
+   "checked": "2026-10-15",
+   "tier": 1,
+   "open_now": [],
+   "before_graduation": false
+  },
+  {
+   "id": "swiggy",
+   "name": "Swiggy Food for Thought",
+   "employer": "Swiggy",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/food-for-thought-challenge-powered-by-swiggy-swiggy-1560244",
+   "last": "Food for Thought Challenge powered by Swiggy: registration 26 Sep 2025 – 8 Oct 2025",
+   "next": "Expect around September 2026, a year after the last",
+   "next_month": "2026-09",
+   "for_2027": "check",
+   "for_2027_note": "The last edition took the 2027 batch; check the batch when the next one opens",
+   "sources": "",
+   "checked": "",
+   "tier": 2,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1560244,
+     "title": "Food for Thought Challenge powered by Swiggy",
+     "url": "https://unstop.com/competitions/food-for-thought-challenge-powered-by-swiggy-swiggy-1560244",
+     "start": "2025-09-26T11:20:00+05:30",
+     "end": "2025-10-08T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": true
+  },
+  {
+   "id": "walmart-sparkplug",
+   "name": "Walmart Sparkplug",
+   "employer": "Walmart Global Tech India",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885",
+   "last": "Sparkplug - Summer Internship 2026: registration 29 Oct 2025 – 16 Nov 2025",
+   "next": "Expect around October 2026, a year after the last",
+   "next_month": "2026-10",
+   "for_2027": "check",
+   "for_2027_note": "The last edition took the 2027 batch; check the batch when the next one opens",
+   "sources": "",
+   "checked": "",
+   "tier": 2,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1575885,
+     "title": "Sparkplug - Summer Internship 2026",
+     "url": "https://unstop.com/hackathons/crp-sparkplug-summer-internship-2026-walmart-global-tech-in-india-1575885",
+     "start": "2025-10-29T12:00:28+05:30",
+     "end": "2025-11-16T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1175366,
+     "title": "Sparkplug - Summer Internship 2025",
+     "url": "https://unstop.com/hackathons/crp-sparkplug-summer-internship-2025-walmart-global-tech-india-1175366",
+     "start": "2024-10-07T00:00:00+05:30",
+     "end": "2024-10-20T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 835650,
+     "title": "Sparkplug 2024",
+     "url": "https://unstop.com/hackathons/crp-sparkplug-2024-walmart-global-tech-in-india-835650",
+     "start": "2023-12-12T11:00:50+05:30",
+     "end": "2024-01-10T23:59:50+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 461069,
+     "title": "Walmart Sparkplug 2022",
+     "url": "https://unstop.com/hackathons/crp-walmart-sparkplug-2022-walmart-global-tech-in-india-461069",
+     "start": "2022-10-19T11:00:36+05:30",
+     "end": "2022-10-31T12:00:36+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": true
+  },
+  {
+   "id": "amex-campus",
+   "name": "American Express Campus Challenge",
+   "employer": "American Express",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-strategy-track-the-american-express-campus-challenge-2026-the-american-express-campus-challenge-2026-americ-1688123",
+   "last": "Strategy Track - The American Express Campus Challenge 2026 (+1 tracks): registration 23 Jun 2026 – 9 Jul 2026",
+   "next": "Expect around June 2027, a year after the last",
+   "next_month": "2027-06",
+   "for_2027": "check",
+   "for_2027_note": "The last edition took the 2027 batch; check the batch when the next one opens",
+   "sources": "",
+   "checked": "",
+   "tier": 2,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1688123,
+     "title": "Strategy Track - The American Express Campus Challenge 2026",
+     "url": "https://unstop.com/competitions/crp-strategy-track-the-american-express-campus-challenge-2026-the-american-express-campus-challenge-2026-americ-1688123",
+     "start": "2026-06-23T12:00:26+05:30",
+     "end": "2026-07-09T00:00:09+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1698314,
+     "title": "Product Track - The American Express Campus Challenge 2026",
+     "url": "https://unstop.com/competitions/crp-product-track-the-american-express-campus-challenge-2026-the-american-express-campus-challenge-2026-america-1698314",
+     "start": "2026-06-23T12:00:26+05:30",
+     "end": "2026-07-09T23:59:26+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch"
+     ]
+    },
+    {
+     "id": 1500442,
+     "title": "Decision Science Track - The American Express Campus Challenge 2025",
+     "url": "https://unstop.com/competitions/crp-decision-science-track-the-american-express-campus-challenge-2025-american-express-1500442",
+     "start": "2026-04-06T18:26:12+05:30",
+     "end": "2026-04-07T18:26:17+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1500540,
+     "title": "Product Track - The American Express Campus Challenge 2025",
+     "url": "https://unstop.com/competitions/crp-product-track-the-american-express-campus-challenge-2025-american-express-1500540",
+     "start": "2025-06-14T10:00:35+05:30",
+     "end": "2025-07-07T23:59:35+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1104328,
+     "title": "Strategy Track - The American Express Campus Challenge 2024",
+     "url": "https://unstop.com/competition/strategy-track-the-american-express-campus-challenge-2024-1104328",
+     "start": "2024-08-02T10:00:12+05:30",
+     "end": "2024-09-01T23:59:12+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 980647,
+     "title": "Decision Science Track - The American Express Campus Challenge 2024",
+     "url": "https://unstop.com/competitions/decision-science-track-the-american-express-campus-challenge-2024-980647",
+     "start": "2024-05-13T10:00:12+05:30",
+     "end": "2024-06-23T23:59:12+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 981114,
+     "title": "Product Track - The American Express Campus Challenge 2024",
+     "url": "https://unstop.com/competitions/product-track-the-american-express-campus-challenge-2024-981114",
+     "start": "2024-05-08T10:00:16+05:30",
+     "end": "2024-06-01T23:59:16+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": true
+  },
+  {
+   "id": "godrej-summersault",
+   "name": "Godrej Properties Summersault",
+   "employer": "Godrej Properties",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-godrej-properties-limited-summersault-challenge-2025-summersault-for-all-operations-track-godrej-properties-1601187",
+   "last": "Godrej Properties Limited-Summersault Challenge 2025 | Summersault For All - Operations Track (+2 tracks): registration 26 Nov 2025 – 8 Jan 2026",
+   "next": "Expect around November 2026, a year after the last",
+   "next_month": "2026-11",
+   "for_2027": "check",
+   "for_2027_note": "The last edition took the 2027 batch; check the batch when the next one opens",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1601187,
+     "title": "Godrej Properties Limited-Summersault Challenge 2025 | Summersault For All - Operations Track",
+     "url": "https://unstop.com/competitions/crp-godrej-properties-limited-summersault-challenge-2025-summersault-for-all-operations-track-godrej-properties-1601187",
+     "start": "2025-11-26T17:28:23+05:30",
+     "end": "2026-01-08T16:00:23+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1588543,
+     "title": "Godrej Properties Limited-Summersault Challenge 2025 | Operations Track",
+     "url": "https://unstop.com/competitions/crp-godrej-properties-limited-summersault-challenge-2025-operations-track-godrej-properties-ltd-1588543",
+     "start": "2025-11-05T00:00:00+05:30",
+     "end": "2025-11-19T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1588712,
+     "title": "Godrej Properties Limited-Summersault Challenge 2025 | Sales Track",
+     "url": "https://unstop.com/competitions/crp-godrej-properties-limited-summersault-challenge-2025-sales-track-godrej-properties-ltd-1588712",
+     "start": "2025-11-05T00:00:00+05:30",
+     "end": "2025-11-19T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1471610,
+     "title": "Godrej Properties Limited Summersault Challenge: Legal Track",
+     "url": "https://unstop.com/p/godrej-properties-limited-summersault-challenge-2024-duplicate-godrej-properties-ltd-1471610",
+     "start": "2025-05-02T07:33:45+05:30",
+     "end": "2025-05-09T07:33:45+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1182465,
+     "title": "Godrej Properties Limited Summersault Challenge 2024",
+     "url": "https://unstop.com/competitions/godrej-properties-limited-summersault-challenge-2024-godrej-properties-ltd-1182465",
+     "start": "2024-10-19T12:01:00+05:30",
+     "end": "2024-10-26T21:15:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": true
+  },
+  {
+   "id": "hero-campus-challenge",
+   "name": "Hero Campus Challenge",
+   "employer": "Hero MotoCorp",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-hero-campus-challenge-season-10-hero-motocorp-limited-1598608",
+   "last": "Hero Campus Challenge Season 10: registration 1 Dec 2025 – 2 Feb 2026",
+   "next": "Expect around December 2026, a year after the last",
+   "next_month": "2026-12",
+   "for_2027": "check",
+   "for_2027_note": "The last edition took the 2027 batch; check the batch when the next one opens",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1598608,
+     "title": "Hero Campus Challenge Season 10",
+     "url": "https://unstop.com/competitions/crp-hero-campus-challenge-season-10-hero-motocorp-limited-1598608",
+     "start": "2025-12-01T14:00:47+05:30",
+     "end": "2026-02-02T12:00:23+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 840491,
+     "title": "Hero Campus Challenge Season 9",
+     "url": "https://unstop.com/competitions/crp-hero-campus-challenge-season-9-hero-motocorp-limited-840491",
+     "start": "2023-12-20T17:00:30+05:30",
+     "end": "2024-01-19T11:00:30+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 488081,
+     "title": "Hero Campus Challenge Season 8",
+     "url": "https://unstop.com/competitions/crp-hero-campus-challenge-season-8-hero-motocorp-limited-488081",
+     "start": "2022-11-14T12:00:48+05:30",
+     "end": "2022-12-16T10:00:48+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 221638,
+     "title": "Hero Campus Challenge Season 7",
+     "url": "https://unstop.com/competitions/crp-hero-campus-challenge-season-7-hero-motocorp-limited-221638",
+     "start": "2021-10-06T09:00:14+05:30",
+     "end": "2021-10-31T23:59:14+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": true
+  },
+  {
+   "id": "asian-paints",
+   "name": "Asian Paints Alchemy and The Conundrum",
+   "employer": "Asian Paints",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-asian-paints-the-conundrum-2026-asian-paints-1728268",
+   "last": "Asian Paints - The Conundrum 2026: registration 28 Aug 2026 – 4 Sep 2026",
+   "next": "Open now",
+   "next_month": "",
+   "for_2027": "no",
+   "for_2027_note": "Other branches only: Metallurgical Engineering, Metallurgy, Others…",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [
+    {
+     "title": "Asian Paints Alchemy 2026",
+     "url": "https://unstop.com/competitions/crp-asian-paints-alchemy-2026-asian-paints-1704498",
+     "end": "2026-10-31T23:59:57+05:30",
+     "fit": "no",
+     "listed": false
+    }
+   ],
+   "editions": [
+    {
+     "id": 1728268,
+     "title": "Asian Paints - The Conundrum 2026",
+     "url": "https://unstop.com/competitions/crp-asian-paints-the-conundrum-2026-asian-paints-1728268",
+     "start": "2026-08-28T15:00:57+05:30",
+     "end": "2026-09-04T23:59:57+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1704498,
+     "title": "Asian Paints Alchemy 2026",
+     "url": "https://unstop.com/competitions/crp-asian-paints-alchemy-2026-asian-paints-1704498",
+     "start": "2026-07-02T12:25:57+05:30",
+     "end": "2026-10-31T23:59:57+05:30",
+     "open": true,
+     "fit": "no",
+     "reasons": [
+      "Other branches only: Metallurgical Engineering, Metallurgy, Others…"
+     ]
+    },
+    {
+     "id": 1582532,
+     "title": "Asian Paints Alchemy 2025",
+     "url": "https://unstop.com/competitions/crp-asian-paints-alchemy-2025-asian-paints-1582532",
+     "start": "2025-11-10T18:00:46+05:30",
+     "end": "2026-01-13T23:59:46+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Other branches only: Metallurgical Engineering, Metallurgy, Others…"
+     ]
+    },
+    {
+     "id": 1521611,
+     "title": "Asian Paints - The Conundrum 2025",
+     "url": "https://unstop.com/competitions/crp-asian-paints-the-conundrum-2025-asian-paints-1521611",
+     "start": "2025-09-19T18:00:15+05:30",
+     "end": "2025-10-04T23:59:15+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1146968,
+     "title": "Asian Paints - The Conundrum 2024",
+     "url": "https://unstop.com/competitions/crp-asian-paints-the-conundrum-2024-asian-paints-1146968",
+     "start": "2024-09-03T00:00:00+05:30",
+     "end": "2024-09-13T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1117873,
+     "title": "Asian Paints Alchemy 2024",
+     "url": "https://unstop.com/competitions/crp-asian-paints-alchemy-2024-asian-paints-1117873",
+     "start": "2024-08-13T15:00:00+05:30",
+     "end": "2024-10-27T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 832665,
+     "title": "Asian Paints - Alchemy",
+     "url": "https://unstop.com/competitions/crp-asian-paints-alchemy-asian-paints-832665",
+     "start": "2023-12-08T12:00:00+05:30",
+     "end": "2024-01-28T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 729966,
+     "title": "Asian Paints - The Conundrum 2023",
+     "url": "https://unstop.com/competitions/crp-asian-paints-the-conundrum-2023-asian-paints-729966",
+     "start": "2023-08-21T17:30:04+05:30",
+     "end": "2023-09-01T23:59:04+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "hdfc-life-aspire",
+   "name": "HDFC Life Aspire",
+   "employer": "HDFC Life",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-hdfc-lifes-aspire-20-hdfc-life-1545468",
+   "last": "HDFC Life's Aspire 2.0: registration 30 Aug 2025 – 12 Oct 2025",
+   "next": "Open now",
+   "next_month": "",
+   "for_2027": "no",
+   "for_2027_note": "MBA and PGDM students only",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [
+    {
+     "title": "HDFC Life's Aspire 3.0",
+     "url": "https://unstop.com/competitions/crp-hdfc-lifes-aspire-30-hdfc-life-1760116",
+     "end": "2026-10-25T23:59:07+05:30",
+     "fit": "no",
+     "listed": false
+    }
+   ],
+   "editions": [
+    {
+     "id": 1760116,
+     "title": "HDFC Life's Aspire 3.0",
+     "url": "https://unstop.com/competitions/crp-hdfc-lifes-aspire-30-hdfc-life-1760116",
+     "start": "2026-10-09T17:00:07+05:30",
+     "end": "2026-10-25T23:59:07+05:30",
+     "open": true,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1545468,
+     "title": "HDFC Life's Aspire 2.0",
+     "url": "https://unstop.com/competitions/crp-hdfc-lifes-aspire-20-hdfc-life-1545468",
+     "start": "2025-08-30T00:00:37+05:30",
+     "end": "2025-10-12T23:59:37+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1167692,
+     "title": "HDFC Life's Aspire",
+     "url": "https://unstop.com/competitions/crp-hdfc-lifes-aspire-hdfc-life-1167692",
+     "start": "2024-09-23T00:00:00+05:30",
+     "end": "2024-10-28T06:00:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "amazon-ace",
+   "name": "Amazon Customer Excellence (ACE) Challenge",
+   "employer": "Amazon",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-amazon-customer-excellence-ace-challenge-2026-amazon-1709385",
+   "last": "Amazon Customer Excellence (ACE) Challenge 2026 (+1 tracks): registration 21 Jul 2026 – 1 Aug 2026",
+   "next": "Expect around July 2027, a year after the last",
+   "next_month": "2027-07",
+   "for_2027": "no",
+   "for_2027_note": "The last edition was not open to an IIT Bombay 2027 B.Tech; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 1,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1709385,
+     "title": "Amazon Customer Excellence (ACE) Challenge 2026",
+     "url": "https://unstop.com/competitions/crp-amazon-customer-excellence-ace-challenge-2026-amazon-1709385",
+     "start": "2026-07-21T18:55:51+05:30",
+     "end": "2026-08-01T06:00:51+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1709457,
+     "title": "Amazon Customer Excellence (ACE) Challenge 2026: Launch Event",
+     "url": "https://unstop.com/workshops-webinars/crp-amazon-customer-excellence-ace-challenge-2026-launch-event-amazon-1709457",
+     "start": "2026-07-09T16:00:31+05:30",
+     "end": "2026-07-21T18:00:31+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1505288,
+     "title": "Amazon Customer Excellence (ACE) Challenge 2025",
+     "url": "https://unstop.com/competitions/crp-amazon-customer-excellence-ace-challenge-2025-amazon-1505288",
+     "start": "2025-07-22T18:30:00+05:30",
+     "end": "2025-07-31T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1505755,
+     "title": "Amazon Customer Excellence (ACE) Challenge 2025: Launch Event",
+     "url": "https://unstop.com/workshops-webinars/crp-amazon-customer-excellence-ace-challenge-2025-launch-event-amazon-1505755",
+     "start": "2025-07-09T11:30:19+05:30",
+     "end": "2025-07-22T18:29:19+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1008875,
+     "title": "Amazon Customer Excellence (ACE) Challenge 2024",
+     "url": "https://unstop.com/competitions/crp-amazon-customer-excellence-ace-challenge-2024-amazon-1008875",
+     "start": "2024-07-23T18:15:40+05:30",
+     "end": "2024-08-01T23:59:40+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1008927,
+     "title": "Amazon Customer Excellence (ACE) Challenge 2024: Launch Event",
+     "url": "https://unstop.com/workshops-webinars/crp-amazon-customer-excellence-ace-challenge-2024-launch-event-amazon-1008927",
+     "start": "2024-07-18T11:00:25+05:30",
+     "end": "2024-07-23T19:00:25+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 700998,
+     "title": "Amazon Customer Excellence (ACE) Challenge 2023",
+     "url": "https://unstop.com/competitions/crp-amazon-customer-excellence-ace-challenge-2023-amazon-700998",
+     "start": "2023-07-21T19:00:16+05:30",
+     "end": "2023-07-31T22:00:16+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 699187,
+     "title": "Amazon Customer Excellence (ACE) Challenge 2023: Launch Event",
+     "url": "https://unstop.com/workshops-webinars/crp-amazon-customer-excellence-ace-challenge-2023-launch-event-amazon-699187",
+     "start": "2023-07-17T00:00:19+05:30",
+     "end": "2023-07-21T18:00:19+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "amazon-ml",
+   "name": "Amazon ML Challenge",
+   "employer": "Amazon",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/hackathons/crp-amazon-ml-challenge-2026-amazon-1743604",
+   "last": "Amazon ML Challenge 2026: registration 7 Sep 2026 – 22 Sep 2026",
+   "next": "Expect around September 2027, a year after the last",
+   "next_month": "2027-09",
+   "for_2027": "no",
+   "for_2027_note": "The last edition took the 2027 batch; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 1,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1743604,
+     "title": "Amazon ML Challenge 2026",
+     "url": "https://unstop.com/hackathons/crp-amazon-ml-challenge-2026-amazon-1743604",
+     "start": "2026-09-07T19:00:45+05:30",
+     "end": "2026-09-22T23:59:45+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1560375,
+     "title": "Amazon ML Challenge 2025",
+     "url": "https://unstop.com/hackathons/crp-amazon-ml-challenge-2025-amazon-1560375",
+     "start": "2025-09-29T06:30:41+05:30",
+     "end": "2025-10-09T18:29:41+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1100713,
+     "title": "Amazon ML Challenge",
+     "url": "https://unstop.com/hackathons/crp-amazon-ml-challenge-amazon-1100713",
+     "start": "2024-08-26T11:00:00+05:30",
+     "end": "2024-09-09T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "B.Tech batches other than 2027"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "flipkart-grid",
+   "name": "Flipkart GRiD",
+   "employer": "Flipkart",
+   "scope": "open",
+   "leads_to": "Flipkart's engineering challenge, tied to its internships; national finals in Bengaluru",
+   "how": "",
+   "url": "https://www.alvaar.in/2026/07/flipkart-grid-8.0.html",
+   "last": "8.0: registration 19 Jun – 7 Jul 2026, 79,000+ registered, B.Tech batches 2027–2030",
+   "next": "9.0: expect June 2027, likely for later batches",
+   "next_month": "2027-06",
+   "for_2027": "no",
+   "for_2027_note": "8.0 was the edition open to the 2027 batch",
+   "sources": [
+    "https://www.alvaar.in/2026/07/flipkart-grid-8.0.html",
+    "https://www.talentd.in/articles/flipkart-grid-8-0-internships-sde-roles"
+   ],
+   "checked": "2026-10-15",
+   "tier": 2,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1024253,
+     "title": "Flipkart GRiD 6.0 - Robotics Challenge",
+     "url": "https://unstop.com/hackathons/crp-flipkart-grid-60-robotics-challenge-flipkart-grid-60-flipkart-1024253",
+     "start": "2024-07-05T12:00:32+05:30",
+     "end": "2024-08-25T23:59:32+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1024247,
+     "title": "Flipkart GRiD 6.0 - Software Development Track",
+     "url": "https://unstop.com/hackathons/crp-flipkart-grid-60-software-development-track-flipkart-grid-60-flipkart-1024247",
+     "start": "2024-07-05T12:00:19+05:30",
+     "end": "2024-08-10T01:00:19+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1024250,
+     "title": "Flipkart GRiD 6.0 - Information Security Challenge",
+     "url": "https://unstop.com/hackathons/crp-flipkart-grid-60-information-security-challenge-flipkart-grid-60-flipkart-1024250",
+     "start": "2024-07-05T12:00:00+05:30",
+     "end": "2024-08-09T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 686250,
+     "title": "Flipkart GRiD 5.0 - Health+ Track",
+     "url": "https://unstop.com/hackathons/crp-flipkart-grid-50-health-track-flipkart-grid-50-flipkart-686250",
+     "start": "2023-06-07T00:15:00+05:30",
+     "end": "2023-07-21T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 686246,
+     "title": "Flipkart GRiD 5.0 - Robotics Challenge",
+     "url": "https://unstop.com/hackathons/crp-flipkart-grid-50-robotics-challenge-flipkart-grid-50-flipkart-686246",
+     "start": "2023-06-07T00:10:00+05:30",
+     "end": "2023-07-21T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 686211,
+     "title": "Flipkart GRiD 5.0 - Information Security Challenge",
+     "url": "https://unstop.com/hackathons/crp-flipkart-grid-50-information-security-challenge-flipkart-grid-50-flipkart-686211",
+     "start": "2023-06-07T00:05:00+05:30",
+     "end": "2023-07-21T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 686157,
+     "title": "Flipkart GRiD 5.0 - Software Development Track",
+     "url": "https://unstop.com/hackathons/crp-flipkart-grid-50-software-development-track-flipkart-grid-50-flipkart-686157",
+     "start": "2023-06-07T00:00:00+05:30",
+     "end": "2023-07-21T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 348170,
+     "title": "Flipkart GRiD 4.0 - Software Development Challenge",
+     "url": "https://unstop.com/hackathons/crp-flipkart-grid-40-software-development-challenge-flipkart-grid-40-flipkart-348170",
+     "start": "2022-06-03T19:00:34+05:30",
+     "end": "2022-07-01T10:00:34+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "B.Tech batches other than 2027"
+     ]
+    }
+   ],
+   "before_graduation": true
+  },
+  {
+   "id": "meesho-dice",
+   "name": "Meesho DICE Challenge",
+   "employer": "Meesho",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-meesho-dice-challenge-30-meesho-1742111",
+   "last": "Meesho DICE Challenge 3.0: registration 28 Aug 2026 – 11 Sep 2026",
+   "next": "Expect around August 2027, a year after the last",
+   "next_month": "2027-08",
+   "for_2027": "no",
+   "for_2027_note": "The last edition took the 2027 batch; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 2,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1742111,
+     "title": "Meesho DICE Challenge 3.0",
+     "url": "https://unstop.com/competitions/crp-meesho-dice-challenge-30-meesho-1742111",
+     "start": "2026-08-28T18:00:39+05:30",
+     "end": "2026-09-11T23:59:39+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1546763,
+     "title": "Meesho DICE Challenge 2.0 - Tech Track",
+     "url": "https://unstop.com/competitions/crp-meesho-dice-challenge-20-tech-track-meesho-dice-challenge-20-meesho-1546763",
+     "start": "2025-08-26T15:00:38+05:30",
+     "end": "2025-09-12T12:00:38+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1546838,
+     "title": "Meesho DICE Challenge 2.0 - Business Track",
+     "url": "https://unstop.com/competitions/crp-meesho-dice-challenge-20-business-track-meesho-dice-challenge-20-meesho-1546838",
+     "start": "2025-08-26T12:00:15+05:30",
+     "end": "2025-09-12T12:00:15+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1135350,
+     "title": "Meesho DICE Challenge - Tech Track",
+     "url": "https://unstop.com/competitions/crp-meesho-dice-challenge-tech-track-meesho-dice-challenge-meesho-1135350",
+     "start": "2024-08-22T17:30:00+05:30",
+     "end": "2024-09-04T08:00:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1135454,
+     "title": "Meesho DICE Challenge - Business Track",
+     "url": "https://unstop.com/competitions/crp-meesho-dice-challenge-business-track-meesho-dice-challenge-meesho-1135454",
+     "start": "2024-08-21T09:00:00+05:30",
+     "end": "2024-09-04T08:00:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "hul-techtonic",
+   "name": "HUL TechTonic",
+   "employer": "Hindustan Unilever",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-hul-techtonic-season-8-hindustan-unilever-limited-hul-1719683",
+   "last": "HUL TechTonic Season 8: registration 22 Jul 2026 – 21 Aug 2026",
+   "next": "Expect around July 2027, a year after the last",
+   "next_month": "2027-07",
+   "for_2027": "no",
+   "for_2027_note": "The last edition was not open to an IIT Bombay 2027 B.Tech; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1719683,
+     "title": "HUL TechTonic Season 8",
+     "url": "https://unstop.com/competitions/crp-hul-techtonic-season-8-hindustan-unilever-limited-hul-1719683",
+     "start": "2026-07-22T15:00:37+05:30",
+     "end": "2026-08-21T10:00:37+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1525984,
+     "title": "HUL TechTonic Season 7",
+     "url": "https://unstop.com/competitions/crp-hul-techtonic-season-7-hindustan-unilever-limited-hul-1525984",
+     "start": "2025-07-28T06:30:39+05:30",
+     "end": "2025-08-17T23:59:39+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1065403,
+     "title": "HUL TechTonic Season 6",
+     "url": "https://unstop.com/competitions/crp-hul-techtonic-season-6-hindustan-unilever-limited-hul-1065403",
+     "start": "2024-07-31T12:30:00+05:30",
+     "end": "2024-08-14T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 717442,
+     "title": "HUL TechTonic Season 5",
+     "url": "https://unstop.com/competitions/crp-hul-techtonic-season-5-hindustan-unilever-limited-hul-717442",
+     "start": "2023-07-12T12:00:40+05:30",
+     "end": "2023-08-20T23:59:40+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 421255,
+     "title": "HUL TechTonic Season 4",
+     "url": "https://unstop.com/competitions/crp-hul-techtonic-season-4-hindustan-unilever-limited-hul-421255",
+     "start": "2022-09-01T09:00:47+05:30",
+     "end": "2022-09-26T23:59:47+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 197972,
+     "title": "HUL TechTonic Season 3",
+     "url": "https://unstop.com/competitions/crp-hul-techtonic-season-3-hindustan-unilever-limited-hul-197972",
+     "start": "2021-09-01T12:00:00+05:30",
+     "end": "2021-09-18T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "accenture-innovation",
+   "name": "Accenture Innovation Challenge",
+   "employer": "Accenture",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-accenture-innovation-challenge-2026-accenture-1714566",
+   "last": "Accenture Innovation Challenge - 2026: registration 24 Jul 2026 – 16 Aug 2026",
+   "next": "Expect around July 2027, a year after the last",
+   "next_month": "2027-07",
+   "for_2027": "no",
+   "for_2027_note": "The last edition took the 2027 batch; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1714566,
+     "title": "Accenture Innovation Challenge - 2026",
+     "url": "https://unstop.com/competitions/crp-accenture-innovation-challenge-2026-accenture-1714566",
+     "start": "2026-07-24T10:00:00+05:30",
+     "end": "2026-08-16T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 710576,
+     "title": "Accenture Innovation Challenge 2023",
+     "url": "https://unstop.com/competitions/crp-accenture-innovation-challenge-2023-accenture-710576",
+     "start": "2023-07-24T00:00:01+05:30",
+     "end": "2023-09-20T06:00:01+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 409549,
+     "title": "Accenture Innovation Challenge 2022",
+     "url": "https://unstop.com/competitions/crp-accenture-innovation-challenge-2022-accenture-409549",
+     "start": "2022-08-25T13:00:11+05:30",
+     "end": "2022-09-26T02:00:11+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "marico-otw",
+   "name": "Marico Over The Wall",
+   "employer": "Marico",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-marico-over-the-wall-season-14-marico-1727644",
+   "last": "Marico Over The Wall Season 14: registration 29 Jul 2026 – 13 Aug 2026",
+   "next": "Expect around July 2027, a year after the last",
+   "next_month": "2027-07",
+   "for_2027": "no",
+   "for_2027_note": "The last edition was not open to an IIT Bombay 2027 B.Tech; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1727644,
+     "title": "Marico Over The Wall Season 14",
+     "url": "https://unstop.com/competitions/crp-marico-over-the-wall-season-14-marico-1727644",
+     "start": "2026-07-29T09:30:53+05:30",
+     "end": "2026-08-13T09:00:53+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1531168,
+     "title": "Marico Over The Wall Season 13",
+     "url": "https://unstop.com/competitions/crp-marico-over-the-wall-season-13-marico-1531168",
+     "start": "2025-08-06T18:30:00+05:30",
+     "end": "2025-08-17T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1100615,
+     "title": "Over The Wall Season 12",
+     "url": "https://unstop.com/competitions/crp-over-the-wall-season-12-marico-1100615",
+     "start": "2024-08-16T18:00:00+05:30",
+     "end": "2024-09-06T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 736412,
+     "title": "Over The Wall Season 11",
+     "url": "https://unstop.com/competitions/crp-over-the-wall-season-11-marico-736412",
+     "start": "2023-08-21T18:00:12+05:30",
+     "end": "2023-09-04T19:00:12+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 429904,
+     "title": "Over The Wall Season 10",
+     "url": "https://unstop.com/competitions/crp-over-the-wall-season-10-marico-429904",
+     "start": "2022-09-06T17:00:00+05:30",
+     "end": "2022-09-22T17:45:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 191727,
+     "title": "Over The Wall Season 9",
+     "url": "https://unstop.com/competitions/crp-over-the-wall-season-9-marico-191727",
+     "start": "2021-09-01T10:00:00+05:30",
+     "end": "2021-09-15T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 132663,
+     "title": "Over The Wall Season 8",
+     "url": "https://unstop.com/competitions/crp-over-the-wall-season-8-marico-132663",
+     "start": "2020-10-28T20:00:00+05:30",
+     "end": "2020-11-06T17:00:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "colgate-transcend",
+   "name": "Colgate Transcend",
+   "employer": "Colgate-Palmolive",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-colgate-transcend-2026-sales-and-marketing-track-colgate-transcend-2026-colgate-palmolive-india-limited-1709953",
+   "last": "Colgate Transcend 2026 - Sales and Marketing Track (+1 tracks): registration 8 Jul 2026 – 15 Jul 2026",
+   "next": "Expect around July 2027, a year after the last",
+   "next_month": "2027-07",
+   "for_2027": "no",
+   "for_2027_note": "The last edition was not open to an IIT Bombay 2027 B.Tech; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1709953,
+     "title": "Colgate Transcend 2026 - Sales and Marketing Track",
+     "url": "https://unstop.com/competitions/crp-colgate-transcend-2026-sales-and-marketing-track-colgate-transcend-2026-colgate-palmolive-india-limited-1709953",
+     "start": "2026-07-08T12:00:44+05:30",
+     "end": "2026-07-15T23:59:44+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1709981,
+     "title": "Colgate Transcend 2026 - Supply Chain Track",
+     "url": "https://unstop.com/competitions/crp-colgate-transcend-2026-supply-chain-track-colgate-transcend-2026-colgate-palmolive-india-limited-1709981",
+     "start": "2026-07-07T09:00:57+05:30",
+     "end": "2026-07-15T23:59:57+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1533645,
+     "title": "Colgate Transcend 2025 - Supply Chain Track",
+     "url": "https://unstop.com/competitions/crp-colgate-transcend-2025-supply-chain-track-colgate-transcend-2025-colgate-palmolive-india-limited-1533645",
+     "start": "2025-08-06T16:00:11+05:30",
+     "end": "2025-08-11T23:59:11+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1533629,
+     "title": "Colgate Transcend 2025 - Sales and Marketing Track",
+     "url": "https://unstop.com/competitions/crp-colgate-transcend-2025-sales-and-marketing-track-colgate-transcend-2025-colgate-palmolive-india-limited-1533629",
+     "start": "2025-08-06T16:00:11+05:30",
+     "end": "2025-08-11T23:59:11+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1102478,
+     "title": "Commercial Track - Colgate Transcend 2024",
+     "url": "https://unstop.com/competitions/crp-commercial-track-colgate-transcend-2024-colgate-transcend-2024-colgate-palmolive-india-limited-1102478",
+     "start": "2024-08-01T00:00:00+05:30",
+     "end": "2024-08-11T16:00:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1102397,
+     "title": "Supply Chain Track - Colgate Transcend 2024",
+     "url": "https://unstop.com/competitions/crp-supply-chain-track-colgate-transcend-2024-colgate-transcend-2024-colgate-palmolive-india-limited-1102397",
+     "start": "2024-08-01T00:00:00+05:30",
+     "end": "2024-08-11T16:00:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 492470,
+     "title": "Colgate Transcend 2022",
+     "url": "https://unstop.com/competitions/crp-colgate-transcend-2022-colgate-palmolive-india-limited-492470",
+     "start": "2022-11-10T12:20:15+05:30",
+     "end": "2022-11-19T23:59:15+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 197883,
+     "title": "Colgate Transcend 2021",
+     "url": "https://unstop.com/competitions/crp-colgate-transcend-2021-colgate-palmolive-india-limited-197883",
+     "start": "2021-09-02T13:00:40+05:30",
+     "end": "2021-10-05T23:59:40+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "airtel-icreate",
+   "name": "Airtel iCreate",
+   "employer": "Airtel",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-airtel-icreate-2026-2nd-year-b-school-track-airtel-icreate-2026-airtel-1710273",
+   "last": "Airtel iCreate 2026 - 2nd Year B-School Track (+1 tracks): registration 3 Jul 2026 – 18 Jul 2026",
+   "next": "Expect around July 2027, a year after the last",
+   "next_month": "2027-07",
+   "for_2027": "no",
+   "for_2027_note": "The last edition was not open to an IIT Bombay 2027 B.Tech; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1710273,
+     "title": "Airtel iCreate 2026 - 2nd Year B-School Track",
+     "url": "https://unstop.com/competitions/crp-airtel-icreate-2026-2nd-year-b-school-track-airtel-icreate-2026-airtel-1710273",
+     "start": "2026-07-03T12:01:13+05:30",
+     "end": "2026-07-18T07:00:13+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1701345,
+     "title": "Airtel iCreate 2026 - 1st Year B-School Track",
+     "url": "https://unstop.com/competitions/crp-airtel-icreate-2026-1st-year-b-school-track-airtel-icreate-2026-airtel-1701345",
+     "start": "2026-07-03T12:00:13+05:30",
+     "end": "2026-07-18T07:00:13+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1509281,
+     "title": "Airtel iCreate 2025 - 1st Year B-School Track",
+     "url": "https://unstop.com/competitions/crp-airtel-icreate-2025-1st-year-b-school-track-airtel-icreate-2025-airtel-1509281",
+     "start": "2025-07-15T12:00:50+05:30",
+     "end": "2025-08-01T23:58:50+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1509017,
+     "title": "Airtel iCreate 2025 - 2nd Year B-School Track",
+     "url": "https://unstop.com/competitions/crp-airtel-icreate-2025-2nd-year-b-school-track-airtel-icreate-2025-airtel-1509017",
+     "start": "2025-07-15T12:00:44+05:30",
+     "end": "2025-08-01T23:56:44+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1064640,
+     "title": "Airtel iCreate 2024 - 2nd Year B-School Track",
+     "url": "https://unstop.com/competitions/crp-airtel-icreate-2024-2nd-year-b-school-track-airtel-icreate-2024-airtel-1064640",
+     "start": "2024-07-02T12:00:42+05:30",
+     "end": "2024-07-20T23:59:42+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1055422,
+     "title": "Airtel iCreate 2024 - 1st Year B-School Track",
+     "url": "https://unstop.com/competitions/crp-airtel-icreate-2024-1st-year-b-school-track-airtel-icreate-2024-airtel-1055422",
+     "start": "2024-07-02T12:00:31+05:30",
+     "end": "2024-07-20T23:59:31+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 218044,
+     "title": "Airtel iCreate 2021",
+     "url": "https://unstop.com/competitions/crp-airtel-icreate-2021-airtel-218044",
+     "start": "2021-10-08T16:00:05+05:30",
+     "end": "2021-11-01T06:00:05+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "tvs-credit-epic",
+   "name": "TVS Credit E.P.I.C",
+   "employer": "TVS Credit",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-tvs-credit-epic-80-strategy-challenge-epic-season-8-tvs-credit-1701123",
+   "last": "TVS Credit E.P.I.C 8.0 — Strategy Challenge (+3 tracks): registration 13 Jul 2026 – 19 Aug 2026",
+   "next": "Expect around July 2027, a year after the last",
+   "next_month": "2027-07",
+   "for_2027": "no",
+   "for_2027_note": "The last edition took the 2027 batch; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1701123,
+     "title": "TVS Credit E.P.I.C 8.0 — Strategy Challenge",
+     "url": "https://unstop.com/competitions/crp-tvs-credit-epic-80-strategy-challenge-epic-season-8-tvs-credit-1701123",
+     "start": "2026-07-13T11:25:29+05:30",
+     "end": "2026-08-19T14:00:29+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1701126,
+     "title": "TVS Credit E.P.I.C 8.0 — Finance Challenge",
+     "url": "https://unstop.com/competitions/crp-tvs-credit-epic-80-finance-challenge-epic-season-8-tvs-credit-1701126",
+     "start": "2026-07-13T11:20:26+05:30",
+     "end": "2026-08-19T14:00:26+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1701127,
+     "title": "TVS Credit E.P.I.C 8.0 — Analytics Challenge",
+     "url": "https://unstop.com/competitions/crp-tvs-credit-epic-80-analytics-challenge-epic-season-8-tvs-credit-1701127",
+     "start": "2026-07-13T11:20:09+05:30",
+     "end": "2026-08-19T14:00:09+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1701115,
+     "title": "TVS Credit E.P.I.C 8.0 — IT Challenge",
+     "url": "https://unstop.com/competitions/crp-tvs-credit-epic-80-it-challenge-epic-season-8-tvs-credit-1701115",
+     "start": "2026-07-12T11:20:41+05:30",
+     "end": "2026-08-19T14:00:41+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1510621,
+     "title": "TVS Credit E.P.I.C 7.0 — IT Challenge",
+     "url": "https://unstop.com/competitions/crp-tvs-credit-epic-70-it-challenge-epic-season-7-tvs-credit-1510621",
+     "start": "2025-07-08T18:00:00+05:30",
+     "end": "2025-08-05T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1510504,
+     "title": "TVS Credit E.P.I.C 7.0 — Strategy Challenge",
+     "url": "https://unstop.com/competitions/crp-tvs-credit-epic-70-strategy-challenge-epic-season-7-tvs-credit-1510504",
+     "start": "2025-07-08T18:00:00+05:30",
+     "end": "2025-08-05T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1509407,
+     "title": "TVS Credit E.P.I.C 7.0 — Finance Challenge",
+     "url": "https://unstop.com/competitions/crp-tvs-credit-epic-70-finance-challenge-epic-season-7-tvs-credit-1509407",
+     "start": "2025-07-08T18:00:00+05:30",
+     "end": "2025-08-05T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1510669,
+     "title": "TVS Credit E.P.I.C 7.0 — Analytics Challenge",
+     "url": "https://unstop.com/competitions/crp-tvs-credit-epic-70-analytics-challenge-epic-season-7-tvs-credit-1510669",
+     "start": "2025-07-08T18:00:00+05:30",
+     "end": "2025-08-05T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "tata-imagination",
+   "name": "Tata Imagination Challenge",
+   "employer": "Tata Group",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-tata-imagination-challenge-2026-tata-group-1740413",
+   "last": "Tata Imagination Challenge 2026: registration 24 Aug 2026 – 17 Sep 2026",
+   "next": "Expect around August 2027, a year after the last",
+   "next_month": "2027-08",
+   "for_2027": "no",
+   "for_2027_note": "The last edition took the 2027 batch; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1740413,
+     "title": "Tata Imagination Challenge 2026",
+     "url": "https://unstop.com/competitions/crp-tata-imagination-challenge-2026-tata-group-1740413",
+     "start": "2026-08-24T10:00:38+05:30",
+     "end": "2026-09-17T23:00:38+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1543000,
+     "title": "Tata Imagination Challenge 2025",
+     "url": "https://unstop.com/competitions/crp-tata-imagination-challenge-2025-tata-group-1543000",
+     "start": "2025-08-18T12:00:00+05:30",
+     "end": "2025-09-22T12:00:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1096490,
+     "title": "Tata Imagination Challenge 2024: Student Track",
+     "url": "https://unstop.com/competitions/crp-tata-imagination-challenge-2024-student-track-tata-imagination-challenge-2024-tata-group-1096490",
+     "start": "2024-07-29T00:00:00+05:30",
+     "end": "2024-09-09T12:00:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 750864,
+     "title": "Tata Imagination Challenge 2023",
+     "url": "https://unstop.com/competitions/crp-tata-imagination-challenge-2023-tata-group-750864",
+     "start": "2023-09-01T12:00:12+05:30",
+     "end": "2024-08-13T15:00:12+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 407493,
+     "title": "Tata Imagination Challenge 2022",
+     "url": "https://unstop.com/competitions/crp-tata-imagination-challenge-2022-tata-407493",
+     "start": "2022-08-18T12:00:25+05:30",
+     "end": "2023-12-12T13:59:25+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 213975,
+     "title": "Tata Imagination Challenge 2021",
+     "url": "https://unstop.com/competitions/crp-tata-imagination-challenge-2021-tata-sons-213975",
+     "start": "2021-09-22T12:00:57+05:30",
+     "end": "2021-10-22T23:59:57+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "hul-lime",
+   "name": "HUL LIME",
+   "employer": "Hindustan Unilever",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-hul-lime-season-17-hindustan-unilever-limited-hul-1531679",
+   "last": "HUL LIME Season 17: registration 22 Aug 2025 – 15 Sep 2025",
+   "next": "Expect around August 2027, a year after the last",
+   "next_month": "2027-08",
+   "for_2027": "no",
+   "for_2027_note": "The last edition was not open to an IIT Bombay 2027 B.Tech; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1531679,
+     "title": "HUL LIME Season 17",
+     "url": "https://unstop.com/competitions/crp-hul-lime-season-17-hindustan-unilever-limited-hul-1531679",
+     "start": "2025-08-22T12:00:05+05:30",
+     "end": "2025-09-15T07:00:05+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 716038,
+     "title": "HUL LIME Season XV",
+     "url": "https://unstop.com/competitions/crp-hul-lime-season-xv-hindustan-unilever-limited-hul-716038",
+     "start": "2023-08-02T13:00:21+05:30",
+     "end": "2023-08-18T23:59:21+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 375585,
+     "title": "HUL LIME Season 14",
+     "url": "https://unstop.com/competitions/crp-hul-lime-season-14-hindustan-unilever-limited-hul-375585",
+     "start": "2022-07-20T11:00:26+05:30",
+     "end": "2022-08-01T23:59:26+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 191792,
+     "title": "HUL LIME Season XIII",
+     "url": "https://unstop.com/competitions/crp-hul-lime-season-xiii-hindustan-unilever-limited-hul-191792",
+     "start": "2021-08-12T17:00:51+05:30",
+     "end": "2021-09-24T13:00:51+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "aditya-birla",
+   "name": "Aditya Birla Group Stratos, HeadstaRt and Engenuity",
+   "employer": "Aditya Birla Group",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-aditya-birla-group-engenuity-2026-aditya-birla-group-1712136",
+   "last": "Aditya Birla Group Engenuity 2026: registration 17 Aug 2026 – 31 Aug 2026",
+   "next": "Expect around August 2027, a year after the last",
+   "next_month": "2027-08",
+   "for_2027": "no",
+   "for_2027_note": "The last edition took the 2027 batch; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1712136,
+     "title": "Aditya Birla Group Engenuity 2026",
+     "url": "https://unstop.com/competitions/crp-aditya-birla-group-engenuity-2026-aditya-birla-group-1712136",
+     "start": "2026-08-17T00:00:38+05:30",
+     "end": "2026-08-31T12:00:38+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1703062,
+     "title": "Aditya Birla Group Stratos 2026",
+     "url": "https://unstop.com/competitions/crp-aditya-birla-group-stratos-2026-aditya-birla-group-1703062",
+     "start": "2026-07-10T12:00:07+05:30",
+     "end": "2026-07-27T18:30:07+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1703040,
+     "title": "Aditya Birla Group HeadstaRt 2026",
+     "url": "https://unstop.com/competitions/crp-aditya-birla-group-headstart-2026-aditya-birla-group-1703040",
+     "start": "2026-07-07T12:00:49+05:30",
+     "end": "2026-07-19T23:59:49+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1550282,
+     "title": "Aditya Birla Group Engenuity 2025",
+     "url": "https://unstop.com/competitions/crp-aditya-birla-group-engenuity-2025-aditya-birla-group-1550282",
+     "start": "2025-09-02T00:00:00+05:30",
+     "end": "2025-09-17T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1525312,
+     "title": "Aditya Birla Group Stratos 2025",
+     "url": "https://unstop.com/competitions/crp-aditya-birla-group-stratos-2025-aditya-birla-group-1525312",
+     "start": "2025-07-28T10:00:00+05:30",
+     "end": "2025-08-11T06:00:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1525277,
+     "title": "Aditya Birla Group HeadstaRt 2025",
+     "url": "https://unstop.com/competitions/crp-aditya-birla-group-headstart-2025-aditya-birla-group-1525277",
+     "start": "2025-07-21T10:00:00+05:30",
+     "end": "2025-08-03T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1068092,
+     "title": "Aditya Birla Group HeadstaRt 2024",
+     "url": "https://unstop.com/competitions/crp-aditya-birla-group-headstart-2024-aditya-birla-group-1068092",
+     "start": "2024-07-29T10:00:42+05:30",
+     "end": "2024-08-11T23:59:42+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1026121,
+     "title": "Aditya Birla Group Stratos 2024",
+     "url": "https://unstop.com/competitions/crp-aditya-birla-group-stratos-2024-aditya-birla-group-1026121",
+     "start": "2024-07-09T12:00:20+05:30",
+     "end": "2024-08-05T05:59:20+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "britannia-creatovate",
+   "name": "Britannia Creatovate",
+   "employer": "Britannia",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-manufacturing-track-britannia-creatovate-20-britannia-creatovate-2026-britannia-industries-ltd-1745495",
+   "last": "Manufacturing Track - Britannia Creatovate 2.0 (+4 tracks): registration 28 Aug 2026 – 19 Sep 2026",
+   "next": "Expect around August 2027, a year after the last",
+   "next_month": "2027-08",
+   "for_2027": "no",
+   "for_2027_note": "The last edition was not open to an IIT Bombay 2027 B.Tech; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1745495,
+     "title": "Manufacturing Track - Britannia Creatovate 2.0",
+     "url": "https://unstop.com/competitions/crp-manufacturing-track-britannia-creatovate-20-britannia-creatovate-2026-britannia-industries-ltd-1745495",
+     "start": "2026-08-28T05:30:15+05:30",
+     "end": "2026-09-19T23:59:15+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "Other branches only: Artificial Intelligence, Electrical Engineering, Electronics Engineering…"
+     ]
+    },
+    {
+     "id": 1736299,
+     "title": "Supply Chain Track - Britannia Creatovate 2.0",
+     "url": "https://unstop.com/competitions/crp-supply-chain-track-britannia-creatovate-20-britannia-creatovate-2026-britannia-industries-ltd-1736299",
+     "start": "2026-08-13T05:00:09+05:30",
+     "end": "2026-08-23T23:59:09+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1736291,
+     "title": "Purchase Track - Britannia Creatovate 2.0",
+     "url": "https://unstop.com/competitions/crp-purchase-track-britannia-creatovate-20-britannia-creatovate-2026-britannia-industries-ltd-1736291",
+     "start": "2026-08-13T04:30:09+05:30",
+     "end": "2026-08-23T23:59:09+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1730268,
+     "title": "HR Track - Britannia Creatovate 2.0",
+     "url": "https://unstop.com/competitions/crp-britannia-creatovate-20-hr-track-britannia-creatovate-2026-britannia-industries-ltd-1730268",
+     "start": "2026-08-04T04:30:09+05:30",
+     "end": "2026-08-16T23:59:09+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1730216,
+     "title": "Sales and Marketing Track - Britannia Creatovate 2.0",
+     "url": "https://unstop.com/competitions/crp-britannia-creatovate-20-sales-and-marketing-track-britannia-industries-ltd-1730216",
+     "start": "2026-08-04T04:30:09+05:30",
+     "end": "2026-08-16T23:59:09+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1539570,
+     "title": "Britannia Creatovate - Manufacturing Track",
+     "url": "https://unstop.com/competitions/crp-britannia-creatovate-manufacturing-track-britannia-creatovate-2025-britannia-industries-ltd-1539570",
+     "start": "2025-08-22T17:00:00+05:30",
+     "end": "2025-08-30T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Other branches only: Electrical Engineering, Industrial Engineering, Instrumentation Engineering…"
+     ]
+    },
+    {
+     "id": 1539552,
+     "title": "Britannia Creatovate - Supply Chain Track",
+     "url": "https://unstop.com/competitions/crp-britannia-creatovate-supply-chain-track-britannia-creatovate-2025-britannia-industries-ltd-1539552",
+     "start": "2025-08-22T17:00:00+05:30",
+     "end": "2025-08-30T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1539559,
+     "title": "Britannia Creatovate - Procurement Track",
+     "url": "https://unstop.com/competitions/crp-britannia-creatovate-procurement-track-britannia-creatovate-2025-britannia-industries-ltd-1539559",
+     "start": "2025-08-22T17:00:00+05:30",
+     "end": "2025-08-30T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "loreal-edge",
+   "name": "The L'Oréal Edge",
+   "employer": "L'Oréal",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-the-loreal-edge-beauty-tech-track-the-loreal-edge-loreal-1727748",
+   "last": "The L’Oréal Edge - Beauty Tech Track: registration 7 Aug 2026 – 10 Aug 2026",
+   "next": "Expect around August 2027, a year after the last",
+   "next_month": "2027-08",
+   "for_2027": "no",
+   "for_2027_note": "The last edition was not open to an IIT Bombay 2027 B.Tech; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1727748,
+     "title": "The L’Oréal Edge - Beauty Tech Track",
+     "url": "https://unstop.com/competitions/crp-the-loreal-edge-beauty-tech-track-the-loreal-edge-loreal-1727748",
+     "start": "2026-08-07T19:05:43+05:30",
+     "end": "2026-08-10T09:00:43+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1711616,
+     "title": "The L’Oréal Edge - Finance Track",
+     "url": "https://unstop.com/competitions/crp-the-loreal-edge-finance-track-the-loreal-edge-loreal-1711616",
+     "start": "2026-07-14T14:30:00+05:30",
+     "end": "2026-07-18T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1709036,
+     "title": "The L’Oréal Edge - Human Resources Track",
+     "url": "https://unstop.com/competitions/crp-the-loreal-edge-human-resources-track-the-loreal-edge-loreal-1709036",
+     "start": "2026-07-14T14:30:00+05:30",
+     "end": "2026-07-18T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1711612,
+     "title": "The L’Oréal Edge - Sales & Marketing Track",
+     "url": "https://unstop.com/competitions/crp-the-loreal-edge-sales-marketing-track-the-loreal-edge-loreal-1711612",
+     "start": "2026-07-14T14:30:00+05:30",
+     "end": "2026-07-18T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1711614,
+     "title": "The L’Oréal Edge - Supply Chain Track",
+     "url": "https://unstop.com/competitions/crp-the-loreal-edge-supply-chain-track-the-loreal-edge-loreal-1711614",
+     "start": "2026-07-14T14:30:00+05:30",
+     "end": "2026-07-18T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "For the 2028 batch",
+      "MBA and PGDM students only"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "reliance-tup",
+   "name": "Reliance T.U.P",
+   "employer": "Reliance Industries",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-reliance-tup-xii-reliance-industries-limited-ril-1743575",
+   "last": "Reliance T.U.P XII: registration 1 Sep 2026 – 25 Sep 2026",
+   "next": "Expect around September 2027, a year after the last",
+   "next_month": "2027-09",
+   "for_2027": "no",
+   "for_2027_note": "The last edition was not open to an IIT Bombay 2027 B.Tech; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1743575,
+     "title": "Reliance T.U.P XII",
+     "url": "https://unstop.com/competitions/crp-reliance-tup-xii-reliance-industries-limited-ril-1743575",
+     "start": "2026-09-01T12:00:14+05:30",
+     "end": "2026-09-25T23:59:14+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1566159,
+     "title": "Reliance T.U.P XI",
+     "url": "https://unstop.com/competitions/crp-reliance-tup-xi-reliance-industries-limited-ril-1566159",
+     "start": "2025-10-15T00:00:53+05:30",
+     "end": "2025-11-21T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1062327,
+     "title": "Reliance TUP X",
+     "url": "https://unstop.com/competitions/crp-reliance-tup-x-reliance-industries-limited-ril-1062327",
+     "start": "2024-07-04T16:20:00+05:30",
+     "end": "2024-10-12T23:59:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 814583,
+     "title": "Reliance TUP 9.0",
+     "url": "https://unstop.com/competitions/crp-reliance-tup-90-reliance-industries-limited-ril-814583",
+     "start": "2023-11-05T11:49:28+05:30",
+     "end": "2023-12-08T23:59:28+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 449738,
+     "title": "Reliance TUP 8.0",
+     "url": "https://unstop.com/competitions/crp-reliance-tup-80-reliance-industries-limited-ril-449738",
+     "start": "2022-10-31T16:00:30+05:30",
+     "end": "2022-11-29T14:00:30+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 224794,
+     "title": "Reliance TUP 7.0",
+     "url": "https://unstop.com/jobs/crp-reliance-tup-70-reliance-industries-limited-ril-224794",
+     "start": "2021-10-13T16:58:34+05:30",
+     "end": "2021-11-16T23:59:34+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "maruti-xcelerate",
+   "name": "Maruti Suzuki XCELerate",
+   "employer": "Maruti Suzuki",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-b-track-maruti-suzuki-xcelerate-2026-maruti-suzuki-xcelerate-2026-maruti-suzuki-india-limited-1751668",
+   "last": "B-Track - Maruti Suzuki XCELerate 2026 (+2 tracks): registration 10 Sep 2026 – 2 Oct 2026",
+   "next": "Expect around September 2027, a year after the last",
+   "next_month": "2027-09",
+   "for_2027": "no",
+   "for_2027_note": "The last edition took the 2027 batch; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1751668,
+     "title": "B-Track - Maruti Suzuki XCELerate 2026",
+     "url": "https://unstop.com/competitions/crp-b-track-maruti-suzuki-xcelerate-2026-maruti-suzuki-xcelerate-2026-maruti-suzuki-india-limited-1751668",
+     "start": "2026-09-10T12:00:36+05:30",
+     "end": "2026-10-02T23:59:36+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1751828,
+     "title": "Digital Track - Maruti Suzuki XCELerate 2026",
+     "url": "https://unstop.com/competitions/crp-digital-track-maruti-suzuki-xcelerate-2026-maruti-suzuki-xcelerate-2026-maruti-suzuki-india-limited-1751828",
+     "start": "2026-09-10T06:30:09+05:30",
+     "end": "2026-10-02T23:59:09+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Other branches only: Computer Science and Engineering, Information Technology"
+     ]
+    },
+    {
+     "id": 1751797,
+     "title": "E-Track - Maruti Suzuki XCELerate 2026",
+     "url": "https://unstop.com/competitions/crp-e-track-maruti-suzuki-xcelerate-2026-maruti-suzuki-xcelerate-2026-maruti-suzuki-india-limited-1751797",
+     "start": "2026-09-10T06:30:09+05:30",
+     "end": "2026-10-02T23:59:09+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1554806,
+     "title": "Maruti Suzuki XCELerate 2025 - B-Track",
+     "url": "https://unstop.com/competitions/crp-maruti-suzuki-xcelerate-2025-b-track-maruti-suzuki-xcelerate-2025-maruti-suzuki-india-limited-1554806",
+     "start": "2025-09-10T00:00:27+05:30",
+     "end": "2025-09-22T23:59:27+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 1556401,
+     "title": "Maruti Suzuki XCELerate 2025 - E-Track",
+     "url": "https://unstop.com/competitions/crp-maruti-suzuki-xcelerate-2025-e-track-maruti-suzuki-xcelerate-2025-maruti-suzuki-india-limited-1556401",
+     "start": "2025-09-10T00:00:27+05:30",
+     "end": "2025-09-22T23:59:27+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 600819,
+     "title": "Maruti Suzuki XCELerate",
+     "url": "https://unstop.com/competitions/crp-maruti-suzuki-xcelerate-maruti-suzuki-india-limited-600819",
+     "start": "2023-02-03T10:00:03+05:30",
+     "end": "2023-03-12T23:59:03+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "ey-techathon",
+   "name": "EY Techathon",
+   "employer": "EY",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-ey-techathon-60-ey-1552002",
+   "last": "EY Techathon 6.0: registration 15 Sep 2025 – 7 Nov 2025",
+   "next": "Expect around September 2027, a year after the last",
+   "next_month": "2027-09",
+   "for_2027": "no",
+   "for_2027_note": "The last edition took the 2027 batch; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1552002,
+     "title": "EY Techathon 6.0",
+     "url": "https://unstop.com/competitions/crp-ey-techathon-60-ey-1552002",
+     "start": "2025-09-15T12:00:16+05:30",
+     "end": "2025-11-07T23:59:16+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 1153249,
+     "title": "EY Techathon 5.0",
+     "url": "https://unstop.com/competitions/crp-ey-techathon-50-ey-1153249",
+     "start": "2024-09-17T13:00:49+05:30",
+     "end": "2024-11-22T23:59:49+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 761725,
+     "title": "EY Techathon 4.0",
+     "url": "https://unstop.com/competitions/ey-techathon-4-ey-ernst-young-761725",
+     "start": "2023-09-20T13:00:49+05:30",
+     "end": "2023-10-13T23:59:49+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "nestle-leaders-league",
+   "name": "Nestlé Leaders League",
+   "employer": "Nestlé",
+   "scope": "",
+   "leads_to": "",
+   "how": "",
+   "url": "https://unstop.com/competitions/crp-nestle-leaders-league-circuitx-2026-nestle-1746782",
+   "last": "Nestlé Leaders League - CircuitX 2026: registration 1 Sep 2026 – 14 Sep 2026",
+   "next": "Expect around September 2027, a year after the last",
+   "next_month": "2027-09",
+   "for_2027": "no",
+   "for_2027_note": "The last edition was not open to an IIT Bombay 2027 B.Tech; the next comes after the final semester",
+   "sources": "",
+   "checked": "",
+   "tier": 3,
+   "open_now": [],
+   "editions": [
+    {
+     "id": 1746782,
+     "title": "Nestlé Leaders League - CircuitX 2026",
+     "url": "https://unstop.com/competitions/crp-nestle-leaders-league-circuitx-2026-nestle-1746782",
+     "start": "2026-09-01T12:00:00+05:30",
+     "end": "2026-09-14T10:00:00+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "MBA and PGDM students only"
+     ]
+    },
+    {
+     "id": 1474036,
+     "title": "Nestlé Leaders League - Genesis 2025",
+     "url": "https://unstop.com/competitions/crp-nestle-leaders-league-genesis-2025-nestle-1474036",
+     "start": "2025-05-05T10:00:41+05:30",
+     "end": "2025-05-18T18:00:41+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 973750,
+     "title": "Nestlé Leaders League - Genesis",
+     "url": "https://unstop.com/competitions/crp-nestle-leaders-league-genesis-nestle-973750",
+     "start": "2024-04-26T00:00:00+05:30",
+     "end": "2024-05-15T23:59:00+05:30",
+     "open": false,
+     "fit": "yes",
+     "reasons": []
+    },
+    {
+     "id": 437133,
+     "title": "Nestlé Leaders League 2022 - IIM Kozhikode",
+     "url": "https://unstop.com/competitions/crp-nestle-leaders-league-2022-iim-kozhikode-nestle-leaders-league-2022-nestle-437133",
+     "start": "2022-09-15T12:00:57+05:30",
+     "end": "2022-09-20T23:59:57+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 437140,
+     "title": "Nestlé Leaders League 2022 - IIM Lucknow",
+     "url": "https://unstop.com/competitions/crp-nestle-leaders-league-2022-iim-lucknow-nestle-leaders-league-2022-nestle-437140",
+     "start": "2022-09-15T12:00:55+05:30",
+     "end": "2022-09-20T23:59:55+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 437158,
+     "title": "Nestlé Leaders League 2022 - TISS Mumbai",
+     "url": "https://unstop.com/competitions/crp-nestle-leaders-league-2022-tiss-mumbai-nestle-leaders-league-2022-nestle-437158",
+     "start": "2022-09-15T12:00:51+05:30",
+     "end": "2022-09-20T23:59:51+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    },
+    {
+     "id": 437147,
+     "title": "Nestlé Leaders League 2022 - XLRI Jamshedpur",
+     "url": "https://unstop.com/competitions/crp-nestle-leaders-league-2022-xlri-jamshedpur-nestle-leaders-league-2022-nestle-437147",
+     "start": "2022-09-15T12:00:43+05:30",
+     "end": "2022-09-20T23:59:43+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students, Postgraduate"
+     ]
+    },
+    {
+     "id": 437153,
+     "title": "Nestlé Leaders League 2022 - NITIE Mumbai",
+     "url": "https://unstop.com/competitions/crp-nestle-leaders-league-2022-nitie-mumbai-nestle-leaders-league-2022-nestle-437153",
+     "start": "2022-09-15T12:00:43+05:30",
+     "end": "2022-09-20T23:59:43+05:30",
+     "open": false,
+     "fit": "no",
+     "reasons": [
+      "Open to MBA Students"
+     ]
+    }
+   ],
+   "before_graduation": false
+  },
+  {
+   "id": "itc-interrobang",
+   "name": "ITC Interrobang",
+   "employer": "ITC",
+   "scope": "b_schools",
+   "leads_to": "ITC's campus case competition",
+   "how": "",
+   "url": "https://www.itcportal.com/careers/interrobang.aspx",
+   "last": "Run on ITC's own site; last on Unstop in 2021",
+   "next": "",
+   "next_month": "",
+   "for_2027": "no",
+   "for_2027_note": "Open only to students of premier B-schools",
+   "sources": [
+    "https://www.itcportal.com/careers/interrobang.aspx"
+   ],
+   "checked": "2026-10-15",
+   "tier": 3,
+   "open_now": [],
+   "before_graduation": false
+  }
+ ]
+}

@@ -1,0 +1,26 @@
+{
+  "_about": [
+    "How well an employer pays an IIT graduate, in four tiers, used to rank competitions after IIT-only ones.",
+    "Tier 1 is where IIT placements pay most: quant and trading firms, investment banks, top strategy consulting, big tech.",
+    "Tier 3 is big companies that hire in volume and pay an IITian less (Tata, ITC, Reliance, FMCG, IT services, Big Four).",
+    "These are rough groupings by employer type, not salary data. Move a company by editing its pattern; first match wins, tier 1 is tried first.",
+    "Patterns are case-insensitive regular expressions matched against the organiser's name, and against the title and prize text for a sponsor."
+  ],
+  "not_employer": "college|institut|university|universit|school|vidyalaya|vidyapeeth|academy|\\biit\\b|\\biim\\b|\\bnit\\b|\\biiit\\b|\\bbits\\b|campus|e-?cell|\\bclub\\b|society|council|chapter|ambassador|communit|developer group|\\bgdg\\b|user group|foundation",
+  "groups": [
+    {"tier": 1, "label": "Quant and trading", "pattern": "jane street|citadel|optiver|tower research|graviton|quadeye|worldquant|d\\.? ?e\\.? shaw|squarepoint|millennium|alphagrep|nk securities|imc trading|imc prosperity|da vinci|jump trading|two sigma|hudson river|\\bhrt\\b|susquehanna|qube research|akuna|\\bdrw\\b|five rings|maven securities|flow traders"},
+    {"tier": 1, "label": "Investment bank", "pattern": "goldman sachs|morgan stanley|j\\.? ?p\\.? ?morgan|jpmorgan|barclays|deutsche bank|nomura|bank of america|\\bbofa\\b|\\bubs\\b|\\bciti(group|bank)?\\b|\\bhsbc\\b|blackrock|blackstone|\\bkkr\\b|jefferies|lazard|evercore"},
+    {"tier": 1, "label": "Top strategy consulting", "pattern": "mckinsey|boston consulting|\\bbcg\\b|\\bbain\\b"},
+    {"tier": 1, "label": "Big tech", "pattern": "google|microsoft|amazon|\\bmeta\\b|\\bapple\\b|nvidia|\\buber\\b|adobe|salesforce|atlassian|rubrik|databricks|linkedin|netflix|\\bstripe\\b"},
+    {"tier": 2, "label": "Product and fintech", "pattern": "flipkart|meesho|myntra|phonepe|\\bcred\\b|razorpay|zomato|eternal ltd|swiggy|zepto|groww|zerodha|paytm|\\bola\\b|dream11|sharechat|inmobi|walmart|intuit|expedia|sprinklr|devrev|freshworks|zoho|browserstack|postman|media\\.net|arcesium|juspay|pine labs|\\backo\\b|delhivery|rapido|blinkit|urban company|makemytrip|policybazaar|lenskart|nykaa|cars24"},
+    {"tier": 2, "label": "Payments and analytics", "pattern": "american express|\\bamex\\b|mastercard|\\bvisa\\b|fractal analytics|mu sigma|\\bexl\\b"},
+    {"tier": 2, "label": "Consulting", "pattern": "kearney|oliver wyman|accenture strategy|alvarez|\\blek\\b|strategy&|zs associates|\\bzs\\b|roland berger|arthur d\\.? little"},
+    {"tier": 2, "label": "Tech and chips", "pattern": "qualcomm|texas instruments|samsung|oracle|cisco|intel\\b|\\bamd\\b|micron|analog devices|nxp|synopsys|cadence"},
+    {"tier": 3, "label": "Big Four and IT services", "pattern": "\\bey\\b|ernst|deloitte|\\bpwc\\b|pricewaterhouse|kpmg|grant thornton|\\btcs\\b|tata consultancy|infosys|wipro|accenture|cognizant|capgemini|\\bhcl\\b|tech mahindra"},
+    {"tier": 3, "label": "Bank or insurer", "pattern": "idfc|icici|hdfc|axis bank|kotak|\\bsbi\\b|state bank|yes (bank|securities)|bajaj finserv|tvs credit"},
+    {"tier": 3, "label": "Pharma", "pattern": "sun pharma|cipla|dr\\.? reddy|lupin|abbott|johnson & johnson"},
+    {"tier": 3, "label": "FMCG and consumer", "pattern": "hindustan unilever|\\bhul\\b|unilever|procter|\\bp ?& ?g\\b|nestl|marico|asian paints|colgate|britannia|dabur|coca[- ]cola|pepsico|pidilite|l['’]?or[eé]al|ab ?inbev|anheuser|diageo|emami|parle|amul|mondelez|cadbury|kellogg|heineken|danone|titan\\b|havells|whirlpool"},
+    {"tier": 3, "label": "Manufacturing and engineering", "pattern": "maruti|hero motocorp|\\btvs\\b|bajaj(?! institute)|ashok leyland|cummins|siemens|bosch|schneider|honeywell|saint[- ]gobain|henkel|\\bshell\\b|ultratech|hindalco|hindustan petroleum|\\bhpcl\\b|\\bongc\\b|\\bntpc\\b|indian oil|\\biocl\\b|\\bbpcl\\b|boeing|airbus|rolls[- ]royce|ge aerospace|ge vernova|safran|lockheed"},
+    {"tier": 3, "label": "Indian conglomerate", "pattern": "\\btata\\b(?! institute| memorial| trusts?)|\\bitc\\b|reliance(?! foundation)|mahindra|aditya birla|adani|vedanta|\\bjsw\\b|l ?& ?t\\b|larsen|godrej|\\bds group\\b|airtel|\\bjio\\b"}
+  ]
+}
