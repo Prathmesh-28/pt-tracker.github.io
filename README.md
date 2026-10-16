@@ -12,7 +12,8 @@ http://127.0.0.1:8765/dashboard.html, refreshed every morning at 8. See
 **Also here:** [Japan/](Japan/README.md), roles in Japan for English speakers and the shared team
 site; [India/](India/README.md), the roles below narrowed to product and analyst roles with what
 each pays; [CaseCompetitions/](CaseCompetitions/README.md), case competitions and contests that lead
-to a PPI or PPO, ranked for an IIT Bombay 2027 graduate.
+to a PPI or PPO, ranked for an IIT Bombay 2027 graduate; [admissions/MBA-admissions/](admissions/MBA-admissions/README.md),
+top MBA schools with GMAT targets, deadlines, costs and scholarships, plus a GMAT guide.
 
 ## What it does
 
