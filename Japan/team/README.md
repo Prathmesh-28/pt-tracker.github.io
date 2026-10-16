@@ -242,3 +242,18 @@ Japan/team/
   web/api/config.js                 hands the browser the Supabase URL and anon key
   web/vercel.json                   security headers, noindex
 ```
+
+## MBA
+
+Prathmesh's list also has an **MBA** tab: 29 top business schools (US, UK, Europe, Asia, Canada), each
+with the class GMAT average, the GMAT to aim for with his CGPA, deadlines and intakes, the deferred
+routes open to final-year students, cost and scholarships, filterable by region, fit, Ivy League,
+January intake and deferred route. Under the list: the GMAT targets, the two timelines (deferred MBA now,
+or work first), the GMAT's dates, fees and format, and funding. It is static data, not rows of
+`japan_jobs`: `web/mba.js` is written by `admissions/MBA-admissions/build_schools.py`, which also
+writes the CSV and the page in that folder. After editing the schools, run it and redeploy:
+
+```bash
+python3 admissions/MBA-admissions/build_schools.py
+cd Japan/team/web && vercel deploy --prod
+```
