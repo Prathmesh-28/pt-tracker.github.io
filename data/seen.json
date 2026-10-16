@@ -4782,6 +4782,20 @@
   "title": "Senior Staff Engineer - Backend & Data Engineering ",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4743105005"
  },
+ "greenhouse:netradyne:4744417005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-10-16",
+  "last_seen": "2026-10-16",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 3,
+  "posted": "2026-10-16",
+  "reposted": false,
+  "title": "Senior Staff Engineer - Infrastructure Software",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4744417005"
+ },
  "greenhouse:porter:4397947009": {
   "age_days": 37,
   "closed": false,
@@ -94237,6 +94251,20 @@
   "title": "Senior Associate / Assistant Manager - Program Ops (Fulfilment & Experience)",
   "url": "https://jobs.lever.co/meesho/35a98774-fbca-4826-93a0-cc2b19bf2354"
  },
+ "lever:meesho:3826c751-3f51-4f36-8c75-d2d65f172214": {
+  "age_days": 119,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-10-16",
+  "last_seen": "2026-10-16",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-06-19",
+  "reposted": false,
+  "title": "Instructional Designer- ValMo Training",
+  "url": "https://jobs.lever.co/meesho/3826c751-3f51-4f36-8c75-d2d65f172214"
+ },
  "lever:meesho:3a60c7e0-bf65-4695-bddc-9f21e68d235d": {
   "age_days": 148,
   "closed": false,
@@ -94407,8 +94435,8 @@
  },
  "lever:meesho:5cc451b2-7bb1-44e0-8ae8-85faa50e4711": {
   "age_days": 91,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-16",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-16",
@@ -97610,6 +97638,20 @@
   "reposted": false,
   "title": "Offline Partnerships & Cross-Sell- Paytm Gold I Exp- 8- 12 Years",
   "url": "https://jobs.lever.co/paytm/7e710f5d-be1b-4377-9054-d455244b8ff5"
+ },
+ "lever:paytm:7ed7b781-45fa-443c-aeb5-9f713568bfc9": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-16",
+  "last_seen": "2026-10-16",
+  "location": "Bengaluru, Karnataka",
+  "min_years": 1,
+  "posted": "2026-10-16",
+  "reposted": false,
+  "title": "Social Media Escalations (Support) - Team Lead / Assistant Manager - Travel CST",
+  "url": "https://jobs.lever.co/paytm/7ed7b781-45fa-443c-aeb5-9f713568bfc9"
  },
  "lever:paytm:7f1de931-39c0-49cb-a57b-18a04827fe3b": {
   "age_days": 93,
