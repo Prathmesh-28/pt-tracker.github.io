@@ -4662,6 +4662,32 @@
       "key": "linkedin:yujaglobaldesigncompany:li-4477343986"
     },
     {
+      "age_days": 0,
+      "first_seen": "2026-10-16",
+      "reposted": false,
+      "title": "Product Manager I",
+      "company": "Meesho",
+      "city": "Bengaluru",
+      "city_tier": "Tier 1",
+      "location": "Bangalore, Karnataka",
+      "pay": "",
+      "url": "https://jobs.lever.co/meesho/494d8ba6-22b6-467f-837b-8af9c1aee377",
+      "posted": "2026-10-16",
+      "deadline": "",
+      "team": "Product",
+      "family": "Product",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "source": "board",
+      "apply_url": "",
+      "batch": "",
+      "batches": [],
+      "kind": "full-time",
+      "funded": null,
+      "key": "lever:meesho:494d8ba6-22b6-467f-837b-8af9c1aee377"
+    },
+    {
       "age_days": 1,
       "first_seen": "2026-10-16",
       "reposted": false,
@@ -16677,12 +16703,12 @@
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 1086,
+    "postings_scanned": 1087,
     "search_postings": 583,
-    "postings_india": 996,
-    "business_track": 562,
+    "postings_india": 997,
+    "business_track": 563,
     "open": 172,
-    "unstated": 208,
+    "unstated": 209,
     "walled": 182
   }
 }
