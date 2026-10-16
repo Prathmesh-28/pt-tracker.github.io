@@ -1,0 +1,49 @@
+name: Deploy team site to Vercel
+
+# Redeploys Japan/team/web (japan-applications.vercel.app) whenever it changes on main,
+# so new tabs go live without running `vercel deploy --prod` on the Mac.
+# Needs one repository secret: VERCEL_TOKEN (vercel.com/account/tokens).
+# Optional: VERCEL_ORG_ID and VERCEL_PROJECT_ID (from Japan/team/web/.vercel/project.json)
+# if the project lives in a team the token does not default to.
+
+on:
+  push:
+    branches: [main]
+    paths: ["Japan/team/web/**", ".github/workflows/team-site.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: team-site
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Japan/team/web
+    env:
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check for the token
+        id: token
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then
+            echo "::warning::VERCEL_TOKEN is not set; add it under Settings → Secrets and variables → Actions. Skipping the deploy."
+            echo "ok=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "ok=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-node@v4
+        if: steps.token.outputs.ok == 'true'
+        with:
+          node-version: 22
+      - name: Link the project
+        if: steps.token.outputs.ok == 'true' && env.VERCEL_PROJECT_ID == ''
+        run: npx --yes vercel@latest link --yes --project japan-applications --token "$VERCEL_TOKEN"
+      - name: Deploy to production
+        if: steps.token.outputs.ok == 'true'
+        run: npx --yes vercel@latest deploy --prod --yes --token "$VERCEL_TOKEN"

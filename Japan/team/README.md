@@ -254,6 +254,9 @@ or work first), the GMAT's dates, fees and format, and funding. It is static dat
 writes the CSV and the page in that folder. After editing the schools, run it and redeploy:
 
 ```bash
-python3 admissions/MBA-admissions/build_schools.py
-cd Japan/team/web && vercel deploy --prod
+python3 admissions/MBA-admissions/build_schools.py   # then push to main
 ```
+
+A push to main that touches `Japan/team/web/` redeploys the site through
+`.github/workflows/team-site.yml`, once the repository secret `VERCEL_TOKEN` is set.
+`vercel deploy --prod` from `Japan/team/web` still works by hand.
