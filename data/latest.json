@@ -1,15 +1,7 @@
 {
   "generated": "2026-10-18",
   "grad_year": 2027,
-  "search": {
-    "searched_at": "2026-10-18T05:59:03+00:00",
-    "next_after": "2026-10-18T09:59:03+00:00",
-    "counts": {
-      "linkedin": 30,
-      "indeed": 450
-    },
-    "blocked": []
-  },
+  "search": {},
   "roles": [
     {
       "age_days": 0,
