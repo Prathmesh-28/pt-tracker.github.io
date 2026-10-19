@@ -96313,6 +96313,20 @@
   "title": "capital partnerships",
   "url": "https://jobs.lever.co/cred/5b8e2c1a-06eb-4127-914f-db56b3078158"
  },
+ "lever:cred:76b5d976-5230-4939-b1ad-4b7d51a40396": {
+  "age_days": 7,
+  "closed": false,
+  "closed_on": "",
+  "company": "cred",
+  "first_seen": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "location": "multiple",
+  "min_years": null,
+  "posted": "2026-10-12",
+  "reposted": false,
+  "title": "area collection manager east - recovery",
+  "url": "https://jobs.lever.co/cred/76b5d976-5230-4939-b1ad-4b7d51a40396"
+ },
  "lever:cred:84aa0489-b7e1-4670-bfa9-7a9654197cc3": {
   "age_days": 62,
   "closed": false,
@@ -96343,11 +96357,11 @@
  },
  "lever:cred:91a5f0f1-b11f-412a-a816-ffc8b08a5617": {
   "age_days": 59,
-  "closed": true,
-  "closed_on": "2026-09-29",
+  "closed": false,
+  "closed_on": "",
   "company": "cred",
   "first_seen": "2026-09-10",
-  "last_seen": "2026-09-28",
+  "last_seen": "2026-10-19",
   "location": "mumbai",
   "min_years": null,
   "posted": "2026-08-21",
@@ -97289,6 +97303,20 @@
   "untracked": true,
   "url": "https://jobs.lever.co/glide/fa60c24f-26d7-4820-92c4-f6afa2405515"
  },
+ "lever:meesho:00ce22b9-5185-4b21-a3c0-172a3fd74a30": {
+  "age_days": 5,
+  "closed": false,
+  "closed_on": "",
+  "company": "meesho",
+  "first_seen": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "location": "Bangalore, Karnataka",
+  "min_years": null,
+  "posted": "2026-10-14",
+  "reposted": false,
+  "title": "Manager - Branding",
+  "url": "https://jobs.lever.co/meesho/00ce22b9-5185-4b21-a3c0-172a3fd74a30"
+ },
  "lever:meesho:0759d672-8d92-496a-a7c9-22bc2ec45d61": {
   "age_days": 5,
   "closed": false,
@@ -97347,8 +97375,8 @@
  },
  "lever:meesho:113ff930-b5bf-42c7-a07d-aa66a9de89d9": {
   "age_days": 28,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-19",
   "company": "meesho",
   "first_seen": "2026-09-21",
   "last_seen": "2026-10-19",
@@ -101197,8 +101225,8 @@
  },
  "lever:paytm:825b704f-6933-4280-aa75-0f2095078077": {
   "age_days": 55,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-19",
   "company": "paytm",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-19",
@@ -101433,6 +101461,20 @@
   "title": "Area Collections Manager - Manager - Lending Collections",
   "url": "https://jobs.lever.co/paytm/8ebc681f-a5c4-4544-a900-f10a5ccafafb"
  },
+ "lever:paytm:8f638723-e8c3-4280-a78f-944fb5b95aaa": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "location": "Patna, Bihar",
+  "min_years": null,
+  "posted": "2026-10-19",
+  "reposted": false,
+  "title": "Area Sales Manager - Manager - Bihar - Lending (LRM)",
+  "url": "https://jobs.lever.co/paytm/8f638723-e8c3-4280-a78f-944fb5b95aaa"
+ },
  "lever:paytm:8f80d61d-6730-43b2-b6e7-3923897093ad": {
   "age_days": 145,
   "closed": false,
@@ -101600,6 +101642,20 @@
   "reposted": false,
   "title": "Project Manager",
   "url": "https://jobs.lever.co/paytm/9f3726a5-236d-4eff-aae8-f2a56ddb072e"
+ },
+ "lever:paytm:9fe6d1ae-b69f-4f7c-91d7-78e16d6cfebe": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "location": "Vijayawada, Andhra Pradesh",
+  "min_years": 3,
+  "posted": "2026-10-19",
+  "reposted": false,
+  "title": "Process Trainer - TL - Lending",
+  "url": "https://jobs.lever.co/paytm/9fe6d1ae-b69f-4f7c-91d7-78e16d6cfebe"
  },
  "lever:paytm:a24d2317-7a21-4d21-b3e3-e2db4b8bcaba": {
   "age_days": 0,
@@ -102049,6 +102105,20 @@
   "title": "Growth Management - Merchant Lending (GM/DGM)",
   "url": "https://jobs.lever.co/paytm/c2fc6a36-bbb3-44bb-88ca-e41f4ffc7119"
  },
+ "lever:paytm:c476e23a-adea-42a4-8198-fe211d3f137c": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "location": "Ahmedabad, Gujarat",
+  "min_years": 3,
+  "posted": "2026-10-19",
+  "reposted": false,
+  "title": "Process Trainer - TL - Lending",
+  "url": "https://jobs.lever.co/paytm/c476e23a-adea-42a4-8198-fe211d3f137c"
+ },
  "lever:paytm:c53fa192-71f2-4566-afde-a6523d6b75e6": {
   "age_days": 32,
   "closed": false,
@@ -102118,6 +102188,20 @@
   "reposted": false,
   "title": "Customer Support Associate",
   "url": "https://jobs.lever.co/paytm/cca996fb-c2b7-46a7-8280-c793670aa81f"
+ },
+ "lever:paytm:cd3a4d7e-931d-4b02-86e0-3b6678cfb37e": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "location": "Bengaluru, Karnataka",
+  "min_years": 10,
+  "posted": "2026-10-19",
+  "reposted": false,
+  "title": "Business Operations - General Manager - CST Travel",
+  "url": "https://jobs.lever.co/paytm/cd3a4d7e-931d-4b02-86e0-3b6678cfb37e"
  },
  "lever:paytm:cedbe7de-4a9d-4dad-b6fc-a0e7efefd13a": {
   "age_days": 557,
@@ -102454,6 +102538,20 @@
   "reposted": false,
   "title": "Senior Devops Engineer",
   "url": "https://jobs.lever.co/paytm/dfb9a8d6-d824-46ff-8a2a-3185301232de"
+ },
+ "lever:paytm:e0322630-04bd-4abe-b9f3-bc0ab07faecf": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-19",
+  "last_seen": "2026-10-19",
+  "location": "Kochi, Kerala",
+  "min_years": 4,
+  "posted": "2026-10-19",
+  "reposted": false,
+  "title": "Process Trainer - TL - Lending",
+  "url": "https://jobs.lever.co/paytm/e0322630-04bd-4abe-b9f3-bc0ab07faecf"
  },
  "lever:paytm:e0c37d78-8cb9-4172-bcf2-fada0f9a2811": {
   "age_days": 41,
