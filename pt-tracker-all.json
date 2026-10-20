@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 638,
+    "open_roles_scraped": 639,
     "roles_open_to_freshers": 206,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 9936,
+    "postings_tracked_in_history": 10151,
     "benchmark_families": 0
   },
   "companies": [
@@ -4385,7 +4385,7 @@
     },
     {
       "age_days": 1,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "Business Development Associate",
       "company": "Career Growth Path",
@@ -5331,7 +5331,7 @@
     },
     {
       "age_days": 6,
-      "first_seen": "2026-10-19",
+      "first_seen": "2026-10-18",
       "reposted": false,
       "title": "Cost Management Trainees",
       "company": "General Mills",
@@ -5435,7 +5435,7 @@
     },
     {
       "age_days": 6,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-16",
       "reposted": false,
       "title": "Project Coordinator Trainee",
       "company": "AppSquadz Software",
@@ -5513,7 +5513,7 @@
     },
     {
       "age_days": 6,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-18",
       "reposted": false,
       "title": "Associate Consultant -EPM",
       "company": "Huron Consulting Group",
@@ -8918,7 +8918,7 @@
     },
     {
       "age_days": 28,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "Business Development Associate, Home",
       "company": "Amazon.com",
@@ -9128,7 +9128,7 @@
     },
     {
       "age_days": 29,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "Resource Management Associate",
       "company": "Baker Tilly Canada",
@@ -9751,6 +9751,32 @@
       "key": "linkedin:beghou:li-4480961546"
     },
     {
+      "age_days": 0,
+      "first_seen": "2026-10-20",
+      "reposted": false,
+      "title": "Talent Acquisition Intern - IT Recruitment",
+      "company": "Paytm",
+      "city": "Noida",
+      "city_tier": "Tier 1",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/95eadc2b-27bf-40fe-b6e6-93aaeadd08f7",
+      "posted": "2026-10-20",
+      "deadline": "",
+      "team": "Recruitment",
+      "family": "Support & other",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "source": "board",
+      "apply_url": "",
+      "batch": "",
+      "batches": [],
+      "kind": "internship",
+      "funded": null,
+      "key": "lever:paytm:95eadc2b-27bf-40fe-b6e6-93aaeadd08f7"
+    },
+    {
       "age_days": 1,
       "first_seen": "2026-10-20",
       "reposted": false,
@@ -9882,7 +9908,7 @@
     },
     {
       "age_days": 1,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "Data Analyst Intern",
       "company": "Ethqan Technologies Private Limited",
@@ -10090,7 +10116,7 @@
     },
     {
       "age_days": 1,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "Junior Business Development Associate (Offline)",
       "company": "Wellversed",
@@ -10116,7 +10142,7 @@
     },
     {
       "age_days": 1,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "Talent Acquisition Intern",
       "company": "Paytm",
@@ -10587,7 +10613,7 @@
     },
     {
       "age_days": 4,
-      "first_seen": "2026-10-17",
+      "first_seen": "2026-10-16",
       "reposted": false,
       "title": "Product Manager I",
       "company": "Meesho",
@@ -10873,7 +10899,7 @@
     },
     {
       "age_days": 6,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "Associate - Global Program Management",
       "company": "JPMorganChase",
@@ -12043,7 +12069,7 @@
     },
     {
       "age_days": 13,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-18",
       "reposted": false,
       "title": "Workday Prism Analytics and Reporting Consultant \u2013 HR IT, Associate",
       "company": "Deutsche Bank",
@@ -13117,7 +13143,7 @@
     },
     {
       "age_days": 21,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-17",
       "reposted": false,
       "title": "Business Trainee",
       "company": "Invesco",
@@ -13351,7 +13377,7 @@
     },
     {
       "age_days": 22,
-      "first_seen": "2026-10-17",
+      "first_seen": "2026-10-16",
       "reposted": false,
       "title": "Asset Serving Associate",
       "company": "JPMorganChase",
@@ -14160,7 +14186,7 @@
     },
     {
       "age_days": 29,
-      "first_seen": "2026-10-19",
+      "first_seen": "2026-10-16",
       "reposted": false,
       "title": "Analyst",
       "company": "Soci\u00e9t\u00e9 G\u00e9n\u00e9rale",
@@ -14928,32 +14954,6 @@
       "key": "lever:meesho:1de2fc88-e203-4f1a-8046-55df700de4be"
     },
     {
-      "age_days": 447,
-      "first_seen": "2026-10-07",
-      "reposted": false,
-      "title": "HR Internship - Talent Acquisition",
-      "company": "Paytm",
-      "city": "Noida",
-      "city_tier": "Tier 1",
-      "location": "Noida, Uttar Pradesh",
-      "pay": "",
-      "url": "https://jobs.lever.co/paytm/249292d2-49ea-4abe-a577-730ba22b9c08",
-      "posted": "2025-07-30",
-      "deadline": "",
-      "team": "Recruitment",
-      "family": "Support & other",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "source": "board",
-      "apply_url": "",
-      "batch": "",
-      "batches": [],
-      "kind": "internship",
-      "funded": null,
-      "key": "lever:paytm:249292d2-49ea-4abe-a577-730ba22b9c08"
-    },
-    {
       "age_days": 456,
       "first_seen": "2026-10-08",
       "reposted": false,
@@ -15163,7 +15163,7 @@
     },
     {
       "age_days": null,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "Strategy Intern",
       "company": "Vedantu",
@@ -15292,6 +15292,32 @@
       "key": "linkedin:arrowhead:li-4480263203"
     },
     {
+      "age_days": 0,
+      "first_seen": "2026-10-20",
+      "reposted": false,
+      "title": "Program Manager - Global Expansion",
+      "company": "Paytm",
+      "city": "Noida",
+      "city_tier": "Tier 1",
+      "location": "Noida, Uttar Pradesh",
+      "pay": "",
+      "url": "https://jobs.lever.co/paytm/6693ab3d-ac11-4251-83fd-3ecf286a4ba8",
+      "posted": "2026-10-20",
+      "deadline": "",
+      "team": "Product Operations / Product Management",
+      "family": "Operations",
+      "min_years": 6,
+      "tier": "walled",
+      "ats": "lever",
+      "source": "board",
+      "apply_url": "",
+      "batch": "",
+      "batches": [],
+      "kind": "full-time",
+      "funded": null,
+      "key": "lever:paytm:6693ab3d-ac11-4251-83fd-3ecf286a4ba8"
+    },
+    {
       "age_days": 1,
       "first_seen": "2026-10-20",
       "reposted": false,
@@ -15371,7 +15397,7 @@
     },
     {
       "age_days": 1,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "Manager \u2013 Founder's Office (Growth) (5+ Yrs to 10 Yrs)",
       "company": "Bilvantis Technologies",
@@ -15787,7 +15813,7 @@
     },
     {
       "age_days": 4,
-      "first_seen": "2026-10-17",
+      "first_seen": "2026-10-16",
       "reposted": false,
       "title": "Data Analyst",
       "company": "H&M",
@@ -15839,7 +15865,7 @@
     },
     {
       "age_days": 4,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-18",
       "reposted": false,
       "title": "Associate Consultant - Cisco Routers & Switches",
       "company": "YASH Technologies",
@@ -15943,7 +15969,7 @@
     },
     {
       "age_days": null,
-      "first_seen": "2026-10-17",
+      "first_seen": "2026-10-16",
       "reposted": false,
       "title": "Chief of Staff to the Founder",
       "company": "Vaia",
@@ -16099,7 +16125,7 @@
     },
     {
       "age_days": 5,
-      "first_seen": "2026-10-17",
+      "first_seen": "2026-10-16",
       "reposted": false,
       "title": "Associate Product Marketing Manager",
       "company": "Recruiterflow",
@@ -16151,7 +16177,7 @@
     },
     {
       "age_days": 5,
-      "first_seen": "2026-10-17",
+      "first_seen": "2026-10-16",
       "reposted": false,
       "title": "Associate Client Support",
       "company": "JPMorganChase",
@@ -16177,7 +16203,7 @@
     },
     {
       "age_days": 5,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "SAP Business Analyst",
       "company": "Baltimore Aircoil India Private Limited",
@@ -16307,7 +16333,7 @@
     },
     {
       "age_days": 5,
-      "first_seen": "2026-10-16",
+      "first_seen": "2026-10-15",
       "reposted": false,
       "title": "PPSL - Growth Management - GM/AVP",
       "company": "Paytm",
@@ -16333,7 +16359,7 @@
     },
     {
       "age_days": 5,
-      "first_seen": "2026-10-16",
+      "first_seen": "2026-10-15",
       "reposted": false,
       "title": "PPSL - Growth Management - DGM/GM - P4B",
       "company": "Paytm",
@@ -16359,7 +16385,7 @@
     },
     {
       "age_days": 6,
-      "first_seen": "2026-10-17",
+      "first_seen": "2026-10-16",
       "reposted": false,
       "title": "Data Management Intern",
       "company": "IBS Intelligence",
@@ -16645,7 +16671,7 @@
     },
     {
       "age_days": 7,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-17",
       "reposted": false,
       "title": "Associate Product Analyst",
       "company": "Eaton",
@@ -16671,7 +16697,7 @@
     },
     {
       "age_days": 7,
-      "first_seen": "2026-10-17",
+      "first_seen": "2026-10-16",
       "reposted": false,
       "title": "Program Management Associate",
       "company": "JPMorganChase",
@@ -19739,7 +19765,7 @@
     },
     {
       "age_days": 27,
-      "first_seen": "2026-10-20",
+      "first_seen": "2026-10-19",
       "reposted": false,
       "title": "Programme Associate - Programmes Office",
       "company": "Council on Energy, Environment and Water",
