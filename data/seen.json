@@ -3619,8 +3619,8 @@
  },
  "greenhouse:druva:8692422002": {
   "age_days": 69,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-20",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-20",
@@ -4518,8 +4518,8 @@
  },
  "greenhouse:netradyne:4722020005": {
   "age_days": 75,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-20",
   "company": "netradyne",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-20",
