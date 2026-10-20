@@ -645,13 +645,14 @@ def pull_workday(b: dict) -> list[dict]:
     listed: dict[str, dict] = {}
     # Big employers are searched for Japan and Tokyo; a Japan-only site is read whole.
     for term in b.get("search") or [""]:
-        offset = 0
+        offset, total = 0, 0
         while True:
             page = http(f"{base}/jobs", {"appliedFacets": {}, "limit": 20, "offset": offset, "searchText": term})
+            total = page.get("total") or total   # Workday reports the total on the first page only
             for j in page.get("jobPostings") or []:
                 listed.setdefault(j.get("externalPath", ""), j)
             offset += 20
-            if offset >= (page.get("total") or 0) or offset >= 1000:
+            if offset >= total or offset >= 1000 or not page.get("jobPostings"):
                 break
     out = []
     for path, j in listed.items():

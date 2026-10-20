@@ -1,0 +1,94 @@
+{
+  "_about": [
+    "Employers that pay IIT freshers in India the most, read by fetch_top.py from their own careers systems' public feeds.",
+    "Only roles that fit Prathmesh's primary resume are kept: product, business and data analyst, strategy, consulting, finance and founder's office. Quant and trading firms and software-engineering roles are left out at his request (2026-10-20).",
+    "`tier` is a rough grouping by kind of employer. It is not salary data: pay comes from AmbitionBox in fetch_india.py.",
+    "Boards were found on 2026-10-20 by asking each careers system for the company's slug; the Workday and Oracle ones are read with an India search or filter. Employers with no public feed (Goldman Sachs, American Express, Uber, Flipkart, PhonePe, McKinsey, BCG, Bain) are not here; add one with its feed when found.",
+    "`ambitionbox`: the company's name on AmbitionBox when it differs."
+  ],
+  "tiers": [
+    "Big tech",
+    "Global bank or fund",
+    "Consulting",
+    "Indian unicorn"
+  ],
+  "employers": [
+    {"company": "Rubrik", "tier": "Big tech", "ats": "greenhouse", "slug": "rubrik"},
+    {"company": "Google", "tier": "Big tech", "ats": "google", "slug": "google.com"},
+    {"company": "Microsoft", "tier": "Big tech", "ats": "pcsx", "slug": "apply.careers.microsoft.com/microsoft.com"},
+    {"company": "Amazon", "tier": "Big tech", "ats": "amazon", "slug": "IND"},
+    {"company": "Atlassian", "tier": "Big tech", "ats": "atlassian", "slug": "atlassian"},
+    {"company": "Salesforce", "tier": "Big tech", "ats": "workday", "slug": "salesforce.wd12.myworkdayjobs.com/salesforce/External_Career_Site", "search": [
+        "India"
+      ]},
+    {"company": "NVIDIA", "tier": "Big tech", "ats": "workday", "slug": "nvidia.wd5.myworkdayjobs.com/nvidia/NVIDIAExternalCareerSite", "search": [
+        "India"
+      ]},
+    {"company": "Qualcomm", "tier": "Big tech", "ats": "pcsx", "slug": "careers.qualcomm.com/qualcomm.com"},
+    {"company": "Databricks", "tier": "Big tech", "ats": "greenhouse", "slug": "databricks"},
+    {"company": "Stripe", "tier": "Big tech", "ats": "greenhouse", "slug": "stripe"},
+    {"company": "Coinbase", "tier": "Big tech", "ats": "greenhouse", "slug": "coinbase"},
+    {"company": "Glean", "tier": "Big tech", "ats": "greenhouse", "slug": "gleanwork"},
+    {"company": "Harness", "tier": "Big tech", "ats": "greenhouse", "slug": "harnessinc"},
+    {"company": "Cohesity", "tier": "Big tech", "ats": "workday", "slug": "cohesity.wd5.myworkdayjobs.com/cohesity/Cohesity_Careers", "search": [
+        "India"
+      ]},
+    {"company": "Sprinklr", "tier": "Big tech", "ats": "workday", "slug": "sprinklr.wd1.myworkdayjobs.com/sprinklr/careers", "search": [
+        "India"
+      ]},
+    {"company": "Zscaler", "tier": "Big tech", "ats": "greenhouse", "slug": "zscaler"},
+    {"company": "Okta", "tier": "Big tech", "ats": "greenhouse", "slug": "okta"},
+    {"company": "Pure Storage", "tier": "Big tech", "ats": "greenhouse", "slug": "purestorage"},
+    {"company": "Netskope", "tier": "Big tech", "ats": "greenhouse", "slug": "netskope"},
+    {"company": "MongoDB", "tier": "Big tech", "ats": "greenhouse", "slug": "mongodb"},
+    {"company": "Snowflake", "tier": "Big tech", "ats": "ashby", "slug": "snowflake"},
+    {"company": "UiPath", "tier": "Big tech", "ats": "ashby", "slug": "uipath"},
+    {"company": "Gainsight", "tier": "Big tech", "ats": "ashby", "slug": "gainsight"},
+    {"company": "Workato", "tier": "Big tech", "ats": "greenhouse", "slug": "workato"},
+    {"company": "ServiceNow", "tier": "Big tech", "ats": "smartrecruiters", "slug": "servicenow"},
+    {"company": "Wise", "tier": "Big tech", "ats": "smartrecruiters", "slug": "wise"},
+    {"company": "Cloudflare", "tier": "Big tech", "ats": "greenhouse", "slug": "cloudflare"},
+    {"company": "Twilio", "tier": "Big tech", "ats": "greenhouse", "slug": "twilio"},
+    {"company": "Morgan Stanley", "tier": "Global bank or fund", "ats": "workday", "slug": "ms.wd5.myworkdayjobs.com/ms/External", "search": [
+        "India"
+      ]},
+    {"company": "JPMorgan Chase", "tier": "Global bank or fund", "ats": "oracle", "slug": "jpmc.fa.oraclecloud.com/CX_1001", "location_id": "300000000289360", "ambitionbox": "JPMorgan Chase & Co"},
+    {"company": "Citi", "tier": "Global bank or fund", "ats": "workday", "slug": "citi.wd5.myworkdayjobs.com/citi/2", "search": [
+        "India"
+      ], "ambitionbox": "Citicorp"},
+    {"company": "Deutsche Bank", "tier": "Global bank or fund", "ats": "workday", "slug": "db.wd3.myworkdayjobs.com/db/DBWebsite", "search": [
+        "India"
+      ]},
+    {"company": "Barclays", "tier": "Global bank or fund", "ats": "workday", "slug": "barclays.wd3.myworkdayjobs.com/barclays/External_Career_Site_Barclays", "search": [
+        "India"
+      ]},
+    {"company": "BlackRock", "tier": "Global bank or fund", "ats": "workday", "slug": "blackrock.wd1.myworkdayjobs.com/blackrock/BlackRock_Professional", "search": [
+        "India"
+      ]},
+    {"company": "Blackstone", "tier": "Global bank or fund", "ats": "workday", "slug": "blackstone.wd1.myworkdayjobs.com/blackstone/Blackstone_Careers", "search": [
+        "India"
+      ]},
+    {"company": "Mastercard", "tier": "Global bank or fund", "ats": "workday", "slug": "mastercard.wd1.myworkdayjobs.com/mastercard/CorporateCareers", "search": [
+        "India"
+      ]},
+    {"company": "Visa", "tier": "Global bank or fund", "ats": "workday", "slug": "visa.wd5.myworkdayjobs.com/visa/Visa", "search": [
+        "India"
+      ]},
+    {"company": "PayPal", "tier": "Global bank or fund", "ats": "workday", "slug": "paypal.wd1.myworkdayjobs.com/paypal/jobs", "search": [
+        "India"
+      ]},
+    {"company": "Oliver Wyman", "tier": "Consulting", "ats": "workday", "slug": "mmc.wd1.myworkdayjobs.com/mmc/MMC", "search": [
+        "Oliver Wyman India"
+      ], "title_has": "Oliver Wyman"},
+    {"company": "AlixPartners", "tier": "Consulting", "ats": "greenhouse", "slug": "alixpartners"},
+    {"company": "Roland Berger", "tier": "Consulting", "ats": "smartrecruiters", "slug": "rolandberger"},
+    {"company": "Razorpay", "tier": "Indian unicorn", "ats": "greenhouse", "slug": "razorpaysoftwareprivatelimited"},
+    {"company": "Groww", "tier": "Indian unicorn", "ats": "greenhouse", "slug": "groww"},
+    {"company": "CRED", "tier": "Indian unicorn", "ats": "lever", "slug": "cred"},
+    {"company": "Swiggy", "tier": "Indian unicorn", "ats": "smartrecruiters", "slug": "swiggy"},
+    {"company": "Freshworks", "tier": "Indian unicorn", "ats": "smartrecruiters", "slug": "freshworks"},
+    {"company": "InMobi", "tier": "Indian unicorn", "ats": "greenhouse", "slug": "inmobi"},
+    {"company": "Upstox", "tier": "Indian unicorn", "ats": "smartrecruiters", "slug": "upstox"},
+    {"company": "Meesho", "tier": "Indian unicorn", "ats": "lever", "slug": "meesho"}
+  ]
+}

@@ -46,6 +46,7 @@ ROOT = HERE.parent
 DATA = HERE / "data"
 LATEST = ROOT / "data" / "latest.json"          # the root India tracker's roles
 PROGRAMS = HERE / "programs.json"
+TOP = DATA / "top_roles.json"                  # roles at the top-paying employers, from fetch_top.py
 CAMPUS = HERE / "private" / "campus.json"
 FULL_JSON = HERE / "private" / "roles.json"   # with the campus offers, for the team site; gitignored
 OUT_JSON = DATA / "roles.json"                 # without them, for this public repo
@@ -62,11 +63,16 @@ KEEP_DAYS = 30         # how long an AmbitionBox answer is reused
 MIN_POINTS = 3         # fewer salaries than this is not a figure
 IST = timezone(timedelta(hours=5, minutes=30))
 YEAR = 2027
+TARGET_LPA = 20   # Prathmesh wants more than ₹20 lakh CTC as a fresher (2026-10-20); roles that reach it come first
+# Top-paying employers (top_employers.json) come next, the big ones before the unicorns.
+TIER_ORDER = {"Big tech": 0, "Global bank or fund": 0, "Consulting": 0, "Indian unicorn": 1}
 
 # The root tracker's role families, in Prathmesh's order of preference. "Support & other" is left out.
+# Finance comes from fetch_top.py only.
 FAMILIES = {
     "Product": (1, "Product analyst and APM"),
     "Business analyst": (2, "Business and data analyst"),
+    "Finance": (2, "Finance and investing"),
     "Strategy": (3, "Strategy"),
     "Consulting": (3, "Consulting"),
     "Founder's office": (4, "Founder's office"),
@@ -82,6 +88,11 @@ DESIGNATIONS = [
     (r"associate product manager|\bapm\b", ["associate-product-manager", "product-manager", "product-analyst"]),
     (r"product manager", ["product-manager", "associate-product-manager"]),
     (r"product analyst", ["product-analyst", "business-analyst", "data-analyst"]),
+    (r"investment bank", ["investment-banking-analyst", "analyst", "associate"]),
+    (r"equity research|research analyst", ["research-analyst", "equity-research-analyst", "analyst"]),
+    (r"financial analyst|fp&a|financial planning", ["financial-analyst", "analyst"]),
+    (r"credit analyst|credit research", ["credit-analyst", "analyst"]),
+    (r"risk analyst", ["risk-analyst", "analyst"]),
     (r"data analyst|analytics", ["data-analyst", "business-analyst", "analyst"]),
     (r"business analyst", ["business-analyst", "analyst"]),
     (r"strategy", ["strategy-analyst", "strategy-associate", "business-analyst"]),
@@ -96,11 +107,16 @@ DESIGNATIONS = [
     (r"analyst", ["analyst", "business-analyst"]),
     (r"associate", ["associate", "business-analyst"]),
 ]
-FAMILY_DESIGNATION = {"Product": "product-analyst", "Business analyst": "business-analyst", "Strategy": "business-analyst",
+FAMILY_DESIGNATION = {"Product": "product-analyst", "Business analyst": "business-analyst", "Finance": "financial-analyst",
+                      "Strategy": "business-analyst",
                       "Consulting": "associate-consultant", "Founder's office": "business-analyst",
                       "Management trainee": "management-trainee", "Growth": "growth-associate",
                       "Category": "category-manager", "Operations": "operations-associate",
                       "Business development": "business-development-associate"}
+# Titles no fresher gets, which the India tracker's own filter lets through ("Group Product Manager").
+SENIOR = re.compile(r"\b(?:senior|sr|lead|principal|head|director|vp|avp|vice president|staff|group product manager|"
+                    r"general manager)\b", re.I)
+STAFF = re.compile(r"chief of staff", re.I)
 # A hospital's "Associate Consultant, Gastroenterology" is a doctor, not a consulting analyst.
 MEDICAL = re.compile(r"gastro|cardio|neuro|oncolog|orthop|physician|doctor|surgeon|\bmbbs\b|\bmd\b|dental|dentist|nurs(e|ing)|"
                      r"radiolog|patholog|ana?esthe|dermatolog|gynae?c|pa?ediatric|psychiatr|physiotherap|urolog|nephrolog", re.I)
@@ -257,13 +273,16 @@ def lakh(n) -> float:
     return round(float(n) / 1e5, 1)
 
 
-def look_up_pay(pay: Pay, company: str, title: str, family: str, campus: dict, ratio: float) -> dict:
+def look_up_pay(pay: Pay, company: str, title: str, family: str, campus: dict, ratio: float,
+                lookup: str = "", national: bool = True) -> dict:
     """Expected CTC and base for one role, with where each number came from. An internship pays a
-    stipend, so it gets no salary figure, and a campus offer never stands in for one."""
+    stipend, so it gets no salary figure, and a campus offer never stands in for one. `lookup` is the
+    company's name on AmbitionBox when it differs; `national=False` gives no figure rather than the
+    role's average across India (which says nothing about what a top-paying employer pays)."""
     if INTERN.search(title or ""):
         return {"basis": "Internship: a stipend, not a salary", "profile": None}
     offer = campus.get(norm(company))
-    found = pay.company(company)
+    found = pay.company(lookup or company)
     profile, figure, used = None, None, ""
     if found:
         for desig in designations(title, family):
@@ -281,7 +300,7 @@ def look_up_pay(pay: Pay, company: str, title: str, family: str, campus: dict, r
         if not profile:
             data = pay.page(f"/salaries/{found['url']}-salaries")
             profile = (data or {}).get("company")
-    if not figure:
+    if not figure and national:
         desig = (designations(title, family) or [FAMILY_DESIGNATION.get(family, "business-analyst")])[0]
         data = pay.page(f"/profile/{desig}-salary")
         level, span = fresher((data or {}).get("levels") or [])
@@ -349,6 +368,27 @@ def deadline_line(r: dict) -> str:
     return f"Apply by {day_text(r['deadline'])}" if r.get("deadline") else "No deadline stated"
 
 
+def stretch(r: dict) -> str:
+    """What in the posting is a stretch for a fresher B.Tech: a year of experience, or an MBA, CA or CFA."""
+    out = []
+    if r.get("min_years") == 1:
+        out.append("asks for 1 year of experience: a stretch")
+    if r.get("degree") == "asked":
+        out.append("names an MBA, CA or CFA")
+    elif r.get("degree") == "preferred":
+        out.append("an MBA, CA or CFA is preferred, not required")
+    return "; " + "; ".join(out) if out else ""
+
+
+def band(x: dict) -> int:
+    """0: freshers at this company, in this role, report ₹20 lakh or more (or a campus offer says so);
+    1: a top-paying employer with no figure for the role, so it may well reach that; 2: the rest, by pay."""
+    own = bool(x.get("ctc")) and "across India" not in (x.get("basis") or "")
+    if own and x["ctc"] >= TARGET_LPA:
+        return 0
+    return 1 if x.get("employer_tier") and not own else 2
+
+
 def main() -> None:
     offline = "--offline" in sys.argv
     DATA.mkdir(exist_ok=True)
@@ -363,18 +403,27 @@ def main() -> None:
 
     rows = []
     wanted = [r for r in latest["roles"] if r.get("family") in FAMILIES and r.get("tier") != "walled"
-              and not MEDICAL.search(r.get("title") or "")]
+              and not MEDICAL.search(r.get("title") or "") and not SENIOR.search(STAFF.sub(" ", r.get("title") or ""))]
     print(f"{len(wanted)} of {len(latest['roles'])} India roles are entry-level and in the families wanted", file=sys.stderr)
-    for i, r in enumerate(wanted, 1):
+    # Roles at the top-paying employers, from their own careers sites; one the India tracker already has stays as it is.
+    have = {r.get("apply_url") or r.get("url") for r in wanted} | {(norm(r["company"]), norm(r["title"])) for r in wanted}
+    top = [r for r in load(TOP, {}).get("roles") or [] if r.get("family") in FAMILIES
+           and r["url"] not in have and (norm(r["company"]), norm(r["title"])) not in have]
+    print(f"{len(top)} more from the top-paying employers' careers sites", file=sys.stderr)
+    for i, r in enumerate(wanted + top, 1):
+        from_site = r.get("source") == "careers"
         fit, why_fit = timing(r)
         priority, family = FAMILIES[r["family"]]
-        p = look_up_pay(pay, r["company"], r["title"], r["family"], campus, ratio)
+        p = look_up_pay(pay, r["company"], r["title"], r["family"], campus, ratio,
+                        lookup=r.get("ambitionbox") or "", national=not from_site)
         rows.append({
+            "employer_tier": r.get("tier") if from_site else "",
+            "notes": f"{r['tier']}: listed on its own careers site." if from_site else "",
             "key": f"india:{r['key']}", "title": r["title"], "company": r["company"], "city": r.get("city") or "",
             "location": r.get("location") or "", "url": r.get("apply_url") or r.get("url") or "", "family": family,
             "priority": priority, "kind": r.get("kind") or "full-time", "source": r.get("ats") or r.get("source") or "",
             "posted": r.get("posted") or "", "deadline": r.get("deadline") or "", "deadline_line": deadline_line(r),
-            "min_years": r.get("min_years"), "fit": fit, "fit_why": why_fit, "batches": r.get("batches") or [],
+            "min_years": r.get("min_years"), "fit": fit, "fit_why": why_fit + stretch(r), "batches": r.get("batches") or [],
             "company_type": company_type(p.get("profile"), r.get("funded")), "funded": r.get("funded"), **{
                 k: p.get(k) for k in ("ctc", "lo", "hi", "base", "basis", "estimate_base", "points", "market",
                                       "company_url", "designation")}, "pay_source": p.get("source") or "",
@@ -382,7 +431,7 @@ def main() -> None:
         })
         if i % 25 == 0:
             pay.save()
-            print(f"  {i}/{len(wanted)} looked up ({pay.asked} AmbitionBox requests so far)", file=sys.stderr)
+            print(f"  {i}/{len(wanted) + len(top)} looked up ({pay.asked} AmbitionBox requests so far)", file=sys.stderr)
 
     for o in campus_offers:   # every campus offer is a row too, as the JAF said
         rows.append({
@@ -395,7 +444,7 @@ def main() -> None:
             "company_type": o.get("company_type") or "", "funded": None, "ctc": o.get("ctc_lpa"), "lo": o.get("ctc_lpa"),
             "hi": o.get("ctc_lpa"), "base": o.get("base_lpa"), "basis": f"Campus offer, {o.get('where') or 'on campus'}",
             "pay_source": "", "estimate_base": False, "points": None, "market": None, "company_url": "", "designation": "",
-            "first_seen": o.get("seen") or "", "row_kind": "campus", "notes": o.get("notes") or "",
+            "first_seen": o.get("seen") or "", "row_kind": "campus", "notes": o.get("notes") or "", "employer_tier": "",
         })
     for g in load(PROGRAMS, {}).get("programs") or []:
         p = look_up_pay(pay, g["org"], g["pay_title"], g.get("pay_family") or "Business analyst", campus, ratio) \
@@ -414,17 +463,23 @@ def main() -> None:
             "basis": g.get("pay_basis") or "", "pay_source": g.get("pay_source") or "",
             "estimate_base": bool(g.get("estimate_base")), "points": None, "market": None, "company_url": "", "designation": "",
             "first_seen": "", "row_kind": "programme", "notes": g.get("notes") or "", "sources": g.get("sources") or [],
+            "employer_tier": g.get("tier") or "",
         })
 
     pay.save()   # after the programmes too: their lookups are cached like any role's
 
+    # Pay first: roles that reach ₹20 lakh, then the top-paying employers, then the rest; within each, campus
+    # offers, then the roles naming the 2027 batch, the bigger employers, the kinds of role wanted, and pay.
     order = {"yes": 0, "check": 1, "no": 2}
-    rows.sort(key=lambda x: (x["row_kind"] == "role", order.get(x["fit"], 1), x["priority"], -(x.get("ctc") or 0),
+    rows.sort(key=lambda x: (x["fit"] == "no", band(x), x["row_kind"] != "campus", order.get(x["fit"], 1),
+                             TIER_ORDER.get(x.get("employer_tier"), 2), x["priority"], -(x.get("ctc") or 0),
                              x.get("posted") or ""))
     for i, x in enumerate(rows, 1):
         x["rank"] = i
     counts = {"roles": sum(x["row_kind"] == "role" for x in rows), "campus": len(campus_offers),
               "programmes": sum(x["row_kind"] == "programme" for x in rows),
+              "from_top_employers": sum(bool(x.get("employer_tier")) and x["row_kind"] == "role" for x in rows),
+              f"pay_{TARGET_LPA}_plus": sum(band(x) == 0 for x in rows),
               "with_pay": sum(bool(x.get("ctc")) for x in rows),
               "company_pay": sum(bool(x.get("ctc")) and "across India" not in (x.get("basis") or "") for x in rows),
               "types": {t or "Not known": sum(x["company_type"] == t for x in rows) for t in sorted({x["company_type"] for x in rows})},
@@ -459,13 +514,14 @@ def without_campus(rows: list[dict]) -> list[dict]:
 
 
 def write_csv(rows: list[dict]) -> None:
-    cols = ["rank", "row_kind", "family", "title", "company", "company_type", "city", "fit", "fit_why", "ctc_lpa",
-            "ctc_range_lpa", "base_lpa", "base_is_estimate", "pay_basis", "deadline_line", "posted", "url"]
+    cols = ["rank", "row_kind", "family", "title", "company", "employer_tier", "company_type", "city", "fit", "fit_why",
+            "ctc_lpa", "ctc_range_lpa", "base_lpa", "base_is_estimate", "pay_basis", "deadline_line", "posted", "url"]
     with OUT_CSV.open("w", newline="") as f:
         w = csv.writer(f)
         w.writerow(cols)
         for x in rows:
-            w.writerow([x["rank"], x["row_kind"], x["family"], x["title"], x["company"], x["company_type"], x["city"], x["fit"],
+            w.writerow([x["rank"], x["row_kind"], x["family"], x["title"], x["company"], x.get("employer_tier") or "",
+                        x["company_type"], x["city"], x["fit"],
                         x["fit_why"], x.get("ctc") or "", f"{x['lo']}–{x['hi']}" if x.get("lo") and x.get("hi") and x["lo"] != x["hi"] else "",
                         x.get("base") or "", "yes" if x.get("estimate_base") else "", x.get("basis") or "", x["deadline_line"],
                         x.get("posted") or "", x.get("url") or ""])

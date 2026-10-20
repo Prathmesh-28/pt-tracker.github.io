@@ -171,7 +171,8 @@ def competition_rows(now: str) -> list[dict]:
 
 
 INDIA_EXTRA = ("rank", "family", "priority", "company_type", "ctc", "lo", "hi", "base", "estimate_base", "basis", "points",
-               "market", "row_kind", "deadline_line", "notes", "company_url", "fit_why", "funded", "city")
+               "market", "row_kind", "deadline_line", "notes", "company_url", "fit_why", "funded", "city",
+               "employer_tier")
 INDIA_VIA = {"linkedin": "LinkedIn", "indeed": "Indeed", "campus": "Campus JAF", "programme": "Programme"}
 
 

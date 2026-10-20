@@ -16,7 +16,7 @@
 #
 # Order: Prathmesh's company boards and sync first (most of his list), then his case competitions
 # from Unstop (CaseCompetitions/) and his India roles with pay (India/, from the India tracker's
-# data/latest.json) and their syncs, then Madhura's searches and sync, then Prathmesh's LinkedIn and
+# data/latest.json and the top-paying employers' careers sites) and their syncs, then Madhura's searches and sync, then Prathmesh's LinkedIn and
 # Indeed searches (one set a day in turn) and a second sync. Searches keep their cooldowns (LinkedIn 4 hours, Madhura's part-time searches 1 hour),
 # so pressing Refresh often re-reads the company boards without getting the searches blocked.
 # A step that fails is logged and skipped; the sync never mass-closes jobs because a source
@@ -129,8 +129,10 @@ step() {
   step "Prathmesh: sync to the team site" "$PY" Japan/team/sync_jobs.py
   step "Competitions: Unstop and the watchlist" "$PY" CaseCompetitions/fetch_competitions.py
   step "Competitions: sync to the team site" "$PY" Japan/team/sync_jobs.py --competitions
+  step "India: roles at the top-paying employers' careers sites" "$PY" India/fetch_top.py
   step "India: pay and company type for the India roles" "$PY" India/fetch_india.py
   step "India: sync to the team site" "$PY" Japan/team/sync_jobs.py --india
+  step "India: application report, mailed to Prathmesh when India/private/mail.env is set" "$PY" India/report.py --send
   if [ -f madhura/find_jobs.py ]; then
     step "Madhura: Indeed part-time, Guidable, LinkedIn, Indeed, Daijob" "$PY" madhura/find_jobs.py --search
     step "Madhura: sync to the team site" "$PY" Japan/team/sync_jobs.py --candidate madhura
