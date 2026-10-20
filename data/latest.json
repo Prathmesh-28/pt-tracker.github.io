@@ -18686,13 +18686,13 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 338,
+  "closed_tracked": 340,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 1273,
+    "postings_scanned": 1271,
     "search_postings": 761,
-    "postings_india": 1116,
+    "postings_india": 1115,
     "business_track": 639,
     "open": 206,
     "unstated": 212,

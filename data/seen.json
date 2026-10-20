@@ -71,8 +71,8 @@
  },
  "ashby:atlan:945193fe-b746-49e1-8843-2d1358314ec5": {
   "age_days": 43,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-20",
   "company": "atlan",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-20",
@@ -104697,8 +104697,8 @@
  },
  "lever:paytm:cee9ed93-5400-4dee-a84f-28a18c802340": {
   "age_days": 21,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-20",
   "company": "paytm",
   "first_seen": "2026-09-29",
   "last_seen": "2026-10-20",
