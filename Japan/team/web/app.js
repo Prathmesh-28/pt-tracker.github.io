@@ -2,6 +2,7 @@
 // refuse a second claim or application on the same job, so the list can never mislead
 // two people into applying twice. This file only shows the state and calls them.
 import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
+import { MBA_SCHOOLS } from "./mba.js";
 
 const $ = s => document.querySelector(s);
 const app = $("#app"), dlg = $("#dlg"), toastEl = $("#toast");
@@ -24,6 +25,8 @@ const S = {
   ishown: 60,
   inf: Object.assign({ q: "", status: "open", family: "all", type: "all", timing: "all", sort: "priority", pay: false },
                      store.get("jt-ifilters", {})),
+  mf: Object.assign({ q: "", region: "all", fit: "all", ivy: false, intake: "any", early: false, sort: "gmat" },
+                    store.get("jt-mfilters", {})),
 };
 
 const STATUS = {
@@ -293,7 +296,7 @@ function counts() {
 // The page is three parts: tabs, counters, and the current view. A refresh that comes from
 // outside (a friend's change arriving live, the window regaining focus after a file picker)
 // updates the tabs and counters but never redraws a view with a form someone is filling in.
-const VIEWS = () => ({ jobs: viewJobs, india: viewIndia, comps: viewComps, mine: viewMine, activity: viewActivity,
+const VIEWS = () => ({ jobs: viewJobs, india: viewIndia, comps: viewComps, mba: viewMba, mine: viewMine, activity: viewActivity,
                        resumes: viewResumes, team: viewTeam, settings: viewSettings });
 const FORM_VIEWS = ["resumes", "settings"];
 
@@ -329,6 +332,7 @@ function renderChrome() {
   const tabs = [["jobs", myIndia().length ? "Japan jobs" : "Jobs", myRoles().filter(j => j.is_open).length]];
   if (myIndia().length) tabs.push(["india", "India jobs", myIndia().filter(j => j.is_open).length]);
   if (myComps().length) tabs.push(["comps", "Competitions", myComps().filter(compOpen).length]);
+  if (S.cand === "prathmesh") tabs.push(["mba", "MBA", MBA_SCHOOLS.length]);
   tabs.push(["mine", "Mine", mine], ["activity", "Activity", ""], ["resumes", "Resumes", myResumes().filter(r => r.active).length],
             ["team", "Team", isOwner() && waiting ? `${waiting} waiting` : S.members.filter(m => m.approved).length]);
   if (isOwner()) tabs.push(["settings", "Settings", ""]);
@@ -341,6 +345,16 @@ function renderChrome() {
       <div><b>${k.open}</b><span>Open to apply</span></div><div><b>${k.product}</b><span>Product analyst and APM</span></div>
       <div><b>${k.paid}</b><span>With the company's own pay</span></div><div><b>${k.startups} · ${k.mncs}</b><span>Startups · MNCs</span></div>
       <div><b>${k.applied}</b><span>Applications sent</span></div>`;
+    return;
+  }
+  if (S.tab === "mba") {
+    const days = Math.ceil((new Date("2027-01-05T12:00:00-05:00") - Date.now()) / 864e5);
+    $("#statsbar").innerHTML = `
+      <div><b>705+</b><span>GMAT Focus target for the M7 and Ivies</span></div>
+      <div><b>${MBA_SCHOOLS.filter(s => /Target|Likely/.test(s.fit)).length}</b><span>Target or likely schools</span></div>
+      <div><b>${MBA_SCHOOLS.filter(mbaHasEarly).length}</b><span>Deferred routes open to final-year students</span></div>
+      <div><b>${days > 0 ? days : "—"}</b><span>Days to HBS Round 2 (5 Jan 2027)</span></div>
+      <div><b>$275</b><span>GMAT fee, any day of the year</span></div>`;
     return;
   }
   if (S.tab === "comps") {
@@ -362,7 +376,7 @@ function backgroundRender() {
   if (!S.me?.approved || !$("#view")) return;
   renderChrome();
   if (FORM_VIEWS.includes(S.tab)) return;
-  const active = document.activeElement, id = active && ["f-q", "c-q", "i-q"].includes(active.id) ? active.id : null;
+  const active = document.activeElement, id = active && ["f-q", "c-q", "i-q", "m-q"].includes(active.id) ? active.id : null;
   const keep = id ? [active.selectionStart, active.selectionEnd] : null;
   VIEWS()[S.tab]();
   if (keep) { const q = $(`#${id}`); if (q) { q.focus(); q.setSelectionRange(...keep); } }
@@ -955,6 +969,132 @@ function addCompDialog() {
 }
 
 const card = j => isComp(j) ? compCard(j) : jobCard(j);
+
+// ---------------------------------------------------------------- MBA
+// Top business schools for Prathmesh, from admissions/MBA-admissions/ (build_schools.py writes mba.js).
+// Static reference data: nothing here is claimed or stored in the database.
+const FIT_ORDER = { Likely: 0, Target: 1, Stretch: 2, Reach: 3, "Later option": 4 };
+const FIT_BADGE = { Likely: "ok", Target: "info", Stretch: "warn", Reach: "bad", "Later option": "" };
+const mbaHasEarly = s => !!s.early_route && !/^—|not open|undergrads only|^Needs|^MSc|Master in Management/i.test(s.early_route);
+const mbaCost = s => parseFloat(String(s.total_cost_inr).replace(/[^\d.]/g, "")) * (/Cr/.test(s.total_cost_inr) ? 100 : 1);
+
+function mbaMatches(s) {
+  const f = S.mf, q = f.q.trim().toLowerCase();
+  return (f.region === "all" || s.region === f.region) && (f.fit === "all" || s.fit === f.fit) && (!f.ivy || s.ivy === "Yes") &&
+    (f.intake === "any" || (f.intake === "spring" ? /Spring|Jan/i.test(s.intakes) : /Fall/i.test(s.intakes))) &&
+    (!f.early || mbaHasEarly(s)) && (!q || Object.values(s).join(" ").toLowerCase().includes(q));
+}
+
+function mbaCard(s) {
+  return `<article class="item">
+    <div>
+      <h3>${esc(s.school)}</h3>
+      <div class="meta"><span>${esc(s.programme)}</span><span>${esc(s.country)}</span><span>${esc(s.length)}</span><span>Avg work exp ${esc(s.avg_work_exp)}</span></div>
+      <div class="badges"><span class="b ${FIT_BADGE[s.fit] ?? ""}">${esc(s.fit)}</span>${s.ivy === "Yes" ? `<span class="b info">Ivy League</span>` : ""}
+        ${/Spring|Jan/i.test(s.intakes) ? `<span class="b ok">January / spring intake</span>` : ""}${mbaHasEarly(s) ? `<span class="b ok">Deferred route for students</span>` : ""}</div>
+    </div>
+    <div class="mbanums">
+      <div><b>${esc(s.avg_gmat_focus)}</b><span>class avg GMAT</span></div>
+      <div><b>${esc(s.target_gmat)}</b><span>your target</span></div>
+      <div><b>${esc(s.total_cost_inr)}</b><span>total cost</span></div>
+    </div>
+    <dl class="mbadl">
+      <dt>Deadlines</dt><dd>${esc(s.rounds)}</dd>
+      <dt>Intake</dt><dd>${esc(s.intakes)}</dd>
+      <dt>While at IITB</dt><dd>${esc(s.early_route)}</dd>
+      <dt>Looking for</dt><dd>${esc(s.looking_for)}</dd>
+      <dt>Tuition</dt><dd>${esc(s.tuition_total)}</dd>
+      <dt>Scholarships</dt><dd>${esc(s.scholarships)}</dd>
+    </dl>
+  </article>`;
+}
+
+function mbaGuide() {
+  return `
+    <h2 class="section">Where the profile stands</h2>
+    <p class="muted sectionnote">10th CBSE 90.8% · 12th Maharashtra Board 77.17% · IIT Bombay B.Tech Civil (IEOR minor), CGPA 6.56 / 10, graduating 2027.
+      The IIT Bombay name is strong, but the 6.56 is the weak point, and Indian male engineers are the most crowded applicant pool, so the GMAT
+      has to sit above the class average. Make up for the CGPA with: a Quant section score of 85+; one or two graded quant courses with an A (HBS Online
+      CORe, UC Berkeley or UCLA Extension statistics, MITx Supply Chain MicroMasters); a three-line optional essay; and work with measurable results.
+      The 12th-grade marks barely matter, except a little at ISB and the IIMs.</p>
+    <div class="tablewrap"><table><thead><tr><th>Aiming for</th><th>Class average</th><th>Target with CGPA 6.56</th><th>Percentile</th></tr></thead><tbody>
+      <tr><td>HBS, Stanford (incl. HBS 2+2)</td><td>685-690</td><td><b>715+</b></td><td>~99</td></tr>
+      <tr><td>Wharton, Columbia, Booth, Kellogg, MIT Sloan, Yale</td><td>675-690</td><td><b>705+</b></td><td>~98-99</td></tr>
+      <tr><td>Tuck, Haas, Stern</td><td>670-675</td><td><b>695+</b></td><td>~97</td></tr>
+      <tr><td>Cornell, Ross, Fuqua, Darden, UCLA, LBS, INSEAD, ISB</td><td>660-675</td><td><b>685+</b></td><td>~96</td></tr>
+      <tr><td>Oxford, Cambridge, HEC, IESE, Tepper</td><td>650-660</td><td><b>675+</b></td><td>~94</td></tr>
+      <tr><td>Imperial, NUS, Rotman</td><td>~635</td><td><b>665+</b></td><td>~90</td></tr>
+    </tbody></table></div>
+    <p class="muted sectionnote" style="margin-top:8px"><b>The Ivies:</b> only six have an MBA (Harvard, Wharton, Columbia, Yale, Tuck, Cornell); Brown and Princeton don't.
+      Best Ivy picks for this profile: <b>Cornell Johnson</b> (most realistic; the 1-year Tech MBA suits engineers; the Park Fellowship pays full tuition),
+      <b>Yale Silver Scholars</b> (you apply while still at IITB), and <b>Columbia</b> (January J-Term start and a deferred programme). Harvard and Wharton are a reach.</p>
+
+    <h2 class="section">Two ways to go</h2>
+    <div class="tablewrap"><table><thead><tr><th>When</th><th>Route A: deferred MBA, apply in final year</th><th>Route B: work first</th></tr></thead><tbody>
+      <tr><td>Oct-Dec 2026</td><td>Take a free official GMAT practice exam as a diagnostic, then prep 12-15 hrs a week</td><td>Same: an early GMAT score is valid 5 years</td></tr>
+      <tr><td>Dec 2026 - Feb 2027</td><td>GMAT attempt 1, retake 3-4 weeks later if needed. Apply to <b>ISB YLP</b></td><td>GMAT done; push the last-semester CGPA up</td></tr>
+      <tr><td>Feb-Apr 2027</td><td>HBS 2+2 (~late Apr), Yale Silver Scholars, Stanford R3, MIT Early Admission, Booth / Kellogg / Columbia / Haas / Stern / Darden deferred</td><td>Pick a first job with ownership: consulting, product, analytics, infrastructure finance</td></tr>
+      <tr><td>Jul 2027 - 2029</td><td>Work 2-4 years, then join the school</td><td>Work; aim for a promotion and results you can put numbers on</td></tr>
+      <tr><td>Sep 2029</td><td>—</td><td><b>Round 1</b> to 5-7 schools (best round for internationals and scholarships); Round 2 in Jan 2030</td></tr>
+    </tbody></table></div>
+    <p class="muted sectionnote" style="margin-top:8px">US schools have one intake (Aug-Sep) with rounds in Sep, Jan and Apr. January ("spring") starts exist only at Columbia J-Term,
+      INSEAD and HEC Paris; ISB and the IIM one-year programmes start in April. Today, Round 1 for Fall 2027 has closed and <b>Round 2 (early January 2027) is open</b>.</p>
+
+    <h2 class="section">GMAT: dates, fees, format</h2>
+    <div class="tablewrap"><table><tbody>
+      <tr><th>Dates</th><td>No fixed attempts and no "four times a year": it runs almost every day, at a Pearson VUE centre (Mumbai, Pune…) or online. Book 2-4 weeks ahead on mba.com.</td></tr>
+      <tr><th>Retakes</th><td>At least 16 days apart · at most 5 in 12 months · 8 in a lifetime · you choose which score to send · scores valid 5 years</td></tr>
+      <tr><th>Fee</th><td>$275 at a centre, $300 online (India may add 18% GST, ~₹27-30k) · reschedule $55-$165 · score report $35 each after the 5 free ones</td></tr>
+      <tr><th>Format</th><td>2 h 15 min, 3 sections × 45 min, in any order you choose: <b>Quant</b> 21 Q (no geometry, no calculator) · <b>Verbal</b> 23 Q (reading comprehension, critical reasoning) ·
+        <b>Data Insights</b> 20 Q (data sufficiency, tables, graphs, multi-source; calculator allowed). Score 205-805; you can review and change up to 3 answers per section.</td></tr>
+      <tr><th>Take it by</th><td>~20 Dec 2026 for US Round 2 · Jan-Feb 2027 for deferred programmes · before Mar 2029 for Route B</td></tr>
+      <tr><th>Prep</th><td>GMAT Official Guide (Focus Edition) and the Quant, Verbal and DI review books, the 6 official practice exams, the GMAT Club question bank; Target Test Prep (Quant), e-GMAT (Verbal)</td></tr>
+    </tbody></table></div>
+
+    <h2 class="section">Paying for it</h2>
+    <div class="tablewrap"><table><thead><tr><th>Source</th><th>What it gives</th></tr></thead><tbody>
+      <tr><td>HBS / Stanford</td><td>Need-based only: avg ~$45-47k a year; Knight-Hennessy (Stanford) covers the full cost</td></tr>
+      <tr><td>Wharton, Booth, Kellogg, Columbia, Ross, Darden, Fuqua, Tepper, Stern</td><td>Merit awards, $10k to full tuition. A high GMAT and applying in Round 1 bring the most. Many schools reconsider an award if you show a better offer from a peer school</td></tr>
+      <tr><td>Cornell Park Fellowship · Oxford Pershing Square · Chevening (UK)</td><td>Full tuition (and living costs for Pershing Square and Chevening)</td></tr>
+      <tr><td>JN Tata Endowment · K.C. Mahindra · Aga Khan</td><td>Indian loan scholarships and grants, about ₹1-10 L; apply Jan-Mar of the year you go</td></tr>
+      <tr><td>School loans, Prodigy, MPOWER, SBI / Credila / Avanse</td><td>Loans with no cosigner (top US schools) or with collateral (Indian banks, up to ~₹1.5 Cr; interest is tax-deductible under Sec 80E)</td></tr>
+      <tr><td>Cheaper routes</td><td>One-year programmes (INSEAD, Oxford, Cambridge, ISB, Kellogg 1Y, Cornell Tech) halve the salary you give up; the US summer internship pays ~$35-50k</td></tr>
+    </tbody></table></div>
+    <p class="muted sectionnote" style="margin-top:8px">Figures are approximate for the 2026-27 cycle, as of Oct 2026. Check each school's own site before relying on one.
+      The full write-up is in the repo under admissions/MBA-admissions/.</p>`;
+}
+
+function viewMba() {
+  const f = S.mf, list = MBA_SCHOOLS.filter(mbaMatches).sort((a, b) =>
+    f.sort === "cost" ? mbaCost(a) - mbaCost(b) : f.sort === "fit" ? FIT_ORDER[a.fit] - FIT_ORDER[b.fit] || b.avg_gmat_focus - a.avg_gmat_focus
+      : b.avg_gmat_focus - a.avg_gmat_focus);
+  const regions = [...new Set(MBA_SCHOOLS.map(s => s.region))].map(r => [r, r]);
+  $("#view").innerHTML = `
+    <div class="controls">
+      <input type="search" id="m-q" placeholder="Search school, country or scholarship" value="${esc(f.q)}" aria-label="Search schools">
+      <select id="m-region" aria-label="Region">${opts([["all", "Every region"], ...regions], f.region)}</select>
+      <select id="m-fit" aria-label="Fit">${opts([["all", "Every fit"], ["Reach", "Reach"], ["Stretch", "Stretch"], ["Target", "Target"],
+                                                  ["Likely", "Likely"], ["Later option", "Later option"]], f.fit)}</select>
+      <select id="m-intake" aria-label="Intake">${opts([["any", "Any intake"], ["fall", "Fall intake"], ["spring", "January / spring intake"]], f.intake)}</select>
+      <select id="m-sort" aria-label="Sort">${opts([["gmat", "Class GMAT, highest first"], ["fit", "Best fit first"], ["cost", "Cheapest first"]], f.sort)}</select>
+      <label><input type="checkbox" id="m-ivy" ${f.ivy ? "checked" : ""}> Ivy League only</label>
+      <label><input type="checkbox" id="m-early" ${f.early ? "checked" : ""}> Deferred route for students</label>
+      <span class="count">${list.length} shown</span>
+    </div>
+    <div class="listhead"><p>Top business schools in the US, UK, Europe, Asia and Canada for an IIT Bombay B.Tech graduating in 2027 (CGPA 6.56).
+      <b>Fit</b> assumes the target GMAT shown on each school and 3-4 years of good work experience, or applying through a deferred programme.</p></div>
+    <div class="list">${list.length ? list.map(mbaCard).join("") : `<div class="empty">No schools match these filters.</div>`}</div>
+    ${mbaGuide()}`;
+  const bind = (id, key, ev = "change", get = el => el.value) => $(id)?.addEventListener(ev, e => {
+    S.mf[key] = get(e.target); store.set("jt-mfilters", S.mf);
+    if (key === "q") { clearTimeout(viewMba.t); viewMba.t = setTimeout(() => { viewMba(); const q = $("#m-q"); q.focus(); q.setSelectionRange(q.value.length, q.value.length); }, 200); }
+    else viewMba();
+  });
+  bind("#m-q", "q", "input");
+  ["region", "fit", "intake", "sort"].forEach(k => bind(`#m-${k}`, k));
+  bind("#m-ivy", "ivy", "change", el => el.checked);
+  bind("#m-early", "early", "change", el => el.checked);
+}
 
 // ---------------------------------------------------------------- other tabs
 

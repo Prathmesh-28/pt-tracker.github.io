@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MBA School Finder</title>
+<style>
+  :root {
+    --bg: #fafaf8; --fg: #1d1d1b; --muted: #6b6b66; --line: #e3e2dc; --card: #fff;
+    --reach: #b42318; --stretch: #b54708; --target: #175cd3; --likely: #067647; --later: #6b6b66;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #141413; --fg: #ecebe6; --muted: #9a9993; --line: #2c2c2a; --card: #1c1c1a;
+      --reach: #f97066; --stretch: #fdb022; --target: #84adff; --likely: #47cd89; --later: #9a9993;
+    }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 15px/1.5 system-ui, -apple-system, Segoe UI, sans-serif; }
+  main { max-width: 1200px; margin: 0 auto; padding: 24px 16px 64px; }
+  h1 { font-size: 24px; margin: 0 0 4px; }
+  p.sub { color: var(--muted); margin: 0 0 20px; }
+  .profile { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 12px 16px; margin-bottom: 20px; font-size: 14px; }
+  .filters { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 16px; align-items: end; }
+  label { display: flex; flex-direction: column; font-size: 12px; color: var(--muted); gap: 4px; }
+  select, input { font: inherit; padding: 6px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--card); color: var(--fg); }
+  .count { color: var(--muted); font-size: 13px; margin-left: auto; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 14px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; }
+  .card h2 { font-size: 17px; margin: 0; }
+  .meta { color: var(--muted); font-size: 13px; margin-bottom: 8px; }
+  .pill { display: inline-block; font-size: 12px; font-weight: 600; padding: 1px 8px; border-radius: 99px; border: 1px solid currentColor; margin-right: 6px; }
+  .Reach { color: var(--reach); } .Stretch { color: var(--stretch); } .Target { color: var(--target); }
+  .Likely { color: var(--likely); } .Later { color: var(--later); }
+  dl { display: grid; grid-template-columns: 120px 1fr; gap: 3px 10px; margin: 8px 0 0; font-size: 13px; }
+  dt { color: var(--muted); }
+  dd { margin: 0; }
+  .nums { display: flex; gap: 16px; margin: 6px 0; }
+  .nums div { font-size: 12px; color: var(--muted); }
+  .nums b { display: block; font-size: 20px; color: var(--fg); }
+  @media (max-width: 420px) { .grid { grid-template-columns: 1fr; } dl { grid-template-columns: 1fr; } dt { margin-top: 4px; } }
+</style>
+</head>
+<body>
+<main>
+  <h1>MBA school finder</h1>
+  <p class="sub">29 top business schools, filtered for an IIT Bombay B.Tech (2027). Figures are approximate for the 2026-27 cycle; check each school's site before you rely on one. Full write-up: <a href="README.md">README</a> · <a href="GMAT-timeline.md">GMAT guide</a> · <a href="schools.csv">CSV</a></p>
+
+  <div class="profile"><b>Profile used for the "Fit" column:</b> 10th CBSE 90.8% · 12th Maharashtra Board 77.17% · IIT Bombay CGPA 6.56/10 · assumes you reach the <i>target GMAT</i> shown on each card and bring 3-4 years of good work experience (or apply through a deferred programme).</div>
+
+  <div class="filters">
+    <label>Region <select id="f-region"><option value="">All</option></select></label>
+    <label>Fit for you <select id="f-fit"><option value="">All</option></select></label>
+    <label>Ivy League only <select id="f-ivy"><option value="">No</option><option value="Yes">Yes</option></select></label>
+    <label>Intake <select id="f-intake"><option value="">Any</option><option value="Fall">Fall</option><option value="Spring">Spring / January</option></select></label>
+    <label>Deferred route for students <select id="f-early"><option value="">Any</option><option value="y">Has one</option></select></label>
+    <label>Search <input id="f-q" placeholder="school, scholarship…"></label>
+    <span class="count" id="count"></span>
+  </div>
+  <div class="grid" id="grid"></div>
+</main>
+<script src="schools.js"></script>
+<script>
+  const $ = id => document.getElementById(id);
+  const data = window.SCHOOLS || [];
+  const fitClass = f => f.split(" ")[0];
+  const fill = (sel, key) => [...new Set(data.map(d => d[key]))].forEach(v => sel.add(new Option(v, v)));
+  fill($("f-region"), "region"); fill($("f-fit"), "fit");
+  const hasEarly = d => d.early_route && !/^—|not open|only/i.test(d.early_route) && !/^Needs/.test(d.early_route);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+  function render() {
+    const r = $("f-region").value, f = $("f-fit").value, ivy = $("f-ivy").value,
+          intake = $("f-intake").value, early = $("f-early").value, q = $("f-q").value.toLowerCase();
+    const rows = data.filter(d =>
+      (!r || d.region === r) && (!f || d.fit === f) && (!ivy || d.ivy === "Yes") &&
+      (!intake || (intake === "Spring" ? /Spring|Jan/i.test(d.intakes) : /Fall/i.test(d.intakes))) &&
+      (!early || hasEarly(d)) &&
+      (!q || Object.values(d).join(" ").toLowerCase().includes(q)));
+    $("count").textContent = rows.length + " of " + data.length + " schools";
+    $("grid").innerHTML = rows.map(d => `
+      <article class="card">
+        <h2>${esc(d.school)}</h2>
+        <div class="meta"><span class="pill ${fitClass(d.fit)}">${esc(d.fit)}</span>${esc(d.programme)} · ${esc(d.country)} · ${esc(d.length)}${d.ivy === "Yes" ? " · Ivy" : ""}</div>
+        <div class="nums">
+          <div><b>${d.avg_gmat_focus}</b>class avg GMAT Focus</div>
+          <div><b>${esc(d.target_gmat)}</b>your target</div>
+          <div><b>${esc(d.total_cost_inr)}</b>total cost (approx)</div>
+        </div>
+        <dl>
+          <dt>Tuition (total)</dt><dd>${esc(d.tuition_total)}</dd>
+          <dt>Intake</dt><dd>${esc(d.intakes)}</dd>
+          <dt>Deadlines</dt><dd>${esc(d.rounds)}</dd>
+          <dt>Student route</dt><dd>${esc(d.early_route)}</dd>
+          <dt>Avg work exp</dt><dd>${esc(d.avg_work_exp)}</dd>
+          <dt>Looking for</dt><dd>${esc(d.looking_for)}</dd>
+          <dt>Scholarships</dt><dd>${esc(d.scholarships)}</dd>
+        </dl>
+      </article>`).join("");
+  }
+  document.querySelectorAll("select, input").forEach(el => el.addEventListener("input", render));
+  render();
+</script>
+</body>
+</html>
