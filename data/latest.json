@@ -12944,6 +12944,32 @@
       "key": "linkedin:peakxvpartners:li-4480766898"
     },
     {
+      "age_days": 0,
+      "first_seen": "2026-10-21",
+      "reposted": false,
+      "title": "Professional Services Consultant",
+      "company": "Druva",
+      "city": "Pune",
+      "city_tier": "Tier 1",
+      "location": "Pune, Maharashtra, India",
+      "pay": "",
+      "url": "https://www.druva.com/why-druva/explore/careers/jobs/8883093002/?gh_jid=8883093002",
+      "posted": "2026-10-21",
+      "deadline": "",
+      "team": "",
+      "family": "Consulting",
+      "min_years": 2,
+      "tier": "walled",
+      "ats": "greenhouse",
+      "source": "board",
+      "apply_url": "",
+      "batch": "",
+      "batches": [],
+      "kind": "full-time",
+      "funded": null,
+      "key": "greenhouse:druva:8883093002"
+    },
+    {
       "age_days": 1,
       "first_seen": "2026-10-21",
       "reposted": false,
@@ -20413,12 +20439,12 @@
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 1268,
+    "postings_scanned": 1272,
     "search_postings": 757,
-    "postings_india": 1179,
-    "business_track": 705,
+    "postings_india": 1183,
+    "business_track": 706,
     "open": 243,
     "unstated": 250,
-    "walled": 212
+    "walled": 213
   }
 }

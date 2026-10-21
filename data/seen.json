@@ -3955,11 +3955,11 @@
  },
  "greenhouse:druva:8857583002": {
   "age_days": 13,
-  "closed": true,
-  "closed_on": "2026-10-09",
+  "closed": false,
+  "closed_on": "",
   "company": "druva",
   "first_seen": "2026-10-08",
-  "last_seen": "2026-10-08",
+  "last_seen": "2026-10-21",
   "location": "Pune, Maharashtra, India",
   "min_years": 2,
   "posted": "2026-10-08",
@@ -4008,6 +4008,20 @@
   "reposted": false,
   "title": "Regional Vice President, Alliances",
   "url": "https://www.druva.com/why-druva/explore/careers/jobs/8871881002/?gh_jid=8871881002"
+ },
+ "greenhouse:druva:8883093002": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "druva",
+  "first_seen": "2026-10-21",
+  "last_seen": "2026-10-21",
+  "location": "Pune, Maharashtra, India",
+  "min_years": 2,
+  "posted": "2026-10-21",
+  "reposted": false,
+  "title": "Professional Services Consultant",
+  "url": "https://www.druva.com/why-druva/explore/careers/jobs/8883093002/?gh_jid=8883093002"
  },
  "greenhouse:glide:4020741007": {
   "age_days": 1254,
@@ -6449,8 +6463,8 @@
  },
  "greenhouse:zenoti:7676418003": {
   "age_days": 114,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-21",
   "company": "zenoti",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-21",
@@ -101699,6 +101713,20 @@
   "title": "SME Engineer IT",
   "url": "https://jobs.lever.co/mindtickle/3ce036e8-d4f9-4086-bec4-186676ea109e"
  },
+ "lever:mindtickle:3e5edd75-7d3e-4345-85b4-ed695a3872f2": {
+  "age_days": 335,
+  "closed": false,
+  "closed_on": "",
+  "company": "mindtickle",
+  "first_seen": "2026-10-21",
+  "last_seen": "2026-10-21",
+  "location": "Remote, US",
+  "min_years": 3,
+  "posted": "2025-11-20",
+  "reposted": false,
+  "title": "Account Executive, Commercial Sales [New Logo]",
+  "url": "https://jobs.lever.co/mindtickle/3e5edd75-7d3e-4345-85b4-ed695a3872f2"
+ },
  "lever:mindtickle:4365dc2a-87b1-4751-bd30-c90c70dea92c": {
   "age_days": 72,
   "closed": false,
@@ -105745,6 +105773,20 @@
   "title": "Process Trainer - TL - Lending",
   "url": "https://jobs.lever.co/paytm/e0322630-04bd-4abe-b9f3-bc0ab07faecf"
  },
+ "lever:paytm:e09a1fc4-47e2-4c49-b17e-6993b958d6ef": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-21",
+  "last_seen": "2026-10-21",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 3,
+  "posted": "2026-10-21",
+  "reposted": false,
+  "title": "Product Management - AI Payments",
+  "url": "https://jobs.lever.co/paytm/e09a1fc4-47e2-4c49-b17e-6993b958d6ef"
+ },
  "lever:paytm:e0c37d78-8cb9-4172-bcf2-fada0f9a2811": {
   "age_days": 43,
   "closed": false,
@@ -107175,6 +107217,20 @@
   "reposted": false,
   "title": "Corporate Risk and Compliance - Associate II",
   "url": "https://jobs.lever.co/zeta/f43a76bd-ec4e-4b4b-a331-93d5d85434a5"
+ },
+ "lever:zeta:f791ce9e-2c8c-4103-9d26-420995384d67": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-10-21",
+  "last_seen": "2026-10-21",
+  "location": "Mumbai / Bangalore",
+  "min_years": null,
+  "posted": "2026-10-21",
+  "reposted": false,
+  "title": "Senior Associate - Banking Operations",
+  "url": "https://jobs.lever.co/zeta/f791ce9e-2c8c-4103-9d26-420995384d67"
  },
  "lever:zeta:fe9b2558-10da-4a2c-907f-0dee2a1d76be": {
   "age_days": 41,
