@@ -22,7 +22,8 @@ const S = {
                    store.get("jt-filters", {})),
   cf: Object.assign({ q: "", status: "open", band: "all", route: false, kind: "all", soon: false, fit: "all", sort: "rank" },
                     store.get("jt-cfilters", {})),
-  ishown: 60,
+  ishown: 60, oshown: 60,
+  of: Object.assign({ q: "", status: "open", country: "all", family: "all", sort: "newest" }, store.get("jt-ofilters", {})),
   inf: Object.assign({ q: "", status: "open", family: "all", type: "all", timing: "all", sort: "priority", pay: false },
                      store.get("jt-ifilters", {})),
   mf: Object.assign({ q: "", region: "all", fit: "all", ivy: false, intake: "any", early: false, sort: "gmat" },
@@ -81,7 +82,10 @@ const myJobs = () => S.jobs.filter(j => candOf(j) === S.cand);
 const isComp = j => j?.kind === "competition";
 // India roles (India/, with pay from AmbitionBox and campus offers) are rows of kind "india", in their own tab.
 const isIndia = j => j?.kind === "india";
-const myRoles = () => myJobs().filter(j => !isComp(j) && !isIndia(j));
+// Roles abroad whose postings say they sponsor a visa (Overseas/), rows of kind "overseas", in their own tab.
+const isOverseas = j => j?.kind === "overseas";
+const myRoles = () => myJobs().filter(j => !isComp(j) && !isIndia(j) && !isOverseas(j));
+const myOverseas = () => myJobs().filter(isOverseas);
 const myComps = () => myJobs().filter(isComp);
 const myIndia = () => myJobs().filter(isIndia);
 const statusOf = (j, s) => (isComp(j) ? COMP_STATUS : STATUS)[s] || [s, ""];
@@ -296,7 +300,7 @@ function counts() {
 // The page is three parts: tabs, counters, and the current view. A refresh that comes from
 // outside (a friend's change arriving live, the window regaining focus after a file picker)
 // updates the tabs and counters but never redraws a view with a form someone is filling in.
-const VIEWS = () => ({ jobs: viewJobs, india: viewIndia, comps: viewComps, mba: viewMba, mine: viewMine, activity: viewActivity,
+const VIEWS = () => ({ jobs: viewJobs, india: viewIndia, overseas: viewOverseas, comps: viewComps, mba: viewMba, mine: viewMine, activity: viewActivity,
                        resumes: viewResumes, team: viewTeam, settings: viewSettings });
 const FORM_VIEWS = ["resumes", "settings"];
 
@@ -328,9 +332,10 @@ function renderChrome() {
   const waiting = S.members.filter(m => !m.approved).length;
   $("#candbar").innerHTML = `<span class="muted">Applying for</span>${S.cands.map(c =>
     `<button class="pill" data-act="cand" data-cand="${esc(c.id)}" aria-pressed="${c.id === S.cand}">${esc(c.name)}<span class="n">${
-      S.jobs.filter(j => candOf(j) === c.id && j.is_open && !isComp(j) && !isIndia(j)).length}</span></button>`).join("")}${refreshBox()}`;
+      S.jobs.filter(j => candOf(j) === c.id && j.is_open && !isComp(j) && !isIndia(j) && !isOverseas(j)).length}</span></button>`).join("")}${refreshBox()}`;
   const tabs = [["jobs", myIndia().length ? "Japan jobs" : "Jobs", myRoles().filter(j => j.is_open).length]];
   if (myIndia().length) tabs.push(["india", "India jobs", myIndia().filter(j => j.is_open).length]);
+  if (myOverseas().length) tabs.push(["overseas", "Overseas", myOverseas().filter(j => j.is_open).length]);
   if (myComps().length) tabs.push(["comps", "Competitions", myComps().filter(compOpen).length]);
   if (S.cand === "prathmesh") tabs.push(["mba", "MBA", MBA_SCHOOLS.length]);
   tabs.push(["mine", "Mine", mine], ["activity", "Activity", ""], ["resumes", "Resumes", myResumes().filter(r => r.active).length],
@@ -345,6 +350,17 @@ function renderChrome() {
       <div><b>${k.open}</b><span>Open to apply</span></div><div><b>${k.product}</b><span>Product analyst and APM</span></div>
       <div><b>${k.paid}</b><span>With the company's own pay</span></div><div><b>${k.startups} · ${k.mncs}</b><span>Startups · MNCs</span></div>
       <div><b>${k.applied}</b><span>Applications sent</span></div>`;
+    return;
+  }
+  if (S.tab === "overseas") {
+    const open = myOverseas().filter(j => j.is_open);
+    const countries = new Set(open.map(j => j.extra?.country).filter(c => c && c !== "Not stated"));
+    const sent = myOverseas().filter(j => ["applied", "interview", "offer"].includes(S.apps.get(j.key)?.status)).length;
+    $("#statsbar").innerHTML = `
+      <div><b>${open.length}</b><span>Open roles that state visa sponsorship</span></div>
+      <div><b>${countries.size}</b><span>Countries</span></div>
+      <div><b>${open.filter(j => j.extra?.tier).length}</b><span>At the top-paying employers</span></div>
+      <div><b>${sent}</b><span>Applications sent</span></div>`;
     return;
   }
   if (S.tab === "mba") {
@@ -428,7 +444,7 @@ function sorted(list) {
 
 function jobCard(j) {
   const a = S.apps.get(j.key), expired = claimExpired(a), me = S.me.user_id;
-  const badges = isIndia(j) ? indiaBadges(j) : [];
+  const badges = isIndia(j) ? indiaBadges(j) : isOverseas(j) ? overseasBadges(j) : [];
   if (j.priority) badges.push(`<span class="b warn">★ Owner's pick</span>`);
   if (j.do_not_apply) badges.push(`<span class="b bad">Do not apply</span>`);
   if (!j.is_open) badges.push(`<span class="b">Closed</span>`);
@@ -499,6 +515,7 @@ function jobCard(j) {
       <div class="badges">${badges.join("")}</div>
       ${j.extra?.india ? `<p class="muted why">Indians work here: ${esc(indiaWhy(j.extra.india))}</p>` : ""}
       ${isIndia(j) ? indiaLines(j) : ""}
+      ${isOverseas(j) && j.eligibility ? `<p class="muted why">Visa: “${esc(j.eligibility)}”</p>` : ""}
       ${j.owner_note ? `<p class="muted" style="margin:6px 0 0;font-size:13px"><b>Owner:</b> ${esc(j.owner_note)}</p>` : ""}
     </div>
     <div class="actions">${actions.join("")}</div>
@@ -898,6 +915,61 @@ function watchSection() {
       refresh, every past edition with its dates; the ones run elsewhere (quant contests, bank hackathons) were checked by hand${checked ? ` on ${esc(fmtDate(checked))}` : ""}.</p>
     <div class="tablewrap"><table class="watch"><thead><tr><th>Competition</th><th>Employer</th><th>Last edition</th><th>Next</th><th>${esc(person().name)}</th></tr></thead>
       <tbody>${body}</tbody></table></div>`;
+}
+
+// ---------------------------------------------------------------- overseas
+
+function overseasBadges(j) {
+  const x = j.extra || {}, out = [];   // the card adds "Sponsors visa" from j.visa
+  if (x.country && x.country !== "Not stated") out.push(`<span class="b info">${esc(x.country)}</span>`);
+  if (j.track) out.push(`<span class="b">${esc(j.track)}</span>`);
+  if (x.tier) out.push(`<span class="b">${esc(x.tier)}</span>`);
+  return out;
+}
+
+function overseasMatches(j) {
+  const f = S.of, a = S.apps.get(j.key), st = !a || claimExpired(a) ? "open" : a.status;
+  if (f.status === "open" && (st !== "open" || !j.is_open || j.do_not_apply)) return false;
+  if (f.status === "claimed" && st !== "claimed") return false;
+  if (f.status === "applied" && !["applied", "interview", "offer", "rejected", "withdrawn"].includes(st)) return false;
+  if (f.status === "skipped" && st !== "skipped") return false;
+  if (f.country !== "all" && (j.extra?.country || "Not stated") !== f.country) return false;
+  if (f.family !== "all" && j.track !== f.family) return false;
+  if (f.q) {
+    const hay = `${j.title} ${j.company} ${j.location} ${j.track} ${j.extra?.country || ""}`.toLowerCase();
+    if (!f.q.toLowerCase().split(/\s+/).every(w => hay.includes(w))) return false;
+  }
+  return true;
+}
+
+function viewOverseas() {
+  const f = S.of, list = myOverseas().filter(overseasMatches).sort((a, b) => f.sort === "company"
+    ? a.company.localeCompare(b.company) || a.title.localeCompare(b.title)
+    : (b.priority - a.priority) || (b.posted || "").localeCompare(a.posted || ""));
+  const uniq = k => [...new Set(myOverseas().map(k).filter(Boolean))].sort().map(v => [v, v]);
+  $("#view").innerHTML = `
+    <div class="controls">
+      <input type="search" id="o-q" placeholder="Search title, company or country" value="${esc(f.q)}" aria-label="Search overseas roles">
+      <select id="o-status" aria-label="Status">${opts([["open", "Open to claim"], ["claimed", "Claimed"], ["applied", "Applied and later"],
+                                                         ["skipped", "Skipped"], ["all", "Everything"]], f.status)}</select>
+      <select id="o-country" aria-label="Country">${opts([["all", "Every country"], ...uniq(j => j.extra?.country || "Not stated")], f.country)}</select>
+      <select id="o-family" aria-label="Kind of role">${opts([["all", "Every kind of role"], ...uniq(j => j.track)], f.family)}</select>
+      <select id="o-sort" aria-label="Sort">${opts([["newest", "Newest"], ["company", "Company"]], f.sort)}</select>
+      <span class="count">${list.length} shown</span>
+    </div>
+    <div class="listhead"><p>Entry-level product, analyst, strategy, consulting and finance roles outside India and Japan whose
+      own posting says the employer sponsors a work visa. The sentence that says so is under each role. Postings that say nothing
+      about visas are left out, and so are ones that ask for an existing right to work there or for two years or more. From the
+      careers boards of about 90 employers, and LinkedIn and Indeed searched for "visa sponsorship" in nine countries.</p></div>
+    <div class="list">${list.length ? list.slice(0, S.oshown).map(jobCard).join("") : `<div class="empty">No roles match these filters.</div>`}</div>
+    ${list.length > S.oshown ? `<button class="btn more" data-act="omore">Show more (${list.length - S.oshown} left)</button>` : ""}`;
+  const bind = (id, key, ev = "change") => $(id)?.addEventListener(ev, e => {
+    S.of[key] = e.target.value; S.oshown = 60; store.set("jt-ofilters", S.of);
+    if (key === "q") { clearTimeout(viewOverseas.t); viewOverseas.t = setTimeout(() => { viewOverseas(); const q = $("#o-q"); q.focus(); q.setSelectionRange(q.value.length, q.value.length); }, 200); }
+    else viewOverseas();
+  });
+  bind("#o-q", "q", "input");
+  ["status", "country", "family", "sort"].forEach(k => bind(`#o-${k}`, k));
 }
 
 function viewComps() {
@@ -1372,6 +1444,7 @@ document.addEventListener("click", async e => {
     case "more": S.shown += 60; viewJobs(); break;
     case "cmore": S.cshown += 40; viewComps(); break;
     case "imore": S.ishown += 60; viewIndia(); break;
+    case "omore": S.oshown += 60; viewOverseas(); break;
     case "claim": {
       const others = isComp(j) ? [] : sameCompany(j);
       if (others.length && !confirm(`${others.length} other application(s) at ${j.company} already. Claim this one too?`)) break;

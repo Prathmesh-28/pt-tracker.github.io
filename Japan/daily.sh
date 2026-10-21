@@ -132,6 +132,8 @@ step() {
   step "India: roles at the top-paying employers' careers sites" "$PY" India/fetch_top.py
   step "India: pay and company type for the India roles" "$PY" India/fetch_india.py
   step "India: sync to the team site" "$PY" Japan/team/sync_jobs.py --india
+  step "Overseas: roles abroad that state visa sponsorship" "$PY" Overseas/fetch_overseas.py
+  step "Overseas: sync to the team site" "$PY" Japan/team/sync_jobs.py --overseas
   step "India: application report, mailed to Prathmesh when India/private/mail.env is set" "$PY" India/report.py --send
   if [ -f madhura/find_jobs.py ]; then
     step "Madhura: Indeed part-time, Guidable, LinkedIn, Indeed, Daijob" "$PY" madhura/find_jobs.py --search

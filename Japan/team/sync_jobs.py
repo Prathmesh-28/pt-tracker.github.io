@@ -26,6 +26,7 @@ Needs the service-role key, which bypasses row-level security. Keep it out of gi
   .venv/bin/python Japan/team/sync_jobs.py --candidate madhura   # Madhura's list, from madhura/data
   .venv/bin/python Japan/team/sync_jobs.py --competitions        # Prathmesh's case competitions, from CaseCompetitions/
   .venv/bin/python Japan/team/sync_jobs.py --india               # Prathmesh's India roles with pay, from India/
+  .venv/bin/python Japan/team/sync_jobs.py --overseas            # Prathmesh's roles abroad that sponsor visas, from Overseas/
   .venv/bin/python Japan/team/sync_jobs.py --dry-run             # count what would be sent
   .venv/bin/python Japan/team/sync_jobs.py --env <file>  # use another env file
 """
@@ -53,6 +54,7 @@ COMPETITIONS = JAPAN.parent / "CaseCompetitions" / "data" / "competitions.json"
 COMPETITION_WATCH = JAPAN.parent / "CaseCompetitions" / "data" / "watchlist.json"
 # The full list, campus offers included, is private; the public copy in India/data/ leaves them out.
 INDIA_ROLES = JAPAN.parent / "India" / "private" / "roles.json"
+OVERSEAS_ROLES = JAPAN.parent / "Overseas" / "data" / "roles.json"
 BATCH = 500
 MASS_CLOSE = 0.3  # closing more than this share of the open jobs in one run means a source failed
 
@@ -193,6 +195,26 @@ def india_rows(now: str) -> list[dict]:
     return rows
 
 
+OVERSEAS_VIA = {"linkedin": "LinkedIn", "indeed": "Indeed"}
+
+
+def overseas_rows(now: str) -> list[dict]:
+    """Prathmesh's Overseas list: roles abroad whose postings say they sponsor a visa (Overseas/fetch_overseas.py)."""
+    rows = []
+    for x in json.loads(OVERSEAS_ROLES.read_text())["roles"]:
+        rows.append({
+            "key": x["key"], "kind": "overseas", "company": x["company"], "title": x["title"],
+            "location": x.get("location") or "", "url": x.get("url") or "", "source": x.get("source") or "",
+            "via": OVERSEAS_VIA.get(x.get("source"), (x.get("source") or "").title()), "level": "",
+            "min_years": x.get("min_years"), "language": "", "visa": "yes", "residency": False,
+            "grad_2027": "yes" if 2027 in (x.get("batches") or []) else "check",
+            "eligibility": (x.get("visa_evidence") or "")[:600], "deadline": None, "track": x.get("family") or "",
+            "posted": day(x.get("posted")), "is_open": True, "synced_at": now, "candidate": "prathmesh",
+            "extra": {"country": x.get("country") or "", "tier": x.get("tier") or "", "visa_evidence": x.get("visa_evidence") or ""},
+        })
+    return rows
+
+
 def program_rows(now: str) -> list[dict]:
     rows = []
     for p in json.loads(PROGRAMS.read_text())["programs"]:
@@ -267,12 +289,12 @@ def link_known(rows: list[dict], known: list[dict], applied: set[str]) -> tuple[
 def main() -> None:
     args = sys.argv[1:]
     env_path = Path(args[args.index("--env") + 1]) if "--env" in args else ENV_FILE
-    competitions, india = "--competitions" in args, "--india" in args
-    candidate = args[args.index("--candidate") + 1] if "--candidate" in args and not (competitions or india) else "prathmesh"
+    competitions, india, overseas = "--competitions" in args, "--india" in args, "--overseas" in args
+    candidate = args[args.index("--candidate") + 1] if "--candidate" in args and not (competitions or india or overseas) else "prathmesh"
     now = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    if competitions or india:
-        rows = competition_rows(now) if competitions else india_rows(now)
-        print(f"{candidate}: {len(rows)} {'competitions' if competitions else 'India roles'} to sync; "
+    if competitions or india or overseas:
+        rows = competition_rows(now) if competitions else india_rows(now) if india else overseas_rows(now)
+        print(f"{candidate}: {len(rows)} {'competitions' if competitions else 'India roles' if india else 'overseas roles'} to sync; "
               f"{len({r['key'] for r in rows})} unique keys", file=sys.stderr)
     else:
         rows = madhura_rows(now) if candidate == "madhura" else program_rows(now) + role_rows(now)
@@ -282,8 +304,8 @@ def main() -> None:
     if "--dry-run" in args:
         return
     # Each run owns its kinds: a job sync never closes a competition or an India role, nor the other way round.
-    kinds = ("competition",) if competitions else ("india",) if india else ("role", "program")
-    seen_kinds = kinds if competitions or india else ("role", "program", "manual")
+    kinds = ("competition",) if competitions else ("india",) if india else ("overseas",) if overseas else ("role", "program")
+    seen_kinds = kinds if competitions or india or overseas else ("role", "program", "manual")
 
     cfg = env(env_path)
     base, key = cfg.get("SUPABASE_URL", "").rstrip("/"), cfg.get("SUPABASE_SERVICE_ROLE_KEY", "")
@@ -304,7 +326,7 @@ def main() -> None:
         print(f"  upserted {min(i + BATCH, len(rows))}/{len(rows)}", file=sys.stderr)
 
     # Anything from a source that this sync did not send has closed. Team-added jobs and competitions stay open.
-    prefix = "comp:unstop:" if competitions else "india:" if india else ""
+    prefix = "comp:unstop:" if competitions else "india:" if india else "overseas:" if overseas else ""
     was_open = [k for k in known if k["is_open"] and k["kind"] in kinds and k["key"].startswith(prefix)]
     closing = [k for k in was_open if k["key"] not in sending]
     held = len(closing) > max(50, MASS_CLOSE * len(was_open)) and "--allow-mass-close" not in args
@@ -317,7 +339,7 @@ def main() -> None:
                 {"is_open": False})
     stats = {"at": now, "jobs": len(rows), "new": added, "closed": 0 if held else len(closing),
              "held": len(closing) if held else 0, "relinked": relinked, "skipped_manual": dropped}
-    settings = [{"key": "refreshed_competitions" if competitions else "refreshed_india" if india else f"refreshed_{candidate}",
+    settings = [{"key": "refreshed_competitions" if competitions else "refreshed_india" if india else "refreshed_overseas" if overseas else f"refreshed_{candidate}",
                  "value": json.dumps(stats)}]
     if competitions and COMPETITION_WATCH.exists():
         # The big competitions between seasons, shown under the list: only what the site shows.
