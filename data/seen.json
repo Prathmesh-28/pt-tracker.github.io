@@ -29,8 +29,8 @@
  },
  "ashby:atlan:254c1250-953b-4323-8d18-9fe5e41d8d7d": {
   "age_days": 90,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-22",
   "company": "atlan",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-22",
@@ -3829,8 +3829,8 @@
  },
  "greenhouse:druva:8750848002": {
   "age_days": 31,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-22",
   "company": "druva",
   "first_seen": "2026-09-21",
   "last_seen": "2026-10-22",
@@ -6265,6 +6265,20 @@
   "title": "Sr.Product Support Consultant (Bilingual Danish and English)",
   "url": "https://job-boards.greenhouse.io/zenoti/jobs/6349536003"
  },
+ "greenhouse:zenoti:6617580003": {
+  "age_days": 324,
+  "closed": false,
+  "closed_on": "",
+  "company": "zenoti",
+  "first_seen": "2026-10-22",
+  "last_seen": "2026-10-22",
+  "location": "Hyderabad, Telangana, India",
+  "min_years": 4,
+  "posted": "2025-12-02",
+  "reposted": true,
+  "title": "Project Manager",
+  "url": "https://job-boards.greenhouse.io/zenoti/jobs/6617580003"
+ },
  "greenhouse:zenoti:6690086003": {
   "age_days": 408,
   "closed": false,
@@ -6390,6 +6404,20 @@
   "reposted": true,
   "title": "Product Support Specialist - L2 Support(Global Customers-B2B SaaS)",
   "url": "https://job-boards.greenhouse.io/zenoti/jobs/7562537003"
+ },
+ "greenhouse:zenoti:7578185003": {
+  "age_days": 287,
+  "closed": false,
+  "closed_on": "",
+  "company": "zenoti",
+  "first_seen": "2026-10-22",
+  "last_seen": "2026-10-22",
+  "location": "Hyderabad, Telangana, India",
+  "min_years": null,
+  "posted": "2026-01-08",
+  "reposted": true,
+  "title": "Senior Implementation Consultant",
+  "url": "https://job-boards.greenhouse.io/zenoti/jobs/7578185003"
  },
  "greenhouse:zenoti:7608201003": {
   "age_days": 160,
@@ -6699,6 +6727,20 @@
   "title": "Senior Product Specialist - Adoption",
   "url": "https://job-boards.greenhouse.io/zenoti/jobs/7793410003"
  },
+ "greenhouse:zenoti:7795653003": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zenoti",
+  "first_seen": "2026-10-22",
+  "last_seen": "2026-10-22",
+  "location": "Hyderabad, Telangana, India",
+  "min_years": null,
+  "posted": "2026-10-22",
+  "reposted": false,
+  "title": "Senior Implementation Consultant",
+  "url": "https://job-boards.greenhouse.io/zenoti/jobs/7795653003"
+ },
  "greenhouse:zenoti:7795821003": {
   "age_days": 56,
   "closed": false,
@@ -6810,6 +6852,20 @@
   "reposted": false,
   "title": "Lead Customer Success Manager",
   "url": "https://job-boards.greenhouse.io/zenoti/jobs/7813738003"
+ },
+ "greenhouse:zenoti:7821167003": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zenoti",
+  "first_seen": "2026-10-22",
+  "last_seen": "2026-10-22",
+  "location": "Hyderabad, Telangana, India",
+  "min_years": 3,
+  "posted": "2026-10-22",
+  "reposted": false,
+  "title": "Senior Implementation Consultant",
+  "url": "https://job-boards.greenhouse.io/zenoti/jobs/7821167003"
  },
  "greenhouse:zenoti:7825552003": {
   "age_days": 76,
@@ -102643,8 +102699,8 @@
  },
  "lever:cred:76b5d976-5230-4939-b1ad-4b7d51a40396": {
   "age_days": 10,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-22",
   "company": "cred",
   "first_seen": "2026-10-19",
   "last_seen": "2026-10-22",
@@ -103176,6 +103232,20 @@
   "reposted": false,
   "title": "Senior Database Administrator",
   "url": "https://jobs.lever.co/fampay/771cb90b-b37a-4610-915d-e0396abd2203"
+ },
+ "lever:fampay:8b4517b2-b038-4f57-b7ef-d2cc8ee588f7": {
+  "age_days": 281,
+  "closed": false,
+  "closed_on": "",
+  "company": "fampay",
+  "first_seen": "2026-10-22",
+  "last_seen": "2026-10-22",
+  "location": "Bengaluru",
+  "min_years": null,
+  "posted": "2026-01-14",
+  "reposted": false,
+  "title": "QA Engineer- 1",
+  "url": "https://jobs.lever.co/fampay/8b4517b2-b038-4f57-b7ef-d2cc8ee588f7"
  },
  "lever:fampay:8dd19bb5-f4ef-4608-bfc4-436221bc5bce": {
   "age_days": 421,
@@ -104193,11 +104263,11 @@
  },
  "lever:meesho:5dca8c71-9993-438f-ad51-da3c7f4be692": {
   "age_days": 65,
-  "closed": true,
-  "closed_on": "2026-10-06",
+  "closed": false,
+  "closed_on": "",
   "company": "meesho",
   "first_seen": "2026-09-15",
-  "last_seen": "2026-10-05",
+  "last_seen": "2026-10-22",
   "location": "Bangalore, Karnataka",
   "min_years": null,
   "posted": "2026-08-18",
@@ -105478,6 +105548,20 @@
   "reposted": false,
   "title": "Senior Manager/Manager - Third-Party Risk Management (TPRM) Governance",
   "url": "https://jobs.lever.co/paytm/0e2a1822-7f4b-49c5-a248-75635275667d"
+ },
+ "lever:paytm:0e3581c9-7812-4249-95c8-8620877fcbc4": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-22",
+  "last_seen": "2026-10-22",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 6,
+  "posted": "2026-10-22",
+  "reposted": false,
+  "title": "HR Business Partner - Noida",
+  "url": "https://jobs.lever.co/paytm/0e3581c9-7812-4249-95c8-8620877fcbc4"
  },
  "lever:paytm:0ecd9d93-e4f3-4dd0-a22e-852fec9b6e02": {
   "age_days": 14,
@@ -107872,6 +107956,20 @@
   "reposted": false,
   "title": "Area Collections Manager - Manager - Lending Collections",
   "url": "https://jobs.lever.co/paytm/8ebc681f-a5c4-4544-a900-f10a5ccafafb"
+ },
+ "lever:paytm:8ef474ea-ea67-4cd4-bcd4-af702e493c52": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-22",
+  "last_seen": "2026-10-22",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 2,
+  "posted": "2026-10-22",
+  "reposted": false,
+  "title": "Lending Operations & Partnerships - AM - Merchant Lending",
+  "url": "https://jobs.lever.co/paytm/8ef474ea-ea67-4cd4-bcd4-af702e493c52"
  },
  "lever:paytm:8f344c23-43a8-492b-99e9-e9735e2d07a8": {
   "age_days": 1,
