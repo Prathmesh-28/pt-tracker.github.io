@@ -3605,8 +3605,8 @@
  },
  "greenhouse:druva:8673031002": {
   "age_days": 71,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-22",
   "company": "druva",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-22",
@@ -4434,8 +4434,8 @@
  },
  "greenhouse:netradyne:4717672005": {
   "age_days": 56,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-22",
   "company": "netradyne",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-22",
@@ -4683,6 +4683,20 @@
   "reposted": false,
   "title": "Founding Product Engineer",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4732434005"
+ },
+ "greenhouse:netradyne:4732455005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-10-22",
+  "last_seen": "2026-10-22",
+  "location": "Remote - AZ; Remote - CA; Remote - CO",
+  "min_years": 7,
+  "posted": "2026-10-22",
+  "reposted": false,
+  "title": "Enterprise Core Account Executive (West)",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4732455005"
  },
  "greenhouse:netradyne:4732521005": {
   "age_days": 43,
@@ -7258,6 +7272,20 @@
   "reposted": false,
   "title": "Lead Reliability Engineer - Network and Security",
   "url": "https://job-boards.greenhouse.io/zenoti/jobs/8004593003"
+ },
+ "greenhouse:zenoti:8029893003": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zenoti",
+  "first_seen": "2026-10-22",
+  "last_seen": "2026-10-22",
+  "location": "Hyderabad, Telangana, India",
+  "min_years": 7,
+  "posted": "2026-10-22",
+  "reposted": false,
+  "title": "Senior Manager -  Product Management (Payments/Fintech)",
+  "url": "https://job-boards.greenhouse.io/zenoti/jobs/8029893003"
  },
  "indeed:100ms:in-c6b6d97e3a4262df": {
   "age_days": 30,
