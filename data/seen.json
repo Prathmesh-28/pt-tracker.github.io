@@ -15,11 +15,11 @@
  },
  "ashby:atlan:20fe5046-b287-40f6-990f-842ad75526e5": {
   "age_days": 15,
-  "closed": true,
-  "closed_on": "2026-10-13",
+  "closed": false,
+  "closed_on": "",
   "company": "atlan",
   "first_seen": "2026-10-08",
-  "last_seen": "2026-10-13",
+  "last_seen": "2026-10-23",
   "location": "India",
   "min_years": null,
   "posted": "2026-10-08",
@@ -107004,6 +107004,20 @@
   "reposted": false,
   "title": "Security and Automation Engineer",
   "url": "https://jobs.lever.co/mindtickle/d62b36db-b088-48c7-a606-4ed458e30208"
+ },
+ "lever:mindtickle:d7ed4f7e-d2d5-4b45-b1ca-fea0a10965e0": {
+  "age_days": 64,
+  "closed": false,
+  "closed_on": "",
+  "company": "mindtickle",
+  "first_seen": "2026-10-23",
+  "last_seen": "2026-10-23",
+  "location": "Remote, Canada",
+  "min_years": 5,
+  "posted": "2026-08-20",
+  "reposted": false,
+  "title": "Product Engagement Manager",
+  "url": "https://jobs.lever.co/mindtickle/d7ed4f7e-d2d5-4b45-b1ca-fea0a10965e0"
  },
  "lever:mindtickle:da0c54e2-5dca-4fb5-b236-57080dbf8648": {
   "age_days": 43,
