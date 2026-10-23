@@ -442,8 +442,8 @@
  },
  "ashby:bureau:8b0a9bec-c408-4815-867e-d7cfb7607a1c": {
   "age_days": 87,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-23",
   "company": "bureau",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-23",
@@ -467,6 +467,20 @@
   "reposted": false,
   "title": "Social Media Marketing Intern",
   "url": "https://jobs.ashbyhq.com/bureau/9a5ea099-9ecf-4e61-814a-55f44624b888"
+ },
+ "ashby:bureau:a2b4133f-6974-4353-9fcd-476c8734dc48": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "bureau",
+  "first_seen": "2026-10-23",
+  "last_seen": "2026-10-23",
+  "location": "Bangalore",
+  "min_years": 1,
+  "posted": "2026-10-23",
+  "reposted": false,
+  "title": "Finance Associate",
+  "url": "https://jobs.ashbyhq.com/bureau/a2b4133f-6974-4353-9fcd-476c8734dc48"
  },
  "ashby:bureau:ac6f2763-4330-475e-9b4c-71b6812a4351": {
   "age_days": 72,
@@ -1717,6 +1731,20 @@
   "title": "Staff Software Engineer - Frontend",
   "url": "https://jobs.ashbyhq.com/sarvam/b60ac66f-a2d7-4354-b67a-aa0de5ad7e3e"
  },
+ "ashby:sarvam:bba82f34-1544-421e-a393-3edd8a5f4cb2": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "sarvam",
+  "first_seen": "2026-10-23",
+  "last_seen": "2026-10-23",
+  "location": "Bengaluru",
+  "min_years": null,
+  "posted": "2026-10-23",
+  "reposted": false,
+  "title": "Marketing internship (brand & communication)",
+  "url": "https://jobs.ashbyhq.com/sarvam/bba82f34-1544-421e-a393-3edd8a5f4cb2"
+ },
  "ashby:sarvam:bd5d2769-7dc3-47c5-9afb-c011b6d22c19": {
   "age_days": 60,
   "closed": false,
@@ -1828,6 +1856,20 @@
   "reposted": false,
   "title": "Staff Engineer - Systems Engineering",
   "url": "https://jobs.ashbyhq.com/sarvam/d71ec2a3-3de6-4380-95f6-41cfc2bbdbf2"
+ },
+ "ashby:sarvam:db89b576-2456-4cc4-ab0b-c45f8c6c27f0": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "sarvam",
+  "first_seen": "2026-10-23",
+  "last_seen": "2026-10-23",
+  "location": "Bengaluru",
+  "min_years": 3,
+  "posted": "2026-10-23",
+  "reposted": false,
+  "title": "Software Development Engineer - Tejas",
+  "url": "https://jobs.ashbyhq.com/sarvam/db89b576-2456-4cc4-ab0b-c45f8c6c27f0"
  },
  "ashby:sarvam:dc047f4f-97be-4bb3-a9f1-cebbfc4de3e6": {
   "age_days": 189,
@@ -3717,8 +3759,8 @@
  },
  "greenhouse:druva:8736185002": {
   "age_days": 16,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-23",
   "company": "druva",
   "first_seen": "2026-10-07",
   "last_seen": "2026-10-23",
@@ -6547,11 +6589,11 @@
  },
  "greenhouse:zenoti:7729931003": {
   "age_days": 165,
-  "closed": true,
-  "closed_on": "2026-09-20",
+  "closed": false,
+  "closed_on": "",
   "company": "zenoti",
   "first_seen": "2026-09-10",
-  "last_seen": "2026-09-19",
+  "last_seen": "2026-10-23",
   "location": "Hyderabad, Telangana, India",
   "min_years": 8,
   "posted": "2026-05-11",
@@ -107411,6 +107453,20 @@
   "title": "Frontend  Lead",
   "url": "https://jobs.lever.co/paytm/0ff90fbd-29a5-4436-b312-8d5ead429dca"
  },
+ "lever:paytm:105a0d9e-94e9-4026-9105-5bea558ab3d9": {
+  "age_days": 11,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-23",
+  "last_seen": "2026-10-23",
+  "location": "Bangalore, Karnataka",
+  "min_years": 3,
+  "posted": "2026-10-12",
+  "reposted": false,
+  "title": "Senior Software Engineer \u2013 Backend (Travel)",
+  "url": "https://jobs.lever.co/paytm/105a0d9e-94e9-4026-9105-5bea558ab3d9"
+ },
  "lever:paytm:112463a4-7fd4-44dd-ab5b-dd93877e6976": {
   "age_days": 36,
   "closed": false,
@@ -107844,6 +107900,20 @@
   "reposted": false,
   "title": "Business Partnership & Alliances - Senior Manager - Loyalty Business",
   "url": "https://jobs.lever.co/paytm/2a61ae9d-b901-4017-a7d1-5f0035fe6043"
+ },
+ "lever:paytm:2a7f30b5-4a32-47a7-997c-27140eb06fb4": {
+  "age_days": 1,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-23",
+  "last_seen": "2026-10-23",
+  "location": "Mumbai, Maharashtra",
+  "min_years": 2,
+  "posted": "2026-10-22",
+  "reposted": false,
+  "title": "Lending Operations - AM - Merchant Lending",
+  "url": "https://jobs.lever.co/paytm/2a7f30b5-4a32-47a7-997c-27140eb06fb4"
  },
  "lever:paytm:2a95d899-9540-4a5c-bf95-249745ed82c3": {
   "age_days": 3,
@@ -111235,8 +111305,8 @@
  },
  "lever:paytm:f36b0ad5-3b34-45e0-ae01-da693a8adc0f": {
   "age_days": 9,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-23",
   "company": "paytm",
   "first_seen": "2026-10-14",
   "last_seen": "2026-10-23",
