@@ -1,15 +1,7 @@
 {
   "generated": "2026-10-24",
   "grad_year": 2027,
-  "search": {
-    "searched_at": "2026-10-24T05:59:43+00:00",
-    "next_after": "2026-10-24T09:59:43+00:00",
-    "counts": {
-      "linkedin": 60,
-      "indeed": 450
-    },
-    "blocked": []
-  },
+  "search": {},
   "roles": [
     {
       "age_days": 0,
@@ -4400,32 +4392,6 @@
       "kind": "internship",
       "funded": null,
       "key": "lever:paytm:6d7551f7-34c3-46a2-a4e4-18b29f15338c"
-    },
-    {
-      "age_days": 6,
-      "first_seen": "2026-10-19",
-      "reposted": false,
-      "title": "Talent Acquisition- Intern || Noida ||",
-      "company": "Paytm",
-      "city": "Noida",
-      "city_tier": "Tier 1",
-      "location": "Noida, Uttar Pradesh",
-      "pay": "",
-      "url": "https://jobs.lever.co/paytm/648841ab-2778-4759-a4c9-eabae97ec65d",
-      "posted": "2026-10-18",
-      "deadline": "",
-      "team": "HR",
-      "family": "Support & other",
-      "min_years": null,
-      "tier": "unstated",
-      "ats": "lever",
-      "source": "board",
-      "apply_url": "",
-      "batch": "",
-      "batches": [],
-      "kind": "internship",
-      "funded": null,
-      "key": "lever:paytm:648841ab-2778-4759-a4c9-eabae97ec65d"
     },
     {
       "age_days": 7,
@@ -12113,16 +12079,16 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 352,
+  "closed_tracked": 353,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 1005,
+    "postings_scanned": 1004,
     "search_postings": 481,
-    "postings_india": 916,
-    "business_track": 387,
+    "postings_india": 915,
+    "business_track": 386,
     "open": 132,
-    "unstated": 129,
+    "unstated": 128,
     "walled": 126
   }
 }
