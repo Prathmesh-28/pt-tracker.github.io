@@ -4,10 +4,10 @@
     "funding_rounds_india": 154,
     "with_role_estimates": 0,
     "with_valuation": 28,
-    "open_roles_scraped": 611,
+    "open_roles_scraped": 614,
     "roles_open_to_freshers": 202,
     "employers_with_readable_board": 15,
-    "postings_tracked_in_history": 11115,
+    "postings_tracked_in_history": 11117,
     "benchmark_families": 0
   },
   "companies": [
@@ -14443,6 +14443,35 @@
       "key": "linkedin:unswbengaluru:li-4471311127"
     },
     {
+      "age_days": 32,
+      "first_seen": "2026-09-24",
+      "reposted": false,
+      "title": "credit card bill payments growth",
+      "company": "CRED",
+      "city": "Bengaluru",
+      "city_tier": "Tier 1",
+      "location": "bengaluru",
+      "pay": "",
+      "url": "https://jobs.lever.co/cred/b3fdba2a-802c-4e03-b445-5284c5e3c157",
+      "posted": "2026-09-24",
+      "deadline": "",
+      "team": "consumer products",
+      "family": "Growth",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "source": "board",
+      "apply_url": "",
+      "batch": "",
+      "batches": [],
+      "kind": "full-time",
+      "funded": {
+        "round": "Series H",
+        "date": "2026-06-22"
+      },
+      "key": "lever:cred:b3fdba2a-802c-4e03-b445-5284c5e3c157"
+    },
+    {
       "age_days": 34,
       "first_seen": "2026-09-30",
       "reposted": false,
@@ -14654,6 +14683,35 @@
       "key": "greenhouse:zenoti:7977887003"
     },
     {
+      "age_days": 66,
+      "first_seen": "2026-09-10",
+      "reposted": false,
+      "title": "business development & strategic partnerships - d2c",
+      "company": "CRED",
+      "city": "Bengaluru",
+      "city_tier": "Tier 1",
+      "location": "bengaluru",
+      "pay": "",
+      "url": "https://jobs.lever.co/cred/a65bef0e-0f4c-40af-b662-9313f255189e",
+      "posted": "2026-08-21",
+      "deadline": "",
+      "team": "business - CREDpay",
+      "family": "Business development",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "source": "board",
+      "apply_url": "",
+      "batch": "",
+      "batches": [],
+      "kind": "full-time",
+      "funded": {
+        "round": "Series H",
+        "date": "2026-06-22"
+      },
+      "key": "lever:cred:a65bef0e-0f4c-40af-b662-9313f255189e"
+    },
+    {
       "age_days": 68,
       "first_seen": "2026-09-10",
       "reposted": false,
@@ -14782,6 +14840,35 @@
       "kind": "full-time",
       "funded": null,
       "key": "greenhouse:groww:4880153101"
+    },
+    {
+      "age_days": 154,
+      "first_seen": "2026-09-10",
+      "reposted": false,
+      "title": "business development & partnerships",
+      "company": "CRED",
+      "city": "Bengaluru",
+      "city_tier": "Tier 1",
+      "location": "bengaluru",
+      "pay": "",
+      "url": "https://jobs.lever.co/cred/09022710-e79a-4cf0-8060-df0e1cd64263",
+      "posted": "2026-05-25",
+      "deadline": "",
+      "team": "consumer products",
+      "family": "Business development",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "source": "board",
+      "apply_url": "",
+      "batch": "",
+      "batches": [],
+      "kind": "full-time",
+      "funded": {
+        "round": "Series H",
+        "date": "2026-06-22"
+      },
+      "key": "lever:cred:09022710-e79a-4cf0-8060-df0e1cd64263"
     },
     {
       "age_days": 154,
