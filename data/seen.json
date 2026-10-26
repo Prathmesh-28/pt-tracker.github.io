@@ -139,6 +139,20 @@
   "title": "Enterprise Account Executive - SF/Bay Area",
   "url": "https://jobs.ashbyhq.com/atlan/b623af11-93ae-437f-bd32-8e9ac97430d4"
  },
+ "ashby:atlan:c6bb032c-6ac8-4b59-915c-d59b6f3a86f8": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "atlan",
+  "first_seen": "2026-10-26",
+  "last_seen": "2026-10-26",
+  "location": "India",
+  "min_years": null,
+  "posted": "2026-10-26",
+  "reposted": false,
+  "title": "AI Native Builder/Architect",
+  "url": "https://jobs.ashbyhq.com/atlan/c6bb032c-6ac8-4b59-915c-d59b6f3a86f8"
+ },
  "ashby:bounce:0ef5aac0-cd80-463e-9ea1-679c29d96552": {
   "age_days": 132,
   "closed": false,
@@ -1115,6 +1129,20 @@
   "title": "Senior Manager, Growth Marketing",
   "url": "https://jobs.ashbyhq.com/sarvam/17d13aaa-2faf-40de-82e5-da894ead0856"
  },
+ "ashby:sarvam:1dd07b8b-0c0b-422a-8ff4-c99bdc5add68": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "sarvam",
+  "first_seen": "2026-10-26",
+  "last_seen": "2026-10-26",
+  "location": "Bengaluru",
+  "min_years": 5,
+  "posted": "2026-10-26",
+  "reposted": false,
+  "title": "SDE3, Infrastructure Security Engineer (DevSecOps)",
+  "url": "https://jobs.ashbyhq.com/sarvam/1dd07b8b-0c0b-422a-8ff4-c99bdc5add68"
+ },
  "ashby:sarvam:1eb3008a-2014-4a6c-8a35-cfa7caf8a60f": {
   "age_days": 33,
   "closed": false,
@@ -1341,8 +1369,8 @@
  },
  "ashby:sarvam:597119b9-ccb6-4b6e-be0e-39eb185093d0": {
   "age_days": 62,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "sarvam",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-26",
@@ -1957,8 +1985,8 @@
  },
  "ashby:sarvam:ef7f079b-6a1f-4b27-9cfb-a5f68fe825c7": {
   "age_days": 39,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "sarvam",
   "first_seen": "2026-09-17",
   "last_seen": "2026-10-26",
@@ -1968,6 +1996,20 @@
   "reposted": false,
   "title": "Marketing Intern",
   "url": "https://jobs.ashbyhq.com/sarvam/ef7f079b-6a1f-4b27-9cfb-a5f68fe825c7"
+ },
+ "ashby:sarvam:f09b6a35-e2d1-4833-8bc5-2b495991d882": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "sarvam",
+  "first_seen": "2026-10-26",
+  "last_seen": "2026-10-26",
+  "location": "Bengaluru",
+  "min_years": 2,
+  "posted": "2026-10-26",
+  "reposted": false,
+  "title": "Infrastructure Engineer",
+  "url": "https://jobs.ashbyhq.com/sarvam/f09b6a35-e2d1-4833-8bc5-2b495991d882"
  },
  "ashby:sarvam:f3376204-1c2d-42a8-bf4a-1a0eec2fbc3c": {
   "age_days": 159,
@@ -108621,8 +108663,8 @@
  },
  "lever:cred:09022710-e79a-4cf0-8060-df0e1cd64263": {
   "age_days": 154,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "cred",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-26",
@@ -108663,8 +108705,8 @@
  },
  "lever:cred:84aa0489-b7e1-4670-bfa9-7a9654197cc3": {
   "age_days": 69,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "cred",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-26",
@@ -108691,8 +108733,8 @@
  },
  "lever:cred:91a5f0f1-b11f-412a-a816-ffc8b08a5617": {
   "age_days": 66,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "cred",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-26",
@@ -108705,8 +108747,8 @@
  },
  "lever:cred:a65bef0e-0f4c-40af-b662-9313f255189e": {
   "age_days": 66,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "cred",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-26",
@@ -108719,8 +108761,8 @@
  },
  "lever:cred:aa501081-1787-4617-bfa9-9f4ecaf68f30": {
   "age_days": 63,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "cred",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-26",
@@ -108733,8 +108775,8 @@
  },
  "lever:cred:aa98a938-af3a-45f5-851d-966b2b5bad33": {
   "age_days": 28,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "cred",
   "first_seen": "2026-09-28",
   "last_seen": "2026-10-26",
@@ -108761,8 +108803,8 @@
  },
  "lever:cred:b3fdba2a-802c-4e03-b445-5284c5e3c157": {
   "age_days": 32,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "cred",
   "first_seen": "2026-09-24",
   "last_seen": "2026-10-26",
@@ -108803,8 +108845,8 @@
  },
  "lever:cred:f846af12-7da9-4737-a0b1-3770c55830fc": {
   "age_days": 343,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "cred",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-26",
@@ -109085,6 +109127,20 @@
   "title": "Assistant Manager(Controllership)",
   "url": "https://jobs.lever.co/fampay/09c9d0cd-f422-4138-a065-8d45e71d01a7"
  },
+ "lever:fampay:0b8051c8-dfcd-475a-925e-69be869bcd86": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "fampay",
+  "first_seen": "2026-10-26",
+  "last_seen": "2026-10-26",
+  "location": "Bengaluru",
+  "min_years": 3,
+  "posted": "2026-10-26",
+  "reposted": false,
+  "title": "Senior Information Security Risk Analyst",
+  "url": "https://jobs.lever.co/fampay/0b8051c8-dfcd-475a-925e-69be869bcd86"
+ },
  "lever:fampay:23dd18f9-a331-4115-98e9-e98c404c47c6": {
   "age_days": 2331,
   "closed": false,
@@ -109185,8 +109241,8 @@
  },
  "lever:fampay:8b4517b2-b038-4f57-b7ef-d2cc8ee588f7": {
   "age_days": 285,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "fampay",
   "first_seen": "2026-10-22",
   "last_seen": "2026-10-26",
@@ -109255,8 +109311,8 @@
  },
  "lever:fampay:a069072e-dfe5-44e5-be3e-31e78b129906": {
   "age_days": 637,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "fampay",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-26",
@@ -109849,8 +109905,8 @@
  },
  "lever:meesho:1de2fc88-e203-4f1a-8046-55df700de4be": {
   "age_days": 453,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-26",
   "company": "meesho",
   "first_seen": "2026-09-11",
   "last_seen": "2026-10-26",
@@ -113713,11 +113769,11 @@
  },
  "lever:paytm:825b704f-6933-4280-aa75-0f2095078077": {
   "age_days": 62,
-  "closed": true,
-  "closed_on": "2026-10-20",
+  "closed": false,
+  "closed_on": "",
   "company": "paytm",
   "first_seen": "2026-09-10",
-  "last_seen": "2026-10-19",
+  "last_seen": "2026-10-26",
   "location": "Mumbai, Maharashtra",
   "min_years": null,
   "posted": "2026-08-25",
@@ -116401,6 +116457,20 @@
   "reposted": false,
   "title": "Specialist Total Rewards",
   "url": "https://jobs.lever.co/zeta/b099e4fe-87cf-44ad-89b6-21edfe60958b"
+ },
+ "lever:zeta:c3a452d5-0dbe-4ac5-b598-b6828d68cf5d": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-10-26",
+  "last_seen": "2026-10-26",
+  "location": "Hyderabad",
+  "min_years": null,
+  "posted": "2026-10-26",
+  "reposted": false,
+  "title": "Sr. Executive - Real Estate and Workplace",
+  "url": "https://jobs.lever.co/zeta/c3a452d5-0dbe-4ac5-b598-b6828d68cf5d"
  },
  "lever:zeta:c6ff3085-f2fb-4c56-9fcd-613a5a32c069": {
   "age_days": 13,
