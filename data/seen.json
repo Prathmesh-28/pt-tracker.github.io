@@ -1493,6 +1493,20 @@
   "title": "Developer Relations Engineer - Developer Advocate",
   "url": "https://jobs.ashbyhq.com/sarvam/730c1766-ad62-4d5d-aa75-b5b0e03409aa"
  },
+ "ashby:sarvam:786e9a1b-e52d-4075-932d-66e4ad8e06c2": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "sarvam",
+  "first_seen": "2026-10-27",
+  "last_seen": "2026-10-27",
+  "location": "Bengaluru",
+  "min_years": 2,
+  "posted": "2026-10-27",
+  "reposted": false,
+  "title": "Strategy & Operations Associate",
+  "url": "https://jobs.ashbyhq.com/sarvam/786e9a1b-e52d-4075-932d-66e4ad8e06c2"
+ },
  "ashby:sarvam:79bb725b-83d4-400c-a207-e2b0a7ccec68": {
   "age_days": 161,
   "closed": false,
@@ -4922,6 +4936,20 @@
   "title": "Senior Staff Engineer - Infrastructure Software",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4744417005"
  },
+ "greenhouse:netradyne:4747924005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-10-27",
+  "last_seen": "2026-10-27",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 3,
+  "posted": "2026-10-27",
+  "reposted": false,
+  "title": "Senior Software Engineer - Business Systems",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4747924005"
+ },
  "greenhouse:porter:4397947009": {
   "age_days": 48,
   "closed": false,
@@ -7009,8 +7037,8 @@
  },
  "greenhouse:zenoti:7894907003": {
   "age_days": 60,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-27",
   "company": "zenoti",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-27",
@@ -7065,8 +7093,8 @@
  },
  "greenhouse:zenoti:7959333003": {
   "age_days": 40,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-27",
   "company": "zenoti",
   "first_seen": "2026-09-17",
   "last_seen": "2026-10-27",
@@ -7219,8 +7247,8 @@
  },
  "greenhouse:zenoti:7998040003": {
   "age_days": 19,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-27",
   "company": "zenoti",
   "first_seen": "2026-10-08",
   "last_seen": "2026-10-27",
@@ -7323,7 +7351,7 @@
   "first_seen": "2026-09-29",
   "last_seen": "2026-10-27",
   "location": "Hyderabad, Telangana, India",
-  "min_years": 5,
+  "min_years": 7,
   "posted": "2026-09-29",
   "reposted": false,
   "title": "System Administrator - IT",
@@ -110289,6 +110317,20 @@
   "title": "Senior Information Security Risk Analyst",
   "url": "https://jobs.lever.co/fampay/0b8051c8-dfcd-475a-925e-69be869bcd86"
  },
+ "lever:fampay:213870db-ddfd-4519-9a57-54691d89cca5": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "fampay",
+  "first_seen": "2026-10-27",
+  "last_seen": "2026-10-27",
+  "location": "Bengaluru",
+  "min_years": null,
+  "posted": "2026-10-27",
+  "reposted": false,
+  "title": "People Operations Intern",
+  "url": "https://jobs.lever.co/fampay/213870db-ddfd-4519-9a57-54691d89cca5"
+ },
  "lever:fampay:23dd18f9-a331-4115-98e9-e98c404c47c6": {
   "age_days": 2332,
   "closed": false,
@@ -116007,6 +116049,20 @@
   "title": "Area Collection Manager - Manager - Lending Collections (Frontend)",
   "url": "https://jobs.lever.co/paytm/cf8e7e47-2871-405f-8e19-aa95fa5e6996"
  },
+ "lever:paytm:d071f4bc-e651-48dc-85ae-a8ee904fd0fa": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-27",
+  "last_seen": "2026-10-27",
+  "location": "Gurugram, Haryana",
+  "min_years": 3,
+  "posted": "2026-10-27",
+  "reposted": false,
+  "title": "Talent Acquisition Specialist - Business Hiring (Non-Tech)",
+  "url": "https://jobs.lever.co/paytm/d071f4bc-e651-48dc-85ae-a8ee904fd0fa"
+ },
  "lever:paytm:d072b16d-9479-4395-9d63-c825d3772a0a": {
   "age_days": 81,
   "closed": true,
@@ -117396,6 +117452,20 @@
   "title": "Associate/Sr Associate- People Experience",
   "url": "https://jobs.lever.co/zeta/42c3b097-4b5c-48b6-83f6-04f09f1cab56"
  },
+ "lever:zeta:4a278744-a77e-4c34-91e5-6247ec99fe11": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-10-27",
+  "last_seen": "2026-10-27",
+  "location": "Mumbai",
+  "min_years": null,
+  "posted": "2026-10-27",
+  "reposted": false,
+  "title": "Personal Assistant",
+  "url": "https://jobs.lever.co/zeta/4a278744-a77e-4c34-91e5-6247ec99fe11"
+ },
  "lever:zeta:500c585f-65ba-4f6a-b515-7d73680038c3": {
   "age_days": 102,
   "closed": false,
@@ -117591,6 +117661,20 @@
   "reposted": false,
   "title": "Executive - IT Support",
   "url": "https://jobs.lever.co/zeta/aa98c726-9336-4d99-be08-20050eaf309c"
+ },
+ "lever:zeta:ad968f1d-da85-4af9-b9b0-0dce5880bb62": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-10-27",
+  "last_seen": "2026-10-27",
+  "location": "Bangalore",
+  "min_years": null,
+  "posted": "2026-10-27",
+  "reposted": false,
+  "title": "Fraud Risk Analyst \u2013 US Banking & Payments",
+  "url": "https://jobs.lever.co/zeta/ad968f1d-da85-4af9-b9b0-0dce5880bb62"
  },
  "lever:zeta:b099e4fe-87cf-44ad-89b6-21edfe60958b": {
   "age_days": 83,
