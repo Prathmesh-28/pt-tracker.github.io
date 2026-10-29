@@ -5062,6 +5062,34 @@
   "title": "Senior Software Engineer - Business Systems",
   "url": "https://www.netradyne.com/company/careers?gh_jid=4747924005"
  },
+ "greenhouse:netradyne:4748411005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-10-29",
+  "last_seen": "2026-10-29",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 5,
+  "posted": "2026-10-29",
+  "reposted": false,
+  "title": "Staff Engineer - Embedded Software (BSP)",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4748411005"
+ },
+ "greenhouse:netradyne:4748413005": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "netradyne",
+  "first_seen": "2026-10-29",
+  "last_seen": "2026-10-29",
+  "location": "Bengaluru, Karnataka, India",
+  "min_years": 8,
+  "posted": "2026-10-29",
+  "reposted": false,
+  "title": "Senior Staff Engineer _ Embedded Software (BSP)",
+  "url": "https://www.netradyne.com/company/careers?gh_jid=4748413005"
+ },
  "greenhouse:porter:4397947009": {
   "age_days": 50,
   "closed": false,
@@ -117675,8 +117703,8 @@
  },
  "lever:meesho:2b1ae28e-627b-40fd-8ed8-219c864178fa": {
   "age_days": 367,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-29",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-29",
@@ -118361,8 +118389,8 @@
  },
  "lever:meesho:d2f50690-efbf-45c6-8985-1494901725e6": {
   "age_days": 22,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-29",
   "company": "meesho",
   "first_seen": "2026-10-07",
   "last_seen": "2026-10-29",
@@ -118431,8 +118459,8 @@
  },
  "lever:meesho:e03deae3-a5f2-428d-b2f3-3c275f8c433b": {
   "age_days": 73,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-29",
   "company": "meesho",
   "first_seen": "2026-09-10",
   "last_seen": "2026-10-29",
@@ -119801,6 +119829,20 @@
   "title": "Regulatory Compliance- Manager",
   "url": "https://jobs.lever.co/paytm/2aee5204-aade-4cf3-9f9e-9d6b8dfc3d20"
  },
+ "lever:paytm:2c5ebb59-d8ec-4cd9-b88e-5ea2ce1f593e": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-29",
+  "last_seen": "2026-10-29",
+  "location": "Ahmedabad, Gujarat",
+  "min_years": 14,
+  "posted": "2026-10-29",
+  "reposted": false,
+  "title": "Group Head - DGM - Paytm Ads",
+  "url": "https://jobs.lever.co/paytm/2c5ebb59-d8ec-4cd9-b88e-5ea2ce1f593e"
+ },
  "lever:paytm:2cf26fd0-439d-4425-8d30-e1ff5d7380bf": {
   "age_days": 174,
   "closed": false,
@@ -120388,6 +120430,20 @@
   "reposted": false,
   "title": "Business Analyst - Assistant Manager - Lending",
   "url": "https://jobs.lever.co/paytm/4a432a72-8763-465e-a107-721b6dd562b1"
+ },
+ "lever:paytm:4a5c3f39-94d6-4581-9b73-65a2895cb03d": {
+  "age_days": 83,
+  "closed": false,
+  "closed_on": "",
+  "company": "paytm",
+  "first_seen": "2026-10-29",
+  "last_seen": "2026-10-29",
+  "location": "Noida, Uttar Pradesh",
+  "min_years": 4,
+  "posted": "2026-08-07",
+  "reposted": false,
+  "title": "Lead/Senior Lead - Data Devops",
+  "url": "https://jobs.lever.co/paytm/4a5c3f39-94d6-4581-9b73-65a2895cb03d"
  },
  "lever:paytm:4a7d4b8e-43ee-46f4-baa6-c2a4a2c9019e": {
   "age_days": 46,
