@@ -1,15 +1,7 @@
 {
   "generated": "2026-10-30",
   "grad_year": 2027,
-  "search": {
-    "searched_at": "2026-10-30T07:21:00+00:00",
-    "next_after": "2026-10-30T11:21:00+00:00",
-    "counts": {
-      "linkedin": 450,
-      "indeed": 450
-    },
-    "blocked": []
-  },
+  "search": {},
   "roles": [
     {
       "age_days": 0,
@@ -8978,6 +8970,32 @@
       "kind": "full-time",
       "funded": null,
       "key": "linkedin:tipsonsgroup:li-4480338700"
+    },
+    {
+      "age_days": 14,
+      "first_seen": "2026-10-16",
+      "reposted": false,
+      "title": "Product Manager I",
+      "company": "Meesho",
+      "city": "Bengaluru",
+      "city_tier": "Tier 1",
+      "location": "Bangalore, Karnataka",
+      "pay": "",
+      "url": "https://jobs.lever.co/meesho/494d8ba6-22b6-467f-837b-8af9c1aee377",
+      "posted": "2026-10-16",
+      "deadline": "",
+      "team": "Product",
+      "family": "Product",
+      "min_years": null,
+      "tier": "unstated",
+      "ats": "lever",
+      "source": "board",
+      "apply_url": "",
+      "batch": "",
+      "batches": [],
+      "kind": "full-time",
+      "funded": null,
+      "key": "lever:meesho:494d8ba6-22b6-467f-837b-8af9c1aee377"
     },
     {
       "age_days": 15,
@@ -18107,12 +18125,12 @@
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 1341,
+    "postings_scanned": 1345,
     "search_postings": 813,
-    "postings_india": 1256,
-    "business_track": 616,
+    "postings_india": 1260,
+    "business_track": 617,
     "open": 198,
-    "unstated": 221,
+    "unstated": 222,
     "walled": 197
   }
 }

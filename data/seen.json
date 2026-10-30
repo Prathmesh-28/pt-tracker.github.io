@@ -482,6 +482,20 @@
   "title": "Social Media Marketing Intern",
   "url": "https://jobs.ashbyhq.com/bureau/9a5ea099-9ecf-4e61-814a-55f44624b888"
  },
+ "ashby:bureau:9dd1d722-f4cd-4611-aff5-e95c0c44af5f": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "bureau",
+  "first_seen": "2026-10-30",
+  "last_seen": "2026-10-30",
+  "location": "Bangalore",
+  "min_years": 5,
+  "posted": "2026-10-30",
+  "reposted": false,
+  "title": "Senior Product Manager - Credit Risk",
+  "url": "https://jobs.ashbyhq.com/bureau/9dd1d722-f4cd-4611-aff5-e95c0c44af5f"
+ },
  "ashby:bureau:a2b4133f-6974-4353-9fcd-476c8734dc48": {
   "age_days": 7,
   "closed": false,
@@ -565,6 +579,20 @@
   "reposted": false,
   "title": "Senior Sales Enterprise Manager (NBFC)",
   "url": "https://jobs.ashbyhq.com/bureau/c7e22c94-8d94-4397-b686-efcc6cc73dd2"
+ },
+ "ashby:bureau:ff1dd2e0-ac5b-4efa-b27a-6cd49aefca0e": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "bureau",
+  "first_seen": "2026-10-30",
+  "last_seen": "2026-10-30",
+  "location": "Southeast Asia",
+  "min_years": 5,
+  "posted": "2026-10-30",
+  "reposted": false,
+  "title": "Senior Product Manager - Credit Risk",
+  "url": "https://jobs.ashbyhq.com/bureau/ff1dd2e0-ac5b-4efa-b27a-6cd49aefca0e"
  },
  "ashby:cello:0e693e6a-de29-4ec8-978b-1a6c2bbe4126": {
   "age_days": 115,
@@ -119889,6 +119917,20 @@
   "title": "business development & partnerships",
   "url": "https://jobs.lever.co/cred/09022710-e79a-4cf0-8060-df0e1cd64263"
  },
+ "lever:cred:224c14b0-0317-4512-b380-60c8acb2d4c2": {
+  "age_days": 0,
+  "closed": false,
+  "closed_on": "",
+  "company": "cred",
+  "first_seen": "2026-10-30",
+  "last_seen": "2026-10-30",
+  "location": "bengaluru",
+  "min_years": null,
+  "posted": "2026-10-30",
+  "reposted": false,
+  "title": "issuance growth lead",
+  "url": "https://jobs.lever.co/cred/224c14b0-0317-4512-b380-60c8acb2d4c2"
+ },
  "lever:cred:5b8e2c1a-06eb-4127-914f-db56b3078158": {
   "age_days": 66,
   "closed": true,
@@ -121427,11 +121469,11 @@
  },
  "lever:meesho:494d8ba6-22b6-467f-837b-8af9c1aee377": {
   "age_days": 14,
-  "closed": true,
-  "closed_on": "2026-10-28",
+  "closed": false,
+  "closed_on": "",
   "company": "meesho",
   "first_seen": "2026-10-16",
-  "last_seen": "2026-10-28",
+  "last_seen": "2026-10-30",
   "location": "Bangalore, Karnataka",
   "min_years": null,
   "posted": "2026-10-16",
@@ -123863,8 +123905,8 @@
  },
  "lever:paytm:44f1ed59-7b89-4fa3-83d1-01b3e8b9c03a": {
   "age_days": 47,
-  "closed": false,
-  "closed_on": "",
+  "closed": true,
+  "closed_on": "2026-10-30",
   "company": "paytm",
   "first_seen": "2026-09-14",
   "last_seen": "2026-10-30",
@@ -127559,6 +127601,20 @@
   "reposted": false,
   "title": "Personal Assistant",
   "url": "https://jobs.lever.co/zeta/4a278744-a77e-4c34-91e5-6247ec99fe11"
+ },
+ "lever:zeta:4dfd3df1-9520-4e20-9b9b-3a1fa80ad323": {
+  "age_days": 2,
+  "closed": false,
+  "closed_on": "",
+  "company": "zeta",
+  "first_seen": "2026-10-30",
+  "last_seen": "2026-10-30",
+  "location": "Hyderabad",
+  "min_years": null,
+  "posted": "2026-10-28",
+  "reposted": false,
+  "title": "Site Reliability Engineer II",
+  "url": "https://jobs.lever.co/zeta/4dfd3df1-9520-4e20-9b9b-3a1fa80ad323"
  },
  "lever:zeta:500c585f-65ba-4f6a-b515-7d73680038c3": {
   "age_days": 105,
