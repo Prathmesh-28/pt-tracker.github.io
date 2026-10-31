@@ -1,15 +1,7 @@
 {
   "generated": "2026-10-31",
   "grad_year": 2027,
-  "search": {
-    "searched_at": "2026-10-31T07:12:15+00:00",
-    "next_after": "2026-10-31T11:12:15+00:00",
-    "counts": {
-      "linkedin": 450,
-      "indeed": 431
-    },
-    "blocked": []
-  },
+  "search": {},
   "roles": [
     {
       "age_days": 0,
@@ -18042,11 +18034,11 @@
       "postings": 7
     }
   ],
-  "closed_tracked": 375,
+  "closed_tracked": 374,
   "coverage": {
     "boards": 15,
     "employers": 15,
-    "postings_scanned": 1329,
+    "postings_scanned": 1330,
     "search_postings": 796,
     "postings_india": 1244,
     "business_track": 614,
